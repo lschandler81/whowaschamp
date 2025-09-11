@@ -1,0 +1,15 @@
+{
+  "world_titles": [
+    { "file": "wwe_championship_reigns.json", "first_key": "Buddy Rogers" },
+    { "file": "wwe_world_heavyweight_2023_reigns.json", "first_key": "Seth Rollins" },
+    { "file": "wwe_world_heavyweight_2002_2013_reigns.json", "final_key": "Randy Orton" },
+    { "file": "wwe_universal_championship_reigns.json", "first_key": "Finn Bálor", "final_key": "Roman Reigns" },
+    { "file": "wcw_championship_reigns.json", "final_key": "Booker T" },
+    { "file": "nwa_worlds_heavyweight_reigns.json", "first_key": "Orville Brown" },
+    { "file": "iwgp_heavyweight_1987_2021_reigns.json", "first_key": "Antonio Inoki" },
+    { "file": "iwgp_world_heavyweight_2021_reigns.json", "first_key": "Will Ospreay" },
+    { "file": "aew_world_championship_reigns.json", "first_key": "Chris Jericho" },
+    { "file": "ecw_world_heavyweight_reigns.json", "first_key": "Shane Douglas" },
+    { "file": "wwe_ecw_championship_reigns.json", "first_key": "Rob Van Dam" }
+  ]
+}
