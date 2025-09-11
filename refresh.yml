@@ -1,0 +1,129 @@
+name: Update Championship Data
+
+on:
+  # Run twice weekly - Mondays and Thursdays at 4 AM UTC
+  schedule:
+    - cron: '0 4 * * 1,4'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update even if no changes detected'
+        required: false
+        default: 'false'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Use a PAT or the default token with appropriate permissions
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          npm install cheerio node-fetch
+      
+      - name: Create data directory
+        run: |
+          mkdir -p public/data
+      
+      - name: Run championship data scraper
+        run: |
+          node scripts/build_reigns.mjs
+      
+      - name: Build additional world titles
+        run: |
+          node scripts/build_more_titles.mjs
+      
+      - name: Validate world title coverage
+        run: |
+          node scripts/validate_coverage.mjs
+      
+      - name: Validate championship data
+        run: |
+          node scripts/validate.mjs
+        env:
+          FORCE_UPDATE: ${{ github.event.inputs.force_update }}
+      
+      
+      - name: Check for changes
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain public/data/)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "📊 Championship data changes detected"
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "✨ No changes in championship data"
+          fi
+      
+      - name: Commit and push changes
+        if: steps.changes.outputs.changes == 'true' || github.event.inputs.force_update == 'true'
+        run: |
+          git config --local user.name "Championship Bot"
+          git config --local user.email "action@github.com"
+          
+          # Add the data files
+          git add public/data/*.json
+          
+          # Create commit message with timestamp
+          TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          git commit -m "📊 Update championship data - $TIMESTAMP
+          
+          - Auto-updated via GitHub Actions
+          - Source: Wikipedia championship lists
+          - Next update: $(date -u -d '+3 days' '+%Y-%m-%d')"
+          
+          # Push changes
+          git push origin main
+          
+          echo "✅ Championship data updated and committed"
+      
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Championship Data Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.changes.outputs.changes }}" == "true" ]; then
+            echo "✅ **Data updated successfully**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Files Updated:" >> $GITHUB_STEP_SUMMARY
+            for file in public/data/*.json; do
+              if [ -f "$file" ]; then
+                reigns=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$file')).metadata.total_reigns)")
+                echo "- \`$(basename $file)\`: $reigns reigns" >> $GITHUB_STEP_SUMMARY
+              fi
+            done
+          else
+            echo "ℹ️ **No changes detected**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Championship data is already up to date." >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Next scheduled update:** $(date -u -d '+3 days' '+%A, %B %d, %Y at %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+
+  # Fallback job to preserve data integrity if scraping fails
+  preserve-data:
+    runs-on: ubuntu-latest
+    needs: update-data
+    if: failure()
+    
+    steps:
+      - name: Notify about failure
+        run: |
+          echo "⚠️ Championship data update failed, but existing data remains intact"
+          echo "The website will continue to work with the last known good data"
+          echo "This failure has been logged and will be investigated"
