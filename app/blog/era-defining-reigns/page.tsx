@@ -379,6 +379,7 @@ export default function EraDefiningReigns() {
             </Card>
           </div>
         </div>
+        </div>
       </section>
     </div>
   );
