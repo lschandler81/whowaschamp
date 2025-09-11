@@ -301,7 +301,7 @@ export default function AttitudeEra() {
               </CardContent>
             </Card>
 
-            
+            </div>
 
           {/* Legacy Section */}
           <div className="mt-16">
@@ -321,11 +321,6 @@ export default function AttitudeEra() {
                   storytelling, the Attitude Era proved that wrestling could be appointment television 
                   when champions felt like larger-than-life personalities rather than scripted characters.
                 </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
               </CardContent>
             </Card>
           </div>
