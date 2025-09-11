@@ -379,7 +379,7 @@ export default function EraDefiningReigns() {
             </Card>
           </div>
         </div>
-      </section>
+        </div>      </section>
     </div>
   );
 }

@@ -316,11 +316,16 @@ export default function AttitudeEra() {
                   "Austin 3:16" became a cultural phenomenon, The Rock launched a Hollywood career, 
                   and Triple H evolved into a corporate executive.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                                <p className="text-gray-700 leading-relaxed">
                   While modern WWE has returned to longer championship reigns and more structured 
                   storytelling, the Attitude Era proved that wrestling could be appointment television 
                   when champions felt like larger-than-life personalities rather than scripted characters.
                 </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
               </CardContent>
             </Card>
           </div>

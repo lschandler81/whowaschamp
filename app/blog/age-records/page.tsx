@@ -409,7 +409,7 @@ export default function AgeRecords() {
             </Card>
           </div>
         </div>
-      </section>
+        </div>      </section>
     </div>
   );
 }
