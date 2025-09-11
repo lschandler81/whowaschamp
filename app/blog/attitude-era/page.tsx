@@ -156,7 +156,7 @@ export default function AttitudeEra() {
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
                   <p className="text-red-800 font-medium">
                     💡 <strong>Did you know?</strong> The Attitude Era saw 47 title changes in just 5 years, 
-                    compared to only 12 changes in the previous 5 years of the "New Generation\" era.
+                    compared to only 12 changes in the previous 5 years of the "New Generation" era.
                   </p>
                 </div>
               </CardContent>

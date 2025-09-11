@@ -13,7 +13,7 @@
     "scrape": "node scripts/build_reigns.mjs",
     "scrape-all": "node scripts/build_reigns.mjs && node scripts/build_more_titles.mjs",
     "validate-coverage": "node scripts/validate_coverage.mjs",
-    "validate-data": "node -e \"require('./lib/schema').parseChampionshipData(require('./public/data/wwe_championship_reigns.json'))\""
+    "validate-data": "node -e 'require(\"./lib/schema\").parseChampionshipData(require(\"./public/data/wwe_championship_reigns.json\"))'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
