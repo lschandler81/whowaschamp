@@ -93,16 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AdSense Banner Placement */}
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg p-8 text-center">
-            <p className="text-gray-500 text-sm">Advertisement Space - 728x90 Banner</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Extra Features */}
       <Extras />
 
       {/* Footer */}

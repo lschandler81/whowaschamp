@@ -182,12 +182,7 @@ export default function MostChampionshipReigns() {
             ))}
           </div>
 
-          {/* AdSense Banner */}
-          <div className="mt-16">
-            <div className="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg p-8 text-center">
-              <p className="text-gray-500 text-sm">Advertisement Space - 728x90 Banner</p>
-            </div>
-          </div>
+         
         </div>
       </section>
     </div>

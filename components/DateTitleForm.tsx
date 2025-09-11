@@ -166,12 +166,7 @@ export function DateTitleForm() {
         </p>
       </div>
 
-      {/* AdSense Inline Ad */}
-      <div className="max-w-2xl mx-auto">
-        <div className="bg-gray-100 border border-gray-300 rounded-lg p-6 text-center">
-          <p className="text-gray-500 text-sm">Advertisement Space - 336x280 Rectangle</p>
-        </div>
-      </div>
+     
 
       {results.length > 0 && (
         <div className="space-y-8">

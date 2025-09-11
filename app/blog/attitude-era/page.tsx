@@ -228,12 +228,7 @@ export default function AttitudeEra() {
             ))}
           </div>
 
-          {/* AdSense Banner */}
-          <div className="mt-16">
-            <div className="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg p-8 text-center">
-              <p className="text-gray-500 text-sm">Advertisement Space - 728x90 Banner</p>
-            </div>
-          </div>
+         
 
           {/* Monday Night Wars Context */}
           <div className="mt-16">
@@ -306,13 +301,7 @@ export default function AttitudeEra() {
               </CardContent>
             </Card>
 
-            {/* AdSense Rectangle */}
-            <div className="mt-8">
-              <div className="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg p-6 text-center">
-                <p className="text-gray-500 text-sm">Advertisement Space - 336x280 Rectangle</p>
-              </div>
-            </div>
-          </div>
+            
 
           {/* Legacy Section */}
           <div className="mt-16">

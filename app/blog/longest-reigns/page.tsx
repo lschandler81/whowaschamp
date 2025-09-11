@@ -257,13 +257,7 @@ export default function LongestReigns() {
             </div>
           </div>
 
-          {/* AdSense Banner */}
-          <div className="mt-16">
-            <div className="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg p-8 text-center">
-              <p className="text-gray-500 text-sm">Advertisement Space - 728x90 Banner</p>
-            </div>
-          </div>
-
+         
           {/* Historical Context */}
           <div className="mt-16">
             <Card className="bg-white shadow-lg">
@@ -288,12 +282,7 @@ export default function LongestReigns() {
               </CardContent>
             </Card>
 
-            {/* AdSense Rectangle */}
-            <div className="mt-8">
-              <div className="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg p-6 text-center">
-                <p className="text-gray-500 text-sm">Advertisement Space - 336x280 Rectangle</p>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
