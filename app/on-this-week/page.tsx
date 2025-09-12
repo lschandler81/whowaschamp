@@ -33,8 +33,13 @@ function fmt(d: Date): string {
 
 async function getData() {
   const filePath = path.join(process.cwd(), 'public', 'data', 'on_this_day_events.min.json');
-  const raw = await fs.readFile(filePath, 'utf8');
-  const events: TitleChangeEvent[] = JSON.parse(raw);
+  let events: TitleChangeEvent[] = [];
+  try {
+    const raw = await fs.readFile(filePath, 'utf8');
+    events = JSON.parse(raw);
+  } catch {
+    events = [];
+  }
   const now = new Date();
   const { week, year, weekStart, weekEnd } = getISOWeek(now);
 

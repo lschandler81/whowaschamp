@@ -9,8 +9,13 @@ export const revalidate = 60 * 60 * 24; // 24 hours
 
 async function getData(): Promise<{ date: string; items: TitleChangeEvent[] }> {
   const filePath = path.join(process.cwd(), 'public', 'data', 'on_this_day_events.min.json');
-  const raw = await fs.readFile(filePath, 'utf8');
-  const events: TitleChangeEvent[] = JSON.parse(raw);
+  let events: TitleChangeEvent[] = [];
+  try {
+    const raw = await fs.readFile(filePath, 'utf8');
+    events = JSON.parse(raw);
+  } catch {
+    events = [];
+  }
   const d = new Date();
   const y = d.getUTCFullYear();
   const m = String(d.getUTCMonth() + 1).padStart(2, '0');
