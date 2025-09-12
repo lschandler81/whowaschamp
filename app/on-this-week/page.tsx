@@ -83,7 +83,7 @@ export default async function OnThisWeekPage() {
         {days.length === 0 && (
           <Card className="border rounded-xl bg-white shadow-sm">
             <CardContent className="p-6">
-              <p className="text-gray-700">No title changes recorded for this ISO week across years.</p>
+              <p className="text-gray-700">A quiet week — no title changes on record.</p>
             </CardContent>
           </Card>
         )}

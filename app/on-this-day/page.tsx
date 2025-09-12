@@ -53,7 +53,7 @@ export default async function OnThisDayPage() {
         {items.length === 0 && (
           <Card className="border rounded-xl bg-white shadow-sm">
             <CardContent className="p-6">
-              <p className="text-gray-700">No recorded title changes on this date across years.</p>
+              <p className="text-gray-700">A quiet day — no title changes on record.</p>
             </CardContent>
           </Card>
         )}
