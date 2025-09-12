@@ -6,6 +6,7 @@ import { toSlug } from '@/lib/slug';
 import { CalendarClock, ArrowLeft, Home } from 'lucide-react';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export const revalidate = 60 * 60 * 24; // 24 hours
 
@@ -103,15 +104,13 @@ export default async function OnThisDayPage() {
             );
           })}
         </div>
-        <nav aria-label="Breadcrumb" className="mt-8">
-          <div className="text-sm text-gray-700 flex items-center gap-2">
-            <Link href="/" className="hover:text-red-600 inline-flex items-center gap-1">
-              <Home className="h-4 w-4" /> Home
-            </Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-gray-600">This Day in Wrestling</span>
-          </div>
-        </nav>
+        <Breadcrumbs
+          className="mt-8"
+          items={[
+            { label: 'Home', href: '/', icon: <Home className="h-4 w-4" /> },
+            { label: 'This Day in Wrestling' },
+          ]}
+        />
       </div>
     </div>
   );
