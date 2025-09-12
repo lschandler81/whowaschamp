@@ -3,7 +3,24 @@ import { Badge } from '@/components/ui/badge';
 import { Clock, Calendar, ArrowLeft, Zap, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-
+        {/* Related Posts */}
+        <section className="mt-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Posts</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Link href="/blog/longest-reigns" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                Read about the longest WWE Championship reigns in history
+              </Link>
+              <Link href="/blog/age-records" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                Explore the youngest and oldest WWE champions
+              </Link>
+              <Link href="/blog/most-championship-reigns" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                Discover who holds the most world championship reigns
+              </Link>
+            </div>
+          </div>
+        </section>
+        
 export const metadata: Metadata = {
   title: 'Shortest Championship Reigns in Wrestling History | Birthday Champion Finder',
   description: 'Explore the briefest championship reigns in wrestling history, from André the Giant\'s 1-minute reign to shocking title changes that lasted mere seconds.',

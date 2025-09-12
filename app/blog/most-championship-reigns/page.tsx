@@ -3,7 +3,24 @@ import { Badge } from '@/components/ui/badge';
 import { Trophy, Calendar, ArrowLeft, Crown, Award, Users } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-
+        {/* Related Posts */}
+        <section className="mt-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Posts</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Link href="/blog/longest-reigns" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                Read about the longest WWE Championship reigns in history
+              </Link>
+              <Link href="/blog/age-records" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                Explore the youngest and oldest WWE champions
+              </Link>
+              <Link href="/blog/era-defining-reigns" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                See era-defining championship reigns that changed wrestling
+              </Link>
+            </div>
+          </div>
+        </section>
+        
 export const metadata: Metadata = {
   title: 'Most Championship Reigns of All Time | Birthday Champion Finder',
   description: 'Discover which wrestling legends hold the record for most championship reigns, from Ric Flair\'s legendary 16 world titles to John Cena\'s record-tying achievements.',

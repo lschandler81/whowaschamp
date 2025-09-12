@@ -74,6 +74,23 @@ export default function BeltDesignEvolution() {
             <ArrowLeft className="h-4 w-4" />
             Back to Champion Finder
           </Link>
+          {/* Related Posts */}
+          <section className="mt-16">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Posts</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Link href="/blog/championship-lineages" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                  Explore how championship lineages evolved across eras
+                </Link>
+                <Link href="/blog/era-defining-reigns" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                  See era-defining championship reigns that changed wrestling
+                </Link>
+                <Link href="/blog/most-championship-reigns" className="block p-4 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
+                  Discover who holds the most world championship reigns
+                </Link>
+              </div>
+            </div>
+          </section>
           
           <div className="flex items-center gap-4 mb-6">
             <div className="p-3 bg-yellow-500 rounded-full">
