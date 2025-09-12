@@ -1,6 +1,5 @@
 import { Separator } from '@/components/ui/separator';
 import { Github, Shield, Database, Clock } from 'lucide-react';
-import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -44,21 +43,13 @@ export function Footer() {
               Our database is automatically refreshed twice weekly using GitHub Actions 
               to ensure the most current championship information.
             </p>
-            <div className="flex flex-col gap-2 mt-3">
-              <Link href="/on-this-day" className="text-blue-400 hover:text-blue-300 text-sm">
-                On This Day
-              </Link>
-              <Link href="/on-this-week" className="text-blue-400 hover:text-blue-300 text-sm">
-                On This Week
-              </Link>
-              <a 
-                href="#" 
-                className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm"
-              >
-                <Github className="h-4 w-4" />
-                View on GitHub
-              </a>
-            </div>
+            <a 
+              href="#" 
+              className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm"
+            >
+              <Github className="h-4 w-4" />
+              View on GitHub
+            </a>
           </div>
         </div>
 

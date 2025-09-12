@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -54,6 +55,24 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className}>
+        <header className="bg-white border-b">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+            <Link href="/" className="text-lg font-semibold tracking-tight text-gray-900 hover:text-red-600">
+              WhoWasChamp
+            </Link>
+            <nav className="flex items-center gap-6">
+              <Link href="/on-this-day" className="text-sm font-medium text-gray-700 hover:text-red-600 transition-colors">
+                On This Day
+              </Link>
+              <Link href="/on-this-week" className="text-sm font-medium text-gray-700 hover:text-red-600 transition-colors">
+                On This Week
+              </Link>
+              <Link href="/blog" className="text-sm font-medium text-gray-700 hover:text-red-600 transition-colors">
+                Articles
+              </Link>
+            </nav>
+          </div>
+        </header>
         {children}
       </body>
     </html>

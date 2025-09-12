@@ -1,9 +1,11 @@
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { TitleChangeEvent } from '@/lib/types/on-this-day';
 import { toSlug } from '@/lib/slug';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { CalendarRange, ArrowLeft, Home } from 'lucide-react';
 
 export const revalidate = 60 * 60 * 24 * 7; // 7 days
 
@@ -64,15 +66,29 @@ export default async function OnThisWeekPage() {
   const { weekStart, weekEnd, itemsByDate } = await getData();
   const days = Object.keys(itemsByDate).sort();
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">This Week in Wrestling</h1>
-        <p className="text-gray-600 mb-8">Week Range: {prettyDate(weekStart)} – {prettyDate(weekEnd)}</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-12 md:py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-6">
+          <Link href="/" className="inline-flex items-center gap-2 text-sm text-gray-700 hover:text-red-600">
+            <ArrowLeft className="h-4 w-4" /> Back to home
+          </Link>
+        </div>
+        <div className="flex items-center gap-3 mb-2">
+          <CalendarRange className="h-6 w-6 text-red-600" />
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">On This Week in Wrestling</h1>
+        </div>
+        <p className="text-sm text-gray-600 mb-8">{prettyDate(weekStart)} – {prettyDate(weekEnd)}</p>
 
         {days.length === 0 && (
-          <div className="p-6 bg-white rounded-lg shadow">
-            <p className="text-gray-700">No title changes recorded for this ISO week across years.</p>
-          </div>
+          <Card className="border rounded-xl bg-white shadow-sm">
+            <CardContent className="p-6">
+              <p className="text-gray-700">No title changes recorded for this ISO week across years.</p>
+              <div className="mt-3 flex items-center gap-4">
+                <Link href="/on-this-day" className="text-gray-900 hover:text-red-600 text-sm font-medium">On This Day</Link>
+                <Link href="/" className="text-gray-900 hover:text-red-600 text-sm font-medium">Home</Link>
+              </div>
+            </CardContent>
+          </Card>
         )}
 
         <div className="space-y-8">
@@ -85,46 +101,54 @@ export default async function OnThisWeekPage() {
                   const newHref = `/wrestlers/${toSlug(e.new_champion)}`;
                   const prevHref = e.previous_champion ? `/wrestlers/${toSlug(e.previous_champion)}` : undefined;
                   return (
-                    <div key={e.slug} className="p-6 bg-white rounded-lg shadow">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="text-sm text-gray-500">{e.date}</div>
-                        <Badge className="bg-blue-100 text-blue-800">{e.promotion}</Badge>
-                      </div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <Link href={beltHref} className="text-blue-600 hover:underline font-medium">
-                          {e.belt_name}
-                        </Link>
-                      </div>
-                      <div className="text-gray-800 mb-2">
-                        {prevHref ? (
-                          <>
-                            <Link href={prevHref} className="text-gray-900 font-semibold hover:underline">
-                              {e.previous_champion}
-                            </Link>
-                            <span className="mx-2">→</span>
-                          </>
-                        ) : (
-                          <>
-                            <span className="font-semibold">New Champion:</span>
-                            <span className="mx-2" />
-                          </>
-                        )}
-                        <Link href={newHref} className="text-gray-900 font-semibold hover:underline">
-                          {e.new_champion}
-                        </Link>
-                      </div>
-                      {(e.event || e.location) && (
-                        <div className="text-sm text-gray-600 mb-1">
-                          {e.event && <span className="font-medium">{e.event}</span>} {e.location && <span>• {e.location}</span>}
+                    <Card key={e.slug} className="border rounded-xl bg-white shadow-sm">
+                      <CardContent className="p-6 space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="text-base font-semibold text-gray-900">{e.date}</div>
+                          <Badge className="bg-blue-100 text-blue-800">{e.promotion}</Badge>
                         </div>
-                      )}
-                      {e.notes && <div className="text-sm text-gray-600">{e.notes}</div>}
-                    </div>
+                        <div className="flex items-center gap-2">
+                          <Link href={beltHref} className="text-gray-900 hover:text-red-600 font-medium">
+                            {e.belt_name}
+                          </Link>
+                        </div>
+                        <div className="text-gray-800">
+                          {prevHref ? (
+                            <>
+                              <Link href={prevHref} className="text-gray-900 font-semibold hover:text-red-600">
+                                {e.previous_champion}
+                              </Link>
+                              <span className="mx-2">→</span>
+                            </>
+                          ) : (
+                            <>
+                              <span className="font-semibold">New Champion:</span>
+                              <span className="mx-2" />
+                            </>
+                          )}
+                          <Link href={newHref} className="text-gray-900 font-semibold hover:text-red-600">
+                            {e.new_champion}
+                          </Link>
+                        </div>
+                        {(e.event || e.location) && (
+                          <div className="text-sm text-gray-600">
+                            {e.event && <span className="font-medium">{e.event}</span>} {e.location && <span>• {e.location}</span>}
+                          </div>
+                        )}
+                        {e.notes && <div className="text-sm text-gray-600">{e.notes}</div>}
+                      </CardContent>
+                    </Card>
                   );
                 })}
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-8 flex items-center gap-4">
+          <Link href="/" className="text-sm text-gray-700 hover:text-red-600 inline-flex items-center gap-1">
+            <Home className="h-4 w-4" /> Home
+          </Link>
+          <Link href="/on-this-day" className="text-sm text-gray-700 hover:text-red-600">On This Day</Link>
         </div>
       </div>
     </div>
