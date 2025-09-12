@@ -83,10 +83,6 @@ export default async function OnThisWeekPage() {
           <Card className="border rounded-xl bg-white shadow-sm">
             <CardContent className="p-6">
               <p className="text-gray-700">No title changes recorded for this ISO week across years.</p>
-              <div className="mt-3 flex items-center gap-4">
-                <Link href="/on-this-day" className="text-gray-900 hover:text-red-600 text-sm font-medium">This Day in Wrestling</Link>
-                <Link href="/" className="text-gray-900 hover:text-red-600 text-sm font-medium">Home</Link>
-              </div>
             </CardContent>
           </Card>
         )}
@@ -144,12 +140,15 @@ export default async function OnThisWeekPage() {
             </div>
           ))}
         </div>
-        <div className="mt-8 flex items-center gap-4">
-          <Link href="/" className="text-sm text-gray-700 hover:text-red-600 inline-flex items-center gap-1">
-            <Home className="h-4 w-4" /> Home
-          </Link>
-          <Link href="/on-this-day" className="text-sm text-gray-700 hover:text-red-600">This Day in Wrestling</Link>
-        </div>
+        <nav aria-label="Breadcrumb" className="mt-8">
+          <div className="text-sm text-gray-700 flex items-center gap-2">
+            <Link href="/" className="hover:text-red-600 inline-flex items-center gap-1">
+              <Home className="h-4 w-4" /> Home
+            </Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-600">This Week in Wrestling</span>
+          </div>
+        </nav>
       </div>
     </div>
   );
