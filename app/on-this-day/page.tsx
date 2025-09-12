@@ -2,15 +2,23 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { TitleChangeEvent } from '@/lib/types/on-this-day';
 import { toSlug } from '@/lib/slug';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
 
 export const revalidate = 60 * 60 * 24; // 24 hours
 
-async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/on-this-day`, {
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error('Failed to fetch on-this-day');
-  return res.json() as Promise<{ date: string; items: TitleChangeEvent[] }>;
+async function getData(): Promise<{ date: string; items: TitleChangeEvent[] }> {
+  const filePath = path.join(process.cwd(), 'public', 'data', 'on_this_day_events.min.json');
+  const raw = await fs.readFile(filePath, 'utf8');
+  const events: TitleChangeEvent[] = JSON.parse(raw);
+  const d = new Date();
+  const y = d.getUTCFullYear();
+  const m = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(d.getUTCDate()).padStart(2, '0');
+  const today = `${y}-${m}-${day}`;
+  const md = today.slice(5, 10);
+  const items = events.filter((e) => e.date.slice(5, 10) === md);
+  return { date: today, items };
 }
 
 function prettyDate(d: string) {
@@ -80,4 +88,3 @@ export default async function OnThisDayPage() {
     </div>
   );
 }
-

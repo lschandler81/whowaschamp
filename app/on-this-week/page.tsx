@@ -2,15 +2,52 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { TitleChangeEvent } from '@/lib/types/on-this-day';
 import { toSlug } from '@/lib/slug';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
 
 export const revalidate = 60 * 60 * 24 * 7; // 7 days
 
+function toDateUTC(str: string): Date {
+  const [y, m, d] = str.split('-').map((x) => Number(x));
+  return new Date(Date.UTC(y, m - 1, d));
+}
+
+function getISOWeek(date: Date): { week: number; year: number; weekStart: Date; weekEnd: Date } {
+  const d = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+  const dayNum = (d.getUTCDay() + 6) % 7; // Monday=0
+  d.setUTCDate(d.getUTCDate() - dayNum + 3);
+  const firstThursday = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+  const diff = d.getTime() - firstThursday.getTime();
+  const week = 1 + Math.round(diff / (7 * 24 * 3600 * 1000));
+  const weekStart = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() - dayNum));
+  const weekEnd = new Date(Date.UTC(weekStart.getUTCFullYear(), weekStart.getUTCMonth(), weekStart.getUTCDate() + 6));
+  return { week, year: d.getUTCFullYear(), weekStart, weekEnd };
+}
+
+function fmt(d: Date): string {
+  const y = d.getUTCFullYear();
+  const m = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(d.getUTCDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/on-this-week`, {
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error('Failed to fetch on-this-week');
-  return res.json() as Promise<{ weekStart: string; weekEnd: string; itemsByDate: Record<string, TitleChangeEvent[]> }>;
+  const filePath = path.join(process.cwd(), 'public', 'data', 'on_this_day_events.min.json');
+  const raw = await fs.readFile(filePath, 'utf8');
+  const events: TitleChangeEvent[] = JSON.parse(raw);
+  const now = new Date();
+  const { week, year, weekStart, weekEnd } = getISOWeek(now);
+
+  const itemsByDate: Record<string, TitleChangeEvent[]> = {};
+  for (const e of events) {
+    const d = toDateUTC(e.date);
+    const { week: ew, year: ey } = getISOWeek(d);
+    if (ew === week && ey === year) {
+      if (!itemsByDate[e.date]) itemsByDate[e.date] = [];
+      itemsByDate[e.date].push(e);
+    }
+  }
+  return { weekStart: fmt(weekStart), weekEnd: fmt(weekEnd), itemsByDate };
 }
 
 function prettyDate(d: string) {
@@ -88,4 +125,3 @@ export default async function OnThisWeekPage() {
     </div>
   );
 }
-
