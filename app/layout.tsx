@@ -6,6 +6,7 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.whowaschamp.com'),
   title: 'Birthday Champion Finder - Who Was Wrestling Champion on Your Birthday?',
   description: 'Discover which wrestling legend held the championship belt on the day you were born. Find your birthday champion instantly with our interactive lookup tool.',
   keywords: 'wrestling champions, WWE championship, birthday lookup, wrestling history, professional wrestling',
