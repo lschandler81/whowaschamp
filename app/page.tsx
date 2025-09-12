@@ -4,7 +4,6 @@ import { Footer } from '@/components/Footer';
 import { Trophy, Calendar, Users, TrendingUp, CalendarClock, CalendarRange } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Link from 'next/link';
 
 export default function Home() {
   return (
