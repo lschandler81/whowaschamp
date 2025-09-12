@@ -1,9 +1,9 @@
 import { DateTitleForm } from '@/components/DateTitleForm';
 import { Extras } from '@/components/Extras';
 import { Footer } from '@/components/Footer';
-import { Trophy, Calendar, Users, TrendingUp, CalendarClock, CalendarRange } from 'lucide-react';
+import { Trophy, Calendar, Users, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+// No card tiles on the homepage for now
 
 export default function Home() {
   return (
@@ -36,56 +36,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick history hits */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Quick history hits</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-            <Link href="/on-this-day" className="group block">
-              <Card className="border rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
-                <CardHeader>
-                  <div className="h-10 w-10 rounded-full bg-red-50 flex items-center justify-center mb-2">
-                    <CalendarClock className="h-5 w-5 text-red-600" />
-                  </div>
-                  <CardTitle className="text-gray-900 text-lg font-semibold group-hover:text-red-600 transition-colors">
-                    This Day in Wrestling
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Title changes and big moments that happened on today’s date.
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/on-this-week" className="group block">
-              <Card className="border rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
-                <CardHeader>
-                  <div className="h-10 w-10 rounded-full bg-red-50 flex items-center justify-center mb-2">
-                    <CalendarRange className="h-5 w-5 text-red-600" />
-                  </div>
-                  <CardTitle className="text-gray-900 text-lg font-semibold group-hover:text-red-600 transition-colors">
-                    This Week in Wrestling
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    A week-by-week look at famous championship shifts.
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Main Form Section */}
       <section className="py-16 sm:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <DateTitleForm />
         </div>
       </section>
+
+      
 
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-br from-white to-gray-50">
@@ -138,7 +96,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* Popular Posts */}
       <section className="py-16 bg-gradient-to-br from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
