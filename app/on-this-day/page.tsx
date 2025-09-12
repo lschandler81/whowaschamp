@@ -45,7 +45,7 @@ export default async function OnThisDayPage() {
         </div>
         <div className="flex items-center gap-3 mb-2">
           <CalendarClock className="h-6 w-6 text-red-600" />
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">On This Day in Wrestling</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">This Day in Wrestling</h1>
         </div>
         <p className="text-sm text-gray-600 mb-8">{prettyDate(date)}</p>
 
@@ -54,7 +54,7 @@ export default async function OnThisDayPage() {
             <CardContent className="p-6">
               <p className="text-gray-700">No recorded title changes on this date across years.</p>
               <div className="mt-3 flex items-center gap-4">
-                <Link href="/on-this-week" className="text-gray-900 hover:text-red-600 text-sm font-medium">On This Week</Link>
+                <Link href="/on-this-week" className="text-gray-900 hover:text-red-600 text-sm font-medium">This Week in Wrestling</Link>
                 <Link href="/" className="text-gray-900 hover:text-red-600 text-sm font-medium">Home</Link>
               </div>
             </CardContent>

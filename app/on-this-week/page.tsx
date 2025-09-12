@@ -75,7 +75,7 @@ export default async function OnThisWeekPage() {
         </div>
         <div className="flex items-center gap-3 mb-2">
           <CalendarRange className="h-6 w-6 text-red-600" />
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">On This Week in Wrestling</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">This Week in Wrestling</h1>
         </div>
         <p className="text-sm text-gray-600 mb-8">{prettyDate(weekStart)} – {prettyDate(weekEnd)}</p>
 
@@ -84,7 +84,7 @@ export default async function OnThisWeekPage() {
             <CardContent className="p-6">
               <p className="text-gray-700">No title changes recorded for this ISO week across years.</p>
               <div className="mt-3 flex items-center gap-4">
-                <Link href="/on-this-day" className="text-gray-900 hover:text-red-600 text-sm font-medium">On This Day</Link>
+                <Link href="/on-this-day" className="text-gray-900 hover:text-red-600 text-sm font-medium">This Day in Wrestling</Link>
                 <Link href="/" className="text-gray-900 hover:text-red-600 text-sm font-medium">Home</Link>
               </div>
             </CardContent>
@@ -148,7 +148,7 @@ export default async function OnThisWeekPage() {
           <Link href="/" className="text-sm text-gray-700 hover:text-red-600 inline-flex items-center gap-1">
             <Home className="h-4 w-4" /> Home
           </Link>
-          <Link href="/on-this-day" className="text-sm text-gray-700 hover:text-red-600">On This Day</Link>
+          <Link href="/on-this-day" className="text-sm text-gray-700 hover:text-red-600">This Day in Wrestling</Link>
         </div>
       </div>
     </div>

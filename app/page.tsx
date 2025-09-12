@@ -48,7 +48,7 @@ export default function Home() {
                     <CalendarClock className="h-5 w-5 text-red-600" />
                   </div>
                   <CardTitle className="text-gray-900 text-lg font-semibold group-hover:text-red-600 transition-colors">
-                    On This Day
+                    This Day in Wrestling
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -66,7 +66,7 @@ export default function Home() {
                     <CalendarRange className="h-5 w-5 text-red-600" />
                   </div>
                   <CardTitle className="text-gray-900 text-lg font-semibold group-hover:text-red-600 transition-colors">
-                    On This Week
+                    This Week in Wrestling
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
