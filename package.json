@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "build:onthisday": "node scripts/build_on_this_day.mjs",
+    "build:ufc-events": "node scripts/build_ufc_events.mjs",
+    "build:ufc-reigns": "node scripts/build_ufc_reigns.mjs",
     "build": "npm run build:onthisday && next build",
     "dev": "next dev",
     "start": "next start",

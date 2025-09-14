@@ -52,26 +52,46 @@ export function DateTitleForm() {
     setError('');
     const foundResults: any[] = [];
     
-    // Pick the data pool based on selected sport
-    const pool = sport === 'wrestling' ? WRESTLING_CHAMPIONSHIPS : UFC_CHAMPIONSHIPS;
-    const activeChampionships = pool.filter(c => c.active);
-
-    if (sport === 'ufc' && activeChampionships.length === 0) {
-      setLoading(false);
-      setResults([]);
-      setError("UFC titles coming soon — we\'re adding reign data next.");
-      return;
+    // Build active list based on selected sport
+    let activeChampionships = (sport === 'wrestling' ? WRESTLING_CHAMPIONSHIPS : UFC_CHAMPIONSHIPS).filter(c => c.active);
+    // If UFC is selected, augment from a manifest so new belts appear automatically
+    if (sport === 'ufc') {
+      try {
+        const resp = await fetch('/data/ufc_titles.json');
+        if (resp.ok) {
+          const list = await resp.json();
+          if (Array.isArray(list)) {
+            const existing = new Set(activeChampionships.map(c => c.file));
+            const extra = list.filter((t: any) => t && t.active && t.file && !existing.has(t.file));
+            activeChampionships = activeChampionships.concat(extra);
+          }
+        }
+      } catch (e) {
+        console.warn('ufc_titles.json not available; using built-in UFC list only');
+      }
+      if (activeChampionships.length === 0) {
+        setLoading(false);
+        setResults([]);
+        setError('UFC titles coming soon — we\'re adding reign data next.');
+        return;
+      }
     }
     
     try {
       // Load data for all active championships
+      const tempResults: any[] = [];
       for (const championship of activeChampionships) {
         try {
           const response = await fetch(`/data/${championship.file}`);
           console.log(`${championship.name} fetch response status:`, response.status);
           
           if (response.ok) {
-            const data = await response.json();
+            const raw = await response.json();
+            const data = Array.isArray(raw) ? raw : (raw && Array.isArray(raw.reigns) ? raw.reigns : []);
+            if (!Array.isArray(data) || data.length === 0) {
+              console.warn(`No reigns array for ${championship.name}`);
+              continue;
+            }
             console.log(`Loaded ${championship.name} data:`, data.slice(0, 2));
             console.log(`Sample champion object structure:`, Object.keys(data[0] || {}));
             
@@ -80,9 +100,9 @@ export function DateTitleForm() {
             console.log(`Found ${championship.name} champion:`, champion);
             console.log(`Champion object keys:`, champion ? Object.keys(champion) : 'No champion found');
             
-            if (champion) {
+            if (champion && typeof champion.start_date === 'string' && /\d{4}-\d{2}-\d{2}/.test(champion.start_date)) {
              console.log(`Adding ${championship.name} result for champion:`, champion.champion);
-              foundResults.push({
+              tempResults.push({
                 champion,
                 championship: championship.name,
                 birthDate: new Date(birthDate),
@@ -99,9 +119,17 @@ export function DateTitleForm() {
           console.error(`Failed to load ${championship.name} data:`, err);
         }
       }
-      
-     console.log(`Total results found:`, foundResults.length);
-     console.log(`Results by championship:`, foundResults.map(r => r.championship));
+      // Deduplicate by (championship, champion name, start_date)
+      const seen = new Set<string>();
+      for (const r of tempResults) {
+        const key = `${r.championship}|${r.champion?.champion}|${r.champion?.start_date}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          foundResults.push(r);
+        }
+      }
+      console.log(`Total results found:`, foundResults.length);
+      console.log(`Results by championship:`, foundResults.map(r => r.championship));
       setResults(foundResults);
       
       if (foundResults.length === 0) {
@@ -221,87 +249,88 @@ export function DateTitleForm() {
             <p className="text-gray-600">Here are the champions who held title gold on your special day.</p>
           </div>
           
-          {/* Categorize results */}
-          {(() => {
-            const categories = {
-              mens_world: results.filter(r => 
-                r.championship.includes('WWE Championship') || 
-                r.championship.includes('WWE Universal Championship') ||
-                r.championship.includes('World Heavyweight Championship') ||
-                r.championship.includes('NWA Worlds Heavyweight Championship') ||
-                r.championship.includes('IWGP') ||
-                r.championship.includes('ECW World Heavyweight Championship') ||
-                r.championship.includes('WWE ECW Championship') ||
-                r.championship.includes('WCW World') || 
-                r.championship.includes('AEW World') ||
-                r.championship.includes('TNA/Impact World')
-              ),
-              womens: results.filter(r => r.championship.includes('Women\'s')),
-              developmental: results.filter(r => r.championship.includes('NXT')),
-              secondary: results.filter(r => 
-                r.championship.includes('Intercontinental') ||
-                r.championship.includes('United States') ||
-                r.championship.includes('Television')
-              )
-            };
-            
-            return (
-              <div className="space-y-12">
-                {categories.mens_world.length > 0 && (
-                  <div>
-                    <h3 className="text-xl font-bold text-center mb-6 text-blue-800">
-                      🏆 World Championships
-                    </h3>
-                    <div className="space-y-8">
-                      {categories.mens_world.map((result, index) => (
-                        <ResultCard key={`mens-${index}`} {...result} />
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                {categories.womens.length > 0 && (
-                  <div>
-                    <h3 className="text-xl font-bold text-center mb-6 text-pink-800">
-                      👑 Women's Championships
-                    </h3>
-                    <div className="space-y-8">
-                      {categories.womens.map((result, index) => (
-                        <ResultCard key={`womens-${index}`} {...result} />
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                {categories.developmental.length > 0 && (
-                  <div>
-                    <h3 className="text-xl font-bold text-center mb-6 text-yellow-800">
-                      ⭐ Developmental Championships
-                    </h3>
-                    <div className="space-y-8">
-                      {categories.developmental.map((result, index) => (
-                        <ResultCard key={`dev-${index}`} {...result} />
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                {categories.secondary.length > 0 && (
-                  <div>
-                    <h3 className="text-xl font-bold text-center mb-6 text-green-800">
-                      🥈 Secondary Championships
-                    </h3>
-                    <div className="space-y-8">
-                      {categories.secondary.map((result, index) => (
-                        <ResultCard key={`secondary-${index}`} {...result} />
-                      ))}
-                    </div>
-                  </div>
-                )}
-
+          {/* Render results: UFC simple list; Wrestling grouped */}
+          {sport === 'ufc' ? (
+            <div className="space-y-12">
+              <div>
+                <h3 className="text-xl font-bold text-center mb-6 text-blue-800">🥋 UFC Titles</h3>
+                <div className="space-y-8">
+                  {results.map((result, index) => (
+                    <ResultCard key={`ufc-${index}`} {...result} />
+                  ))}
+                </div>
               </div>
-            );
-          })()}
+            </div>
+          ) : (
+            (() => {
+              const categories = {
+                mens_world: results.filter(r => 
+                  r.championship.includes('WWE Championship') || 
+                  r.championship.includes('WWE Universal Championship') ||
+                  r.championship.includes('World Heavyweight Championship') ||
+                  r.championship.includes('NWA Worlds Heavyweight Championship') ||
+                  r.championship.includes('IWGP') ||
+                  r.championship.includes('ECW World Heavyweight Championship') ||
+                  r.championship.includes('WWE ECW Championship') ||
+                  r.championship.includes('WCW World') || 
+                  r.championship.includes('AEW World') ||
+                  r.championship.includes('TNA/Impact World')
+                ),
+                womens: results.filter(r => r.championship.includes('Women\'s')),
+                developmental: results.filter(r => r.championship.includes('NXT')),
+                secondary: results.filter(r => 
+                  r.championship.includes('Intercontinental') ||
+                  r.championship.includes('United States') ||
+                  r.championship.includes('Television')
+                )
+              };
+              
+              return (
+                <div className="space-y-12">
+                  {categories.mens_world.length > 0 && (
+                    <div>
+                      <h3 className="text-xl font-bold text-center mb-6 text-blue-800">🏆 World Championships</h3>
+                      <div className="space-y-8">
+                        {categories.mens_world.map((result, index) => (
+                          <ResultCard key={`mens-${index}`} {...result} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {categories.womens.length > 0 && (
+                    <div>
+                      <h3 className="text-xl font-bold text-center mb-6 text-pink-800">👑 Women's Championships</h3>
+                      <div className="space-y-8">
+                        {categories.womens.map((result, index) => (
+                          <ResultCard key={`womens-${index}`} {...result} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {categories.developmental.length > 0 && (
+                    <div>
+                      <h3 className="text-xl font-bold text-center mb-6 text-yellow-800">⭐ Developmental Championships</h3>
+                      <div className="space-y-8">
+                        {categories.developmental.map((result, index) => (
+                          <ResultCard key={`dev-${index}`} {...result} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {categories.secondary.length > 0 && (
+                    <div>
+                      <h3 className="text-xl font-bold text-center mb-6 text-green-800">🥈 Secondary Championships</h3>
+                      <div className="space-y-8">
+                        {categories.secondary.map((result, index) => (
+                          <ResultCard key={`secondary-${index}`} {...result} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })()
+          )}
         </div>
       )}
     </div>
