@@ -1,9 +1,120 @@
 [
   {
     "title_key": "ufc_mens_welterweight",
-    "title_name": "Ufc Mens Welterweight Championship",
-    "champion": "Placeholder Champion",
-    "start_date": "2020-01-01",
-    "end_date": null
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Pat Miletich",
+    "start_date": "1998-05-15",
+    "end_date": "2001-05-04",
+    "won_event": "UFC 17",
+    "won_location": "Mobile, AL"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Carlos Newton",
+    "start_date": "2001-05-05",
+    "end_date": "2001-11-01",
+    "won_event": "UFC 31",
+    "won_location": "Atlantic City, NJ"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Matt Hughes",
+    "start_date": "2001-11-02",
+    "end_date": "2004-10-21",
+    "won_event": "UFC 34",
+    "won_location": "Las Vegas, NV"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "BJ Penn",
+    "start_date": "2004-10-22",
+    "end_date": "2006-01-20",
+    "won_event": "UFC 46",
+    "won_location": "Las Vegas, NV"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Matt Hughes",
+    "start_date": "2006-01-21",
+    "end_date": "2007-04-06",
+    "won_event": "UFC 63",
+    "won_location": "Anaheim, CA"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Matt Serra",
+    "start_date": "2007-04-07",
+    "end_date": "2008-04-18",
+    "won_event": "UFC 69",
+    "won_location": "Houston, TX"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Georges St-Pierre",
+    "start_date": "2008-04-19",
+    "end_date": "2013-11-15",
+    "won_event": "UFC 83",
+    "won_location": "Montreal, QC"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "VACANT",
+    "start_date": "2013-11-16",
+    "end_date": "2014-03-14",
+    "won_event": "Vacated",
+    "won_location": "N/A",
+    "notes": "Georges St-Pierre vacated title due to personal reasons"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Johny Hendricks",
+    "start_date": "2014-03-15",
+    "end_date": "2015-03-13",
+    "won_event": "UFC 171",
+    "won_location": "Dallas, TX"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Robbie Lawler",
+    "start_date": "2015-03-14",
+    "end_date": "2016-07-29",
+    "won_event": "UFC 185",
+    "won_location": "Dallas, TX"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Tyron Woodley",
+    "start_date": "2016-07-30",
+    "end_date": "2019-03-01",
+    "won_event": "UFC 201",
+    "won_location": "Atlanta, GA"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Kamaru Usman",
+    "start_date": "2019-03-02",
+    "end_date": "2022-08-19",
+    "won_event": "UFC 235",
+    "won_location": "Las Vegas, NV"
+  },
+  {
+    "title_key": "ufc_mens_welterweight",
+    "title_name": "UFC Men's Welterweight Championship",
+    "champion": "Leon Edwards",
+    "start_date": "2022-08-20",
+    "end_date": null,
+    "won_event": "UFC 278",
+    "won_location": "Salt Lake City, UT"
   }
 ]

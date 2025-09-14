@@ -107,11 +107,26 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
               </div>
             </div>
             <CardTitle className="text-3xl font-bold text-gray-900 mb-2">
-              {getChampionshipIcon(championship)} Your Birthday Champion! {getChampionshipIcon(championship)}
+              {champion.champion === 'VACANT' ? '👑 Title Was Vacant! 👑' : `${getChampionshipIcon(championship)} Your Birthday Champion! ${getChampionshipIcon(championship)}`}
             </CardTitle>
             <div className="text-xl text-gray-700">
-              <strong className="text-2xl text-blue-800">{champion.champion || champion.name || 'Unknown Champion'}</strong> was the{' '}
-              <span className="font-semibold text-indigo-600">{championship}</span> champion
+              {champion.champion === 'VACANT' ? (
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-orange-600">
+                    The <span className="font-semibold text-indigo-600">{championship}</span> title was vacant on your birthday!
+                  </div>
+                  {champion.notes && (
+                    <div className="text-lg text-gray-600 bg-orange-50 p-3 rounded-lg border-l-4 border-orange-400">
+                      <strong>Reason:</strong> {champion.notes}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <>
+                  <strong className="text-2xl text-blue-800">{champion.champion || champion.name || 'Unknown Champion'}</strong> was the{' '}
+                  <span className="font-semibold text-indigo-600">{championship}</span> champion
+                </>
+              )}
             </div>
           </CardHeader>
 
@@ -173,32 +188,51 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
             {/* Fun Facts */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Fun Facts</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="text-center">
-                  <Badge variant="outline" className="mb-2 bg-white">Reign Length</Badge>
-                  <p className="text-2xl font-bold text-blue-600">{Math.max(0, reignLength)}</p>
-                  <p className="text-sm text-gray-600">days</p>
-                </div>
-                {!championship.includes('UFC') && (
-                  <div className="text-center">
-                    <Badge variant="outline" className="mb-2 bg-white">Era</Badge>
-                    <p className="text-xl font-bold text-purple-600">{reignStart ? getWrestlingEra(reignStart.getFullYear()) : '—'}</p>
-                    <p className="text-sm text-gray-600">era</p>
-                  </div>
-                )}
-                {champion.won_event && (
-                  <div className="text-center">
-                    <Badge variant="outline" className="mb-2 bg-white">Won At</Badge>
-                    <p className="text-lg font-bold text-green-600">{champion.won_event}</p>
-                    <p className="text-sm text-gray-600">event</p>
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {champion.champion === 'VACANT' ? (
+                  <>
+                    <div className="text-center">
+                      <Badge variant="outline" className="mb-2 bg-orange-100 text-orange-800 border-orange-300">Vacant Period</Badge>
+                      <p className="text-2xl font-bold text-orange-600">{Math.max(0, reignLength)}</p>
+                      <p className="text-sm text-gray-600">days vacant</p>
+                    </div>
+                    {champion.won_event && (
+                      <div className="text-center">
+                        <Badge variant="outline" className="mb-2 bg-orange-100 text-orange-800 border-orange-300">Status</Badge>
+                        <p className="text-lg font-bold text-orange-600">{champion.won_event}</p>
+                        <p className="text-sm text-gray-600">action</p>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <div className="text-center">
+                      <Badge variant="outline" className="mb-2 bg-white">Reign Length</Badge>
+                      <p className="text-2xl font-bold text-blue-600">{Math.max(0, reignLength)}</p>
+                      <p className="text-sm text-gray-600">days</p>
+                    </div>
+                    {champion.won_event && (
+                      <div className="text-center">
+                        <Badge variant="outline" className="mb-2 bg-white">Won At</Badge>
+                        <p className="text-lg font-bold text-green-600">{champion.won_event}</p>
+                        <p className="text-sm text-gray-600">event</p>
+                      </div>
+                    )}
+                    {!champion.won_event && (
+                      <div className="text-center">
+                        <Badge variant="outline" className="mb-2 bg-white">Champion</Badge>
+                        <p className="text-lg font-bold text-gray-700">{champion.champion}</p>
+                        <p className="text-sm text-gray-600">name</p>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
               
               {/* Additional notes if present */}
               {champion.notes && (
-                <div className="mt-4 p-3 bg-blue-100 rounded-lg">
-                  <p className="text-sm text-blue-700">{champion.notes}</p>
+                <div className={`mt-4 p-3 rounded-lg ${champion.champion === 'VACANT' ? 'bg-orange-100' : 'bg-blue-100'}`}>
+                  <p className={`text-sm ${champion.champion === 'VACANT' ? 'text-orange-700' : 'text-blue-700'}`}>{champion.notes}</p>
                 </div>
               )}
               

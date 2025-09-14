@@ -1,9 +1,150 @@
 [
   {
     "title_key": "ufc_mens_lightweight",
-    "title_name": "Ufc Mens Lightweight Championship",
-    "champion": "Placeholder Champion",
-    "start_date": "2020-01-01",
-    "end_date": null
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Jens Pulver",
+    "start_date": "2001-02-23",
+    "end_date": "2002-09-27",
+    "won_event": "UFC 30",
+    "won_location": "Atlantic City, NJ"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "VACANT",
+    "start_date": "2002-09-28",
+    "end_date": "2006-08-16",
+    "won_event": "Vacated",
+    "won_location": "N/A",
+    "notes": "Division temporarily discontinued"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Sean Sherk",
+    "start_date": "2006-08-17",
+    "end_date": "2007-05-25",
+    "won_event": "UFC 64",
+    "won_location": "Las Vegas, NV"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "BJ Penn",
+    "start_date": "2007-05-26",
+    "end_date": "2010-08-27",
+    "won_event": "UFC 84",
+    "won_location": "Las Vegas, NV"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Frankie Edgar",
+    "start_date": "2010-08-28",
+    "end_date": "2012-07-06",
+    "won_event": "UFC 112",
+    "won_location": "Abu Dhabi, UAE"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Benson Henderson",
+    "start_date": "2012-07-07",
+    "end_date": "2013-08-30",
+    "won_event": "UFC 150",
+    "won_location": "Denver, CO"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Anthony Pettis",
+    "start_date": "2013-08-31",
+    "end_date": "2015-03-13",
+    "won_event": "UFC 164",
+    "won_location": "Milwaukee, WI"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Rafael dos Anjos",
+    "start_date": "2015-03-14",
+    "end_date": "2016-11-11",
+    "won_event": "UFC 185",
+    "won_location": "Dallas, TX"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Eddie Alvarez",
+    "start_date": "2016-11-12",
+    "end_date": "2016-11-11",
+    "won_event": "UFC Fight Night 88",
+    "won_location": "Las Vegas, NV"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Conor McGregor",
+    "start_date": "2016-11-12",
+    "end_date": "2018-04-06",
+    "won_event": "UFC 205",
+    "won_location": "New York, NY"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "VACANT",
+    "start_date": "2018-04-07",
+    "end_date": "2018-10-05",
+    "won_event": "Stripped",
+    "won_location": "N/A",
+    "notes": "Conor McGregor stripped for inactivity"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Khabib Nurmagomedov",
+    "start_date": "2018-10-06",
+    "end_date": "2020-10-23",
+    "won_event": "UFC 223",
+    "won_location": "Brooklyn, NY"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "VACANT",
+    "start_date": "2020-10-24",
+    "end_date": "2021-05-14",
+    "won_event": "Vacated",
+    "won_location": "N/A",
+    "notes": "Khabib Nurmagomedov retired and vacated title"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Charles Oliveira",
+    "start_date": "2021-05-15",
+    "end_date": "2022-05-06",
+    "won_event": "UFC 262",
+    "won_location": "Houston, TX"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "VACANT",
+    "start_date": "2022-05-07",
+    "end_date": "2022-10-21",
+    "won_event": "Stripped",
+    "won_location": "N/A",
+    "notes": "Charles Oliveira stripped for missing weight"
+  },
+  {
+    "title_key": "ufc_mens_lightweight",
+    "title_name": "UFC Men's Lightweight Championship",
+    "champion": "Islam Makhachev",
+    "start_date": "2022-10-22",
+    "end_date": null,
+    "won_event": "UFC 280",
+    "won_location": "Abu Dhabi, UAE"
   }
 ]

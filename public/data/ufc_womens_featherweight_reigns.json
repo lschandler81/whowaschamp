@@ -1,0 +1,49 @@
+[
+  {
+    "title_key": "ufc_womens_featherweight",
+    "title_name": "UFC Women's Featherweight Championship",
+    "champion": "Germaine de Randamie",
+    "start_date": "2017-02-11",
+    "end_date": "2017-09-17",
+    "won_event": "UFC 208",
+    "won_location": "Brooklyn, NY"
+  },
+  {
+    "title_key": "ufc_womens_featherweight",
+    "title_name": "UFC Women's Featherweight Championship",
+    "champion": "VACANT",
+    "start_date": "2017-09-18",
+    "end_date": "2017-12-29",
+    "won_event": "Stripped",
+    "won_location": "N/A",
+    "notes": "Germaine de Randamie stripped for refusing to defend against Cyborg"
+  },
+  {
+    "title_key": "ufc_womens_featherweight",
+    "title_name": "UFC Women's Featherweight Championship",
+    "champion": "Cris Cyborg",
+    "start_date": "2017-12-30",
+    "end_date": "2018-12-28",
+    "won_event": "UFC 214",
+    "won_location": "Anaheim, CA"
+  },
+  {
+    "title_key": "ufc_womens_featherweight",
+    "title_name": "UFC Women's Featherweight Championship",
+    "champion": "Amanda Nunes",
+    "start_date": "2018-12-29",
+    "end_date": "2022-12-09",
+    "won_event": "UFC 232",
+    "won_location": "Inglewood, CA"
+  },
+  {
+    "title_key": "ufc_womens_featherweight",
+    "title_name": "UFC Women's Featherweight Championship",
+    "champion": "VACANT",
+    "start_date": "2022-12-10",
+    "end_date": null,
+    "won_event": "Vacated",
+    "won_location": "N/A",
+    "notes": "Amanda Nunes retired and vacated both bantamweight and featherweight titles"
+  }
+]

@@ -1,9 +1,58 @@
 [
   {
     "title_key": "ufc_womens_bantamweight",
-    "title_name": "Ufc Womens Bantamweight Championship",
-    "champion": "Placeholder Champion",
-    "start_date": "2020-01-01",
-    "end_date": null
+    "title_name": "UFC Women's Bantamweight Championship",
+    "champion": "Ronda Rousey",
+    "start_date": "2012-12-06",
+    "end_date": "2015-11-13",
+    "won_event": "UFC on Fox 5",
+    "won_location": "Seattle, WA",
+    "notes": "Title transferred from Strikeforce to UFC"
+  },
+  {
+    "title_key": "ufc_womens_bantamweight",
+    "title_name": "UFC Women's Bantamweight Championship",
+    "champion": "Holly Holm",
+    "start_date": "2015-11-14",
+    "end_date": "2016-03-04",
+    "won_event": "UFC 193",
+    "won_location": "Melbourne, Australia"
+  },
+  {
+    "title_key": "ufc_womens_bantamweight",
+    "title_name": "UFC Women's Bantamweight Championship",
+    "champion": "Miesha Tate",
+    "start_date": "2016-03-05",
+    "end_date": "2016-12-29",
+    "won_event": "UFC 196",
+    "won_location": "Las Vegas, NV"
+  },
+  {
+    "title_key": "ufc_womens_bantamweight",
+    "title_name": "UFC Women's Bantamweight Championship",
+    "champion": "Amanda Nunes",
+    "start_date": "2016-12-30",
+    "end_date": "2022-12-09",
+    "won_event": "UFC 207",
+    "won_location": "Las Vegas, NV"
+  },
+  {
+    "title_key": "ufc_womens_bantamweight",
+    "title_name": "UFC Women's Bantamweight Championship",
+    "champion": "VACANT",
+    "start_date": "2022-12-10",
+    "end_date": "2023-05-12",
+    "won_event": "Vacated",
+    "won_location": "N/A",
+    "notes": "Amanda Nunes retired and vacated title"
+  },
+  {
+    "title_key": "ufc_womens_bantamweight",
+    "title_name": "UFC Women's Bantamweight Championship",
+    "champion": "Raquel Pennington",
+    "start_date": "2023-05-13",
+    "end_date": null,
+    "won_event": "UFC 289",
+    "won_location": "Vancouver, BC"
   }
 ]
