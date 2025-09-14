@@ -159,29 +159,24 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
             {/* Fun Facts */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Fun Facts</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="text-center">
                   <Badge variant="outline" className="mb-2 bg-white">Reign Length</Badge>
                   <p className="text-2xl font-bold text-blue-600">{Math.max(0, reignLength)}</p>
                   <p className="text-sm text-gray-600">days</p>
                 </div>
-                <div className="text-center">
-                  <Badge variant="outline" className="mb-2 bg-white">Era</Badge>
-                  <p className="text-2xl font-bold text-purple-600">{reignStart ? `${reignStart.getFullYear()}s` : '—'}</p>
-                  <p className="text-sm text-gray-600">era</p>
-                </div>
+                {!championship.includes('UFC') && (
+                  <div className="text-center">
+                    <Badge variant="outline" className="mb-2 bg-white">Era</Badge>
+                    <p className="text-2xl font-bold text-purple-600">{reignStart ? `${reignStart.getFullYear()}s` : '—'}</p>
+                    <p className="text-sm text-gray-600">era</p>
+                  </div>
+                )}
                 {champion.won_event && (
                   <div className="text-center">
                     <Badge variant="outline" className="mb-2 bg-white">Won At</Badge>
                     <p className="text-lg font-bold text-green-600">{champion.won_event}</p>
                     <p className="text-sm text-gray-600">event</p>
-                  </div>
-                )}
-                {champion.won_location && (
-                  <div className="text-center">
-                    <Badge variant="outline" className="mb-2 bg-white">Location</Badge>
-                    <p className="text-lg font-bold text-red-600">{champion.won_location}</p>
-                    <p className="text-sm text-gray-600">venue</p>
                   </div>
                 )}
               </div>
@@ -201,14 +196,35 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                 {championship.includes('Women\'s') && (
                   <Badge className="bg-pink-500 text-white">👑 Women's Division</Badge>
                 )}
-                {championship.includes('NXT') && (
-                  <Badge className="bg-yellow-500 text-white">⭐ Developmental</Badge>
+                
+                {/* WWE-specific badges */}
+                {!championship.includes('UFC') && (
+                  <>
+                    {championship.includes('NXT') && (
+                      <Badge className="bg-yellow-500 text-white">⭐ Developmental</Badge>
+                    )}
+                    {reignStart && reignStart.getFullYear() < 1980 && (
+                      <Badge className="bg-amber-600 text-white">📜 Golden Era</Badge>
+                    )}
+                    {reignStart && reignStart.getFullYear() >= 1997 && reignStart.getFullYear() <= 2002 && (
+                      <Badge className="bg-red-600 text-white">🔥 Attitude Era</Badge>
+                    )}
+                  </>
                 )}
-                {reignStart && reignStart.getFullYear() < 1980 && (
-                  <Badge className="bg-amber-600 text-white">📜 Golden Era</Badge>
-                )}
-                {reignStart && reignStart.getFullYear() >= 1997 && reignStart.getFullYear() <= 2002 && (
-                  <Badge className="bg-red-600 text-white">🔥 Attitude Era</Badge>
+                
+                {/* UFC-specific badges */}
+                {championship.includes('UFC') && reignStart && (
+                  <>
+                    {reignStart.getFullYear() >= 1993 && reignStart.getFullYear() <= 2000 && (
+                      <Badge className="bg-gray-600 text-white">🥊 Early UFC Era</Badge>
+                    )}
+                    {reignStart.getFullYear() >= 2001 && reignStart.getFullYear() <= 2016 && (
+                      <Badge className="bg-orange-600 text-white">🔥 Zuffa Era</Badge>
+                    )}
+                    {reignStart.getFullYear() >= 2017 && (
+                      <Badge className="bg-red-600 text-white">✨ WME Era</Badge>
+                    )}
+                  </>
                 )}
               </div>
             </div>

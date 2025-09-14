@@ -47,6 +47,16 @@
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
+    "champion": "VACANT",
+    "start_date": "2002-07-14",
+    "end_date": "2002-09-27",
+    "won_event": "Stripped",
+    "won_location": "N/A",
+    "notes": "Title vacated due to Josh Barnett's positive steroid test"
+  },
+  {
+    "title_key": "ufc_mens_heavyweight",
+    "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Ricco Rodriguez",
     "start_date": "2002-09-28",
     "end_date": "2003-06-06",
