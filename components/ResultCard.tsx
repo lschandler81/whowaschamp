@@ -125,7 +125,7 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                     <Trophy className="h-5 w-5 text-yellow-600" />
                     <div>
                       <p className="text-sm text-gray-500">Day of Reign</p>
-                      <p className="font-semibold text-gray-900">Day {dayOfReign.toLocaleString()}</p>
+                      <p className="font-semibold text-gray-900">Day {dayOfReign?.toLocaleString() || 'N/A'}</p>
                     </div>
                   </div>
                 </div>
@@ -192,10 +192,10 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                 {championship.includes('NXT') && (
                   <Badge className="bg-yellow-500 text-white">⭐ Developmental</Badge>
                 )}
-                {reignStart.getFullYear() < 1980 && (
+                {reignStart && reignStart.getFullYear() < 1980 && (
                   <Badge className="bg-amber-600 text-white">📜 Golden Era</Badge>
                 )}
-                {reignStart.getFullYear() >= 1997 && reignStart.getFullYear() <= 2002 && (
+                {reignStart && reignStart.getFullYear() >= 1997 && reignStart.getFullYear() <= 2002 && (
                   <Badge className="bg-red-600 text-white">🔥 Attitude Era</Badge>
                 )}
               </div>

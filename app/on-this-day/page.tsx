@@ -9,7 +9,7 @@ import { CalendarClock, ArrowLeft, Home } from 'lucide-react';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { getCurrentIsoWeekRange, getEventsForIsoWeek } from '../../lib/events.ts';
+import { getCurrentIsoWeekRange, getEventsForIsoWeek } from '@/lib/events';
 
 export const revalidate = 60 * 60 * 24; // 24 hours
 

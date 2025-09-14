@@ -2,8 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { CalendarRange, ArrowLeft, Home } from 'lucide-react';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { getCurrentIsoWeekRange, getEventsForIsoWeek } from '../../lib/events.ts';
-import { formatDateGB, formatRangeGB } from '../../lib/date.ts';
+import { getCurrentIsoWeekRange, getEventsForIsoWeek } from '@/lib/events';
+import { formatDateGB, formatRangeGB } from '@/lib/date';
 
 export const revalidate = 60 * 60 * 24 * 7;
 
