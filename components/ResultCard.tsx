@@ -154,21 +154,12 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                   )}
                 </div>
               </div>
-
-              {champion.won_event && (
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                  <p className="text-sm text-blue-600 font-medium">Won at: {champion.won_event}</p>
-                  {champion.notes && (
-                    <p className="text-xs text-blue-500 mt-1">{champion.notes}</p>
-                  )}
-                </div>
-              )}
             </div>
 
             {/* Fun Facts */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Fun Facts</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center">
                   <Badge variant="outline" className="mb-2 bg-white">Reign Length</Badge>
                   <p className="text-2xl font-bold text-blue-600">{Math.max(0, reignLength)}</p>
@@ -179,7 +170,28 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                   <p className="text-2xl font-bold text-purple-600">{reignStart ? `${reignStart.getFullYear()}s` : '—'}</p>
                   <p className="text-sm text-gray-600">era</p>
                 </div>
+                {champion.won_event && (
+                  <div className="text-center">
+                    <Badge variant="outline" className="mb-2 bg-white">Won At</Badge>
+                    <p className="text-lg font-bold text-green-600">{champion.won_event}</p>
+                    <p className="text-sm text-gray-600">event</p>
+                  </div>
+                )}
+                {champion.won_location && (
+                  <div className="text-center">
+                    <Badge variant="outline" className="mb-2 bg-white">Location</Badge>
+                    <p className="text-lg font-bold text-red-600">{champion.won_location}</p>
+                    <p className="text-sm text-gray-600">venue</p>
+                  </div>
+                )}
               </div>
+              
+              {/* Additional notes if present */}
+              {champion.notes && (
+                <div className="mt-4 p-3 bg-blue-100 rounded-lg">
+                  <p className="text-sm text-blue-700">{champion.notes}</p>
+                </div>
+              )}
               
               {/* Special badges for notable reigns */}
               <div className="mt-4 flex flex-wrap gap-2 justify-center">

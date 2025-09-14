@@ -4,139 +4,179 @@
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Randy Couture",
     "start_date": "1997-12-21",
-    "end_date": "1999-05-07"
+    "end_date": "1999-05-07",
+    "won_event": "UFC 15",
+    "won_location": "Bay St. Louis, MS"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Bas Rutten",
     "start_date": "1999-05-07",
-    "end_date": "1999-09-24"
+    "end_date": "1999-09-24",
+    "won_event": "UFC 20",
+    "won_location": "Birmingham, AL"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Kevin Randleman",
     "start_date": "1999-09-24",
-    "end_date": "2000-11-17"
+    "end_date": "2000-11-17",
+    "won_event": "UFC 23",
+    "won_location": "Tokyo, Japan"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Randy Couture",
     "start_date": "2000-11-17",
-    "end_date": "2002-03-22"
+    "end_date": "2002-03-22",
+    "won_event": "UFC 28",
+    "won_location": "Atlantic City, NJ"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Josh Barnett",
     "start_date": "2002-03-22",
-    "end_date": "2002-07-13"
+    "end_date": "2002-07-13",
+    "won_event": "UFC 36",
+    "won_location": "Las Vegas, NV"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Ricco Rodriguez",
     "start_date": "2002-09-28",
-    "end_date": "2003-06-06"
+    "end_date": "2003-06-06",
+    "won_event": "UFC 39",
+    "won_location": "Uncasville, CT"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Tim Sylvia",
     "start_date": "2003-06-06",
-    "end_date": "2005-04-16"
+    "end_date": "2005-04-16",
+    "won_event": "UFC 41",
+    "won_location": "Atlantic City, NJ"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Andrei Arlovski",
     "start_date": "2005-04-16",
-    "end_date": "2006-02-04"
+    "end_date": "2006-02-04",
+    "won_event": "UFC 51",
+    "won_location": "Las Vegas, NV"
   },
   {
-    "title_key": "ufc_mens_heavyweight",
+    "title_key": "ufc_mens_heavyweight", 
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Tim Sylvia",
     "start_date": "2006-02-04",
-    "end_date": "2007-07-07"
+    "end_date": "2007-07-07",
+    "won_event": "UFC 59",
+    "won_location": "Anaheim, CA"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Randy Couture",
     "start_date": "2007-07-07",
-    "end_date": "2008-12-27"
+    "end_date": "2008-12-27",
+    "won_event": "UFC 68",
+    "won_location": "Columbus, OH"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Brock Lesnar",
     "start_date": "2008-12-27",
-    "end_date": "2010-07-03"
+    "end_date": "2010-07-03",
+    "won_event": "UFC 91",
+    "won_location": "Las Vegas, NV"
   },
   {
     "title_key": "ufc_mens_heavyweight",
-    "title_name": "UFC Men's Heavyweight Championship",
+    "title_name": "UFC Men's Heavyweight Championship", 
     "champion": "Cain Velasquez",
     "start_date": "2010-07-03",
-    "end_date": "2011-11-12"
+    "end_date": "2011-11-12",
+    "won_event": "UFC 121",
+    "won_location": "Anaheim, CA"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Junior dos Santos",
     "start_date": "2011-11-12",
-    "end_date": "2012-12-29"
+    "end_date": "2012-12-29",
+    "won_event": "UFC on FOX 1",
+    "won_location": "Anaheim, CA"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Cain Velasquez",
     "start_date": "2012-12-29",
-    "end_date": "2015-06-13"
+    "end_date": "2015-06-13",
+    "won_event": "UFC 155",
+    "won_location": "Las Vegas, NV"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Fabricio Werdum",
     "start_date": "2015-06-13",
-    "end_date": "2016-05-14"
+    "end_date": "2016-05-14",
+    "won_event": "UFC 188",
+    "won_location": "Mexico City, Mexico"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Stipe Miocic",
     "start_date": "2016-05-14",
-    "end_date": "2018-07-07"
+    "end_date": "2018-07-07",
+    "won_event": "UFC 198",
+    "won_location": "Curitiba, Brazil"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Daniel Cormier",
     "start_date": "2018-07-07",
-    "end_date": "2019-08-17"
+    "end_date": "2019-08-17",
+    "won_event": "UFC 226",
+    "won_location": "Las Vegas, NV"
   },
   {
-    "title_key": "ufc_mens_heavyweight",
+    "title_key": "ufc_mens_heavyweight", 
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Stipe Miocic",
     "start_date": "2019-08-17",
-    "end_date": "2021-03-27"
+    "end_date": "2021-03-27",
+    "won_event": "UFC 241",
+    "won_location": "Anaheim, CA"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Francis Ngannou",
     "start_date": "2021-03-27",
-    "end_date": "2023-01-14"
+    "end_date": "2023-01-14",
+    "won_event": "UFC 260",
+    "won_location": "Las Vegas, NV"
   },
   {
     "title_key": "ufc_mens_heavyweight",
     "title_name": "UFC Men's Heavyweight Championship",
     "champion": "Jon Jones",
     "start_date": "2023-03-04",
-    "end_date": null
+    "end_date": null,
+    "won_event": "UFC 285",
+    "won_location": "Las Vegas, NV"
   }
 ]

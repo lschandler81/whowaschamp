@@ -1,4 +1,8 @@
-[
+#!/usr/bin/env node
+// Update UFC bantamweight data with location and event info
+import { promises as fs } from 'node:fs';
+
+const bantamweightWithLocation = [
   {
     "title_key": "ufc_mens_bantamweight",
     "title_name": "UFC Men's Bantamweight Championship",
@@ -39,7 +43,7 @@
     "title_key": "ufc_mens_bantamweight",
     "title_name": "UFC Men's Bantamweight Championship",
     "champion": "T.J. Dillashaw",
-    "start_date": "2018-08-04",
+    "start_date": "2018-08-04", 
     "end_date": "2019-03-28",
     "won_event": "UFC 227",
     "won_location": "Los Angeles, CA"
@@ -57,7 +61,7 @@
     "title_key": "ufc_mens_bantamweight",
     "title_name": "UFC Men's Bantamweight Championship",
     "champion": "Petr Yan",
-    "start_date": "2020-07-11",
+    "start_date": "2020-07-11", 
     "end_date": "2021-03-06",
     "won_event": "UFC 251",
     "won_location": "Abu Dhabi, UAE"
@@ -73,11 +77,18 @@
   },
   {
     "title_key": "ufc_mens_bantamweight",
-    "title_name": "UFC Men's Bantamweight Championship",
+    "title_name": "UFC Men's Bantamweight Championship", 
     "champion": "Sean O'Malley",
     "start_date": "2023-08-19",
     "end_date": null,
     "won_event": "UFC 292",
     "won_location": "Boston, MA"
   }
-]
+];
+
+await fs.writeFile(
+  'public/data/ufc_mens_bantamweight_reigns.json',
+  JSON.stringify(bantamweightWithLocation, null, 2)
+);
+
+console.log('✅ Updated UFC bantamweight data with locations and events');
