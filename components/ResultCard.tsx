@@ -13,6 +13,10 @@ interface ResultCardProps {
   metadata: any;
 }
 
+function isValidISODate(s: any): s is string {
+  return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
+}
+
 export function ResultCard({ champion, championship, birthDate, metadata }: ResultCardProps) {
   console.log('ResultCard received champion:', champion);
   console.log('ResultCard received championship:', championship);
@@ -21,15 +25,15 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
   console.log('Champion name alt field:', champion.name);
   console.log('Full champion object:', JSON.stringify(champion, null, 2));
   
-  const reignStart = new Date(champion.start_date);
-  const reignEnd = champion.end_date ? new Date(champion.end_date) : null;
+  const reignStart = isValidISODate(champion.start_date) ? new Date(champion.start_date) : null;
+  const reignEnd = isValidISODate(champion.end_date) ? new Date(champion.end_date) : null;
   
   // Calculate which day of the reign the birthday was
-  const dayOfReign = Math.floor((birthDate.getTime() - reignStart.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+  const dayOfReign = reignStart ? Math.floor((birthDate.getTime() - reignStart.getTime()) / (1000 * 60 * 60 * 24)) + 1 : null;
   
   // Calculate reign length
   const reignEndDate = reignEnd || new Date();
-  const reignLength = Math.floor((reignEndDate.getTime() - reignStart.getTime()) / (1000 * 60 * 60 * 24));
+  const reignLength = reignStart ? Math.floor((reignEndDate.getTime() - reignStart.getTime()) / (1000 * 60 * 60 * 24)) : 0;
 
   const shareText = `${champion.champion} was ${championship} champion on my birthday (${birthDate.toLocaleDateString()})! 🏆 Find your birthday champion at`;
   const shareUrl = typeof window !== 'undefined' ? window.location.origin : '';
@@ -132,11 +136,9 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                     <div>
                       <p className="text-sm text-gray-500">Title Won</p>
                       <p className="font-semibold text-gray-900">
-                        {reignStart.toLocaleDateString('en-US', { 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
-                        })}
+                        {reignStart
+                          ? reignStart.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
+                          : 'Unknown'}
                       </p>
                     </div>
                   </div>
@@ -169,13 +171,13 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="text-center">
                   <Badge variant="outline" className="mb-2 bg-white">Reign Length</Badge>
-                  <p className="text-2xl font-bold text-blue-600">{reignLength}</p>
+                  <p className="text-2xl font-bold text-blue-600">{Math.max(0, reignLength)}</p>
                   <p className="text-sm text-gray-600">days</p>
                 </div>
                 <div className="text-center">
                   <Badge variant="outline" className="mb-2 bg-white">Era</Badge>
-                  <p className="text-2xl font-bold text-purple-600">{reignStart.getFullYear()}s</p>
-                  <p className="text-sm text-gray-600">wrestling era</p>
+                  <p className="text-2xl font-bold text-purple-600">{reignStart ? `${reignStart.getFullYear()}s` : '—'}</p>
+                  <p className="text-sm text-gray-600">era</p>
                 </div>
               </div>
               
