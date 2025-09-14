@@ -5,6 +5,7 @@ import path from 'node:path';
 /** Infer promotion from filename prefix */
 function inferPromotion(filename) {
   const base = path.basename(filename);
+  if (base.startsWith('ufc_')) return 'UFC';
   if (base.startsWith('wwe_')) return 'WWE';
   if (base.startsWith('wcw_')) return 'WCW';
   if (base.startsWith('aew_')) return 'AEW';
@@ -67,9 +68,11 @@ async function main() {
       const start = normalizeDate(r.start_date);
       if (!start) continue;
       const champion = (r.champion || '').trim();
-      if (!champion || champion.toLowerCase() === 'vacated') {
-        // Skip vacated reigns as title_change events
-        continue;
+      if (!champion) continue; // Skip if no champion specified
+      
+      // Include vacant periods for UFC
+      if (champion.toLowerCase() === 'vacated' || champion.toUpperCase() === 'VACANT') {
+        if (promotion !== 'UFC') continue; // Only include vacant periods for UFC
       }
 
       const prev = byEndDate.get(`${r.title_key}__${start}`);

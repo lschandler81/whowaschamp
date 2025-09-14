@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -34,11 +35,36 @@ const UFC_CHAMPIONSHIPS: { id: string; name: string; file: string; active: boole
 ];
 
 export function DateTitleForm() {
+  const searchParams = useSearchParams();
   const [birthDate, setBirthDate] = useState('');
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [sport, setSport] = useState<'wrestling' | 'ufc'>('wrestling');
+
+  // Handle URL parameters on component mount
+  useEffect(() => {
+    const date = searchParams?.get('date');
+    const sportParam = searchParams?.get('sport');
+    
+    if (date) {
+      setBirthDate(date);
+    }
+    
+    if (sportParam === 'ufc' || sportParam === 'wrestling') {
+      setSport(sportParam);
+    }
+    
+    // Auto-submit if both date and sport are provided
+    if (date && sportParam) {
+      setTimeout(() => {
+        const form = document.querySelector('form');
+        if (form) {
+          form.requestSubmit();
+        }
+      }, 100);
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
