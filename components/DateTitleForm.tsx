@@ -29,9 +29,20 @@ const WRESTLING_CHAMPIONSHIPS = [
   { id: 'tna', name: 'TNA/Impact World Championship', file: 'tna_championship_reigns.json', active: true },
 ];
 
-// UFC titles will be added after we import reign data
+// Complete UFC championships list - statically defined to work in production builds
 const UFC_CHAMPIONSHIPS: { id: string; name: string; file: string; active: boolean; category?: string }[] = [
-  { id: 'ufc_hw', name: "UFC Men's Heavyweight Championship", file: 'ufc_mens_heavyweight_reigns.json', active: true },
+  { id: 'ufc_mens_heavyweight', name: 'UFC Men\'s Heavyweight Championship', file: 'ufc_mens_heavyweight_reigns.json', active: true },
+  { id: 'ufc_mens_light_heavyweight', name: 'UFC Men\'s Light Heavyweight Championship', file: 'ufc_mens_light_heavyweight_reigns.json', active: true },
+  { id: 'ufc_mens_middleweight', name: 'UFC Men\'s Middleweight Championship', file: 'ufc_mens_middleweight_reigns.json', active: true },
+  { id: 'ufc_mens_welterweight', name: 'UFC Men\'s Welterweight Championship', file: 'ufc_mens_welterweight_reigns.json', active: true },
+  { id: 'ufc_mens_lightweight', name: 'UFC Men\'s Lightweight Championship', file: 'ufc_mens_lightweight_reigns.json', active: true },
+  { id: 'ufc_mens_featherweight', name: 'UFC Men\'s Featherweight Championship', file: 'ufc_mens_featherweight_reigns.json', active: true },
+  { id: 'ufc_mens_bantamweight', name: 'UFC Men\'s Bantamweight Championship', file: 'ufc_mens_bantamweight_reigns.json', active: true },
+  { id: 'ufc_mens_flyweight', name: 'UFC Men\'s Flyweight Championship', file: 'ufc_mens_flyweight_reigns.json', active: true },
+  { id: 'ufc_womens_featherweight', name: 'UFC Women\'s Featherweight Championship', file: 'ufc_womens_featherweight_reigns.json', active: true },
+  { id: 'ufc_womens_bantamweight', name: 'UFC Women\'s Bantamweight Championship', file: 'ufc_womens_bantamweight_reigns.json', active: true },
+  { id: 'ufc_womens_flyweight', name: 'UFC Women\'s Flyweight Championship', file: 'ufc_womens_flyweight_reigns.json', active: true },
+  { id: 'ufc_womens_strawweight', name: 'UFC Women\'s Strawweight Championship', file: 'ufc_womens_strawweight_reigns.json', active: true },
 ];
 
 export function DateTitleForm() {
@@ -80,27 +91,12 @@ export function DateTitleForm() {
     
     // Build active list based on selected sport
     let activeChampionships = (sport === 'wrestling' ? WRESTLING_CHAMPIONSHIPS : UFC_CHAMPIONSHIPS).filter(c => c.active);
-    // If UFC is selected, augment from a manifest so new belts appear automatically
-    if (sport === 'ufc') {
-      try {
-        const resp = await fetch('/data/ufc_titles.json');
-        if (resp.ok) {
-          const list = await resp.json();
-          if (Array.isArray(list)) {
-            const existing = new Set(activeChampionships.map(c => c.file));
-            const extra = list.filter((t: any) => t && t.active && t.file && !existing.has(t.file));
-            activeChampionships = activeChampionships.concat(extra);
-          }
-        }
-      } catch (e) {
-        console.warn('ufc_titles.json not available; using built-in UFC list only');
-      }
-      if (activeChampionships.length === 0) {
-        setLoading(false);
-        setResults([]);
-        setError('UFC titles coming soon — we\'re adding reign data next.');
-        return;
-      }
+    
+    if (sport === 'ufc' && activeChampionships.length === 0) {
+      setLoading(false);
+      setResults([]);
+      setError('UFC titles coming soon — we\'re adding reign data next.');
+      return;
     }
     
     try {
