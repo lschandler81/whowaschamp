@@ -17,6 +17,20 @@ function isValidISODate(s: any): s is string {
   return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
 }
 
+function getWrestlingEra(year: number): string {
+  if (year >= 2023) return 'Triple H Era';
+  if (year >= 2019) return 'Thunderdome Era';
+  if (year >= 2016) return 'New Era';
+  if (year >= 2013) return 'Reality Era';
+  if (year >= 2008) return 'PG Era';
+  if (year >= 2002) return 'Ruthless Aggression';
+  if (year >= 1997) return 'Attitude Era';
+  if (year >= 1993) return 'New Generation';
+  if (year >= 1984) return 'Golden Era';
+  if (year >= 1979) return 'Rock \'n\' Wrestling';
+  return 'Classic Era';
+}
+
 export function ResultCard({ champion, championship, birthDate, metadata }: ResultCardProps) {
   console.log('ResultCard received champion:', champion);
   console.log('ResultCard received championship:', championship);
@@ -168,7 +182,7 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                 {!championship.includes('UFC') && (
                   <div className="text-center">
                     <Badge variant="outline" className="mb-2 bg-white">Era</Badge>
-                    <p className="text-2xl font-bold text-purple-600">{reignStart ? `${reignStart.getFullYear()}s` : '—'}</p>
+                    <p className="text-xl font-bold text-purple-600">{reignStart ? getWrestlingEra(reignStart.getFullYear()) : '—'}</p>
                     <p className="text-sm text-gray-600">era</p>
                   </div>
                 )}
@@ -203,12 +217,34 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                     {championship.includes('NXT') && (
                       <Badge className="bg-yellow-500 text-white">⭐ Developmental</Badge>
                     )}
-                    {reignStart && reignStart.getFullYear() < 1980 && (
-                      <Badge className="bg-amber-600 text-white">📜 Golden Era</Badge>
-                    )}
-                    {reignStart && reignStart.getFullYear() >= 1997 && reignStart.getFullYear() <= 2002 && (
-                      <Badge className="bg-red-600 text-white">🔥 Attitude Era</Badge>
-                    )}
+                    {reignStart && (() => {
+                      const year = reignStart.getFullYear();
+                      const era = getWrestlingEra(year);
+                      const eraColors: { [key: string]: string } = {
+                        'Triple H Era': 'bg-purple-600',
+                        'Thunderdome Era': 'bg-blue-600', 
+                        'New Era': 'bg-indigo-600',
+                        'Reality Era': 'bg-cyan-600',
+                        'PG Era': 'bg-green-600',
+                        'Ruthless Aggression': 'bg-orange-600',
+                        'Attitude Era': 'bg-red-600',
+                        'New Generation': 'bg-pink-600',
+                        'Golden Era': 'bg-amber-600',
+                        'Rock \'n\' Wrestling': 'bg-rose-600',
+                        'Classic Era': 'bg-gray-600'
+                      };
+                      const colorClass = eraColors[era] || 'bg-gray-600';
+                      return (
+                        <Badge className={`${colorClass} text-white`}>
+                          {era === 'Attitude Era' ? '🔥' : 
+                           era === 'Golden Era' ? '📜' : 
+                           era === 'PG Era' ? '🎪' :
+                           era === 'Reality Era' ? '📱' :
+                           era === 'New Era' ? '✨' :
+                           era === 'Triple H Era' ? '👑' : '🏟️'} {era}
+                        </Badge>
+                      );
+                    })()}
                   </>
                 )}
                 
