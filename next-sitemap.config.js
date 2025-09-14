@@ -4,9 +4,17 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 5000,
   additionalPaths: async (config) => {
-    return [
-      await config.transform(config, '/on-this-day'),
-      await config.transform(config, '/on-this-week'),
+    const paths = [
+      '/on-this-day',
+      '/on-this-week',
+      '/this-week',
+      '/ufc/this-week',
+      '/boxing/this-week',
     ];
+    const out = [];
+    for (const p of paths) {
+      out.push(await config.transform(config, p));
+    }
+    return out;
   },
 };

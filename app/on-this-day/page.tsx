@@ -9,6 +9,7 @@ import { CalendarClock, ArrowLeft, Home } from 'lucide-react';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { getCurrentIsoWeekRange, getEventsForIsoWeek } from '../../lib/events.ts';
 
 export const revalidate = 60 * 60 * 24; // 24 hours
 
@@ -34,6 +35,8 @@ async function getData(): Promise<{ date: string; items: TitleChangeEvent[] }> {
 export default async function OnThisDayPage() {
   const { date, items } = await getData();
   const deduped = uniqueEvents(items);
+  const { isoWeek, isoYear } = getCurrentIsoWeekRange(new Date(date + 'T00:00:00Z'));
+  const weekEvents = await getEventsForIsoWeek('wwe', isoYear, isoWeek);
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-12 md:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,6 +104,23 @@ export default async function OnThisDayPage() {
               </Card>
             );
           })}
+        </div>
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Also happened this week</h2>
+          {weekEvents.length === 0 && (
+            <p className="text-sm text-gray-600">No additional events recorded for this week.</p>
+          )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {weekEvents.slice(0, 4).map((ev, idx) => (
+              <Link key={idx} href="/this-week" className="block p-4 rounded-xl bg-white shadow-sm border hover:shadow-md">
+                <div className="text-sm text-gray-600">{formatDateGB(ev.date)}</div>
+                <div className="text-gray-900 font-medium">{ev.name}</div>
+                {(ev.venue || ev.city) && (
+                  <div className="text-sm text-gray-600">{[ev.venue, ev.city].filter(Boolean).join(', ')}</div>
+                )}
+              </Link>
+            ))}
+          </div>
         </div>
         <Breadcrumbs
           className="mt-8"
