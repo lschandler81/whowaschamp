@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { TitleChangeEvent } from '@/lib/types/on-this-day';
 import { toSlug } from '@/lib/slug';
+import { uniqueEvents } from '@/lib/events';
+import { formatDateGB } from '@/lib/date';
 import { CalendarClock, ArrowLeft, Home } from 'lucide-react';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
@@ -29,13 +31,9 @@ async function getData(): Promise<{ date: string; items: TitleChangeEvent[] }> {
   return { date: today, items };
 }
 
-function prettyDate(d: string) {
-  const [y, m, day] = d.split('-').map((x) => Number(x));
-  return new Date(Date.UTC(y, m - 1, day)).toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
-}
-
 export default async function OnThisDayPage() {
   const { date, items } = await getData();
+  const deduped = uniqueEvents(items);
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-12 md:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,9 +46,9 @@ export default async function OnThisDayPage() {
           <CalendarClock className="h-6 w-6 text-red-600" />
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">This Day in Wrestling</h1>
         </div>
-        <p className="text-sm text-gray-600 mb-8">{prettyDate(date)}</p>
+        <p className="text-sm text-gray-600 mb-8">{formatDateGB(date)}</p>
 
-        {items.length === 0 && (
+        {deduped.length === 0 && (
           <Card className="border rounded-xl bg-white shadow-sm">
             <CardContent className="p-6">
               <p className="text-gray-700">A quiet day — no title changes on record.</p>
@@ -59,7 +57,7 @@ export default async function OnThisDayPage() {
         )}
 
         <div className="space-y-6">
-          {items.map((e) => {
+          {deduped.map((e) => {
             const beltHref = `/belts/${e.belt_key}`;
             const newHref = `/wrestlers/${toSlug(e.new_champion)}`;
             const prevHref = e.previous_champion ? `/wrestlers/${toSlug(e.previous_champion)}` : undefined;
@@ -67,7 +65,7 @@ export default async function OnThisDayPage() {
               <Card key={e.slug} className="border rounded-xl bg-white shadow-sm">
                 <CardContent className="p-6 space-y-2">
                   <div className="flex items-center justify-between">
-                    <div className="text-base font-semibold text-gray-900">{e.date}</div>
+                    <div className="text-base font-semibold text-gray-900">{formatDateGB(e.date)}</div>
                     <Badge className="bg-blue-100 text-blue-800">{e.promotion}</Badge>
                   </div>
                   <div className="flex items-center gap-2">

@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { TitleChangeEvent } from '@/lib/types/on-this-day';
 import { toSlug } from '@/lib/slug';
+import { uniqueEvents } from '@/lib/events';
+import { formatRangeGB, formatDateGB } from '@/lib/date';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { CalendarRange, ArrowLeft, Home } from 'lucide-react';
@@ -78,7 +80,7 @@ export default async function OnThisWeekPage() {
           <CalendarRange className="h-6 w-6 text-red-600" />
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">This Week in Wrestling</h1>
         </div>
-        <p className="text-sm text-gray-600 mb-8">{prettyDate(weekStart)} – {prettyDate(weekEnd)}</p>
+        <p className="text-sm text-gray-600 mb-8">{formatRangeGB(weekStart, weekEnd)}</p>
 
         {days.length === 0 && (
           <Card className="border rounded-xl bg-white shadow-sm">
@@ -93,7 +95,7 @@ export default async function OnThisWeekPage() {
             <div key={date}>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">{prettyDate(date)} ({date})</h2>
               <div className="space-y-4">
-                {itemsByDate[date].map((e) => {
+                {uniqueEvents(itemsByDate[date]).map((e) => {
                   const beltHref = `/belts/${e.belt_key}`;
                   const newHref = `/wrestlers/${toSlug(e.new_champion)}`;
                   const prevHref = e.previous_champion ? `/wrestlers/${toSlug(e.previous_champion)}` : undefined;
@@ -101,7 +103,7 @@ export default async function OnThisWeekPage() {
                     <Card key={e.slug} className="border rounded-xl bg-white shadow-sm">
                       <CardContent className="p-6 space-y-2">
                         <div className="flex items-center justify-between">
-                          <div className="text-base font-semibold text-gray-900">{e.date}</div>
+                          <div className="text-base font-semibold text-gray-900">{formatDateGB(e.date)}</div>
                           <Badge className="bg-blue-100 text-blue-800">{e.promotion}</Badge>
                         </div>
                         <div className="flex items-center gap-2">
