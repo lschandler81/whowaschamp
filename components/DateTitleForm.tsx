@@ -10,7 +10,7 @@ import { findChampionOn } from '@/lib/dateRange';
 import { championshipSchema, type Championship } from '@/lib/schema';
 import { Search, Calendar } from 'lucide-react';
 
-const availableChampionships = [
+const WRESTLING_CHAMPIONSHIPS = [
   { id: 'wwe', name: 'WWE Championship', file: 'wwe_championship_reigns.json', active: true },
   { id: 'wwe_world_2023', name: 'World Heavyweight Championship (2023)', file: 'wwe_world_heavyweight_2023_reigns.json', active: true },
   { id: 'wwe_world_2002', name: 'World Heavyweight Championship (2002-2013)', file: 'wwe_world_heavyweight_2002_2013_reigns.json', active: false },
@@ -28,11 +28,17 @@ const availableChampionships = [
   { id: 'tna', name: 'TNA/Impact World Championship', file: 'tna_championship_reigns.json', active: true },
 ];
 
+// UFC titles will be added after we import reign data
+const UFC_CHAMPIONSHIPS: { id: string; name: string; file: string; active: boolean; category?: string }[] = [
+  { id: 'ufc_hw', name: "UFC Men's Heavyweight Championship", file: 'ufc_mens_heavyweight_reigns.json', active: true },
+];
+
 export function DateTitleForm() {
   const [birthDate, setBirthDate] = useState('');
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [sport, setSport] = useState<'wrestling' | 'ufc'>('wrestling');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,8 +52,16 @@ export function DateTitleForm() {
     setError('');
     const foundResults: any[] = [];
     
-    // Filter to only active championships
-    const activeChampionships = availableChampionships.filter(c => c.active);
+    // Pick the data pool based on selected sport
+    const pool = sport === 'wrestling' ? WRESTLING_CHAMPIONSHIPS : UFC_CHAMPIONSHIPS;
+    const activeChampionships = pool.filter(c => c.active);
+
+    if (sport === 'ufc' && activeChampionships.length === 0) {
+      setLoading(false);
+      setResults([]);
+      setError("UFC titles coming soon — we\'re adding reign data next.");
+      return;
+    }
     
     try {
       // Load data for all active championships
@@ -113,6 +127,32 @@ export function DateTitleForm() {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Sport toggle */}
+            <div className="flex items-center justify-center gap-2">
+              <Label className="text-sm text-gray-700">Sport:</Label>
+              <div className="inline-flex rounded-lg border bg-white p-1">
+                <button
+                  type="button"
+                  onClick={() => setSport('wrestling')}
+                  className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+                    sport === 'wrestling' ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                  aria-pressed={sport === 'wrestling'}
+                >
+                  Wrestling
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSport('ufc')}
+                  className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+                    sport === 'ufc' ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                  aria-pressed={sport === 'ufc'}
+                >
+                  UFC
+                </button>
+              </div>
+            </div>
             <div className="space-y-2">
               <Label htmlFor="birth-date" className="text-sm font-medium text-gray-700">
                 Your Birth Date
@@ -159,10 +199,16 @@ export function DateTitleForm() {
       {/* Championship Info */}
       <div className="max-w-2xl mx-auto text-center">
         <p className="text-sm text-gray-600">
-          Currently searching: <strong>WWE Championship</strong>, <strong>WWE Universal Championship</strong>, <strong>WWE Intercontinental Championship</strong>, <strong>WWE Women's Championship</strong>, 
-          <strong>World Heavyweight Championship</strong>, <strong>WCW World Heavyweight Championship</strong>, <strong>NWA Worlds Heavyweight Championship</strong>,
-          <strong>IWGP World Heavyweight Championship</strong>, <strong>ECW World Heavyweight Championship</strong>, <strong>AEW World Championship</strong>, 
-          <strong>NXT Championship</strong>, and <strong>TNA/Impact World Championship</strong>
+          {sport === 'wrestling' ? (
+            <>
+              Currently searching: <strong>WWE Championship</strong>, <strong>WWE Universal Championship</strong>, <strong>WWE Intercontinental Championship</strong>, <strong>WWE Women's Championship</strong>, 
+              <strong>World Heavyweight Championship</strong>, <strong>WCW World Heavyweight Championship</strong>, <strong>NWA Worlds Heavyweight Championship</strong>,
+              <strong>IWGP World Heavyweight Championship</strong>, <strong>ECW World Heavyweight Championship</strong>, <strong>AEW World Championship</strong>, 
+              <strong>NXT Championship</strong>, and <strong>TNA/Impact World Championship</strong>
+            </>
+          ) : (
+            <>Currently searching: <strong>UFC Men's Heavyweight Championship</strong></>
+          )}
         </p>
       </div>
 
@@ -171,12 +217,8 @@ export function DateTitleForm() {
       {results.length > 0 && (
         <div className="space-y-8">
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              🎉 Your Birthday Champions ({results.length} found) 🎉
-            </h2>
-            <p className="text-gray-600">
-              Here are all the wrestling legends who held championship gold on your special day!
-            </p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">🎉 Your Birthday Champions ({results.length} found) 🎉</h2>
+            <p className="text-gray-600">Here are the champions who held title gold on your special day.</p>
           </div>
           
           {/* Categorize results */}

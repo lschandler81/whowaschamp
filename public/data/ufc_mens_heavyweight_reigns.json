@@ -1,0 +1,22 @@
+[
+  {
+    "title_key": "ufc_mens_heavyweight",
+    "title_name": "UFC Mens Heavyweight Championship",
+    "champion": "Stipe Miocic",
+    "start_date": "2016-05-14",
+    "end_date": "2018-07-07",
+    "won_event": "UFC 198",
+    "won_location": "Curitiba, Brazil",
+    "notes": "Defeated Fabricio Werdum via KO in round 1."
+  },
+  {
+    "title_key": "ufc_mens_heavyweight",
+    "title_name": "UFC Mens Heavyweight Championship",
+    "champion": "Jon Jones",
+    "start_date": "2023-03-04",
+    "end_date": null,
+    "won_event": "UFC 285",
+    "won_location": "Las Vegas, NV",
+    "notes": "Defeated Ciryl Gane via submission in round 1."
+  }
+]
