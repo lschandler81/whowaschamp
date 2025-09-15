@@ -31,7 +31,15 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
   const [fallbackEvents, setFallbackEvents] = useState<any[]>([]);
   const [debug, setDebug] = useState<any>(null);
 
+  // Always reset state and fetch fresh data on mount and when navigating
   useEffect(() => {
+    setEvent(null);
+    setError(null);
+    setLoading(true);
+    setCurrentWeek(null);
+    setContext(null);
+    setFallbackEvents([]);
+    setDebug(null);
     fetchWeeklyPPV();
   }, []);
 
