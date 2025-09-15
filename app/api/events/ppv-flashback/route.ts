@@ -84,19 +84,30 @@ export async function GET(request: NextRequest) {
 
     console.log('PPV Flashback API: Found', weekMatchingEvents.length, 'events matching current week');
 
-    if (weekMatchingEvents.length === 0) {
-      console.log('PPV Flashback API: No matching events, returning empty result');
-      return NextResponse.json({
-        event: null,
-        message: `No major PPV events happened during this week in wrestling history`,
-        currentWeek: currentISOWeek,
-        totalPPVs: allPPVEvents.length,
-        context: {
-          yearsAgo: null,
-          alternativeEvents: allPPVEvents.slice(0, 3).map(e => e.name)
-        }
-      });
-    }
+      if (weekMatchingEvents.length === 0) {
+        console.log('PPV Flashback API: No matching events for ISO week', currentISOWeek);
+        // Fallback: show the 3 most recent PPV events
+        const fallbackEvents = allPPVEvents.slice(0, 3);
+        return NextResponse.json({
+          event: null,
+          message: `No major PPV events happened during ISO week ${currentISOWeek}. Showing most recent PPVs as fallback.`,
+          currentWeek: currentISOWeek,
+          totalPPVs: allPPVEvents.length,
+          fallbackEvents: fallbackEvents.map(e => ({
+            id: e.id,
+            name: e.name,
+            date: e.date,
+            promotion: e.promotion.name,
+            attendance: e.attendance,
+            buyrate: e.buyrate
+          })),
+          debug: {
+            isoWeek: currentISOWeek,
+            today: new Date().toISOString(),
+            allPPVDates: allPPVEvents.map(e => e.date)
+          }
+        });
+      }
 
     // Sort by "biggest" criteria: attendance > buyrate > recency
     const sortedEvents = weekMatchingEvents.sort((a: EventWithRelations, b: EventWithRelations) => {
@@ -170,14 +181,39 @@ export async function GET(request: NextRequest) {
     });
 
   } catch (error) {
+    // Print error type, message, stack, and any custom fields
     console.error('PPV Flashback API: Caught error:', error);
-    console.error('PPV Flashback API: Error stack:', error instanceof Error ? error.stack : 'No stack trace');
-    
+    if (error instanceof Error) {
+      console.error('PPV Flashback API: Error name:', error.name);
+      console.error('PPV Flashback API: Error message:', error.message);
+      console.error('PPV Flashback API: Error stack:', error.stack);
+      // Print any custom fields
+      for (const key of Object.keys(error)) {
+        if (!['name', 'message', 'stack'].includes(key)) {
+          console.error(`PPV Flashback API: Error custom field ${key}:`, (error as any)[key]);
+        }
+      }
+    } else {
+      console.error('PPV Flashback API: Non-Error object:', error);
+    }
+    // Print request info
+    console.error('PPV Flashback API: Request info:', {
+      method: request.method,
+      url: request.url,
+      headers: Object.fromEntries(request.headers.entries()),
+      timestamp: new Date().toISOString()
+    });
     return NextResponse.json(
-      { 
+      {
         error: 'Failed to fetch PPV flashback',
         details: error instanceof Error ? error.message : 'Unknown error',
-        timestamp: new Date().toISOString()
+        stack: error instanceof Error ? error.stack : null,
+        request: {
+          method: request.method,
+          url: request.url,
+          headers: Object.fromEntries(request.headers.entries()),
+          timestamp: new Date().toISOString()
+        }
       },
       { status: 500 }
     );
