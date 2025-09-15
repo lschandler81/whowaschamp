@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 import { OnThisDayEvent } from '@/lib/types/ppv';
 
 /**
@@ -143,6 +144,3 @@ function getMonthName(month: number): string {
   ];
   return months[month - 1] || 'Unknown';
 }
-
-// Enable ISR caching
-export const revalidate = 60 * 60 * 12; // 12 hours
