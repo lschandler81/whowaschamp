@@ -35,10 +35,29 @@ type ScoredEvent = EventWithRelations & { score: number };
  */
 export async function GET(request: NextRequest) {
   try {
+    console.log('PPV Flashback API: Starting request...');
+    
+    // Test database connection first
+    try {
+      await prisma.$connect();
+      console.log('PPV Flashback API: Database connection successful');
+    } catch (dbError) {
+      console.error('PPV Flashback API: Database connection failed:', dbError);
+      return NextResponse.json(
+        { 
+          error: 'Database connection failed',
+          details: dbError instanceof Error ? dbError.message : 'Unknown database error'
+        },
+        { status: 500 }
+      );
+    }
+
     // Get the current ISO week number (1-53)
     const currentISOWeek = getCurrentISOWeek();
+    console.log('PPV Flashback API: Current ISO week:', currentISOWeek);
     
     // Get all PPV events
+    console.log('PPV Flashback API: Querying database...');
     const allPPVEvents = await prisma.event.findMany({
       where: {
         isPpv: true
@@ -55,18 +74,27 @@ export async function GET(request: NextRequest) {
       orderBy: { date: 'desc' }
     });
 
+    console.log('PPV Flashback API: Found', allPPVEvents.length, 'PPV events total');
+
     // Filter events to only those that happened in the same ISO week
     const isoWeekMatcher = getISOWeekMatcher();
     const weekMatchingEvents = allPPVEvents.filter(event => 
       isoWeekMatcher(new Date(event.date))
     );
 
+    console.log('PPV Flashback API: Found', weekMatchingEvents.length, 'events matching current week');
+
     if (weekMatchingEvents.length === 0) {
+      console.log('PPV Flashback API: No matching events, returning empty result');
       return NextResponse.json({
         event: null,
         message: `No major PPV events happened during this week in wrestling history`,
         currentWeek: currentISOWeek,
-        totalPPVs: allPPVEvents.length
+        totalPPVs: allPPVEvents.length,
+        context: {
+          yearsAgo: null,
+          alternativeEvents: allPPVEvents.slice(0, 3).map(e => e.name)
+        }
       });
     }
 
@@ -142,11 +170,14 @@ export async function GET(request: NextRequest) {
     });
 
   } catch (error) {
-    console.error('Error in ppv-flashback API:', error);
+    console.error('PPV Flashback API: Caught error:', error);
+    console.error('PPV Flashback API: Error stack:', error instanceof Error ? error.stack : 'No stack trace');
+    
     return NextResponse.json(
       { 
         error: 'Failed to fetch PPV flashback',
-        details: error instanceof Error ? error.message : 'Unknown error'
+        details: error instanceof Error ? error.message : 'Unknown error',
+        timestamp: new Date().toISOString()
       },
       { status: 500 }
     );
