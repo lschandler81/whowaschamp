@@ -97,87 +97,104 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
   };
 
   return (
-    <Card className="max-w-3xl mx-auto shadow-2xl border-0 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
-      <div className={`bg-gradient-to-r ${getChampionshipColors(championship)} p-1`}>
+    <Card className="result-card w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto shadow-xl border-0 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+      <div className={`bg-gradient-to-r ${getChampionshipColors(championship)} p-0.5`}>
         <div className="bg-white/95 rounded-lg">
-          <CardHeader className="text-center pb-4">
-            <div className="flex justify-center mb-4">
-              <div className={`p-3 bg-gradient-to-br ${getChampionshipColors(championship)} rounded-full`}>
-                <div className="text-4xl">{getChampionshipIcon(championship)}</div>
+          <CardHeader className="text-center pb-2 md:pb-4 px-2 md:px-6">
+            <div className="flex justify-center mb-2 md:mb-4">
+              <div className={`p-1 md:p-2 lg:p-3 bg-gradient-to-br ${getChampionshipColors(championship)} rounded-full`}>
+                <div className="text-lg md:text-2xl lg:text-4xl">{getChampionshipIcon(championship)}</div>
               </div>
             </div>
-            <CardTitle className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+            <CardTitle className="text-xs md:text-lg lg:text-xl font-bold text-gray-900 mb-1 md:mb-2 px-1 md:px-2">
               {champion.champion === 'VACANT' ? '👑 Title Was Vacant! 👑' : `${getChampionshipIcon(championship)} Your Birthday Champion! ${getChampionshipIcon(championship)}`}
             </CardTitle>
-            <div className="text-lg sm:text-xl text-gray-700 break-words">
+            <div className="text-xs md:text-base text-gray-700 px-1 md:px-4">
               {champion.champion === 'VACANT' ? (
                 <div className="space-y-2">
-                  <div className="text-xl sm:text-2xl font-bold text-orange-600">
+                  <div className="text-xs md:text-sm text-gray-600">
                     The <span className="font-semibold text-indigo-600">{championship}</span> title was vacant on your birthday!
                   </div>
                   {champion.notes && (
-                    <div className="text-sm sm:text-lg text-gray-600 bg-orange-50 p-3 rounded-lg border-l-4 border-orange-400">
+                    <div className="text-xs md:text-sm lg:text-lg text-gray-600 bg-orange-50 p-2 md:p-3 rounded-lg border-l-4 border-orange-400">
                       <strong>Reason:</strong> {champion.notes}
                     </div>
                   )}
                 </div>
               ) : (
                 <>
-                  <strong className="text-xl sm:text-2xl text-blue-800">{champion.champion || champion.name || 'Unknown Champion'}</strong> was the{' '}
+                  <strong className="text-sm md:text-xl lg:text-2xl text-blue-800">{champion.champion || champion.name || 'Unknown Champion'}</strong> was the{' '}
                   <span className="font-semibold text-indigo-600">{championship}</span> champion
                 </>
               )}
             </div>
           </CardHeader>
 
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-3 md:space-y-4 lg:space-y-6 p-2 md:p-3 lg:p-6">
             {/* Champion Details */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Calendar className="h-5 w-5 text-blue-600" />
-                    <div>
-                      <p className="text-sm text-gray-500">Your Birthday</p>
-                      <p className="text-sm sm:text-base font-semibold text-gray-900 break-words">
-                        {birthDate.toLocaleDateString('en-US', { 
-                          weekday: 'long',
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
-                        })}
+            <div className="bg-white p-2 md:p-3 lg:p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4 lg:gap-6">
+                <div className="space-y-2 md:space-y-3 lg:space-y-4">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5 text-blue-600 flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs md:text-sm text-gray-500">Your Birthday</p>
+                      <p className="text-xs md:text-sm lg:text-base font-semibold text-gray-900 break-words">
+                        <span className="md:hidden">
+                          {birthDate.toLocaleDateString('en-US', { 
+                            weekday: 'short',
+                            year: 'numeric', 
+                            month: 'short', 
+                            day: 'numeric' 
+                          })}
+                        </span>
+                        <span className="hidden md:inline">
+                          {birthDate.toLocaleDateString('en-US', { 
+                            weekday: 'long',
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                          })}
+                        </span>
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-3">
-                    <Trophy className="h-5 w-5 text-yellow-600" />
-                    <div>
-                      <p className="text-sm text-gray-500">Day of Reign</p>
-                      <p className="font-semibold text-gray-900">Day {dayOfReign?.toLocaleString() || 'N/A'}</p>
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <Trophy className="h-4 w-4 md:h-5 md:w-5 text-yellow-600 flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs md:text-sm text-gray-500">Day of Reign</p>
+                      <p className="text-xs md:text-sm font-semibold text-gray-900">Day {dayOfReign?.toLocaleString() || 'N/A'}</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Calendar className="h-5 w-5 text-green-600" />
-                    <div>
-                      <p className="text-sm text-gray-500">Title Won</p>
-                      <p className="text-sm sm:text-base font-semibold text-gray-900 break-words">
-                        {reignStart
-                          ? reignStart.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
-                          : 'Unknown'}
+                <div className="space-y-3 md:space-y-4">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <Calendar className="h-4 w-4 md:h-5 md:w-5 text-green-600 flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs md:text-sm text-gray-500">Title Won</p>
+                      <p className="text-xs md:text-sm lg:text-base font-semibold text-gray-900 break-words">
+                        <span className="md:hidden">
+                          {reignStart
+                            ? reignStart.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' })
+                            : 'Unknown'}
+                        </span>
+                        <span className="hidden md:inline">
+                          {reignStart
+                            ? reignStart.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
+                            : 'Unknown'}
+                        </span>
                       </p>
                     </div>
                   </div>
                   
                   {champion.won_location && (
-                    <div className="flex items-center gap-3">
-                      <MapPin className="h-5 w-5 text-red-600" />
-                      <div>
-                        <p className="text-sm text-gray-500">Location</p>
-                        <p className="font-semibold text-gray-900">{champion.won_location}</p>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4 md:h-5 md:w-5 text-red-600" />
+                      <div className="min-w-0 flex-1">
+                        <p className="text-xs md:text-sm text-gray-500">Location</p>
+                        <p className="font-semibold text-sm md:text-base text-gray-900 truncate">{champion.won_location}</p>
                       </div>
                     </div>
                   )}
@@ -186,9 +203,9 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
             </div>
 
             {/* Fun Facts */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Fun Facts</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-2 md:p-3 lg:p-6 rounded-xl">
+              <h3 className="text-sm md:text-base lg:text-lg font-semibold text-gray-900 mb-2 md:mb-3 lg:mb-4">Fun Facts</h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4 lg:gap-6">
                 {champion.champion === 'VACANT' ? (
                   <>
                     <div className="text-center">
@@ -207,22 +224,22 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                 ) : (
                   <>
                     <div className="text-center">
-                      <Badge variant="outline" className="mb-2 bg-white">Reign Length</Badge>
-                      <p className="text-xl sm:text-2xl font-bold text-blue-600 break-all">{Math.max(0, reignLength)}</p>
-                      <p className="text-sm text-gray-600">days</p>
+                      <Badge variant="outline" className="mb-1 md:mb-2 bg-white text-xs">Reign Length</Badge>
+                      <p className="text-sm md:text-lg lg:text-xl font-bold text-blue-600 break-all">{Math.max(0, reignLength)}</p>
+                      <p className="text-xs text-gray-600">days</p>
                     </div>
                     {champion.won_event && (
                       <div className="text-center">
-                        <Badge variant="outline" className="mb-2 bg-white">Won At</Badge>
-                        <p className="text-base sm:text-lg font-bold text-green-600 break-words">{champion.won_event}</p>
-                        <p className="text-sm text-gray-600">event</p>
+                        <Badge variant="outline" className="mb-1 md:mb-2 bg-white text-xs">Won At</Badge>
+                        <p className="text-xs md:text-sm lg:text-base font-bold text-green-600 break-words">{champion.won_event}</p>
+                        <p className="text-xs text-gray-600">event</p>
                       </div>
                     )}
                     {!champion.won_event && (
                       <div className="text-center">
-                        <Badge variant="outline" className="mb-2 bg-white">Champion</Badge>
-                        <p className="text-lg font-bold text-gray-700">{champion.champion}</p>
-                        <p className="text-sm text-gray-600">name</p>
+                        <Badge variant="outline" className="mb-1 md:mb-2 bg-white text-xs">Champion</Badge>
+                        <p className="text-sm md:text-base lg:text-lg font-bold text-gray-700">{champion.champion}</p>
+                        <p className="text-xs text-gray-600">name</p>
                       </div>
                     )}
                   </>
@@ -231,25 +248,26 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
               
               {/* Additional notes if present */}
               {champion.notes && (
-                <div className={`mt-4 p-3 rounded-lg ${champion.champion === 'VACANT' ? 'bg-orange-100' : 'bg-blue-100'}`}>
-                  <p className={`text-sm ${champion.champion === 'VACANT' ? 'text-orange-700' : 'text-blue-700'}`}>{champion.notes}</p>
+                <div className={`mt-3 md:mt-4 p-2 md:p-3 rounded-lg ${champion.champion === 'VACANT' ? 'bg-orange-100' : 'bg-blue-100'}`}>
+                  <p className={`text-xs md:text-sm ${champion.champion === 'VACANT' ? 'text-orange-700' : 'text-blue-700'}`}>{champion.notes}</p>
                 </div>
               )}
               
               {/* Special badges for notable reigns */}
-              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+              <div className="mt-3 md:mt-4 flex flex-wrap gap-2 justify-center">
                 {reignLength > 365 && (
-                  <Badge className="bg-gold text-white text-xs sm:text-sm">🏆 Long Reign (1+ Year)</Badge>
+                  <Badge className="bg-gold text-white text-xs">🏆 Long Reign (1+ Year)</Badge>
                 )}
                 {championship.includes('Women\'s') && (
-                  <Badge className="bg-pink-500 text-white text-xs sm:text-sm">👑 Women's Division</Badge>
+                  <Badge className="bg-pink-500 text-white text-xs">👑 Women's Division</Badge>
                 )}
+                
                 
                 {/* WWE-specific badges */}
                 {!championship.includes('UFC') && (
                   <>
                     {championship.includes('NXT') && (
-                      <Badge className="bg-yellow-500 text-white text-xs sm:text-sm">⭐ Developmental</Badge>
+                      <Badge className="bg-yellow-500 text-white text-xs">⭐ Developmental</Badge>
                     )}
                     {/* Only show wrestling eras for WWE championships */}
                     {(championship.includes('WWE') || championship.includes('WWF')) && reignStart && (() => {
@@ -270,7 +288,7 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                       };
                       const colorClass = eraColors[era] || 'bg-gray-600';
                       return (
-                        <Badge className={`${colorClass} text-white text-xs sm:text-sm`}>
+                        <Badge className={`${colorClass} text-white text-xs`}>
                           {era === 'Attitude Era' ? '🔥' : 
                            era === 'Golden Era' ? '📜' : 
                            era === 'PG Era' ? '🎪' :
@@ -287,13 +305,13 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                 {championship.includes('UFC') && reignStart && (
                   <>
                     {reignStart.getFullYear() >= 1993 && reignStart.getFullYear() <= 2000 && (
-                      <Badge className="bg-gray-600 text-white text-xs sm:text-sm">🥊 Early UFC Era</Badge>
+                      <Badge className="bg-gray-600 text-white text-xs">🥊 Early UFC Era</Badge>
                     )}
                     {reignStart.getFullYear() >= 2001 && reignStart.getFullYear() <= 2016 && (
-                      <Badge className="bg-orange-600 text-white text-xs sm:text-sm">🔥 Zuffa Era</Badge>
+                      <Badge className="bg-orange-600 text-white text-xs">🔥 Zuffa Era</Badge>
                     )}
                     {reignStart.getFullYear() >= 2017 && (
-                      <Badge className="bg-red-600 text-white text-xs sm:text-sm">✨ WME Era</Badge>
+                      <Badge className="bg-red-600 text-white text-xs">✨ WME Era</Badge>
                     )}
                   </>
                 )}
@@ -301,33 +319,33 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
             </div>
 
             {/* Social Share */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Share2 className="h-4 w-4 sm:h-5 sm:w-5" />
+            <div className="bg-white p-2 md:p-3 lg:p-6 rounded-xl shadow-sm border border-gray-100">
+              <h3 className="text-xs md:text-sm lg:text-base font-semibold text-gray-900 mb-2 md:mb-3 lg:mb-4 flex items-center gap-1 md:gap-2">
+                <Share2 className="h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
                 Share Your Result
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-1 md:gap-2 lg:gap-3">
                 <Button
                   onClick={() => handleShare('twitter')}
-                  className="bg-blue-500 hover:bg-blue-600 text-white flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 py-2"
+                  className="bg-blue-500 hover:bg-blue-600 text-white flex items-center gap-1 md:gap-2 text-xs md:text-sm lg:text-base px-1.5 md:px-2 lg:px-3 py-1.5 md:py-2"
                 >
-                  <Twitter className="h-4 w-4" />
+                  <Twitter className="h-3 w-3" />
                   <span className="hidden xs:inline">Twitter/X</span>
                   <span className="inline xs:hidden">X</span>
                 </Button>
                 <Button
                   onClick={() => handleShare('facebook')}
-                  className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 py-2"
+                  className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-1 md:gap-2 text-xs md:text-sm lg:text-base px-1.5 md:px-2 lg:px-3 py-1.5 md:py-2"
                 >
-                  <Facebook className="h-4 w-4" />
+                  <Facebook className="h-3 w-3" />
                   <span className="hidden xs:inline">Facebook</span>
                   <span className="inline xs:hidden">FB</span>
                 </Button>
                 <Button
                   onClick={() => handleShare('threads')}
-                  className="bg-black hover:bg-gray-800 text-white flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 py-2"
+                  className="bg-black hover:bg-gray-800 text-white flex items-center gap-1 md:gap-2 text-xs md:text-sm lg:text-base px-1.5 md:px-2 lg:px-3 py-1.5 md:py-2"
                 >
-                  <span className="font-bold">@</span>
+                  <span className="font-bold text-xs">@</span>
                   <span className="hidden xs:inline">Threads</span>
                   <span className="inline xs:hidden">Th</span>
                 </Button>
@@ -335,7 +353,7 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
             </div>
 
             {/* Data Source */}
-            <div className="text-center text-sm text-gray-500">
+            <div className="text-center text-xs md:text-sm text-gray-500">
               <p>
                 Data last updated: {new Date(metadata.generated_at).toLocaleDateString()}
               </p>

@@ -111,4 +111,37 @@
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
+  
+  /* Mobile-first responsive overrides */
+  @media (max-width: 640px) {
+    .result-card {
+      max-width: 100% !important;
+      margin: 0 0.5rem !important;
+    }
+    
+    .result-card h1, .result-card h2, .result-card h3 {
+      font-size: 0.875rem !important;
+      line-height: 1.25rem !important;
+    }
+    
+    .result-card p {
+      font-size: 0.75rem !important;
+      line-height: 1rem !important;
+    }
+    
+    .result-card .text-2xl {
+      font-size: 0.875rem !important;
+      line-height: 1.25rem !important;
+    }
+    
+    .result-card .text-xl {
+      font-size: 0.75rem !important;
+      line-height: 1rem !important;
+    }
+    
+    .result-card .text-lg {
+      font-size: 0.75rem !important;
+      line-height: 1rem !important;
+    }
+  }
 }
