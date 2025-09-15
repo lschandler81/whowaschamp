@@ -278,24 +278,24 @@ export default function EraDefiningReigns() {
             {eraDefiningReigns.map((reign, index) => (
               <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <CardTitle className="text-2xl text-gray-900 mb-2">{reign.champion}</CardTitle>
-                      <div className="flex items-center gap-4">
-                        <Badge variant="outline" className="bg-orange-50 text-orange-700">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl sm:text-2xl text-gray-900 mb-2">{reign.champion}</CardTitle>
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+                        <Badge variant="outline" className="bg-orange-50 text-orange-700 text-xs">
                           {reign.championship}
                         </Badge>
                         <div className="flex items-center gap-1 text-gray-600">
                           <Calendar className="h-4 w-4" />
                           <span className="text-sm">{reign.reignPeriod}</span>
                         </div>
-                        <Badge className={`bg-gradient-to-r ${reign.eraColor} text-white`}>
+                        <Badge className={`bg-gradient-to-r ${reign.eraColor} text-white text-xs`}>
                           {reign.era}
                         </Badge>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-lg font-bold text-orange-600">{reign.reignLength}</div>
+                    <div className="text-left sm:text-right flex-shrink-0">
+                      <div className="text-lg font-bold text-orange-600 break-words">{reign.reignLength}</div>
                       <div className="text-sm text-gray-500">Reign Length</div>
                     </div>
                   </div>

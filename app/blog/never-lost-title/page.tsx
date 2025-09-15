@@ -208,32 +208,33 @@ export default function NeverLostTitle() {
             {neverLostChampions.map((champion, index) => (
               <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full text-white font-bold text-lg">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex items-start gap-4 flex-1">
+                      <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full text-white font-bold text-lg flex-shrink-0">
                         <Crown className="h-6 w-6" />
                       </div>
-                      <div>
-                        <CardTitle className="text-2xl text-gray-900">{champion.name}</CardTitle>
-                        <div className="flex items-center gap-4 mt-2">
-                          <Badge variant="outline" className="bg-indigo-50 text-indigo-700">
+                      <div className="flex-1 min-w-0">
+                        <CardTitle className="text-xl sm:text-2xl text-gray-900 break-words">{champion.name}</CardTitle>
+                        <div className="flex flex-wrap items-center gap-2 mt-2">
+                          <Badge variant="outline" className="bg-indigo-50 text-indigo-700 text-xs">
                             {champion.championship}
                           </Badge>
                           <div className="flex items-center gap-1 text-gray-600">
-                            <Calendar className="h-4 w-4" />
+                            <Calendar className="h-4 w-4 flex-shrink-0" />
                             <span className="text-sm">{champion.reignPeriod}</span>
                           </div>
                           <Badge 
                             variant={champion.category === 'Medical' ? 'destructive' : 
                                    champion.category === 'Controversial' ? 'default' : 'secondary'}
+                            className="text-xs"
                           >
                             {champion.category}
                           </Badge>
                         </div>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-lg font-bold text-indigo-600">{champion.reignLength}</div>
+                    <div className="text-left sm:text-right flex-shrink-0">
+                      <div className="text-lg font-bold text-indigo-600 break-words">{champion.reignLength}</div>
                       <div className="text-sm text-gray-500">Reign Length</div>
                     </div>
                   </div>

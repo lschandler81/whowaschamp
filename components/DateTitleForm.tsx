@@ -167,24 +167,25 @@ export function DateTitleForm() {
 
   return (
     <div className="space-y-8">
-      <Card className="mx-auto max-w-2xl shadow-xl border-0 bg-white/80 backdrop-blur-sm">
-        <CardHeader className="text-center pb-6">
-          <CardTitle className="text-2xl font-bold text-gray-900 flex items-center justify-center gap-2">
-            <Calendar className="h-6 w-6 text-blue-600" />
-            Find Your Birthday Champions
+      <Card className="rounded-2xl border border-gray-200/70 bg-white shadow-sm">
+        <CardHeader className="text-center p-4 sm:p-5">
+          <CardTitle className="text-2xl font-bold tracking-tight text-gray-900 mb-3">
+            🏆 Find Your Birthday Champion
           </CardTitle>
-          <p className="text-gray-600 mt-2">Enter your birth date to discover which wrestling legends held championship gold on your special day</p>
+          <p className="text-[15px] leading-6 text-gray-700">
+            Enter your birth date to discover which wrestling legend held the title on the day you were born.
+          </p>
         </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <CardContent className="p-4 sm:p-5 space-y-3">
+          <form onSubmit={handleSubmit} className="space-y-3">
             {/* Sport toggle */}
             <div className="flex items-center justify-center gap-2">
-              <Label className="text-sm text-gray-700">Sport:</Label>
+              <Label className="text-xs text-gray-500">Sport:</Label>
               <div className="inline-flex rounded-lg border bg-white p-1">
                 <button
                   type="button"
                   onClick={() => setSport('wrestling')}
-                  className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+                  className={`px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
                     sport === 'wrestling' ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'
                   }`}
                   aria-pressed={sport === 'wrestling'}
@@ -194,7 +195,7 @@ export function DateTitleForm() {
                 <button
                   type="button"
                   onClick={() => setSport('ufc')}
-                  className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+                  className={`px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
                     sport === 'ufc' ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'
                   }`}
                   aria-pressed={sport === 'ufc'}
@@ -204,7 +205,7 @@ export function DateTitleForm() {
               </div>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="birth-date" className="text-sm font-medium text-gray-700">
+              <Label htmlFor="birth-date" className="text-xs font-medium text-gray-500">
                 Your Birth Date
               </Label>
               <Input
@@ -214,30 +215,30 @@ export function DateTitleForm() {
                 onChange={(e) => setBirthDate(e.target.value)}
                 min="1963-04-25"
                 max={new Date().toISOString().split('T')[0]}
-                className="w-full h-12 text-lg"
+                className="w-full h-10 text-[15px]"
                 required
               />
             </div>
 
             {error && (
-              <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-600 text-sm">{error}</p>
+              <div className="rounded-2xl border border-red-200/70 bg-red-50 shadow-sm p-3">
+                <p className="text-[15px] leading-6 text-red-700 text-center">{error}</p>
               </div>
             )}
 
             <Button 
               type="submit" 
-              className="w-full h-12 text-lg font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg"
+              className="w-full h-10 text-[15px] font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-sm"
               disabled={loading}
             >
               {loading ? (
                 <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                   Searching...
                 </div>
               ) : (
                 <div className="flex items-center gap-2">
-                  <Search className="h-5 w-5" />
+                  <Search className="h-4 w-4" />
                   Find My Champions
                 </div>
               )}
@@ -247,8 +248,8 @@ export function DateTitleForm() {
       </Card>
 
       {/* Championship Info */}
-      <div className="max-w-2xl mx-auto text-center">
-        <p className="text-sm text-gray-600">
+      <div className="text-center">
+        <p className="text-xs text-gray-500 line-clamp-2">
           {sport === 'wrestling' ? (
             <>
               Currently searching: <strong>WWE Championship</strong>, <strong>WWE Universal Championship</strong>, <strong>WWE Intercontinental Championship</strong>, <strong>WWE Women's Championship</strong>, 

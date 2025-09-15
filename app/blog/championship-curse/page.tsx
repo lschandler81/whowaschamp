@@ -168,27 +168,28 @@ export default function ChampionshipCurse() {
               {cursedChampions.map((champion, index) => (
                 <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardHeader className="pb-4">
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <CardTitle className="text-2xl text-gray-900">{champion.name}</CardTitle>
-                        <div className="flex items-center gap-4 mt-2">
-                          <Badge variant="outline" className="bg-red-50 text-red-700">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                      <div className="flex-1">
+                        <CardTitle className="text-xl sm:text-2xl text-gray-900 break-words">{champion.name}</CardTitle>
+                        <div className="flex flex-wrap items-center gap-2 sm:gap-4 mt-2">
+                          <Badge variant="outline" className="bg-red-50 text-red-700 text-xs">
                             {champion.championship}
                           </Badge>
                           <div className="flex items-center gap-1 text-gray-600">
-                            <Calendar className="h-4 w-4" />
+                            <Calendar className="h-4 w-4 flex-shrink-0" />
                             <span className="text-sm">{champion.reignPeriod}</span>
                           </div>
                           <Badge 
                             variant={champion.severity === 'Extreme' ? 'destructive' : 
                                    champion.severity === 'High' ? 'default' : 'secondary'}
+                            className="text-xs"
                           >
                             {champion.severity} Impact
                           </Badge>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-lg font-bold text-red-600">{champion.curse}</div>
+                      <div className="text-left sm:text-right flex-shrink-0">
+                        <div className="text-lg font-bold text-red-600 break-words">{champion.curse}</div>
                       </div>
                     </div>
                   </CardHeader>

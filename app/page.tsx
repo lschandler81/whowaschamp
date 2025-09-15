@@ -17,18 +17,18 @@ export default function Home() {
           <div className="absolute bottom-20 left-1/4 w-12 h-12 border-2 border-pink-400 rounded-full animate-pulse delay-2000"></div>
           <div className="absolute bottom-32 right-1/3 w-14 h-14 border-2 border-green-400 rounded-full animate-pulse delay-3000"></div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+        <div className="relative max-w-screen-sm sm:max-w-4xl mx-auto px-4 sm:px-6 py-24 sm:py-32">
           <div className="text-center">
             <div className="flex justify-center mb-8">
               <div className="p-4 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full shadow-2xl animate-bounce">
                 <Trophy className="h-16 w-16 text-yellow-100" />
               </div>
             </div>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+            <h1 className="text-2xl font-bold tracking-tight mb-6">
               Who Was Champion on{' '}
               <span className="bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">Your Birthday?</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto">
+            <p className="text-[15px] leading-6 text-blue-100 mb-12">
               Discover which wrestling legends held championship gold the day you were born.
               Explore decades of wrestling history across multiple promotions and divisions.
             </p>
@@ -38,16 +38,14 @@ export default function Home() {
 
       {/* Main Form Section */}
       <section className="py-16 sm:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-sm sm:max-w-4xl mx-auto px-4 sm:px-6">
           <DateTitleForm />
         </div>
       </section>
 
-      
-
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-br from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-sm sm:max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Wrestling Championship Stats</h2>
             <p className="text-lg text-gray-600">Explore fascinating statistics from decades of championship history across all major promotions</p>
@@ -99,7 +97,7 @@ export default function Home() {
       
       {/* Popular Posts */}
       <section className="py-16 bg-gradient-to-br from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-sm sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Popular Posts</h2>
             <p className="text-gray-600">Explore more championship history and deep dives</p>
