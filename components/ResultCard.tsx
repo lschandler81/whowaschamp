@@ -251,7 +251,8 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                     {championship.includes('NXT') && (
                       <Badge className="bg-yellow-500 text-white">⭐ Developmental</Badge>
                     )}
-                    {reignStart && (() => {
+                    {/* Only show wrestling eras for WWE championships */}
+                    {(championship.includes('WWE') || championship.includes('WWF')) && reignStart && (() => {
                       const year = reignStart.getFullYear();
                       const era = getWrestlingEra(year);
                       const eraColors: { [key: string]: string } = {

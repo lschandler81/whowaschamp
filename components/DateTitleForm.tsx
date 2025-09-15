@@ -257,7 +257,11 @@ export function DateTitleForm() {
               <strong>NXT Championship</strong>, and <strong>TNA/Impact World Championship</strong>
             </>
           ) : (
-            <>Currently searching: <strong>UFC Men's Heavyweight Championship</strong></>
+            <>
+              Currently searching: <strong>UFC Men's Heavyweight</strong>, <strong>UFC Men's Light Heavyweight</strong>, <strong>UFC Men's Middleweight</strong>, <strong>UFC Men's Welterweight</strong>,
+              <strong>UFC Men's Lightweight</strong>, <strong>UFC Men's Featherweight</strong>, <strong>UFC Men's Bantamweight</strong>, <strong>UFC Men's Flyweight</strong>,
+              <strong>UFC Women's Featherweight</strong>, <strong>UFC Women's Bantamweight</strong>, <strong>UFC Women's Flyweight</strong>, and <strong>UFC Women's Strawweight Championships</strong>
+            </>
           )}
         </p>
       </div>
