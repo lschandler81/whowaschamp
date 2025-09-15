@@ -13,6 +13,7 @@
 
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { parse } from 'node-html-parser';
 import { ETLDatabase, HTTPClient, ScrapedEvent, cleanText, isUFCPPV, parseEventDate } from './utils';
 
@@ -26,9 +27,15 @@ interface UFCEventRow {
   eventPageUrl?: string;
 }
 
+interface ParsedUFCEvent extends ScrapedEvent {
+  eventNumber?: number;
+  eventPageUrl?: string;
+  promotionSlug: 'ufc';
+}
+
 class UFCETLService {
-  private db: ETLDatabase;
-  private http: HTTPClient;
+  private readonly db: ETLDatabase;
+  private readonly http: HTTPClient;
   private readonly since?: Date;
   private readonly dryRun: boolean;
   private readonly limit?: number;
@@ -43,7 +50,6 @@ class UFCETLService {
     this.since = options.since ? new Date(options.since) : undefined;
     this.dryRun = options.dryRun || false;
     this.limit = options.limit;
-    this.dryRun = options.dryRun || false;
   }
 
   async run(): Promise<void> {
@@ -107,6 +113,7 @@ class UFCETLService {
         eventNumber: 292,
         attendance: 19319,
         isPpv: true,
+        promotionSlug: 'ufc' as const,
         headliners: [
           {
             side: 'main',
@@ -133,6 +140,7 @@ class UFCETLService {
         eventNumber: 291,
         attendance: 17551,
         isPpv: true,
+        promotionSlug: 'ufc' as const,
         headliners: [
           {
             side: 'main',
@@ -152,6 +160,7 @@ class UFCETLService {
         country: 'Singapore',
         attendance: 11000,
         isPpv: false,
+        promotionSlug: 'ufc' as const,
         headliners: [
           {
             side: 'main',
@@ -172,6 +181,7 @@ class UFCETLService {
         eventNumber: 1,
         attendance: 7800,
         isPpv: true,
+        promotionSlug: 'ufc' as const,
         headliners: [
           {
             side: 'main',
