@@ -6,5 +6,6 @@
   package = "@netlify/plugin-nextjs"
 
 [build.environment]
-# Skip devDependencies during Netlify install to avoid vite/vitest peer conflicts
-  NPM_FLAGS = "--omit=dev"
+# Install devDependencies during build so Prisma can generate the client.
+# Using legacy peer deps to avoid transient peer conflicts from test tooling.
+  NPM_FLAGS = "--legacy-peer-deps"

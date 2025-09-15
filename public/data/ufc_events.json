@@ -1,1 +1,5995 @@
-[]
+[
+  {
+    "sport": "ufc",
+    "date": "2026-05-31",
+    "name": "UFC White House",
+    "venue": "White House",
+    "city": "Washington, D.C., U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-12-13",
+    "name": "UFC Fight Night 266",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-12-06",
+    "name": "UFC 323",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-11-22",
+    "name": "UFC Fight Night 265",
+    "venue": "Ali Bin Hamad al-Attiyah Arena",
+    "city": "Doha, Qatar",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-11-15",
+    "name": "UFC 322: Della Maddalena vs. Makhachev",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-11-08",
+    "name": "UFC Fight Night 264",
+    "venue": "TBA",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-11-01",
+    "name": "UFC Fight Night 263",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-10-24",
+    "name": "UFC 321: Aspinall vs. Gane",
+    "venue": "Etihad Arena",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-10-17",
+    "name": "UFC Fight Night: de Ridder vs. Hernandez",
+    "venue": "Rogers Arena",
+    "city": "Vancouver, British Columbia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-10-10",
+    "name": "UFC Fight Night: Oliveira vs. Fiziev",
+    "venue": "Farmasi Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-10-03",
+    "name": "UFC 320: Ankalaev vs. Pereira 2",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-09-27",
+    "name": "UFC Fight Night: Ulberg vs. Reyes",
+    "venue": "RAC Arena",
+    "city": "Perth, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-09-12",
+    "name": "UFC Fight Night: Lopes vs. Silva",
+    "venue": "Frost Bank Center",
+    "city": "San Antonio, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-09-05",
+    "name": "UFC Fight Night: Imavov vs. Borralho",
+    "venue": "Accor Arena",
+    "city": "Paris, France",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-08-22",
+    "name": "UFC Fight Night: Walker vs. Zhang",
+    "venue": "Shanghai Indoor Stadium",
+    "city": "Shanghai, China",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-08-15",
+    "name": "UFC 319: du Plessis vs. Chimaev",
+    "venue": "United Center",
+    "city": "Chicago, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-08-08",
+    "name": "UFC on ESPN: Dolidze vs. Hernandez",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-08-01",
+    "name": "UFC on ESPN: Taira vs. Park",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-07-25",
+    "name": "UFC on ABC: Whittaker vs. de Ridder",
+    "venue": "Etihad Arena",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-07-18",
+    "name": "UFC 318: Holloway vs. Poirier 3",
+    "venue": "Smoothie King Center",
+    "city": "New Orleans, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-07-11",
+    "name": "UFC on ESPN: Lewis vs. Teixeira",
+    "venue": "Bridgestone Arena",
+    "city": "Nashville, Tennessee, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-06-27",
+    "name": "UFC 317: Topuria vs. Oliveira",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-06-20",
+    "name": "UFC on ABC: Hill vs. Rountree Jr.",
+    "venue": "Baku Crystal Hall",
+    "city": "Baku, Azerbaijan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-06-13",
+    "name": "UFC on ESPN: Usman vs. Buckley",
+    "venue": "State Farm Arena",
+    "city": "Atlanta, Georgia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-06-06",
+    "name": "UFC 316: Dvalishvili vs. O'Malley 2",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-05-30",
+    "name": "UFC on ESPN: Gamrot vs. Klein",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-05-16",
+    "name": "UFC Fight Night: Burns vs. Morales",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-05-09",
+    "name": "UFC 315: Muhammad vs. Della Maddalena",
+    "venue": "Bell Centre",
+    "city": "Montreal, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-05-02",
+    "name": "UFC on ESPN: Sandhagen vs. Figueiredo",
+    "venue": "Wells Fargo Arena",
+    "city": "Des Moines, Iowa, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-04-25",
+    "name": "UFC on ESPN: Machado Garry vs. Prates",
+    "venue": "T-Mobile Center",
+    "city": "Kansas City, Missouri, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-04-11",
+    "name": "UFC 314: Volkanovski vs. Lopes",
+    "venue": "Kaseya Center",
+    "city": "Miami, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-04-04",
+    "name": "UFC on ESPN: Emmett vs. Murphy",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-03-29",
+    "name": "UFC on ESPN: Moreno vs. Erceg",
+    "venue": "Arena CDMX",
+    "city": "Mexico City, Mexico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-03-22",
+    "name": "UFC Fight Night: Edwards vs. Brady",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-03-15",
+    "name": "UFC Fight Night: Vettori vs. Dolidze 2",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-03-08",
+    "name": "UFC 313: Pereira vs. Ankalaev",
+    "venue": "T-Mobile Arena",
+    "city": "18,869",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-03-01",
+    "name": "UFC Fight Night: Kape vs. Almabayev",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-02-22",
+    "name": "UFC Fight Night: Cejudo vs. Song",
+    "venue": "Climate Pledge Arena",
+    "city": "Seattle, Washington, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-02-15",
+    "name": "UFC Fight Night: Cannonier vs. Rodrigues",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-02-08",
+    "name": "UFC 312: du Plessis vs. Strickland 2",
+    "venue": "Qudos Bank Arena",
+    "city": "Sydney, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-02-01",
+    "name": "UFC Fight Night: Adesanya vs. Imavov",
+    "venue": "anb Arena",
+    "city": "Riyadh, Saudi Arabia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-01-18",
+    "name": "UFC 311: Makhachev vs. Moicano",
+    "venue": "Intuit Dome",
+    "city": "Inglewood, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2025-01-11",
+    "name": "UFC Fight Night: Dern vs. Ribas 2",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-12-14",
+    "name": "UFC on ESPN: Covington vs. Buckley",
+    "venue": "Amalie Arena",
+    "city": "Tampa, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-12-07",
+    "name": "UFC 310: Pantoja vs. Asakura",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-11-23",
+    "name": "UFC Fight Night: Yan vs. Figueiredo",
+    "venue": "Galaxy Arena",
+    "city": "Macau SAR, China",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-11-16",
+    "name": "UFC 309: Jones vs. Miocic",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-11-09",
+    "name": "UFC Fight Night: Magny vs. Prates",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-11-02",
+    "name": "UFC Fight Night: Moreno vs. Albazi",
+    "venue": "Rogers Place",
+    "city": "Edmonton, Alberta, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-10-25",
+    "name": "UFC 308: Topuria vs. Holloway",
+    "venue": "Etihad Arena",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-10-18",
+    "name": "UFC Fight Night: Hernandez vs. Pereira",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-10-11",
+    "name": "UFC Fight Night: Royval vs. Taira",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-10-04",
+    "name": "UFC 307: Pereira vs. Rountree Jr.",
+    "venue": "Delta Center",
+    "city": "Salt Lake City, Utah, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-09-27",
+    "name": "UFC Fight Night: Moicano vs. Saint Denis",
+    "venue": "Accor Arena",
+    "city": "Paris, France",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-09-13",
+    "name": "UFC 306: O'Malley vs. Dvalishvili",
+    "venue": "Sphere",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-09-06",
+    "name": "UFC Fight Night: Burns vs. Brady",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-08-23",
+    "name": "UFC on ESPN: Cannonier vs. Borralho",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-08-17",
+    "name": "UFC 305: du Plessis vs. Adesanya",
+    "venue": "RAC Arena",
+    "city": "Perth, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-08-09",
+    "name": "UFC on ESPN: Tybura vs. Spivac 2",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-08-02",
+    "name": "UFC on ABC: Sandhagen vs. Nurmagomedov",
+    "venue": "Etihad Arena",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-07-26",
+    "name": "UFC 304: Edwards vs. Muhammad 2",
+    "venue": "Co-op Live",
+    "city": "Manchester, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-07-19",
+    "name": "UFC on ESPN: Lemos vs. Jandiroba",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-07-12",
+    "name": "UFC on ESPN: Namajunas vs. Cortez",
+    "venue": "Ball Arena",
+    "city": "Denver, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-06-28",
+    "name": "UFC 303: Pereira vs. Procházka 2",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-06-21",
+    "name": "UFC on ABC: Whittaker vs. Aliskerov",
+    "venue": "Kingdom Arena",
+    "city": "Riyadh, Saudi Arabia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-06-14",
+    "name": "UFC on ESPN: Perez vs. Taira",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-06-07",
+    "name": "UFC on ESPN: Cannonier vs. Imavov",
+    "venue": "KFC Yum! Center",
+    "city": "Louisville, Kentucky, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-05-31",
+    "name": "UFC 302: Makhachev vs. Poirier",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-05-17",
+    "name": "UFC Fight Night: Barboza vs. Murphy",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-05-10",
+    "name": "UFC on ESPN: Lewis vs. Nascimento",
+    "venue": "Enterprise Center",
+    "city": "St. Louis, Missouri, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-05-03",
+    "name": "UFC 301: Pantoja vs. Erceg",
+    "venue": "Farmasi Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-04-26",
+    "name": "UFC on ESPN: Nicolau vs. Perez",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-04-12",
+    "name": "UFC 300: Pereira vs. Hill",
+    "venue": "T-Mobile Arena",
+    "city": "20,067",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-04-05",
+    "name": "UFC Fight Night: Allen vs. Curtis 2",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-03-30",
+    "name": "UFC on ESPN: Blanchfield vs. Fiorot",
+    "venue": "Boardwalk Hall",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-03-23",
+    "name": "UFC on ESPN: Ribas vs. Namajunas",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-03-16",
+    "name": "UFC Fight Night: Tuivasa vs. Tybura",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-03-09",
+    "name": "UFC 299: O'Malley vs. Vera 2",
+    "venue": "Kaseya Center",
+    "city": "Miami, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-03-02",
+    "name": "UFC Fight Night: Rozenstruik vs. Gaziev",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-02-24",
+    "name": "UFC Fight Night: Moreno vs. Royval 2",
+    "venue": "Arena CDMX",
+    "city": "Mexico City, Mexico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-02-17",
+    "name": "UFC 298: Volkanovski vs. Topuria",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-02-10",
+    "name": "UFC Fight Night: Hermansson vs. Pyfer",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-02-03",
+    "name": "UFC Fight Night: Dolidze vs. Imavov",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-01-20",
+    "name": "UFC 297: Strickland vs. du Plessis",
+    "venue": "Scotiabank Arena",
+    "city": "Toronto, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2024-01-13",
+    "name": "UFC Fight Night: Ankalaev vs. Walker 2",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-12-16",
+    "name": "UFC 296: Edwards vs. Covington",
+    "venue": "T-Mobile Arena",
+    "city": "19,039",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-12-09",
+    "name": "UFC Fight Night: Song vs. Gutiérrez",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-12-02",
+    "name": "UFC on ESPN: Dariush vs. Tsarukyan",
+    "venue": "Moody Center",
+    "city": "Austin, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-11-18",
+    "name": "UFC Fight Night: Allen vs. Craig",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-11-11",
+    "name": "UFC 295: Procházka vs. Pereira",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-11-04",
+    "name": "UFC Fight Night: Almeida vs. Lewis",
+    "venue": "Ginásio do Ibirapuera",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-10-20",
+    "name": "UFC 294: Makhachev vs. Volkanovski 2",
+    "venue": "Etihad Arena",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-10-13",
+    "name": "UFC Fight Night: Yusuff vs. Barboza",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-10-06",
+    "name": "UFC Fight Night: Dawson vs. Green",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-09-22",
+    "name": "UFC Fight Night: Fiziev vs. Gamrot",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-09-15",
+    "name": "UFC Fight Night: Grasso vs. Shevchenko 2",
+    "venue": "T-Mobile Arena",
+    "city": "18,766",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-09-09",
+    "name": "UFC 293: Adesanya vs. Strickland",
+    "venue": "Qudos Bank Arena",
+    "city": "Sydney, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-09-01",
+    "name": "UFC Fight Night: Gane vs. Spivac",
+    "venue": "Accor Arena",
+    "city": "Paris, France",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-08-25",
+    "name": "UFC Fight Night: Holloway vs. The Korean Zombie",
+    "venue": "Singapore Indoor Stadium",
+    "city": "Kallang, Singapore",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-08-18",
+    "name": "UFC 292: Sterling vs. O'Malley",
+    "venue": "TD Garden",
+    "city": "Boston, Massachusetts, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-08-11",
+    "name": "UFC on ESPN: Luque vs. dos Anjos",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-08-04",
+    "name": "UFC on ESPN: Sandhagen vs. Font",
+    "venue": "Bridgestone Arena",
+    "city": "Nashville, Tennessee, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-07-28",
+    "name": "UFC 291: Poirier vs. Gaethje 2",
+    "venue": "Delta Center",
+    "city": "Salt Lake City, Utah, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-07-21",
+    "name": "UFC Fight Night: Aspinall vs. Tybura",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-07-14",
+    "name": "UFC on ESPN: Holm vs. Bueno Silva",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-07-07",
+    "name": "UFC 290: Volkanovski vs. Rodríguez",
+    "venue": "T-Mobile Arena",
+    "city": "19,204",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-06-30",
+    "name": "UFC on ESPN: Strickland vs. Magomedov",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-06-23",
+    "name": "UFC on ABC: Emmett vs. Topuria",
+    "venue": "VyStar Veterans Memorial Arena",
+    "city": "Jacksonville, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-06-16",
+    "name": "UFC on ESPN: Vettori vs. Cannonier",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-06-09",
+    "name": "UFC 289: Nunes vs. Aldana",
+    "venue": "Rogers Arena",
+    "city": "Vancouver, British Columbia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-06-02",
+    "name": "UFC on ESPN: Kara-France vs. Albazi",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-05-19",
+    "name": "UFC Fight Night: Dern vs. Hill",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-05-12",
+    "name": "UFC on ABC: Rozenstruik vs. Almeida",
+    "venue": "Spectrum Center",
+    "city": "Charlotte, North Carolina, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-05-05",
+    "name": "UFC 288: Sterling vs. Cejudo",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-04-28",
+    "name": "UFC on ESPN: Song vs. Simón",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-04-21",
+    "name": "UFC Fight Night: Pavlovich vs. Blaydes",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-04-14",
+    "name": "UFC on ESPN: Holloway vs. Allen",
+    "venue": "T-Mobile Center",
+    "city": "Kansas City, Missouri, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-04-07",
+    "name": "UFC 287: Pereira vs. Adesanya 2",
+    "venue": "Kaseya Center",
+    "city": "Miami, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-03-25",
+    "name": "UFC on ESPN: Vera vs. Sandhagen",
+    "venue": "Frost Bank Center",
+    "city": "San Antonio, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-03-18",
+    "name": "UFC 286: Edwards vs. Usman 3",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-03-11",
+    "name": "UFC Fight Night: Yan vs. Dvalishvili",
+    "venue": "The Theater at Virgin Hotels",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-03-04",
+    "name": "UFC 285: Jones vs. Gane",
+    "venue": "T-Mobile Arena",
+    "city": "19,471",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-02-25",
+    "name": "UFC Fight Night: Muniz vs. Allen",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-02-18",
+    "name": "UFC Fight Night: Andrade vs. Blanchfield",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-02-12",
+    "name": "UFC 284: Makhachev vs. Volkanovski",
+    "venue": "RAC Arena",
+    "city": "Perth, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-02-04",
+    "name": "UFC Fight Night: Lewis vs. Spivac",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-01-21",
+    "name": "UFC 283: Teixeira vs. Hill",
+    "venue": "Jeunesse Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2023-01-14",
+    "name": "UFC Fight Night: Strickland vs. Imavov",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-12-17",
+    "name": "UFC Fight Night: Cannonier vs. Strickland",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-12-10",
+    "name": "UFC 282: Błachowicz vs. Ankalaev",
+    "venue": "T-Mobile Arena",
+    "city": "18,455",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-12-03",
+    "name": "UFC on ESPN: Thompson vs. Holland",
+    "venue": "Kia Center",
+    "city": "Orlando, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-11-19",
+    "name": "UFC Fight Night: Nzechukwu vs. Cuțelaba",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-11-12",
+    "name": "UFC 281: Adesanya vs. Pereira",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-11-05",
+    "name": "UFC Fight Night: Rodriguez vs. Lemos",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-10-28",
+    "name": "UFC Fight Night: Kattar vs. Allen",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-10-21",
+    "name": "UFC 280: Oliveira vs. Makhachev",
+    "venue": "Etihad Arena",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-10-14",
+    "name": "UFC Fight Night: Grasso vs. Araújo",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-09-30",
+    "name": "UFC Fight Night: Dern vs. Yan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-09-16",
+    "name": "UFC Fight Night: Sandhagen vs. Song",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-09-09",
+    "name": "UFC 279: Diaz vs. Ferguson",
+    "venue": "T-Mobile Arena",
+    "city": "19,125",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-09-02",
+    "name": "UFC Fight Night: Gane vs. Tuivasa",
+    "venue": "Accor Arena",
+    "city": "Paris, France",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-08-19",
+    "name": "UFC 278: Usman vs. Edwards 2",
+    "venue": "Vivint Arena",
+    "city": "Salt Lake City, Utah, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-08-12",
+    "name": "UFC on ESPN: Vera vs. Cruz",
+    "venue": "Pechanga Arena",
+    "city": "San Diego, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-08-05",
+    "name": "UFC on ESPN: Santos vs. Hill",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-07-29",
+    "name": "UFC 277: Peña vs. Nunes 2",
+    "venue": "American Airlines Center",
+    "city": "Dallas, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-07-22",
+    "name": "UFC Fight Night: Blaydes vs. Aspinall",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-07-15",
+    "name": "UFC on ABC: Ortega vs. Rodríguez",
+    "venue": "UBS Arena",
+    "city": "Elmont, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-07-08",
+    "name": "UFC on ESPN: dos Anjos vs. Fiziev",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-07-01",
+    "name": "UFC 276: Adesanya vs. Cannonier",
+    "venue": "T-Mobile Arena",
+    "city": "19,649",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-06-24",
+    "name": "UFC on ESPN: Tsarukyan vs. Gamrot",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-06-17",
+    "name": "UFC on ESPN: Kattar vs. Emmett",
+    "venue": "Moody Center",
+    "city": "Austin, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-06-11",
+    "name": "UFC 275: Teixeira vs. Procházka",
+    "venue": "Singapore Indoor Stadium",
+    "city": "Kallang, Singapore",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-06-03",
+    "name": "UFC Fight Night: Volkov vs. Rozenstruik",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-05-20",
+    "name": "UFC Fight Night: Holm vs. Vieira",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-05-13",
+    "name": "UFC on ESPN: Błachowicz vs. Rakić",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-05-06",
+    "name": "UFC 274: Oliveira vs. Gaethje",
+    "venue": "Footprint Center",
+    "city": "Phoenix, Arizona, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-04-29",
+    "name": "UFC on ESPN: Font vs. Vera",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-04-22",
+    "name": "UFC Fight Night: Lemos vs. Andrade",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-04-15",
+    "name": "UFC on ESPN: Luque vs. Muhammad 2",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-04-08",
+    "name": "UFC 273: Volkanovski vs. The Korean Zombie",
+    "venue": "VyStar Veterans Memorial Arena",
+    "city": "Jacksonville, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-03-26",
+    "name": "UFC on ESPN: Blaydes vs. Daukaus",
+    "venue": "Nationwide Arena",
+    "city": "Columbus, Ohio, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-03-19",
+    "name": "UFC Fight Night: Volkov vs. Aspinall",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-03-12",
+    "name": "UFC Fight Night: Santos vs. Ankalaev",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-03-05",
+    "name": "UFC 272: Covington vs. Masvidal",
+    "venue": "T-Mobile Arena",
+    "city": "19,425",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-02-26",
+    "name": "UFC Fight Night: Makhachev vs. Green",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-02-19",
+    "name": "UFC Fight Night: Walker vs. Hill",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-02-12",
+    "name": "UFC 271: Adesanya vs. Whittaker 2",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-02-05",
+    "name": "UFC Fight Night: Hermansson vs. Strickland",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-01-22",
+    "name": "UFC 270: Ngannou vs. Gane",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2022-01-15",
+    "name": "UFC on ESPN: Kattar vs. Chikadze",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-12-18",
+    "name": "UFC Fight Night: Lewis vs. Daukaus",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-12-11",
+    "name": "UFC 269: Oliveira vs. Poirier",
+    "venue": "T-Mobile Arena",
+    "city": "18,471",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-12-04",
+    "name": "UFC on ESPN: Font vs. Aldo",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-11-20",
+    "name": "UFC Fight Night: Vieira vs. Tate",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-11-13",
+    "name": "UFC Fight Night: Holloway vs. Rodríguez",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-11-06",
+    "name": "UFC 268: Usman vs. Covington 2",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-10-29",
+    "name": "UFC 267: Błachowicz vs. Teixeira",
+    "venue": "Etihad Arena",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-10-22",
+    "name": "UFC Fight Night: Costa vs. Vettori",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-10-15",
+    "name": "UFC Fight Night: Ladd vs. Dumont",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-10-08",
+    "name": "UFC Fight Night: Dern vs. Rodriguez",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-10-01",
+    "name": "UFC Fight Night: Santos vs. Walker",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-09-24",
+    "name": "UFC 266: Volkanovski vs. Ortega",
+    "venue": "T-Mobile Arena",
+    "city": "19,029",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-09-17",
+    "name": "UFC Fight Night: Smith vs. Spann",
+    "venue": "UFC Apex",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-09-03",
+    "name": "UFC Fight Night: Brunson vs. Till",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-08-27",
+    "name": "UFC on ESPN: Barboza vs. Chikadze",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-08-20",
+    "name": "UFC on ESPN: Cannonier vs. Gastelum",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-08-06",
+    "name": "UFC 265: Lewis vs. Gane",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-07-30",
+    "name": "UFC on ESPN: Hall vs. Strickland",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-07-23",
+    "name": "UFC on ESPN: Sandhagen vs. Dillashaw",
+    "venue": "51",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-07-16",
+    "name": "UFC on ESPN: Makhachev vs. Moisés",
+    "venue": "0",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-07-09",
+    "name": "UFC 264: Poirier vs. McGregor 3",
+    "venue": "T-Mobile Arena",
+    "city": "20,062",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-06-25",
+    "name": "UFC Fight Night: Gane vs. Volkov",
+    "venue": "UFC Apex",
+    "city": "0",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-06-18",
+    "name": "UFC on ESPN: The Korean Zombie vs. Ige",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-06-11",
+    "name": "UFC 263: Adesanya vs. Vettori 2",
+    "venue": "Gila River Arena",
+    "city": "Glendale, Arizona, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-06-04",
+    "name": "UFC Fight Night: Rozenstruik vs. Sakai",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-05-21",
+    "name": "UFC Fight Night: Font vs. Garbrandt",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-05-14",
+    "name": "UFC 262: Oliveira vs. Chandler",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-05-07",
+    "name": "UFC on ESPN: Rodriguez vs. Waterson",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-04-30",
+    "name": "UFC on ESPN: Reyes vs. Procházka",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-04-23",
+    "name": "UFC 261: Usman vs. Masvidal 2",
+    "venue": "VyStar Veterans Memorial Arena",
+    "city": "Jacksonville, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-04-16",
+    "name": "UFC on ESPN: Whittaker vs. Gastelum",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-04-09",
+    "name": "UFC on ABC: Vettori vs. Holland",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-03-27",
+    "name": "UFC 260: Miocic vs. Ngannou 2",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-03-20",
+    "name": "UFC on ESPN: Brunson vs. Holland",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-03-13",
+    "name": "UFC Fight Night: Edwards vs. Muhammad",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-03-06",
+    "name": "UFC 259: Błachowicz vs. Adesanya",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-02-27",
+    "name": "UFC Fight Night: Rozenstruik vs. Gane",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-02-20",
+    "name": "UFC Fight Night: Blaydes vs. Lewis",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-02-13",
+    "name": "UFC 258: Usman vs. Burns",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-02-06",
+    "name": "UFC Fight Night: Overeem vs. Volkov",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-01-24",
+    "name": "UFC 257: Poirier vs. McGregor 2",
+    "venue": "Etihad Arena",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-01-20",
+    "name": "UFC on ESPN: Chiesa vs. Magny",
+    "venue": "2,000",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2021-01-16",
+    "name": "UFC on ABC: Holloway vs. Kattar",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-12-19",
+    "name": "UFC Fight Night: Thompson vs. Neal",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-12-12",
+    "name": "UFC 256: Figueiredo vs. Moreno",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-12-05",
+    "name": "UFC on ESPN: Hermansson vs. Vettori",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-11-28",
+    "name": "UFC on ESPN: Smith vs. Clark",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-11-21",
+    "name": "UFC 255: Figueiredo vs. Perez",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-11-14",
+    "name": "UFC Fight Night: Felder vs. dos Anjos",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-11-07",
+    "name": "UFC on ESPN: Santos vs. Teixeira",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-10-31",
+    "name": "UFC Fight Night: Hall vs. Silva",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-10-23",
+    "name": "UFC 254: Khabib vs. Gaethje",
+    "venue": "du Forum",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-10-17",
+    "name": "UFC Fight Night: Ortega vs. The Korean Zombie",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-10-10",
+    "name": "UFC Fight Night: Moraes vs. Sandhagen",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-10-03",
+    "name": "UFC on ESPN: Holm vs. Aldana",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-09-26",
+    "name": "UFC 253: Adesanya vs. Costa",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-09-18",
+    "name": "UFC Fight Night: Covington vs. Woodley",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-09-11",
+    "name": "UFC Fight Night: Waterson vs. Hill",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-09-04",
+    "name": "UFC Fight Night: Overeem vs. Sakai",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-08-28",
+    "name": "UFC Fight Night: Smith vs. Rakić",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-08-21",
+    "name": "UFC on ESPN: Munhoz vs. Edgar",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-08-14",
+    "name": "UFC 252: Miocic vs. Cormier 3",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-08-07",
+    "name": "UFC Fight Night: Lewis vs. Oleinik",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-07-31",
+    "name": "UFC Fight Night: Brunson vs. Shahbazyan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-07-25",
+    "name": "UFC on ESPN: Whittaker vs. Till",
+    "venue": "du Forum",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-07-18",
+    "name": "UFC Fight Night: Figueiredo vs. Benavidez 2",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-07-15",
+    "name": "UFC on ESPN: Kattar vs. Ige",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-07-11",
+    "name": "UFC 251: Usman vs. Masvidal",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-06-26",
+    "name": "UFC on ESPN: Poirier vs. Hooker",
+    "venue": "UFC Apex",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-06-19",
+    "name": "UFC on ESPN: Blaydes vs. Volkov",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-06-12",
+    "name": "UFC on ESPN: Eye vs. Calvillo",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-06-05",
+    "name": "UFC 250: Nunes vs. Spencer",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-05-29",
+    "name": "UFC on ESPN: Woodley vs. Burns",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-05-15",
+    "name": "UFC on ESPN: Overeem vs. Harris",
+    "venue": "VyStar Veterans Memorial Arena",
+    "city": "Jacksonville, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-05-12",
+    "name": "UFC Fight Night: Smith vs. Teixeira",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-05-08",
+    "name": "UFC 249: Ferguson vs. Gaethje",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-05-01",
+    "name": "UFC Fight Night: Hermansson vs. Weidman",
+    "venue": "Chesapeake Energy Arena",
+    "city": "Oklahoma City, Oklahoma, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-04-24",
+    "name": "UFC Fight Night: Smith vs. Teixeira",
+    "venue": "Pinnacle Bank Arena",
+    "city": "Lincoln, Nebraska, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-04-10",
+    "name": "UFC Fight Night: Overeem vs. Harris",
+    "venue": "Moda Center",
+    "city": "Portland, Oregon, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-03-28",
+    "name": "UFC on ESPN: Ngannou vs. Rozenstruik",
+    "venue": "Nationwide Arena",
+    "city": "Columbus, Ohio, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-03-21",
+    "name": "UFC Fight Night: Woodley vs. Edwards",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-03-14",
+    "name": "UFC Fight Night: Lee vs. Oliveira",
+    "venue": "Ginásio Nilson Nelson",
+    "city": "Brasília, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-03-07",
+    "name": "UFC 248: Adesanya vs. Romero",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-02-29",
+    "name": "UFC Fight Night: Benavidez vs. Figueiredo",
+    "venue": "Chartway Arena",
+    "city": "Norfolk, Virginia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-02-23",
+    "name": "UFC Fight Night: Felder vs. Hooker",
+    "venue": "Spark Arena",
+    "city": "Auckland, New Zealand",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-02-15",
+    "name": "UFC Fight Night: Anderson vs. Błachowicz 2",
+    "venue": "Santa Ana Star Center",
+    "city": "Rio Rancho, New Mexico, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-02-08",
+    "name": "UFC 247: Jones vs. Reyes",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-01-25",
+    "name": "UFC Fight Night: Blaydes vs. dos Santos",
+    "venue": "PNC Arena",
+    "city": "Raleigh, North Carolina, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2020-01-18",
+    "name": "UFC 246: McGregor vs. Cowboy",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-12-21",
+    "name": "UFC Fight Night: Edgar vs. The Korean Zombie",
+    "venue": "Sajik Arena",
+    "city": "Busan, South Korea",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-12-14",
+    "name": "UFC 245: Usman vs. Covington",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-12-07",
+    "name": "UFC on ESPN: Overeem vs. Rozenstruik",
+    "venue": "Capital One Arena",
+    "city": "Washington, D.C., U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-11-16",
+    "name": "UFC Fight Night: Błachowicz vs. Jacaré",
+    "venue": "Ginásio do Ibirapuera",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-11-09",
+    "name": "UFC Fight Night: Magomedsharipov vs. Kattar",
+    "venue": "CSKA Arena",
+    "city": "Moscow, Russia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-11-02",
+    "name": "UFC 244: Masvidal vs. Diaz",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-10-25",
+    "name": "UFC Fight Night: Maia vs. Askren",
+    "venue": "Singapore Indoor Stadium",
+    "city": "Kallang, Singapore",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-10-17",
+    "name": "UFC on ESPN: Reyes vs. Weidman",
+    "venue": "TD Garden",
+    "city": "Boston, Massachusetts, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-10-11",
+    "name": "UFC Fight Night: Joanna vs. Waterson",
+    "venue": "Amalie Arena",
+    "city": "Tampa, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-10-04",
+    "name": "UFC 243: Whittaker vs. Adesanya",
+    "venue": "Marvel Stadium",
+    "city": "Melbourne, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-09-27",
+    "name": "UFC Fight Night: Hermansson vs. Cannonier",
+    "venue": "Royal Arena",
+    "city": "Copenhagen, Denmark",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-09-20",
+    "name": "UFC Fight Night: Rodríguez vs. Stephens",
+    "venue": "Arena Ciudad de México",
+    "city": "Mexico City, Mexico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-09-13",
+    "name": "UFC Fight Night: Cowboy vs. Gaethje",
+    "venue": "Rogers Arena",
+    "city": "Vancouver, British Columbia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-09-06",
+    "name": "UFC 242: Khabib vs. Poirier",
+    "venue": "The Arena, Yas Island",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-08-30",
+    "name": "UFC Fight Night: Andrade vs. Zhang",
+    "venue": "Shenzhen Universiade Sports Centre",
+    "city": "Shenzhen, China",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-08-16",
+    "name": "UFC 241: Cormier vs. Miocic 2",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-08-09",
+    "name": "UFC Fight Night: Shevchenko vs. Carmouche 2",
+    "venue": "Antel Arena",
+    "city": "Montevideo, Uruguay",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-08-02",
+    "name": "UFC on ESPN: Covington vs. Lawler",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-07-26",
+    "name": "UFC 240: Holloway vs. Edgar",
+    "venue": "Rogers Place",
+    "city": "Edmonton, Alberta, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-07-19",
+    "name": "UFC on ESPN: dos Anjos vs. Edwards",
+    "venue": "AT&T Center",
+    "city": "San Antonio, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-07-12",
+    "name": "UFC Fight Night: de Randamie vs. Ladd",
+    "venue": "Golden 1 Center",
+    "city": "Sacramento, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-07-05",
+    "name": "UFC 239: Jones vs. Santos",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-06-28",
+    "name": "UFC on ESPN: Ngannou vs. dos Santos",
+    "venue": "Target Center",
+    "city": "Minneapolis, Minnesota, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-06-21",
+    "name": "UFC Fight Night: Moicano vs. The Korean Zombie",
+    "venue": "Bon Secours Wellness Arena",
+    "city": "Greenville, South Carolina, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-06-07",
+    "name": "UFC 238: Cejudo vs. Moraes",
+    "venue": "United Center",
+    "city": "Chicago, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-05-31",
+    "name": "UFC Fight Night: Gustafsson vs. Smith",
+    "venue": "Avicii Arena",
+    "city": "Stockholm, Sweden",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-05-17",
+    "name": "UFC Fight Night: dos Anjos vs. Lee",
+    "venue": "Blue Cross Arena",
+    "city": "Rochester, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-05-10",
+    "name": "UFC 237: Namajunas vs. Andrade",
+    "venue": "Jeunesse Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-05-03",
+    "name": "UFC Fight Night: Iaquinta vs. Cowboy",
+    "venue": "Canadian Tire Centre",
+    "city": "Ottawa, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-04-26",
+    "name": "UFC Fight Night: Jacaré vs. Hermansson",
+    "venue": "Amerat Bank Arena",
+    "city": "Sunrise, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-04-19",
+    "name": "UFC Fight Night: Overeem vs. Oleinik",
+    "venue": "Yubileyny Sports Palace",
+    "city": "Saint Petersburg, Russia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-04-12",
+    "name": "UFC 236: Holloway vs. Poirier 2",
+    "venue": "State Farm Arena",
+    "city": "Atlanta, Georgia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-03-30",
+    "name": "UFC on ESPN: Barboza vs. Gaethje",
+    "venue": "Wells Fargo Center",
+    "city": "Philadelphia, Pennsylvania, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-03-23",
+    "name": "UFC Fight Night: Thompson vs. Pettis",
+    "venue": "Bridgestone Arena",
+    "city": "Nashville, Tennessee, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-03-16",
+    "name": "UFC Fight Night: Till vs. Masvidal",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-03-09",
+    "name": "UFC Fight Night: Lewis vs. dos Santos",
+    "venue": "Intrust Bank Arena",
+    "city": "Wichita, Kansas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-03-02",
+    "name": "UFC 235: Jones vs. Smith",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-02-23",
+    "name": "UFC Fight Night: Błachowicz vs. Santos",
+    "venue": "O2 Arena",
+    "city": "Prague, Czech Republic",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-02-17",
+    "name": "UFC on ESPN: Ngannou vs. Velasquez",
+    "venue": "Talking Stick Resort Arena",
+    "city": "Phoenix, Arizona, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-02-10",
+    "name": "UFC 234: Adesanya vs. Silva",
+    "venue": "Rod Laver Arena",
+    "city": "Melbourne, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-02-02",
+    "name": "UFC Fight Night: Assunção vs. Moraes 2",
+    "venue": "Centro de Formação Olímpica do Nordeste",
+    "city": "Fortaleza, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-01-26",
+    "name": "UFC 233: Cejudo vs. Dillashaw",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2019-01-19",
+    "name": "UFC Fight Night: Cejudo vs. Dillashaw",
+    "venue": "Barclays Center",
+    "city": "New York, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-12-29",
+    "name": "UFC 232: Jones vs. Gustafsson 2",
+    "venue": "The Forum",
+    "city": "Inglewood, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-12-15",
+    "name": "UFC on Fox: Lee vs. Iaquinta 2",
+    "venue": "Fiserv Forum",
+    "city": "Milwaukee, Wisconsin, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-12-08",
+    "name": "UFC 231: Holloway vs. Ortega",
+    "venue": "Scotiabank Arena",
+    "city": "Toronto, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-12-02",
+    "name": "UFC Fight Night: dos Santos vs. Tuivasa",
+    "venue": "Adelaide Entertainment Centre",
+    "city": "Adelaide, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-11-30",
+    "name": "The Ultimate Fighter: Heavy Hitters Finale",
+    "venue": "Pearl Theatre",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-11-24",
+    "name": "UFC Fight Night: Blaydes vs. Ngannou 2",
+    "venue": "Cadillac Arena",
+    "city": "Beijing, China",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-11-17",
+    "name": "UFC Fight Night: Magny vs. Ponzinibbio",
+    "venue": "Estadio Mary Terán de Weiss",
+    "city": "Buenos Aires, Argentina",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-11-10",
+    "name": "UFC Fight Night: The Korean Zombie vs. Rodríguez",
+    "venue": "Pepsi Center",
+    "city": "Denver, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-11-03",
+    "name": "UFC 230: Cormier vs. Lewis",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-10-26",
+    "name": "UFC Fight Night: Volkan vs. Smith",
+    "venue": "Avenir Centre",
+    "city": "Moncton, New Brunswick, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-10-05",
+    "name": "UFC 229: Khabib vs. McGregor",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-09-21",
+    "name": "UFC Fight Night: Santos vs. Anders",
+    "venue": "Ginásio do Ibirapuera",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-09-14",
+    "name": "UFC Fight Night: Hunt vs. Oleinik",
+    "venue": "Olimpiyskiy Stadium",
+    "city": "Moscow, Russia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-09-07",
+    "name": "UFC 228: Woodley vs. Till",
+    "venue": "American Airlines Center",
+    "city": "Dallas, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-08-24",
+    "name": "UFC Fight Night: Gaethje vs. Vick",
+    "venue": "Pinnacle Bank Arena",
+    "city": "Lincoln, Nebraska, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-08-03",
+    "name": "UFC 227: Dillashaw vs. Garbrandt 2",
+    "venue": "Staples Center",
+    "city": "Los Angeles, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-07-27",
+    "name": "UFC on Fox: Alvarez vs. Poirier 2",
+    "venue": "Scotiabank Saddledome",
+    "city": "Calgary, Alberta, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-07-21",
+    "name": "UFC Fight Night: Shogun vs. Smith",
+    "venue": "Barclaycard Arena",
+    "city": "Hamburg, Germany",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-07-13",
+    "name": "UFC Fight Night: dos Santos vs. Ivanov",
+    "venue": "CenturyLink Arena",
+    "city": "Boise, Idaho, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-07-06",
+    "name": "UFC 226: Miocic vs. Cormier",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-07-05",
+    "name": "The Ultimate Fighter: Undefeated Finale",
+    "venue": "Palms Casino Resort",
+    "city": "2,123",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-06-22",
+    "name": "UFC Fight Night: Cowboy vs. Edwards",
+    "venue": "Singapore Indoor Stadium",
+    "city": "Kallang, Singapore",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-06-08",
+    "name": "UFC 225: Whittaker vs. Romero 2",
+    "venue": "United Center",
+    "city": "Chicago, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-05-31",
+    "name": "UFC Fight Night: Rivera vs. Moraes",
+    "venue": "Adirondack Bank Center",
+    "city": "Utica, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-05-26",
+    "name": "UFC Fight Night: Thompson vs. Till",
+    "venue": "Echo Arena",
+    "city": "Liverpool, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-05-18",
+    "name": "UFC Fight Night: Maia vs. Usman",
+    "venue": "Movistar Arena",
+    "city": "Santiago, Chile",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-05-11",
+    "name": "UFC 224: Nunes vs. Pennington",
+    "venue": "Jeunesse Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-04-20",
+    "name": "UFC Fight Night: Barboza vs. Lee",
+    "venue": "Boardwalk Hall",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-04-13",
+    "name": "UFC on Fox: Poirier vs. Gaethje",
+    "venue": "Gila River Arena",
+    "city": "Glendale, Arizona, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-04-06",
+    "name": "UFC 223: Khabib vs. Iaquinta",
+    "venue": "Barclays Center",
+    "city": "New York, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-03-17",
+    "name": "UFC Fight Night: Werdum vs. Volkov",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-03-03",
+    "name": "UFC 222: Cyborg vs. Kunitskaya",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-02-24",
+    "name": "UFC on Fox: Emmett vs. Stephens",
+    "venue": "Amway Center",
+    "city": "Orlando, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-02-18",
+    "name": "UFC Fight Night: Cowboy vs. Medeiros",
+    "venue": "Frank Erwin Center",
+    "city": "Austin, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-02-11",
+    "name": "UFC 221: Romero vs. Rockhold",
+    "venue": "Perth Arena",
+    "city": "Perth, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-02-03",
+    "name": "UFC Fight Night: Machida vs. Anders",
+    "venue": "Arena Guilherme Paraense",
+    "city": "Belém, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-01-27",
+    "name": "UFC on Fox: Jacaré vs. Brunson 2",
+    "venue": "Spectrum Center",
+    "city": "Charlotte, North Carolina, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-01-20",
+    "name": "UFC 220: Miocic vs. Ngannou",
+    "venue": "TD Garden",
+    "city": "Boston, Massachusetts, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2018-01-14",
+    "name": "UFC Fight Night: Stephens vs. Choi",
+    "venue": "Scottrade Center",
+    "city": "St. Louis, Missouri, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-12-30",
+    "name": "UFC 219: Cyborg vs. Holm",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-12-16",
+    "name": "UFC on Fox: Lawler vs. dos Anjos",
+    "venue": "Canada Life Centre",
+    "city": "Winnipeg, Manitoba, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-12-09",
+    "name": "UFC Fight Night: Swanson vs. Ortega",
+    "venue": "Save Mart Center",
+    "city": "Fresno, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-12-02",
+    "name": "UFC 218: Holloway vs. Aldo 2",
+    "venue": "Little Caesars Arena",
+    "city": "Detroit, Michigan, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-12-01",
+    "name": "The Ultimate Fighter: A New World Champion Finale",
+    "venue": "Park Theater",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-11-25",
+    "name": "UFC Fight Night: Bisping vs. Gastelum",
+    "venue": "Mercedes-Benz Arena",
+    "city": "Shanghai, China",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-11-19",
+    "name": "UFC Fight Night: Werdum vs. Tybura",
+    "venue": "Qudos Bank Arena",
+    "city": "Sydney, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-11-11",
+    "name": "UFC Fight Night: Poirier vs. Pettis",
+    "venue": "Ted Constant Convocation Center",
+    "city": "Norfolk, Virginia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-11-04",
+    "name": "UFC 217: Bisping vs. St-Pierre",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-10-27",
+    "name": "UFC Fight Night: Brunson vs. Machida",
+    "venue": "Ginásio do Ibirapuera",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-10-20",
+    "name": "UFC Fight Night: Cowboy vs. Till",
+    "venue": "Ergo Arena",
+    "city": "Gdańsk, Poland",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-10-06",
+    "name": "UFC 216: Ferguson vs. Lee",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-09-22",
+    "name": "UFC Fight Night: Saint Preux vs. Okami",
+    "venue": "Saitama Super Arena",
+    "city": "Saitama, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-09-15",
+    "name": "UFC Fight Night: Rockhold vs. Branch",
+    "venue": "PPG Paints Arena",
+    "city": "Pittsburgh, Pennsylvania, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-09-08",
+    "name": "UFC 215: Nunes vs. Shevchenko 2",
+    "venue": "Rogers Place",
+    "city": "Edmonton, Alberta, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-09-01",
+    "name": "UFC Fight Night: Volkov vs. Struve",
+    "venue": "Rotterdam Ahoy",
+    "city": "Rotterdam, Netherlands",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-08-04",
+    "name": "UFC Fight Night: Pettis vs. Moreno",
+    "venue": "Arena Ciudad de México",
+    "city": "Mexico City, Mexico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-07-28",
+    "name": "UFC 214: Cormier vs. Jones 2",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-07-21",
+    "name": "UFC on Fox: Weidman vs. Gastelum",
+    "venue": "Nassau Veterans Memorial Coliseum",
+    "city": "Uniondale, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-07-15",
+    "name": "UFC Fight Night: Nelson vs. Ponzinibbio",
+    "venue": "The SSE Hydro",
+    "city": "Glasgow, Scotland, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-07-07",
+    "name": "UFC 213: Romero vs. Whittaker",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-07-06",
+    "name": "The Ultimate Fighter: Redemption Finale",
+    "venue": "6,308",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-06-24",
+    "name": "UFC Fight Night: Chiesa vs. Lee",
+    "venue": "Chesapeake Energy Arena",
+    "city": "Oklahoma City, Oklahoma, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-06-16",
+    "name": "UFC Fight Night: Holm vs. Correia",
+    "venue": "Singapore Indoor Stadium",
+    "city": "Kallang, Singapore",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-06-10",
+    "name": "UFC Fight Night: Lewis vs. Hunt",
+    "venue": "Spark Arena",
+    "city": "Auckland, New Zealand",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-06-02",
+    "name": "UFC 212: Aldo vs. Holloway",
+    "venue": "Jeunesse Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-05-27",
+    "name": "UFC Fight Night: Gustafsson vs. Teixeira",
+    "venue": "Ericsson Globe",
+    "city": "Stockholm, Sweden",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-05-12",
+    "name": "UFC 211: Miocic vs. dos Santos 2",
+    "venue": "American Airlines Center",
+    "city": "Dallas, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-04-21",
+    "name": "UFC Fight Night: Swanson vs. Lobov",
+    "venue": "Bridgestone Arena",
+    "city": "Nashville, Tennessee, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-04-14",
+    "name": "UFC on Fox: Johnson vs. Reis",
+    "venue": "Sprint Center",
+    "city": "Kansas City, Missouri, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-04-07",
+    "name": "UFC 210: Cormier vs. Johnson 2",
+    "venue": "KeyBank Center",
+    "city": "Buffalo, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-03-18",
+    "name": "UFC Fight Night: Manuwa vs. Anderson",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-03-11",
+    "name": "UFC Fight Night: Belfort vs. Gastelum",
+    "venue": "Centro de Formação Olímpica do Nordeste",
+    "city": "Fortaleza, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-03-04",
+    "name": "UFC 209: Woodley vs. Thompson 2",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-02-19",
+    "name": "UFC Fight Night: Lewis vs. Browne",
+    "venue": "Scotiabank Centre",
+    "city": "Halifax, Nova Scotia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-02-11",
+    "name": "UFC 208: Holm vs. de Randamie",
+    "venue": "Barclays Center",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-02-04",
+    "name": "UFC Fight Night: Bermudez vs. The Korean Zombie",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-01-28",
+    "name": "UFC on Fox: Shevchenko vs. Peña",
+    "venue": "Pepsi Center",
+    "city": "Denver, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2017-01-15",
+    "name": "UFC Fight Night: Rodríguez vs. Penn",
+    "venue": "Talking Stick Resort Arena",
+    "city": "Phoenix, Arizona, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-12-30",
+    "name": "UFC 207: Nunes vs. Rousey",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-12-17",
+    "name": "UFC on Fox: VanZant vs. Waterson",
+    "venue": "Golden 1 Center",
+    "city": "Sacramento, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-12-10",
+    "name": "UFC 206: Holloway vs. Pettis",
+    "venue": "Scotiabank Arena",
+    "city": "Toronto, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-12-09",
+    "name": "UFC Fight Night: Lewis vs. Abdurakhimov",
+    "venue": "Times Union Center",
+    "city": "Albany, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-12-03",
+    "name": "The Ultimate Fighter: Tournament of Champions Finale",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-11-27",
+    "name": "UFC Fight Night: Whittaker vs. Brunson",
+    "venue": "Rod Laver Arena",
+    "city": "Melbourne, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-11-19",
+    "name": "UFC Fight Night: Bader vs. Nogueira 2",
+    "venue": "Ginásio do Ibirapuera",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-11-19",
+    "name": "UFC Fight Night: Mousasi vs. Hall 2",
+    "venue": "The SSE Arena",
+    "city": "Belfast, Northern Ireland, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-11-12",
+    "name": "UFC 205: Alvarez vs. McGregor",
+    "venue": "Madison Square Garden",
+    "city": "New York City, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-11-05",
+    "name": "The Ultimate Fighter Latin America 3 Finale: dos Anjos vs. Ferguson",
+    "venue": "Arena Ciudad de México",
+    "city": "Mexico City, Mexico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-10-14",
+    "name": "UFC Fight Night: Lamas vs. Penn",
+    "venue": "Mall of Asia Arena",
+    "city": "Pasay, Philippines",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-10-07",
+    "name": "UFC 204: Bisping vs. Henderson 2",
+    "venue": "AO Arena",
+    "city": "Manchester, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-09-30",
+    "name": "UFC Fight Night: Lineker vs. Dodson",
+    "venue": "Moda Center",
+    "city": "Portland, Oregon, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-09-23",
+    "name": "UFC Fight Night: Cyborg vs. Länsberg",
+    "venue": "Ginásio Nilson Nelson",
+    "city": "Brasília, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-09-16",
+    "name": "UFC Fight Night: Poirier vs. Johnson",
+    "venue": "State Farm Arena",
+    "city": "Hidalgo, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-09-09",
+    "name": "UFC 203: Miocic vs. Overeem",
+    "venue": "Quicken Loans Arena",
+    "city": "Cleveland, Ohio, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-09-02",
+    "name": "UFC Fight Night: Arlovski vs. Barnett",
+    "venue": "Barclaycard Arena",
+    "city": "Hamburg, Germany",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-08-26",
+    "name": "UFC on Fox: Maia vs. Condit",
+    "venue": "Rogers Arena",
+    "city": "Vancouver, British Columbia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-08-19",
+    "name": "UFC 202: Diaz vs. McGregor 2",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-08-05",
+    "name": "UFC Fight Night: Rodríguez vs. Caceres",
+    "venue": "Vivint Smart Home Arena",
+    "city": "Salt Lake City, Utah, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-07-29",
+    "name": "UFC 201: Lawler vs. Woodley",
+    "venue": "Philips Arena",
+    "city": "Atlanta, Georgia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-07-22",
+    "name": "UFC on Fox: Holm vs. Shevchenko",
+    "venue": "United Center",
+    "city": "Chicago, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-07-12",
+    "name": "UFC Fight Night: McDonald vs. Lineker",
+    "venue": "Denny Sanford Premier Center",
+    "city": "Sioux Falls, South Dakota, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-07-08",
+    "name": "UFC 200: Tate vs. Nunes",
+    "venue": "T-Mobile Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-07-07",
+    "name": "The Ultimate Fighter: Team Joanna vs. Team Cláudia Finale",
+    "venue": "MGM Grand Garden Arena",
+    "city": "8,115",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-07-06",
+    "name": "UFC Fight Night: dos Anjos vs. Alvarez",
+    "venue": "7,760",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-06-17",
+    "name": "UFC Fight Night: MacDonald vs. Thompson",
+    "venue": "TD Place Arena",
+    "city": "Ottawa, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-06-03",
+    "name": "UFC 199: Rockhold vs. Bisping 2",
+    "venue": "The Forum",
+    "city": "Inglewood, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-05-28",
+    "name": "UFC Fight Night: Almeida vs. Garbrandt",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-05-13",
+    "name": "UFC 198: Werdum vs. Miocic",
+    "venue": "Arena da Baixada",
+    "city": "Curitiba, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-05-07",
+    "name": "UFC Fight Night: Overeem vs. Arlovski",
+    "venue": "Rotterdam Ahoy",
+    "city": "Rotterdam, Netherlands",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-04-22",
+    "name": "UFC 197: Jones vs. Saint Preux",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-04-15",
+    "name": "UFC on Fox: Teixeira vs. Evans",
+    "venue": "Amalie Arena",
+    "city": "Tampa, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-04-09",
+    "name": "UFC Fight Night: Rothwell vs. dos Santos",
+    "venue": "Arena Zagreb",
+    "city": "Zagreb, Croatia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-03-20",
+    "name": "UFC Fight Night: Hunt vs. Mir",
+    "venue": "Brisbane Entertainment Centre",
+    "city": "Brisbane, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-03-05",
+    "name": "UFC 196: McGregor vs. Diaz",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-02-27",
+    "name": "UFC Fight Night: Silva vs. Bisping",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-02-21",
+    "name": "UFC Fight Night: Cowboy vs. Cowboy",
+    "venue": "Consol Energy Center",
+    "city": "Pittsburgh, Pennsylvania, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-02-06",
+    "name": "UFC Fight Night: Hendricks vs. Thompson",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-01-30",
+    "name": "UFC on Fox: Johnson vs. Bader",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-01-17",
+    "name": "UFC Fight Night: Dillashaw vs. Cruz",
+    "venue": "TD Garden",
+    "city": "Boston, Massachusetts, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2016-01-02",
+    "name": "UFC 195: Lawler vs. Condit",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-12-19",
+    "name": "UFC on Fox: dos Anjos vs. Cowboy 2",
+    "venue": "Amway Center",
+    "city": "Orlando, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-12-12",
+    "name": "UFC 194: Aldo vs. McGregor",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-12-11",
+    "name": "The Ultimate Fighter: Team McGregor vs. Team Faber Finale",
+    "venue": "The Chelsea at The Cosmopolitan",
+    "city": "2,566",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-12-10",
+    "name": "UFC Fight Night: Namajunas vs. VanZant",
+    "venue": "1,643",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-11-28",
+    "name": "UFC Fight Night: Henderson vs. Masvidal",
+    "venue": "Olympic Gymnastics Arena",
+    "city": "Seoul, South Korea",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-11-21",
+    "name": "The Ultimate Fighter Latin America 2 Finale: Magny vs. Gastelum",
+    "venue": "Arena Monterrey",
+    "city": "Monterrey, Mexico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-11-15",
+    "name": "UFC 193: Rousey vs. Holm",
+    "venue": "Marvel Stadium",
+    "city": "Melbourne, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-11-07",
+    "name": "UFC Fight Night: Belfort vs. Henderson 3",
+    "venue": "Ginásio do Ibirapuera",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-10-23",
+    "name": "UFC Fight Night: Holohan vs. Smolka",
+    "venue": "3Arena",
+    "city": "Dublin, Ireland",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-10-02",
+    "name": "UFC 192: Cormier vs. Gustafsson",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-09-26",
+    "name": "UFC Fight Night: Barnett vs. Nelson",
+    "venue": "Saitama Super Arena",
+    "city": "Saitama, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-09-04",
+    "name": "UFC 191: Johnson vs. Dodson 2",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-08-22",
+    "name": "UFC Fight Night: Holloway vs. Oliveira",
+    "venue": "SaskTel Centre",
+    "city": "Saskatoon, Saskatchewan, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-08-07",
+    "name": "UFC Fight Night: Teixeira vs. Saint Preux",
+    "venue": "Bridgestone Arena",
+    "city": "Nashville, Tennessee, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-07-31",
+    "name": "UFC 190: Rousey vs. Correia",
+    "venue": "HSBC Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-07-24",
+    "name": "UFC on Fox: Dillashaw vs. Barão 2",
+    "venue": "United Center",
+    "city": "Chicago, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-07-17",
+    "name": "UFC Fight Night: Bisping vs. Leites",
+    "venue": "The SSE Hydro",
+    "city": "Glasgow, Scotland, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-07-14",
+    "name": "UFC Fight Night: Mir vs. Duffee",
+    "venue": "Pechanga Arena",
+    "city": "San Diego, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-07-11",
+    "name": "The Ultimate Fighter: American Top Team vs. Blackzilians Finale",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-07-10",
+    "name": "UFC 189: Mendes vs. McGregor",
+    "venue": "16,019",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-06-26",
+    "name": "UFC Fight Night: Machida vs. Romero",
+    "venue": "Seminole Hard Rock Hotel and Casino",
+    "city": "Hollywood, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-06-19",
+    "name": "UFC Fight Night: Jędrzejczyk vs. Penne",
+    "venue": "Uber Arena",
+    "city": "Berlin, Germany",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-06-12",
+    "name": "UFC 188: Velasquez vs. Werdum",
+    "venue": "Arena Ciudad de México",
+    "city": "Mexico City, Mexico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-06-05",
+    "name": "UFC Fight Night: Boetsch vs. Henderson",
+    "venue": "Smoothie King Center",
+    "city": "New Orleans, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-05-29",
+    "name": "UFC Fight Night: Condit vs. Alves",
+    "venue": "Goiânia Arena",
+    "city": "Goiânia, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-05-22",
+    "name": "UFC 187: Johnson vs. Cormier",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-05-15",
+    "name": "UFC Fight Night: Edgar vs. Faber",
+    "venue": "Mall of Asia Arena",
+    "city": "Pasay, Philippines",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-05-09",
+    "name": "UFC Fight Night: Miocic vs. Hunt",
+    "venue": "Adelaide Entertainment Centre",
+    "city": "Adelaide, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-04-24",
+    "name": "UFC 186: Johnson vs. Horiguchi",
+    "venue": "Bell Centre",
+    "city": "Montreal, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-04-17",
+    "name": "UFC on Fox: Machida vs. Rockhold",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-04-10",
+    "name": "UFC Fight Night: Gonzaga vs. Cro Cop 2",
+    "venue": "Tauron Arena Kraków",
+    "city": "Kraków, Poland",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-04-03",
+    "name": "UFC Fight Night: Mendes vs. Lamas",
+    "venue": "Patriot Center",
+    "city": "Fairfax, Virginia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-03-21",
+    "name": "UFC Fight Night: Maia vs. LaFlare",
+    "venue": "Ginásio do Maracanãzinho",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-03-14",
+    "name": "UFC 185: Pettis vs. dos Anjos",
+    "venue": "American Airlines Center",
+    "city": "Dallas, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-02-28",
+    "name": "UFC 184: Rousey vs. Zingano",
+    "venue": "Staples Center",
+    "city": "Los Angeles, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-02-22",
+    "name": "UFC Fight Night: Bigfoot vs. Mir",
+    "venue": "Ginásio Gigantinho",
+    "city": "Porto Alegre, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-02-14",
+    "name": "UFC Fight Night: Henderson vs. Thatch",
+    "venue": "1stBank Center",
+    "city": "Broomfield, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-01-31",
+    "name": "UFC 183: Silva vs. Diaz",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-01-24",
+    "name": "UFC on Fox: Gustafsson vs. Johnson",
+    "venue": "Tele2 Arena",
+    "city": "Stockholm, Sweden",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-01-18",
+    "name": "UFC Fight Night: McGregor vs. Siver",
+    "venue": "TD Garden",
+    "city": "Boston, Massachusetts, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2015-01-03",
+    "name": "UFC 182: Jones vs. Cormier",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-12-20",
+    "name": "UFC Fight Night: Machida vs. Dollaway",
+    "venue": "Ginásio José Corrêa",
+    "city": "Barueri, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-12-13",
+    "name": "UFC on Fox: dos Santos vs. Miocic",
+    "venue": "U.S. Airways Center",
+    "city": "Phoenix, Arizona, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-12-12",
+    "name": "The Ultimate Fighter: A Champion Will Be Crowned Finale",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-12-06",
+    "name": "UFC 181: Hendricks vs. Lawler II",
+    "venue": "Mandalay Bay Events Center",
+    "city": "9,617",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-11-22",
+    "name": "UFC Fight Night: Edgar vs. Swanson",
+    "venue": "Frank Erwin Center",
+    "city": "Austin, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-11-15",
+    "name": "UFC 180: Werdum vs. Hunt",
+    "venue": "Arena Ciudad de México",
+    "city": "Mexico City, Mexico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-11-08",
+    "name": "UFC Fight Night: Shogun vs. Saint Preux",
+    "venue": "Ginásio Municipal Tancredo Neves",
+    "city": "Uberlândia, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-11-08",
+    "name": "UFC Fight Night: Rockhold vs. Bisping",
+    "venue": "Qudos Bank Arena",
+    "city": "Sydney, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-10-24",
+    "name": "UFC 179: Aldo vs. Mendes 2",
+    "venue": "Ginásio do Maracanãzinho",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-10-03",
+    "name": "UFC Fight Night: MacDonald vs. Saffiedine",
+    "venue": "Scotiabank Centre",
+    "city": "Halifax, Nova Scotia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-10-03",
+    "name": "UFC Fight Night: Nelson vs. Story",
+    "venue": "Avicii Arena",
+    "city": "Stockholm, Sweden",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-09-26",
+    "name": "UFC 178: Johnson vs. Cariaso",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-09-19",
+    "name": "UFC Fight Night: Hunt vs. Nelson",
+    "venue": "Saitama Super Arena",
+    "city": "Saitama, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-09-12",
+    "name": "UFC Fight Night: Bigfoot vs. Arlovski",
+    "venue": "Ginásio Nilson Nelson",
+    "city": "Brasília, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-09-04",
+    "name": "UFC Fight Night: Jacaré vs. Mousasi",
+    "venue": "Foxwoods Resort Casino",
+    "city": "Ledyard, Connecticut, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-08-29",
+    "name": "UFC 177: Dillashaw vs. Soto",
+    "venue": "Sleep Train Arena",
+    "city": "Sacramento, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-08-22",
+    "name": "UFC Fight Night: Henderson vs. dos Anjos",
+    "venue": "BOK Center",
+    "city": "Tulsa, Oklahoma, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-08-22",
+    "name": "UFC Fight Night: Bisping vs. Le",
+    "venue": "Cotai Arena",
+    "city": "Macau SAR, China",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-08-15",
+    "name": "UFC Fight Night: Bader vs. Saint Preux",
+    "venue": "Cross Insurance Center",
+    "city": "Bangor, Maine, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-08-01",
+    "name": "UFC 176: Aldo vs. Mendes II",
+    "venue": "Staples Center",
+    "city": "Los Angeles, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-07-25",
+    "name": "UFC on Fox: Lawler vs. Brown",
+    "venue": "SAP Center",
+    "city": "San Jose, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-07-18",
+    "name": "UFC Fight Night: McGregor vs. Brandão",
+    "venue": "3Arena",
+    "city": "Dublin, Ireland",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-07-15",
+    "name": "UFC Fight Night: Cowboy vs. Miller",
+    "venue": "Revel Casino Hotel",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-07-05",
+    "name": "The Ultimate Fighter: Team Edgar vs. Team Penn Finale",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-07-04",
+    "name": "UFC 175: Weidman vs. Machida",
+    "venue": "10,088",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-06-27",
+    "name": "UFC Fight Night: Swanson vs. Stephens",
+    "venue": "AT&T Center",
+    "city": "San Antonio, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-06-27",
+    "name": "UFC Fight Night: Te Huna vs. Marquardt",
+    "venue": "Vector Arena",
+    "city": "Auckland, New Zealand",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-06-13",
+    "name": "UFC 174: Johnson vs. Bagautinov",
+    "venue": "Rogers Arena",
+    "city": "Vancouver, British Columbia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-06-06",
+    "name": "UFC Fight Night: Henderson vs. Khabilov",
+    "venue": "Tingley Coliseum",
+    "city": "Albuquerque, New Mexico, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-05-30",
+    "name": "The Ultimate Fighter Brazil 3 Finale: Miocic vs. Maldonado",
+    "venue": "Ginásio do Ibirapuera",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-05-30",
+    "name": "UFC Fight Night: Muñoz vs. Mousasi",
+    "venue": "Uber Arena",
+    "city": "Berlin, Germany",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-05-23",
+    "name": "UFC 173: Barão vs. Dillashaw",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-05-09",
+    "name": "UFC Fight Night: Brown vs. Silva",
+    "venue": "U.S. Bank Arena",
+    "city": "Cincinnati, Ohio, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-04-25",
+    "name": "UFC 172: Jones vs. Teixeira",
+    "venue": "Baltimore Arena",
+    "city": "Baltimore, Maryland, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-04-18",
+    "name": "UFC on Fox: Werdum vs. Browne",
+    "venue": "Amway Center",
+    "city": "Orlando, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-04-15",
+    "name": "The Ultimate Fighter Nations Finale: Bisping vs. Kennedy",
+    "venue": "Colisée Pepsi",
+    "city": "Quebec City, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-04-10",
+    "name": "UFC Fight Night: Nogueira vs. Nelson",
+    "venue": "Etihad Park",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-03-23",
+    "name": "UFC Fight Night: Shogun vs. Henderson 2",
+    "venue": "Ginásio Nélio Dias",
+    "city": "Natal, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-03-15",
+    "name": "UFC 171: Hendricks vs. Lawler",
+    "venue": "American Airlines Center",
+    "city": "Dallas, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-03-08",
+    "name": "UFC Fight Night: Gustafsson vs. Manuwa",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-03-01",
+    "name": "The Ultimate Fighter China Finale: Kim vs. Hathaway",
+    "venue": "Cotai Arena",
+    "city": "Macau SAR, China",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-02-22",
+    "name": "UFC 170: Rousey vs. McMann",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-02-15",
+    "name": "UFC Fight Night: Machida vs. Mousasi",
+    "venue": "Arena Jaraguá",
+    "city": "Jaraguá do Sul, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-02-01",
+    "name": "UFC 169: Barão vs. Faber 2",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-01-25",
+    "name": "UFC on Fox: Henderson vs. Thomson",
+    "venue": "United Center",
+    "city": "Chicago, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-01-15",
+    "name": "UFC Fight Night: Rockhold vs. Philippou",
+    "venue": "Arena at Gwinnett Center",
+    "city": "Duluth, Georgia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2014-01-04",
+    "name": "UFC Fight Night: Saffiedine vs. Lim",
+    "venue": "Marina Bay Sands",
+    "city": "Marina Bay, Singapore",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-12-28",
+    "name": "UFC 168: Weidman vs. Silva 2",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-12-14",
+    "name": "UFC on Fox: Johnson vs. Benavidez 2",
+    "venue": "Sleep Train Arena",
+    "city": "Sacramento, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-12-07",
+    "name": "UFC Fight Night: Hunt vs. Bigfoot",
+    "venue": "Brisbane Entertainment Centre",
+    "city": "Brisbane, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-11-30",
+    "name": "The Ultimate Fighter: Team Rousey vs. Team Tate Finale",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-11-16",
+    "name": "UFC 167: St-Pierre vs. Hendricks",
+    "venue": "MGM Grand Garden Arena",
+    "city": "14,856",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-11-09",
+    "name": "UFC Fight Night: Belfort vs. Henderson 2",
+    "venue": "Goiânia Arena",
+    "city": "Goiânia, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-11-06",
+    "name": "UFC: Fight for the Troops 3",
+    "venue": "Fort Campbell",
+    "city": "Fort Campbell, Kentucky, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-10-25",
+    "name": "UFC Fight Night: Machida vs. Muñoz",
+    "venue": "Phones 4u Arena",
+    "city": "Manchester, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-10-18",
+    "name": "UFC 166: Velasquez vs. dos Santos III",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-10-08",
+    "name": "UFC Fight Night: Maia vs. Shields",
+    "venue": "Ginásio José Corrêa",
+    "city": "Barueri, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-09-20",
+    "name": "UFC 165: Jones vs. Gustafsson",
+    "venue": "Scotiabank Arena",
+    "city": "Toronto, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-09-03",
+    "name": "UFC Fight Night: Teixeira vs. Bader",
+    "venue": "Mineirinho Arena",
+    "city": "Belo Horizonte, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-08-30",
+    "name": "UFC 164: Henderson vs. Pettis 2",
+    "venue": "BMO Harris Bradley Center",
+    "city": "Milwaukee, Wisconsin, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-08-27",
+    "name": "UFC Fight Night: Condit vs. Kampmann 2",
+    "venue": "Bankers Life Fieldhouse",
+    "city": "Indianapolis, Indiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-08-16",
+    "name": "UFC Fight Night: Shogun vs. Sonnen",
+    "venue": "TD Garden",
+    "city": "Boston, Massachusetts, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-08-02",
+    "name": "UFC 163: Aldo vs. Korean Zombie",
+    "venue": "HSBC Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-07-26",
+    "name": "UFC on Fox: Johnson vs. Moraga",
+    "venue": "Climate Pledge Arena",
+    "city": "Seattle, Washington, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-07-05",
+    "name": "UFC 162: Silva vs. Weidman",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-06-14",
+    "name": "UFC 161: Evans vs. Henderson",
+    "venue": "Canada Life Centre",
+    "city": "Winnipeg, Manitoba, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-06-07",
+    "name": "UFC on Fuel TV: Nogueira vs. Werdum",
+    "venue": "Ginásio Paulo Sarasate",
+    "city": "Fortaleza, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-05-24",
+    "name": "UFC 160: Velasquez vs. Bigfoot 2",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-05-17",
+    "name": "UFC on FX: Belfort vs. Rockhold",
+    "venue": "Arena Jaraguá",
+    "city": "Jaraguá do Sul, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-04-26",
+    "name": "UFC 159: Jones vs. Sonnen",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-04-19",
+    "name": "UFC on Fox: Henderson vs. Melendez",
+    "venue": "SAP Center",
+    "city": "San Jose, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-04-12",
+    "name": "The Ultimate Fighter: Team Jones vs. Team Sonnen Finale",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-04-05",
+    "name": "UFC on Fuel TV: Mousasi vs. Latifi",
+    "venue": "Avicii Arena",
+    "city": "Stockholm, Sweden",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-03-16",
+    "name": "UFC 158: St-Pierre vs. Diaz",
+    "venue": "Bell Centre",
+    "city": "Montreal, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-03-03",
+    "name": "UFC on Fuel TV: Silva vs. Stann",
+    "venue": "Saitama Super Arena",
+    "city": "Saitama, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-02-23",
+    "name": "UFC 157: Rousey vs. Carmouche",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-02-16",
+    "name": "UFC on Fuel TV: Barão vs. McDonald",
+    "venue": "Wembley Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-02-02",
+    "name": "UFC 156: Aldo vs. Edgar",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-01-26",
+    "name": "UFC on Fox: Johnson vs. Dodson",
+    "venue": "United Center",
+    "city": "Chicago, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2013-01-19",
+    "name": "UFC on FX: Belfort vs. Bisping",
+    "venue": "Ginásio do Ibirapuera",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-12-29",
+    "name": "UFC 155: dos Santos vs. Velasquez 2",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-12-15",
+    "name": "The Ultimate Fighter: Team Carwin vs. Team Nelson Finale",
+    "venue": "Hard Rock Hotel and Casino",
+    "city": "2,500",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-12-15",
+    "name": "UFC on FX: Sotiropoulos vs. Pearson",
+    "venue": "Gold Coast Convention and Exhibition Centre",
+    "city": "Gold Coast, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-12-08",
+    "name": "UFC on Fox: Henderson vs. Diaz",
+    "venue": "Climate Pledge Arena",
+    "city": "Seattle, Washington, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-11-17",
+    "name": "UFC 154: St-Pierre vs. Condit",
+    "venue": "Bell Centre",
+    "city": "Montreal, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-11-10",
+    "name": "UFC on Fuel TV: Franklin vs. Le",
+    "venue": "Cotai Arena",
+    "city": "Macau SAR, China",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-10-12",
+    "name": "UFC 153: Silva vs. Bonnar",
+    "venue": "Farmasi Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-10-04",
+    "name": "UFC on FX: Browne vs. Bigfoot",
+    "venue": "Target Center",
+    "city": "Minneapolis, Minnesota, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-09-28",
+    "name": "UFC on Fuel TV: Struve vs. Miocic",
+    "venue": "Motorpoint Arena",
+    "city": "Nottingham, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-09-21",
+    "name": "UFC 152: Jones vs. Belfort",
+    "venue": "Scotiabank Arena",
+    "city": "Toronto, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-08-31",
+    "name": "UFC 151: Jones vs. Henderson",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-08-10",
+    "name": "UFC 150: Henderson vs. Edgar II",
+    "venue": "Ball Arena",
+    "city": "Denver, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-08-03",
+    "name": "UFC on Fox: Shogun vs. Vera",
+    "venue": "Crypto.com Arena",
+    "city": "Los Angeles, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-07-20",
+    "name": "UFC 149: Faber vs. Barão",
+    "venue": "Scotiabank Saddledome",
+    "city": "Calgary, Alberta, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-07-10",
+    "name": "UFC on Fuel TV: Muñoz vs. Weidman",
+    "venue": "SAP Center",
+    "city": "San Jose, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-07-06",
+    "name": "UFC 148: Silva vs. Sonnen II",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-06-22",
+    "name": "UFC 147: Silva vs. Franklin II",
+    "venue": "Mineirinho Arena",
+    "city": "Belo Horizonte, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-06-21",
+    "name": "UFC on FX: Maynard vs. Guida",
+    "venue": "Revel Casino Hotel",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-06-07",
+    "name": "UFC on FX: Johnson vs. McCall 2",
+    "venue": "Amerant Bank Arena",
+    "city": "Sunrise, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-05-31",
+    "name": "The Ultimate Fighter: Live Finale",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-05-25",
+    "name": "UFC 146: dos Santos vs. Mir",
+    "venue": "MGM Grand Garden Arena",
+    "city": "14,674",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-05-14",
+    "name": "UFC on Fuel TV: The Korean Zombie vs. Poirier",
+    "venue": "EagleBank Arena",
+    "city": "Fairfax, Virginia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-05-04",
+    "name": "UFC on Fox: Diaz vs. Miller",
+    "venue": "Meadowlands Arena",
+    "city": "East Rutherford, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-04-20",
+    "name": "UFC 145: Jones vs. Evans",
+    "venue": "Philips Arena",
+    "city": "Atlanta, Georgia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-04-13",
+    "name": "UFC on Fuel TV: Gustafsson vs. Silva",
+    "venue": "Avicii Arena",
+    "city": "Stockholm, Sweden",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-03-03",
+    "name": "UFC on FX: Alves vs. Kampmann",
+    "venue": "Qudos Bank Arena",
+    "city": "Sydney, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-02-26",
+    "name": "UFC 144: Edgar vs. Henderson",
+    "venue": "Saitama Super Arena",
+    "city": "Saitama, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-02-15",
+    "name": "UFC on Fuel TV: Sanchez vs. Ellenberger",
+    "venue": "Omaha Civic Auditorium",
+    "city": "Omaha, Nebraska, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-02-04",
+    "name": "UFC 143: Diaz vs. Condit",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-01-28",
+    "name": "UFC on Fox: Evans vs. Davis",
+    "venue": "United Center",
+    "city": "Chicago, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-01-20",
+    "name": "UFC on FX: Guillard vs. Miller",
+    "venue": "Bridgestone Arena",
+    "city": "Nashville, Tennessee, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2012-01-14",
+    "name": "UFC 142: Aldo vs. Mendes",
+    "venue": "HSBC Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-12-30",
+    "name": "UFC 141: Lesnar vs. Overeem",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-12-10",
+    "name": "UFC 140: Jones vs. Machida",
+    "venue": "Scotiabank Arena",
+    "city": "Toronto, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-12-03",
+    "name": "The Ultimate Fighter: Team Bisping vs. Team Miller Finale",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-11-19",
+    "name": "UFC 139: Shogun vs. Henderson",
+    "venue": "SAP Center",
+    "city": "San Jose, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-11-12",
+    "name": "UFC on Fox: Velasquez vs. dos Santos",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-11-05",
+    "name": "UFC 138: Leben vs. Muñoz",
+    "venue": "LG Arena",
+    "city": "Birmingham, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-10-28",
+    "name": "UFC 137: Penn vs. Diaz",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-10-07",
+    "name": "UFC 136: Edgar vs. Maynard III",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-09-30",
+    "name": "UFC Live: Cruz vs. Johnson",
+    "venue": "Capital One Arena",
+    "city": "Washington, D.C., U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-09-23",
+    "name": "UFC 135: Jones vs. Rampage",
+    "venue": "Pepsi Center",
+    "city": "Denver, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-09-16",
+    "name": "UFC Fight Night: Shields vs. Ellenberger",
+    "venue": "Ernest N. Morial Convention Center",
+    "city": "New Orleans, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-08-26",
+    "name": "UFC 134: Silva vs. Okami",
+    "venue": "HSBC Arena",
+    "city": "Rio de Janeiro, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-08-13",
+    "name": "UFC Live: Hardy vs. Lytle",
+    "venue": "Bradley Center",
+    "city": "Milwaukee, Wisconsin, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-08-05",
+    "name": "UFC 133: Evans vs. Ortiz",
+    "venue": "Wells Fargo Center",
+    "city": "Philadelphia, Pennsylvania, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-07-01",
+    "name": "UFC 132: Cruz vs. Faber",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-06-25",
+    "name": "UFC Live: Kongo vs. Barry",
+    "venue": "Consol Energy Center",
+    "city": "Pittsburgh, Pennsylvania, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-06-10",
+    "name": "UFC 131: dos Santos vs. Carwin",
+    "venue": "Rogers Arena",
+    "city": "Vancouver, British Columbia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-06-03",
+    "name": "The Ultimate Fighter: Team Lesnar vs. Team dos Santos Finale",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-05-27",
+    "name": "UFC 130: Rampage vs. Hamill",
+    "venue": "MGM Grand Garden Arena",
+    "city": "12,753",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-04-29",
+    "name": "UFC 129: St-Pierre vs. Shields",
+    "venue": "Rogers Centre",
+    "city": "Toronto, Ontario, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-03-26",
+    "name": "UFC Fight Night: Nogueira vs. Davis",
+    "venue": "Climate Pledge Arena",
+    "city": "Seattle, Washington, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-03-19",
+    "name": "UFC 128: Shogun vs. Jones",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-03-03",
+    "name": "UFC Live: Sanchez vs. Kampmann",
+    "venue": "KFC Yum! Center",
+    "city": "Louisville, Kentucky, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-02-27",
+    "name": "UFC 127: Penn vs. Fitch",
+    "venue": "Qudos Bank Arena",
+    "city": "Sydney, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-02-05",
+    "name": "UFC 126: Silva vs. Belfort",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-01-22",
+    "name": "UFC: Fight for the Troops 2",
+    "venue": "Fort Hood",
+    "city": "Fort Hood, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2011-01-01",
+    "name": "UFC 125: Resolution",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-12-11",
+    "name": "UFC 124: St-Pierre vs. Koscheck 2",
+    "venue": "Bell Centre",
+    "city": "Montreal, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-12-04",
+    "name": "The Ultimate Fighter: Team GSP vs. Team Koscheck Finale",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-11-20",
+    "name": "UFC 123: Rampage vs. Machida",
+    "venue": "The Palace of Auburn Hills",
+    "city": "Auburn Hills, Michigan, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-11-13",
+    "name": "UFC 122: Marquardt vs. Okami",
+    "venue": "Rudolf Weber-Arena",
+    "city": "Oberhausen, Germany",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-10-22",
+    "name": "UFC 121: Lesnar vs. Velasquez",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-10-15",
+    "name": "UFC 120: Bisping vs. Akiyama",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-09-24",
+    "name": "UFC 119: Mir vs. Cro Cop",
+    "venue": "Conseco Fieldhouse",
+    "city": "Indianapolis, Indiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-09-14",
+    "name": "UFC Fight Night: Marquardt vs. Palhares",
+    "venue": "Frank Erwin Center",
+    "city": "Austin, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-08-27",
+    "name": "UFC 118: Edgar vs. Penn 2",
+    "venue": "TD Garden",
+    "city": "Boston, Massachusetts, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-08-06",
+    "name": "UFC 117: Silva vs. Sonnen",
+    "venue": "Oracle Arena",
+    "city": "Oakland, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-07-31",
+    "name": "UFC Live: Jones vs. Matyushenko",
+    "venue": "Pechanga Arena",
+    "city": "San Diego, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-07-02",
+    "name": "UFC 116: Lesnar vs. Carwin",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-06-18",
+    "name": "The Ultimate Fighter: Team Liddell vs. Team Ortiz Finale",
+    "venue": "Palms Casino Resort",
+    "city": "1,708",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-06-11",
+    "name": "UFC 115: Liddell vs. Franklin",
+    "venue": "General Motors Place",
+    "city": "Vancouver, British Columbia, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-05-28",
+    "name": "UFC 114: Rampage vs. Evans",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-05-07",
+    "name": "UFC 113: Machida vs. Shogun 2",
+    "venue": "Bell Centre",
+    "city": "Montreal, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-04-09",
+    "name": "UFC 112: Invincible",
+    "venue": "Concert Arena, Yas Island",
+    "city": "Abu Dhabi, United Arab Emirates",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-03-30",
+    "name": "UFC Fight Night: Florian vs. Gomi",
+    "venue": "Bojangles Coliseum",
+    "city": "Charlotte, North Carolina, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-03-27",
+    "name": "UFC 111: St-Pierre vs. Hardy",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-03-21",
+    "name": "UFC Live: Vera vs. Jones",
+    "venue": "1stBank Center",
+    "city": "Broomfield, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-02-21",
+    "name": "UFC 110: Nogueira vs. Velasquez",
+    "venue": "Qudos Bank Arena",
+    "city": "Sydney, Australia",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-02-06",
+    "name": "UFC 109: Relentless",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-01-11",
+    "name": "UFC Fight Night: Maynard vs. Diaz",
+    "venue": "Patriot Center",
+    "city": "Fairfax, Virginia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2010-01-02",
+    "name": "UFC 108: Evans vs. Silva",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-12-12",
+    "name": "UFC 107: Penn vs. Sanchez",
+    "venue": "FedExForum",
+    "city": "Memphis, Tennessee, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-12-05",
+    "name": "The Ultimate Fighter: Heavyweights Finale",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-11-21",
+    "name": "UFC 106: Ortiz vs. Griffin 2",
+    "venue": "Mandalay Bay Events Center",
+    "city": "10,529",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-11-14",
+    "name": "UFC 105: Couture vs. Vera",
+    "venue": "Manchester Evening News Arena",
+    "city": "Manchester, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-10-23",
+    "name": "UFC 104: Machida vs. Shogun",
+    "venue": "Crypto.com Arena",
+    "city": "Los Angeles, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-09-18",
+    "name": "UFC 103: Franklin vs. Belfort",
+    "venue": "American Airlines Center",
+    "city": "Dallas, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-09-15",
+    "name": "UFC Fight Night: Diaz vs. Guillard",
+    "venue": "Cox Convention Center",
+    "city": "Oklahoma City, Oklahoma, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-08-28",
+    "name": "UFC 102: Couture vs. Nogueira",
+    "venue": "Rose Garden",
+    "city": "Portland, Oregon, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-08-07",
+    "name": "UFC 101: Declaration",
+    "venue": "Wachovia Center",
+    "city": "Philadelphia, Pennsylvania, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-07-10",
+    "name": "UFC 100",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-06-19",
+    "name": "The Ultimate Fighter: United States vs. United Kingdom Finale",
+    "venue": "Palms Casino Resort",
+    "city": "2,217",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-06-12",
+    "name": "UFC 99: The Comeback",
+    "venue": "Lanxess Arena",
+    "city": "Cologne, Germany",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-05-22",
+    "name": "UFC 98: Evans vs. Machida",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-04-17",
+    "name": "UFC 97: Redemption",
+    "venue": "Bell Centre",
+    "city": "Montreal, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-03-31",
+    "name": "UFC Fight Night: Condit vs. Kampmann",
+    "venue": "Sommet Center",
+    "city": "Nashville, Tennessee, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-03-07",
+    "name": "UFC 96: Jackson vs. Jardine",
+    "venue": "Nationwide Arena",
+    "city": "Columbus, Ohio, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-02-21",
+    "name": "UFC 95: Sanchez vs. Stevenson",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-02-07",
+    "name": "UFC Fight Night: Lauzon vs. Stephens",
+    "venue": "USF Sun Dome",
+    "city": "Tampa, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-01-31",
+    "name": "UFC 94: St-Pierre vs. Penn 2",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2009-01-17",
+    "name": "UFC 93: Franklin vs. Henderson",
+    "venue": "3Arena",
+    "city": "Dublin, Ireland",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-12-27",
+    "name": "UFC 92: The Ultimate 2008",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-12-13",
+    "name": "The Ultimate Fighter: Team Nogueira vs. Team Mir Finale",
+    "venue": "Palms Casino Resort",
+    "city": "1,853",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-12-10",
+    "name": "UFC: Fight for the Troops",
+    "venue": "Crown Coliseum",
+    "city": "Fayetteville, North Carolina, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-11-15",
+    "name": "UFC 91: Couture vs. Lesnar",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-10-24",
+    "name": "UFC 90: Silva vs. Côté",
+    "venue": "Allstate Arena",
+    "city": "Rosemont, Illinois, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-10-17",
+    "name": "UFC 89: Bisping vs. Leben",
+    "venue": "National Indoor Arena",
+    "city": "Birmingham, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-09-16",
+    "name": "UFC Fight Night: Diaz vs. Neer",
+    "venue": "Omaha Civic Auditorium",
+    "city": "Omaha, Nebraska, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-09-05",
+    "name": "UFC 88: Breakthrough",
+    "venue": "State Farm Arena",
+    "city": "Atlanta, Georgia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-08-08",
+    "name": "UFC 87: Seek and Destroy",
+    "venue": "Target Center",
+    "city": "Minneapolis, Minnesota, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-07-18",
+    "name": "UFC Fight Night: Silva vs. Irvin",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-07-04",
+    "name": "UFC 86: Jackson vs. Griffin",
+    "venue": "Mandalay Bay Events Center",
+    "city": "10,990",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-06-20",
+    "name": "The Ultimate Fighter: Team Rampage vs. Team Forrest Finale",
+    "venue": "Palms Casino Resort",
+    "city": "1,853",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-06-06",
+    "name": "UFC 85: Bedlam",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-05-23",
+    "name": "UFC 84: Ill Will",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-04-18",
+    "name": "UFC 83: Serra vs. St-Pierre 2",
+    "venue": "Bell Centre",
+    "city": "Montreal, Quebec, Canada",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-04-01",
+    "name": "UFC Fight Night: Florian vs. Lauzon",
+    "venue": "Broomfield Event Center",
+    "city": "Broomfield, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-03-01",
+    "name": "UFC 82: Pride of a Champion",
+    "venue": "Nationwide Arena",
+    "city": "Columbus, Ohio, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-02-02",
+    "name": "UFC 81: Breaking Point",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-01-23",
+    "name": "UFC Fight Night: Swick vs. Burkman",
+    "venue": "Palms Casino Resort",
+    "city": "1,900",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2008-01-19",
+    "name": "UFC 80: Rapid Fire",
+    "venue": "Metro Radio Arena",
+    "city": "Newcastle upon Tyne, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-12-29",
+    "name": "UFC 79: Nemesis",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-12-08",
+    "name": "The Ultimate Fighter: Team Hughes vs. Team Serra Finale",
+    "venue": "Palms Casino Resort",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-11-17",
+    "name": "UFC 78: Validation",
+    "venue": "Prudential Center",
+    "city": "Newark, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-10-19",
+    "name": "UFC 77: Hostile Territory",
+    "venue": "U.S. Bank Arena",
+    "city": "Cincinnati, Ohio, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-09-21",
+    "name": "UFC 76: Knockout",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-09-18",
+    "name": "UFC Fight Night: Thomas vs. Florian",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-09-07",
+    "name": "UFC 75: Champion vs. Champion",
+    "venue": "The O2 Arena",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-08-24",
+    "name": "UFC 74: Respect",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-07-06",
+    "name": "UFC 73: Stacked",
+    "venue": "ARCO Arena",
+    "city": "Sacramento, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-06-22",
+    "name": "The Ultimate Fighter: Team Pulver vs. Team Penn Finale",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-06-15",
+    "name": "UFC 72: Victory",
+    "venue": "The Odyssey",
+    "city": "Belfast, Northern Ireland, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-06-11",
+    "name": "UFC Fight Night: Stout vs. Fisher",
+    "venue": "Seminole Hard Rock Hotel and Casino",
+    "city": "Hollywood, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-05-25",
+    "name": "UFC 71: Liddell vs. Jackson",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-04-20",
+    "name": "UFC 70: Nations Collide",
+    "venue": "Manchester Evening News Arena",
+    "city": "Manchester, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-04-06",
+    "name": "UFC 69: Shootout",
+    "venue": "Toyota Center",
+    "city": "Houston, Texas, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-04-04",
+    "name": "UFC Fight Night: Stevenson vs. Guillard",
+    "venue": "Palms Casino Resort",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-03-03",
+    "name": "UFC 68: The Uprising",
+    "venue": "Nationwide Arena",
+    "city": "Columbus, Ohio, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-02-03",
+    "name": "UFC 67: All or Nothing",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2007-01-25",
+    "name": "UFC Fight Night: Evans vs. Salmon",
+    "venue": "Seminole Hard Rock Hotel and Casino",
+    "city": "Hollywood, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-12-30",
+    "name": "UFC 66: Liddell vs. Ortiz",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-12-13",
+    "name": "UFC Fight Night: Sanchez vs. Riggs",
+    "venue": "Marine Corps Air Station Miramar",
+    "city": "San Diego, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-11-18",
+    "name": "UFC 65: Bad Intentions",
+    "venue": "ARCO Arena",
+    "city": "Sacramento, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-11-11",
+    "name": "The Ultimate Fighter: The Comeback Finale",
+    "venue": "Hard Rock Hotel and Casino",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-10-13",
+    "name": "UFC 64: Unstoppable",
+    "venue": "Mandalay Bay Events Center",
+    "city": "10,173",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-10-09",
+    "name": "UFC Fight Night 6.5",
+    "venue": "Seminole Hard Rock Hotel and Casino",
+    "city": "Hollywood, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-09-22",
+    "name": "UFC 63: Hughes vs. Penn",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-08-25",
+    "name": "UFC 62: Liddell vs. Sobral",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-08-16",
+    "name": "UFC Fight Night 6",
+    "venue": "Red Rock Resort Spa and Casino",
+    "city": "Summerlin, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-07-07",
+    "name": "UFC 61: Bitter Rivals",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-06-27",
+    "name": "UFC Ultimate Fight Night 5",
+    "venue": "Hard Rock Hotel and Casino",
+    "city": "606",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-06-23",
+    "name": "The Ultimate Fighter: Team Ortiz vs. Team Shamrock Finale",
+    "venue": "849",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-05-26",
+    "name": "UFC 60: Hughes vs. Gracie",
+    "venue": "Crypto.com Arena",
+    "city": "Los Angeles, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-04-14",
+    "name": "UFC 59: Reality Check",
+    "venue": "Honda Center",
+    "city": "Anaheim, California, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-04-05",
+    "name": "UFC Ultimate Fight Night 4",
+    "venue": "Hard Rock Hotel and Casino",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-03-04",
+    "name": "UFC 58: USA vs. Canada",
+    "venue": "Mandalay Bay Events Center",
+    "city": "9,569",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-02-04",
+    "name": "UFC 57: Liddell vs. Couture 3",
+    "venue": "10,659",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2006-01-16",
+    "name": "UFC Ultimate Fight Night 3",
+    "venue": "Hard Rock Hotel and Casino",
+    "city": "1,008",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-11-19",
+    "name": "UFC 56: Full Force",
+    "venue": "MGM Grand Garden Arena",
+    "city": "12,000",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-11-05",
+    "name": "The Ultimate Fighter: Team Hughes vs. Team Franklin Finale",
+    "venue": "Hard Rock Hotel and Casino",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-10-06",
+    "name": "UFC 55: Fury",
+    "venue": "Mohegan Sun Arena",
+    "city": "Montville, Connecticut, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-10-02",
+    "name": "UFC Ultimate Fight Night 2",
+    "venue": "Hard Rock Hotel and Casino",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-08-19",
+    "name": "UFC 54: Boiling Point",
+    "venue": "MGM Grand Garden Arena",
+    "city": "13,520",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-08-05",
+    "name": "UFC Ultimate Fight Night",
+    "venue": "Cox Pavilion",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-06-03",
+    "name": "UFC 53: Heavy Hitters",
+    "venue": "Boardwalk Hall",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-04-15",
+    "name": "UFC 52: Couture vs. Liddell",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-04-08",
+    "name": "The Ultimate Fighter: Team Couture vs. Team Liddell Finale",
+    "venue": "Cox Pavilion",
+    "city": "—",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2005-02-05",
+    "name": "UFC 51: Super Saturday",
+    "venue": "Mandalay Bay Events Center",
+    "city": "11,072",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2004-10-21",
+    "name": "UFC 50: The War of '04",
+    "venue": "Boardwalk Hall",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2004-08-20",
+    "name": "UFC 49: Unfinished Business",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2004-06-18",
+    "name": "UFC 48: Payback",
+    "venue": "Mandalay Bay Events Center",
+    "city": "10,000",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2004-04-01",
+    "name": "UFC 47: It's On!",
+    "venue": "11,437",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2004-01-31",
+    "name": "UFC 46: Supernatural",
+    "venue": "10,700",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2003-11-21",
+    "name": "UFC 45: Revolution",
+    "venue": "Mohegan Sun Arena",
+    "city": "Montville, Connecticut, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2003-09-25",
+    "name": "UFC 44: Undisputed",
+    "venue": "Mandalay Bay Events Center",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2003-06-05",
+    "name": "UFC 43: Meltdown",
+    "venue": "Thomas & Mack Center",
+    "city": "9,800",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2003-04-24",
+    "name": "UFC 42: Sudden Impact",
+    "venue": "Kaseya Center",
+    "city": "Miami, Florida, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2003-02-28",
+    "name": "UFC 41: Onslaught",
+    "venue": "Boardwalk Hall",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2002-11-22",
+    "name": "UFC 40: Vendetta",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2002-09-26",
+    "name": "UFC 39: The Warriors Return",
+    "venue": "Mohegan Sun Arena",
+    "city": "Montville, Connecticut, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2002-07-12",
+    "name": "UFC 38: Brawl at the Hall",
+    "venue": "Royal Albert Hall",
+    "city": "London, England, UK",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2002-06-21",
+    "name": "UFC 37.5: As Real As It Gets",
+    "venue": "Bellagio",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2002-05-09",
+    "name": "UFC 37: High Impact",
+    "venue": "CenturyTel Center",
+    "city": "Bossier City, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2002-03-22",
+    "name": "UFC 36: Worlds Collide",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2002-01-11",
+    "name": "UFC 35: Throwdown",
+    "venue": "Mohegan Sun Arena",
+    "city": "Uncasville, Connecticut, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2001-11-02",
+    "name": "UFC 34: High Voltage",
+    "venue": "MGM Grand Garden Arena",
+    "city": "Las Vegas, Nevada, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2001-09-27",
+    "name": "UFC 33: Victory in Vegas",
+    "venue": "Mandalay Bay Events Center",
+    "city": "9,500",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2001-06-28",
+    "name": "UFC 32: Showdown in the Meadowlands",
+    "venue": "Continental Airlines Arena",
+    "city": "East Rutherford, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2001-05-03",
+    "name": "UFC 31: Locked and Loaded",
+    "venue": "Etess Arena at Trump Taj Mahal",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2001-02-23",
+    "name": "UFC 30: Battle on the Boardwalk",
+    "venue": "3,000",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2000-12-16",
+    "name": "UFC 29: Defense of the Belts",
+    "venue": "Differ Ariake Arena",
+    "city": "Tokyo, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2000-11-17",
+    "name": "UFC 28: High Stakes",
+    "venue": "Etess Arena at Trump Taj Mahal",
+    "city": "Atlantic City, New Jersey, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2000-09-21",
+    "name": "UFC 27: Ultimate Bad Boyz",
+    "venue": "Lakefront Arena",
+    "city": "New Orleans, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2000-06-08",
+    "name": "UFC 26: Ultimate Field of Dreams",
+    "venue": "Five Seasons Events Center",
+    "city": "Cedar Rapids, Iowa, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2000-04-13",
+    "name": "UFC 25: Ultimate Japan 3",
+    "venue": "Yoyogi National Gymnasium",
+    "city": "Tokyo, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "2000-03-10",
+    "name": "UFC 24: First Defense",
+    "venue": "Lake Charles Civic Center",
+    "city": "Lake Charles, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1999-11-19",
+    "name": "UFC 23: Ultimate Japan 2",
+    "venue": "Tokyo Bay NK Hall",
+    "city": "Chiba, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1999-09-23",
+    "name": "UFC 22: Only One Can be Champion",
+    "venue": "Lake Charles Civic Center",
+    "city": "Lake Charles, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1999-07-15",
+    "name": "UFC 21: Return of the Champions",
+    "venue": "Five Seasons Events Center",
+    "city": "Cedar Rapids, Iowa, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1999-05-06",
+    "name": "UFC 20: Battle for the Gold",
+    "venue": "Boutwell Memorial Auditorium",
+    "city": "Birmingham, Alabama, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1999-03-05",
+    "name": "UFC 19: Ultimate Young Guns",
+    "venue": "Casino Magic Bay St. Louis",
+    "city": "Bay St. Louis, Mississippi, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1999-01-08",
+    "name": "UFC 18: The Road to the Heavyweight Title",
+    "venue": "Pontchartrain Center",
+    "city": "New Orleans, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1998-10-15",
+    "name": "UFC Brazil: Ultimate Brazil",
+    "venue": "Ginásio da Portuguesa",
+    "city": "São Paulo, Brazil",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1998-05-14",
+    "name": "UFC 17: Redemption",
+    "venue": "Mobile Civic Center",
+    "city": "Mobile, Alabama, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1998-03-13",
+    "name": "UFC 16: Battle in the Bayou",
+    "venue": "Pontchartrain Center",
+    "city": "New Orleans, Louisiana, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1997-12-21",
+    "name": "UFC Japan: Ultimate Japan",
+    "venue": "Yokohama Arena",
+    "city": "Yokohama, Japan",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1997-10-16",
+    "name": "UFC 15: Collision Course",
+    "venue": "Casino Magic Bay St. Louis",
+    "city": "Bay St. Louis, Mississippi, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1997-07-26",
+    "name": "UFC 14: Showdown",
+    "venue": "Boutwell Memorial Auditorium",
+    "city": "Birmingham, Alabama, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1997-05-29",
+    "name": "UFC 13: The Ultimate Force",
+    "venue": "Augusta Civic Center",
+    "city": "Augusta, Georgia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1997-02-07",
+    "name": "UFC 12: Judgement Day",
+    "venue": "Dothan Civic Center",
+    "city": "Dothan, Alabama, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1996-12-07",
+    "name": "UFC: The Ultimate Ultimate 2",
+    "venue": "Fair Park Arena",
+    "city": "Birmingham, Alabama, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1996-09-19",
+    "name": "UFC 11: The Proving Ground",
+    "venue": "Augusta Civic Center",
+    "city": "Augusta, Georgia, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1996-07-11",
+    "name": "UFC 10: The Tournament",
+    "venue": "Fair Park Arena",
+    "city": "Birmingham, Alabama, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1996-05-16",
+    "name": "UFC 9: Motor City Madness",
+    "venue": "Cobo Arena",
+    "city": "Detroit, Michigan, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1996-02-16",
+    "name": "UFC 8: David vs. Goliath",
+    "venue": "Coliseo Rubén Rodríguez",
+    "city": "Bayamón, Puerto Rico",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1995-12-16",
+    "name": "UFC: The Ultimate Ultimate",
+    "venue": "Mammoth Gardens",
+    "city": "Denver, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1995-09-07",
+    "name": "UFC 7: The Brawl in Buffalo",
+    "venue": "Buffalo Memorial Auditorium",
+    "city": "Buffalo, New York, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1995-07-13",
+    "name": "UFC 6: Clash of the Titans",
+    "venue": "Casper Events Center",
+    "city": "Casper, Wyoming, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1995-04-06",
+    "name": "UFC 5: The Return of the Beast",
+    "venue": "Independence Arena",
+    "city": "Charlotte, North Carolina, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1994-12-16",
+    "name": "UFC 4: Revenge of the Warriors",
+    "venue": "Expo Square Pavilion",
+    "city": "Tulsa, Oklahoma, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1994-09-08",
+    "name": "UFC 3: The American Dream",
+    "venue": "Grady Cole Center",
+    "city": "Charlotte, North Carolina, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1994-03-11",
+    "name": "UFC 2: No Way Out",
+    "venue": "Mammoth Gardens",
+    "city": "Denver, Colorado, U.S.",
+    "promotion": "UFC"
+  },
+  {
+    "sport": "ufc",
+    "date": "1993-11-12",
+    "name": "UFC 1: The Beginning",
+    "venue": "McNichols Sports Arena",
+    "city": "7,800",
+    "promotion": "UFC"
+  }
+]

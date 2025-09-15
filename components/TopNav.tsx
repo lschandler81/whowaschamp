@@ -20,8 +20,8 @@ export function TopNav() {
             <Link href="/on-this-day" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
               This Day in Wrestling
             </Link>
-            <Link href="/on-this-week" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
-              This Week in Wrestling  
+            <Link href="/ppv-flashback" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
+              PPV Flashback
             </Link>
             <Link href="/blog" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
               Articles
@@ -50,11 +50,11 @@ export function TopNav() {
                 This Day in Wrestling
               </Link>
               <Link 
-                href="/on-this-week" 
+                href="/ppv-flashback" 
                 className="block text-xs font-medium text-gray-700 hover:text-red-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                This Week in Wrestling
+                PPV Flashback
               </Link>
               <Link 
                 href="/blog" 

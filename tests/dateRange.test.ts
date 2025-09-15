@@ -3,29 +3,27 @@ import { findChampionOn, calculateDayOfReign, calculateReignLength, validateReig
 import type { Reign } from '../lib/dateRange';
 import wweData from '../public/data/wwe_championship_reigns.json';
 
-const sampleReigns: Reign[] = [
-  {
-    name: 'John Doe',
-    start_date: '2020-01-01',
-    end_date: '2020-06-01',
-    event: 'New Year Event',
-    location: 'New York'
-  },
-  {
-    name: 'Jane Smith',
-    start_date: '2020-06-01',
-    end_date: '2020-12-01',
-    event: 'Summer Event',
-    location: 'Los Angeles'
-  },
-  {
-    name: 'Bob Johnson',
-    start_date: '2020-12-01',
-    end_date: null, // Current champion
-    event: 'Winter Event',
-    location: 'Chicago'
-  }
-];
+  const testReigns = [
+    {
+      champion: 'John Doe',
+      start_date: '2023-01-15',
+      end_date: '2023-03-20',
+    },
+    {
+      champion: 'Jane Smith',
+      start_date: '2023-03-20',
+      end_date: '2023-06-10',
+    },
+    {
+      champion: 'Bob Johnson',
+      start_date: '2023-06-10',
+      end_date: null,
+    }
+  ];
+
+  test('finds current champion', () => {
+    const result = getReignAtDate(testReigns, '2023-08-15');
+    expect(result?.champion).toBe('John Doe');
 
 describe('findChampionOn', () => {
   it('should find champion for date within first reign', () => {

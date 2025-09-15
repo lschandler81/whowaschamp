@@ -69,7 +69,7 @@ export interface PPVFlashbackEvent {
   attendance?: number;
   headliners: string[];
   titleChanges: string[];
-  score: number;
+  score?: number; // Made optional since we don't need it anymore
 }
 
 // For PPV selection heuristic

@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/db';
 import { PPVFlashbackEvent } from '@/lib/types/ppv';
+import { getISOWeekNumber, getCurrentISOWeek, getISOWeekMatcher } from '@/lib/iso-week';
 
-const prisma = new PrismaClient();
+// Ensure this route runs on the Node.js runtime (Prisma is not supported on Edge)
+export const runtime = 'nodejs';
 
 type EventWithRelations = {
   id: string;
@@ -27,37 +29,19 @@ type EventWithRelations = {
 type ScoredEvent = EventWithRelations & { score: number };
 
 /**
- * GET /api/events/ppv-flashback?weekOf=YYYY-MM-DD
- * Returns a high-scoring PPV event from the past for the "PPV Flashback" widget
- * Optional weekOf parameter to find events from a specific week
+ * GET /api/events/ppv-flashback
+ * Returns the biggest PPV event that happened during the current ISO week in history
+ * "Biggest" is determined by attendance > buyrate > recency as tiebreaker
  */
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
-    const weekOfParam = searchParams.get('weekOf');
+    // Get the current ISO week number (1-53)
+    const currentISOWeek = getCurrentISOWeek();
     
-    // Parse weekOf parameter if provided
-    let weekOfDate: Date | undefined;
-    if (weekOfParam) {
-      weekOfDate = new Date(weekOfParam);
-      if (isNaN(weekOfDate.getTime())) {
-        return NextResponse.json({
-          error: 'Invalid weekOf parameter. Use YYYY-MM-DD format.'
-        }, { status: 400 });
-      }
-    }
-
-    // Get all PPV events with scoring data
-    const ppvEvents = await prisma.event.findMany({
+    // Get all PPV events
+    const allPPVEvents = await prisma.event.findMany({
       where: {
-        isPpv: true,
-        // If weekOf is specified, filter to events within that week
-        ...(weekOfDate && {
-          date: {
-            gte: getWeekStart(weekOfDate),
-            lte: getWeekEnd(weekOfDate)
-          }
-        })
+        isPpv: true
       },
       include: {
         promotion: true,
@@ -71,92 +55,89 @@ export async function GET(request: NextRequest) {
       orderBy: { date: 'desc' }
     });
 
-    if (ppvEvents.length === 0) {
-      const message = weekOfParam 
-        ? `No PPV events found for week of ${weekOfParam}`
-        : 'No PPV events found';
-        
+    // Filter events to only those that happened in the same ISO week
+    const isoWeekMatcher = getISOWeekMatcher();
+    const weekMatchingEvents = allPPVEvents.filter(event => 
+      isoWeekMatcher(new Date(event.date))
+    );
+
+    if (weekMatchingEvents.length === 0) {
       return NextResponse.json({
         event: null,
-        message,
-        weekOf: weekOfParam || undefined
+        message: `No major PPV events happened during this week in wrestling history`,
+        currentWeek: currentISOWeek,
+        totalPPVs: allPPVEvents.length
       });
     }
 
-    // Score events based on multiple factors
-    const scoredEvents = ppvEvents.map((event: EventWithRelations): ScoredEvent => {
-      let score = 0;
-      
-      // Buyrate score (scale: 1-10, max at 1.5M buys)
-      if (event.buyrate) {
-        score += Math.min(10, (event.buyrate / 150));
+    // Sort by "biggest" criteria: attendance > buyrate > recency
+    const sortedEvents = weekMatchingEvents.sort((a: EventWithRelations, b: EventWithRelations) => {
+      // Primary: attendance (higher is better)
+      const attendanceA = a.attendance || 0;
+      const attendanceB = b.attendance || 0;
+      if (attendanceA !== attendanceB) {
+        return attendanceB - attendanceA;
       }
-      
-      // Attendance score (scale: 1-10, max at 100k attendance)
-      if (event.attendance) {
-        score += Math.min(10, (event.attendance / 10000));
+
+      // Secondary: buyrate (higher is better)
+      const buyrateA = a.buyrate || 0;
+      const buyrateB = b.buyrate || 0;
+      if (buyrateA !== buyrateB) {
+        return buyrateB - buyrateA;
       }
-      
-      // Title changes bonus (2 points per title change)
-      score += event.titleChanges.length * 2;
-      
-      // Main event bonus (1 point if has main event)
-      if (event.headliners.some(h => h.side === 'main')) {
-        score += 1;
-      }
-      
-      // Historical significance (older events get slight bonus)
-      const yearsDiff = new Date().getFullYear() - event.date.getFullYear();
-      if (yearsDiff >= 10) score += 2;
-      if (yearsDiff >= 20) score += 1;
-      
-      // Special event bonus for landmark shows
-      if (isLandmarkEvent(event.name)) {
-        score += 3;
-      }
-      
-      return { ...event, score };
+
+      // Tertiary: recency (more recent is better)
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
 
-    // Sort by score and pick top event
-    const topEvent = scoredEvents.sort((a: ScoredEvent, b: ScoredEvent) => b.score - a.score)[0];
+    const selectedEvent = sortedEvents[0];
+    
+    // Calculate years ago for context
+    const eventDate = new Date(selectedEvent.date);
+    const now = new Date();
+    const yearsAgo = Math.floor((now.getTime() - eventDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000));
 
     // Format for API response
     const flashbackEvent: PPVFlashbackEvent = {
-      id: topEvent.id,
-      promotion: topEvent.promotion.name,
-      name: topEvent.name,
-      date: topEvent.date,
-      venue: topEvent.venue || undefined,
-      city: topEvent.city || undefined,
-      country: topEvent.country || undefined,
-      buyrate: topEvent.buyrate || undefined,
-      attendance: topEvent.attendance || undefined,
-      headliners: topEvent.headliners.map((h: { name: string }) => h.name),
-      titleChanges: topEvent.titleChanges
+      id: selectedEvent.id,
+      promotion: selectedEvent.promotion.name,
+      name: selectedEvent.name,
+      date: selectedEvent.date,
+      venue: selectedEvent.venue || undefined,
+      city: selectedEvent.city || undefined,
+      country: selectedEvent.country || undefined,
+      buyrate: selectedEvent.buyrate || undefined,
+      attendance: selectedEvent.attendance || undefined,
+      headliners: selectedEvent.headliners.map((h: { name: string }) => h.name),
+      titleChanges: selectedEvent.titleChanges
         .filter((tc: any) => tc.newChampion && tc.oldChampion)
         .map((tc: any) => 
           `${tc.titleName}: ${tc.newChampion} defeats ${tc.oldChampion}`
-        ),
-      score: topEvent.score
+        )
     };
 
     return NextResponse.json({
       event: flashbackEvent,
-      weekOf: weekOfParam || undefined,
+      currentWeek: currentISOWeek,
+      context: {
+        yearsAgo,
+        totalMatchingEvents: weekMatchingEvents.length,
+        alternativeEvents: sortedEvents.slice(1, 4).map((e: EventWithRelations) => ({
+          name: e.name,
+          promotion: e.promotion.name,
+          date: e.date.toISOString().split('T')[0],
+          attendance: e.attendance,
+          buyrate: e.buyrate
+        }))
+      },
       debugInfo: {
-        totalPPVs: ppvEvents.length,
-        queryDate: weekOfDate?.toISOString(),
-        topScores: scoredEvents
-          .sort((a: ScoredEvent, b: ScoredEvent) => b.score - a.score)
-          .slice(0, 3)
-          .map((e: ScoredEvent) => ({
-            name: e.name,
-            date: e.date.toISOString().split('T')[0],
-            score: e.score,
-            buyrate: e.buyrate,
-            attendance: e.attendance
-          }))
+        totalPPVs: allPPVEvents.length,
+        weekMatchingPPVs: weekMatchingEvents.length,
+        selectedReason: {
+          attendance: selectedEvent.attendance,
+          buyrate: selectedEvent.buyrate,
+          date: selectedEvent.date.toISOString().split('T')[0]
+        }
       }
     });
 
@@ -169,44 +150,7 @@ export async function GET(request: NextRequest) {
       },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
-}
-
-/**
- * Get the start of the week (Sunday) for a given date
- */
-function getWeekStart(date: Date): Date {
-  const d = new Date(date);
-  const day = d.getDay();
-  const diff = d.getDate() - day;
-  return new Date(d.setDate(diff));
-}
-
-/**
- * Get the end of the week (Saturday) for a given date
- */
-function getWeekEnd(date: Date): Date {
-  const d = new Date(date);
-  const day = d.getDay();
-  const diff = d.getDate() - day + 6;
-  return new Date(d.setDate(diff));
-}
-
-/**
- * Check if an event is a landmark show that deserves bonus points
- */
-function isLandmarkEvent(eventName: string): boolean {
-  const landmarkPatterns = [
-    /wrestlemania/i,
-    /ufc\s+(100|200|300)/i,
-    /royal rumble/i,
-    /summerslam/i,
-    /survivor series/i
-  ];
-  
-  return landmarkPatterns.some(pattern => pattern.test(eventName));
 }
 
 // Enable ISR caching

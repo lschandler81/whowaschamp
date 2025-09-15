@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/db';
 
-const prisma = new PrismaClient();
+// Ensure Node runtime for Prisma
+export const runtime = 'nodejs';
 
 /**
  * GET /api/health
@@ -78,7 +79,7 @@ export async function GET() {
     }, { status: 503 });
     
   } finally {
-    await prisma.$disconnect();
+    // Do not disconnect Prisma on each request; singleton is reused in dev
   }
 }
 
@@ -87,7 +88,6 @@ export async function HEAD() {
   try {
     // Quick database ping
     await prisma.$queryRaw`SELECT 1`;
-    await prisma.$disconnect();
     
     return new NextResponse(null, { status: 200 });
   } catch (error) {

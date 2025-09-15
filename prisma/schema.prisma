@@ -6,10 +6,7 @@ generator client {
 }
 
 datasource db {
-  // Use the provider from the environment variable or default to SQLite
-  // For development: provider = "sqlite", url = "file:./dev.db"
-  // For production: provider = "postgresql", url = postgresql://...
-  provider = env("DATABASE_PROVIDER") 
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
