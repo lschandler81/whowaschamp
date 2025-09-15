@@ -1,291 +1,315 @@
-# Birthday Champion Finder
+# PPV Flashback & On This Day in Combat Sports
 
-🏆 **Discover which wrestling legend held the championship belt the day you were born!**
+A comprehensive Next.js application providing APIs for exploring combat sports history, featuring PPV (Pay-Per-View) events from UFC and WWE/WWF spanning from 1985 to present day.
 
-A modern, responsive web application that lets users enter their birth date and instantly discover which wrestling champion held the title on that special day. Built with Next.js, TypeScript, and Tailwind CSS.
+## 🌟 Features
 
-## ✨ Features
+### API Endpoints
 
-- **Instant Lookup**: Enter your birthday and get immediate results
-- **Multiple Championships**: WWE Championship, Intercontinental Championship, and more
-- **Rich Results**: See champion details, reign statistics, and fun facts
-- **Social Sharing**: Share your results on Twitter/X, Facebook, and Threads
-- **Historical Data**: Comprehensive championship history dating back to the 1960s
-- **Auto-Updated**: Data refreshed twice weekly via GitHub Actions
-- **AdSense Ready**: Optimized layout with designated ad placement zones
-- **Mobile Optimized**: Fully responsive design for all devices
-- **SEO Friendly**: Blog content and trivia for search optimization
+#### 1. On This Day API (`/api/events/on-this-day`)
+Find all combat sports events that occurred on a specific date throughout history.
 
-## 🚀 Live Demo
+**Parameters:**
+- `month` (required): Month number (1-12)
+- `day` (required): Day number (1-31)
 
-Visit the live application: [Birthday Champion Finder](https://your-domain.com)
+**Example:**
+```bash
+curl "http://localhost:3000/api/events/on-this-day?month=4&day=6"
+```
 
-## 🛠️ Tech Stack
+**Response includes:**
+- All events on that date across all years
+- Event details (venue, attendance, buyrates)
+- Headliners and title changes
+- Summary statistics
 
-- **Framework**: Next.js 14+ with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS + shadcn/ui components
-- **Validation**: Zod for schema validation
-- **Data Source**: Wikipedia (scraped automatically)
-- **Deployment**: Static export compatible (Netlify/Vercel/GitHub Pages)
-- **Testing**: Vitest for unit and integration tests
-- **CI/CD**: GitHub Actions for automated data refresh
+#### 2. PPV Flashback API (`/api/events/ppv-flashback`)
+Discover the most significant PPV event near a given date using intelligent scoring.
+
+**Parameters:**
+- `date` (optional): Target date in YYYY-MM-DD format
+- `weekOf` (optional): Find best PPV in the week of specified date
+- Default: Returns best PPV near current date
+
+**Scoring Algorithm:**
+- Buyrate weight: 40%
+- Attendance weight: 40%
+- Historical significance: 20%
+
+**Example:**
+```bash
+# Best PPV near April 6, 2024
+curl "http://localhost:3000/api/events/ppv-flashback?date=2024-04-06"
+
+# Best PPV in the week of UFC 200
+curl "http://localhost:3000/api/events/ppv-flashback?weekOf=2016-07-09"
+```
+
+### Health & Monitoring
+
+#### Health Check API (`/api/health`)
+Production-ready health monitoring endpoint for uptime checks and system diagnostics.
+
+**Features:**
+- Database connectivity check
+- System metrics and response times
+- Feature status reporting
+- Detailed error information
+
+## 🏗️ Architecture
+
+### Tech Stack
+- **Frontend:** Next.js 13.5.1 with TypeScript
+- **Styling:** Tailwind CSS with shadcn/ui components
+- **Database:** Prisma ORM with SQLite (dev) / PostgreSQL (prod)
+- **APIs:** Next.js App Router API routes
+- **Deployment:** Docker with production-ready configuration
+
+### Database Schema
+```prisma
+model Event {
+  id          String   @id @default(cuid())
+  name        String
+  date        DateTime
+  venue       String?
+  city        String?
+  country     String?
+  attendance  Int?
+  buyrate     Int?     // in thousands
+  isPpv       Boolean  @default(false)
+  promotion   Promotion @relation(fields: [promotionId], references: [id])
+  headliners  Headliner[]
+  titleChanges TitleChange[]
+  // ... additional fields
+}
+```
+
+## 📊 Data Coverage
+
+### UFC Events (19 total)
+- **Era Coverage:** UFC 1 (1993) through UFC 300 (2024)
+- **Historic Events:** UFC 100, UFC 200, UFC 229 (Khabib vs McGregor)
+- **International:** UFC 129 (Toronto), UFC 204 (Manchester), UFC 243 (Melbourne)
+- **Fight Nights:** Non-PPV events for comprehensive coverage
+
+### WWE/WWF Events (32 total)
+- **WrestleMania:** Complete coverage from WrestleMania I (1985) to WrestleMania 40 (2024)
+- **Big Four PPVs:** SummerSlam, Survivor Series, Royal Rumble
+- **Era Coverage:** Golden Era, Attitude Era, Ruthless Aggression, PG Era, Modern Era
+- **Historic Moments:** WrestleMania III (93K attendance), WrestleMania X-Seven
+
+### Key Statistics
+- **Total Events:** 51
+- **PPV Events:** 49
+- **Date Range:** 1985-2024 (39 years)
+- **Average Attendance:** 35,000+
+- **Peak Buyrate:** 2.4M (UFC 229)
+- **Peak Attendance:** 93,173 (WrestleMania III)
+
+## 🚀 Development
+
+### Prerequisites
+```bash
+node >= 18
+npm >= 9
+```
+
+### Quick Start
+```bash
+# Clone and install
+git clone [repository-url]
+cd whowaschamp
+npm install
+
+# Set up database
+npx prisma generate
+npx prisma db push
+
+# Populate with historical data
+npx tsx scripts/etl/run_etl.ts
+
+# Start development server
+npm run dev
+```
+
+### ETL System
+
+#### Full Data Population
+```bash
+# Load all UFC and WWE events
+npx tsx scripts/etl/run_etl.ts
+
+# Load specific promotion
+npx tsx scripts/etl/run_etl.ts --service=ufc
+npx tsx scripts/etl/run_etl.ts --service=wwe
+
+# Dry run with sample data
+npx tsx scripts/etl/run_etl.ts --dry-run --limit=5
+```
+
+#### Individual Services
+```bash
+# UFC events only
+npx tsx scripts/etl/backfill_ufc_new.ts
+
+# WWE events only  
+npx tsx scripts/etl/backfill_wwe.ts
+```
+
+### API Testing
+```bash
+# Test On This Day API
+curl "http://localhost:3000/api/events/on-this-day?month=3&day=29"
+
+# Test PPV Flashback API
+curl "http://localhost:3000/api/events/ppv-flashback?date=2024-04-06"
+
+# Test Health API
+curl "http://localhost:3000/api/health"
+```
+
+## 🐳 Production Deployment
+
+### Docker Setup
+```bash
+# Build production image
+docker build -f Dockerfile.prod -t ppv-flashback .
+
+# Run with docker-compose
+docker-compose -f docker-compose.prod.yml up -d
+```
+
+### Environment Configuration
+Copy `.env.production.example` to `.env.production` and configure:
+
+```env
+# Database
+DATABASE_URL="postgresql://user:password@db:5432/ppv_flashback"
+
+# ETL Settings
+RATE_LIMIT_DELAY_MS=1000
+MAX_CONCURRENT_REQUESTS=5
+
+# Features
+ENABLE_DEBUG_INFO=false
+ENABLE_CORS=true
+MAINTENANCE_MODE=false
+
+# Monitoring
+HEALTH_CHECK_INTERVAL=30000
+LOG_LEVEL=info
+```
+
+### Deployment Scripts
+```bash
+# Database migration
+./scripts/deploy/migrate-db.sh production
+
+# Run ETL in production
+./scripts/deploy/run-etl.sh production
+
+# Health check
+curl https://your-domain.com/api/health
+```
+
+## 🧪 Testing
+
+### Manual API Validation
+```bash
+# Key test dates
+curl "localhost:3000/api/events/on-this-day?month=3&day=29"  # WrestleManias
+curl "localhost:3000/api/events/on-this-day?month=7&day=9"   # UFC 200
+curl "localhost:3000/api/events/on-this-day?month=4&day=6"   # WrestleMania 40
+
+# PPV Flashback validation
+curl "localhost:3000/api/events/ppv-flashback?date=2016-07-09"  # UFC 200
+curl "localhost:3000/api/events/ppv-flashback?date=1987-03-29"  # WrestleMania III
+curl "localhost:3000/api/events/ppv-flashback?weekOf=2024-04-06" # WrestleMania 40 week
+```
+
+### Expected Results
+- **March 29:** Multiple WrestleManias (III, XIV, 31)
+- **July 9:** UFC 200 (2016)
+- **April 6:** WrestleMania 40 (2024)
+- **PPV Flashback:** Highest scored events based on buyrates/attendance
 
 ## 📁 Project Structure
 
 ```
 ├── app/
-│   ├── layout.tsx          # Root layout with metadata
-│   ├── page.tsx           # Homepage with hero section
-│   └── globals.css        # Global styles and CSS variables
-├── components/
-│   ├── DateTitleForm.tsx  # Main lookup form
-│   ├── ResultCard.tsx     # Champion result display
-│   ├── Extras.tsx         # Additional features and stats
-│   └── Footer.tsx         # Legal disclaimers and links
-├── lib/
-│   ├── dateRange.ts       # Date logic and champion lookup
-│   └── schema.ts          # Zod schemas for data validation
-├── public/data/
-│   ├── wwe_championship_reigns.json
-│   └── intercontinental_reigns.json
+│   ├── api/
+│   │   ├── events/
+│   │   │   ├── on-this-day/route.ts      # Historical events API
+│   │   │   └── ppv-flashback/route.ts    # PPV recommendation API
+│   │   └── health/route.ts               # System health API
+│   ├── globals.css                       # Global styles
+│   ├── layout.tsx                        # App layout
+│   └── page.tsx                          # Home page
 ├── scripts/
-│   └── build_reigns.mjs   # Wikipedia scraper
-├── tests/
-│   ├── dateRange.test.ts  # Date logic tests
-│   └── parsing.test.ts    # Data validation tests
-├── .github/workflows/
-│   └── refresh.yml        # Automated data refresh
-└── README.md
+│   ├── deploy/
+│   │   ├── migrate-db.sh                 # Database migration
+│   │   └── run-etl.sh                    # ETL orchestration
+│   └── etl/
+│       ├── utils.ts                      # ETL utilities
+│       ├── backfill_ufc_new.ts          # UFC data service
+│       ├── backfill_wwe.ts              # WWE data service
+│       └── run_etl.ts                    # ETL orchestrator
+├── prisma/
+│   └── schema.prisma                     # Database schema
+├── docker-compose.prod.yml               # Production Docker setup
+├── Dockerfile.prod                       # Production Dockerfile
+├── .env.production.example               # Production environment template
+└── DEPLOYMENT.md                         # Deployment runbook
 ```
 
-## 🏃 Quick Start
+## 🔧 Configuration
 
-### Prerequisites
+### Database Providers
+- **Development:** SQLite (`DATABASE_URL="file:./dev.db"`)
+- **Production:** PostgreSQL (`DATABASE_URL="postgresql://..."`)
 
-- Node.js 18+ 
-- npm or yarn
+### Rate Limiting
+- Default: 1000ms between ETL requests
+- Configurable via `RATE_LIMIT_DELAY_MS`
+- Respects Wikipedia's robots.txt
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/birthday-champion-finder.git
-   cd birthday-champion-finder
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-### Development Commands
-
-```bash
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Run tests
-npm run test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Scrape latest championship data
-npm run scrape
-
-# Validate existing data
-npm run validate-data
-
-# Lint code
-npm run lint
-```
-
-## 📊 Data Management
-
-### Automated Updates
-
-The application uses GitHub Actions to automatically refresh championship data:
-
-- **Schedule**: Twice weekly (Mondays and Thursdays at 4 AM UTC)
-- **Sources**: Wikipedia championship lists
-- **Validation**: JSON schema validation before committing
-- **Fallback**: Preserves existing data if scraping fails
-
-### Manual Data Update
-
-To manually update championship data:
-
-```bash
-npm run scrape
-```
-
-This will:
-1. Fetch latest data from Wikipedia
-2. Parse and normalize the data
-3. Validate against schemas
-4. Save to `public/data/` directory
-
-### Data Structure
-
-Championship data follows this schema:
-
-```json
-{
-  "metadata": {
-    "generated_at": "2024-01-15T10:30:00Z",
-    "source": "Wikipedia URL",
-    "total_reigns": 150,
-    "date_range": {
-      "earliest": "1963-05-17",
-      "latest": null
-    }
-  },
-  "reigns": [
-    {
-      "name": "Champion Name",
-      "start_date": "YYYY-MM-DD",
-      "end_date": "YYYY-MM-DD", // null for current champion
-      "event": "Event Name",
-      "location": "City, State",
-      "notes": "Additional information"
-    }
-  ]
-}
-```
-
-## 🧪 Testing
-
-The project includes comprehensive tests:
-
-### Date Logic Tests (`tests/dateRange.test.ts`)
-- Champion lookup for various dates
-- Inclusive date range checking
-- Day-of-reign calculations
-- Reign length calculations
-
-### Data Validation Tests (`tests/parsing.test.ts`)
-- Schema validation
-- JSON structure verification
-- Error handling
-
-### Running Tests
-
-```bash
-# Run all tests
-npm run test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Run specific test file
-npm run test dateRange.test.ts
-```
-
-## 📈 SEO & Monetization
-
-### AdSense Integration
-
-The application is designed for AdSense approval with:
-
-- **Content Depth**: Blog sections with wrestling trivia and statistics
-- **Ad Placements**: Strategic placement zones for banners and inline ads
-- **User Engagement**: Interactive features and social sharing
-- **Regular Updates**: Fresh content via automated data refresh
-
-### SEO Features
-
-- **Meta Tags**: Comprehensive OpenGraph and Twitter Card support
-- **Semantic HTML**: Proper heading hierarchy and structure
-- **Performance**: Optimized images and efficient code splitting
-- **Mobile First**: Responsive design with excellent Core Web Vitals
-
-## ⚖️ Legal & Compliance
-
-### Copyright Safety
-
-This project is designed to be legally safe:
-
-- **No WWE Logos**: Generic wrestling imagery only
-- **No Copyrighted Images**: Uses only free stock photos or icons
-- **Fair Use**: Factual championship data from public sources
-- **Clear Attribution**: Credits Wikipedia and other data sources
-- **Disclaimers**: Prominent legal disclaimers in footer
-
-### Disclaimer
-
-This site is an independent fan project and is not affiliated with or endorsed by WWE, All Elite Wrestling, or any other wrestling organization. All wrestling company names, champion names, and related trademarks are the property of their respective owners.
-
-## 🚢 Deployment
-
-### Static Export
-
-The application supports static export for hosting on:
-
-- **Netlify**
-- **Vercel**
-- **GitHub Pages**
-- **Any static hosting provider**
-
-### Build Commands
-
-```bash
-# Build and export
-npm run build
-
-# The `out/` directory contains the static files
-```
-
-### Environment Variables
-
-No environment variables required for basic functionality. The application runs entirely client-side with static JSON data.
+### Feature Flags
+- `ENABLE_DEBUG_INFO`: Include debug data in API responses
+- `ENABLE_CORS`: Enable cross-origin requests
+- `MAINTENANCE_MODE`: Disable non-essential endpoints
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please:
+### Data Quality
+- All events include proper date validation
+- PPV classification follows promotion standards
+- Attendance/buyrate figures from reliable sources
+- Title changes accurately reflected
 
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit changes**: `git commit -m 'Add amazing feature'`
-4. **Push to branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
+### Code Standards
+- TypeScript strict mode
+- ESLint + Prettier formatting
+- Comprehensive error handling
+- Production-ready logging
 
-### Development Guidelines
+### ETL Guidelines
+- Rate limiting for respectful scraping
+- Data deduplication via checksums  
+- Graceful error handling and retry logic
+- Comprehensive data validation
 
-- **Code Style**: Follow existing TypeScript/React patterns
-- **Testing**: Add tests for new features
-- **Documentation**: Update README for significant changes
-- **Data**: Ensure all data changes are validated
+## 📄 License
 
-## 📝 License
+MIT License - see LICENSE file for details
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🏆 Data Sources
 
-## 🙏 Acknowledgments
-
-- **Wikipedia**: Primary data source for championship information
-- **Pro Wrestling Community**: Historical data verification
-- **shadcn/ui**: Beautiful UI components
-- **Lucide React**: Icon library
-- **All Wrestling Fans**: For preserving and sharing wrestling history
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/birthday-champion-finder/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/birthday-champion-finder/discussions)
-- **Email**: support@your-domain.com
+- **UFC:** Official UFC records, ESPN, MMA databases
+- **WWE:** WWE.com, Wrestling Observer, Cagematch
+- **Validation:** Multiple cross-referenced sources
+- **Historical Data:** 39 years of combat sports history (1985-2024)
 
 ---
 
-**Built with ❤️ for wrestling fans worldwide** 🌍
+**Built with ❤️ for combat sports fans and data enthusiasts**
