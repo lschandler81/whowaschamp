@@ -106,24 +106,24 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                 <div className="text-4xl">{getChampionshipIcon(championship)}</div>
               </div>
             </div>
-            <CardTitle className="text-3xl font-bold text-gray-900 mb-2">
+            <CardTitle className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
               {champion.champion === 'VACANT' ? '👑 Title Was Vacant! 👑' : `${getChampionshipIcon(championship)} Your Birthday Champion! ${getChampionshipIcon(championship)}`}
             </CardTitle>
-            <div className="text-xl text-gray-700">
+            <div className="text-lg sm:text-xl text-gray-700 break-words">
               {champion.champion === 'VACANT' ? (
                 <div className="space-y-2">
-                  <div className="text-2xl font-bold text-orange-600">
+                  <div className="text-xl sm:text-2xl font-bold text-orange-600">
                     The <span className="font-semibold text-indigo-600">{championship}</span> title was vacant on your birthday!
                   </div>
                   {champion.notes && (
-                    <div className="text-lg text-gray-600 bg-orange-50 p-3 rounded-lg border-l-4 border-orange-400">
+                    <div className="text-sm sm:text-lg text-gray-600 bg-orange-50 p-3 rounded-lg border-l-4 border-orange-400">
                       <strong>Reason:</strong> {champion.notes}
                     </div>
                   )}
                 </div>
               ) : (
                 <>
-                  <strong className="text-2xl text-blue-800">{champion.champion || champion.name || 'Unknown Champion'}</strong> was the{' '}
+                  <strong className="text-xl sm:text-2xl text-blue-800">{champion.champion || champion.name || 'Unknown Champion'}</strong> was the{' '}
                   <span className="font-semibold text-indigo-600">{championship}</span> champion
                 </>
               )}
@@ -133,13 +133,13 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
           <CardContent className="space-y-6">
             {/* Champion Details */}
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Calendar className="h-5 w-5 text-blue-600" />
                     <div>
                       <p className="text-sm text-gray-500">Your Birthday</p>
-                      <p className="font-semibold text-gray-900">
+                      <p className="text-sm sm:text-base font-semibold text-gray-900 break-words">
                         {birthDate.toLocaleDateString('en-US', { 
                           weekday: 'long',
                           year: 'numeric', 
@@ -164,7 +164,7 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                     <Calendar className="h-5 w-5 text-green-600" />
                     <div>
                       <p className="text-sm text-gray-500">Title Won</p>
-                      <p className="font-semibold text-gray-900">
+                      <p className="text-sm sm:text-base font-semibold text-gray-900 break-words">
                         {reignStart
                           ? reignStart.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
                           : 'Unknown'}
@@ -208,13 +208,13 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                   <>
                     <div className="text-center">
                       <Badge variant="outline" className="mb-2 bg-white">Reign Length</Badge>
-                      <p className="text-2xl font-bold text-blue-600">{Math.max(0, reignLength)}</p>
+                      <p className="text-xl sm:text-2xl font-bold text-blue-600 break-all">{Math.max(0, reignLength)}</p>
                       <p className="text-sm text-gray-600">days</p>
                     </div>
                     {champion.won_event && (
                       <div className="text-center">
                         <Badge variant="outline" className="mb-2 bg-white">Won At</Badge>
-                        <p className="text-lg font-bold text-green-600">{champion.won_event}</p>
+                        <p className="text-base sm:text-lg font-bold text-green-600 break-words">{champion.won_event}</p>
                         <p className="text-sm text-gray-600">event</p>
                       </div>
                     )}
@@ -239,17 +239,17 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
               {/* Special badges for notable reigns */}
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
                 {reignLength > 365 && (
-                  <Badge className="bg-gold text-white">🏆 Long Reign (1+ Year)</Badge>
+                  <Badge className="bg-gold text-white text-xs sm:text-sm">🏆 Long Reign (1+ Year)</Badge>
                 )}
                 {championship.includes('Women\'s') && (
-                  <Badge className="bg-pink-500 text-white">👑 Women's Division</Badge>
+                  <Badge className="bg-pink-500 text-white text-xs sm:text-sm">👑 Women's Division</Badge>
                 )}
                 
                 {/* WWE-specific badges */}
                 {!championship.includes('UFC') && (
                   <>
                     {championship.includes('NXT') && (
-                      <Badge className="bg-yellow-500 text-white">⭐ Developmental</Badge>
+                      <Badge className="bg-yellow-500 text-white text-xs sm:text-sm">⭐ Developmental</Badge>
                     )}
                     {/* Only show wrestling eras for WWE championships */}
                     {(championship.includes('WWE') || championship.includes('WWF')) && reignStart && (() => {
@@ -270,7 +270,7 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                       };
                       const colorClass = eraColors[era] || 'bg-gray-600';
                       return (
-                        <Badge className={`${colorClass} text-white`}>
+                        <Badge className={`${colorClass} text-white text-xs sm:text-sm`}>
                           {era === 'Attitude Era' ? '🔥' : 
                            era === 'Golden Era' ? '📜' : 
                            era === 'PG Era' ? '🎪' :
@@ -287,13 +287,13 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
                 {championship.includes('UFC') && reignStart && (
                   <>
                     {reignStart.getFullYear() >= 1993 && reignStart.getFullYear() <= 2000 && (
-                      <Badge className="bg-gray-600 text-white">🥊 Early UFC Era</Badge>
+                      <Badge className="bg-gray-600 text-white text-xs sm:text-sm">🥊 Early UFC Era</Badge>
                     )}
                     {reignStart.getFullYear() >= 2001 && reignStart.getFullYear() <= 2016 && (
-                      <Badge className="bg-orange-600 text-white">🔥 Zuffa Era</Badge>
+                      <Badge className="bg-orange-600 text-white text-xs sm:text-sm">🔥 Zuffa Era</Badge>
                     )}
                     {reignStart.getFullYear() >= 2017 && (
-                      <Badge className="bg-red-600 text-white">✨ WME Era</Badge>
+                      <Badge className="bg-red-600 text-white text-xs sm:text-sm">✨ WME Era</Badge>
                     )}
                   </>
                 )}
@@ -302,31 +302,34 @@ export function ResultCard({ champion, championship, birthDate, metadata }: Resu
 
             {/* Social Share */}
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Share2 className="h-5 w-5" />
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                <Share2 className="h-4 w-4 sm:h-5 sm:w-5" />
                 Share Your Result
               </h3>
               <div className="flex flex-wrap gap-3">
                 <Button
                   onClick={() => handleShare('twitter')}
-                  className="bg-blue-500 hover:bg-blue-600 text-white flex items-center gap-2"
+                  className="bg-blue-500 hover:bg-blue-600 text-white flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 py-2"
                 >
                   <Twitter className="h-4 w-4" />
-                  Twitter/X
+                  <span className="hidden xs:inline">Twitter/X</span>
+                  <span className="inline xs:hidden">X</span>
                 </Button>
                 <Button
                   onClick={() => handleShare('facebook')}
-                  className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2"
+                  className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 py-2"
                 >
                   <Facebook className="h-4 w-4" />
-                  Facebook
+                  <span className="hidden xs:inline">Facebook</span>
+                  <span className="inline xs:hidden">FB</span>
                 </Button>
                 <Button
                   onClick={() => handleShare('threads')}
-                  className="bg-black hover:bg-gray-800 text-white flex items-center gap-2"
+                  className="bg-black hover:bg-gray-800 text-white flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 py-2"
                 >
                   <span className="font-bold">@</span>
-                  Threads
+                  <span className="hidden xs:inline">Threads</span>
+                  <span className="inline xs:hidden">Th</span>
                 </Button>
               </div>
             </div>
