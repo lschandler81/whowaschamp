@@ -17,10 +17,22 @@
     "scrape": "node scripts/build_reigns.mjs",
     "scrape-all": "node scripts/build_reigns.mjs && node scripts/build_more_titles.mjs",
     "validate-coverage": "node scripts/validate_coverage.mjs",
-    "validate-data": "node -e 'require(\"./lib/schema\").parseChampionshipData(require(\"./public/data/wwe_championship_reigns.json\"))'"
+    "validate-data": "node -e 'require(\"./lib/schema\").parseChampionshipData(require(\"./public/data/wwe_championship_reigns.json\"))'",
+    "db:generate": "npx prisma generate",
+    "db:push": "npx prisma db push",
+    "db:migrate": "npx prisma migrate deploy",
+    "db:seed": "npx tsx scripts/etl/seed.ts",
+    "etl:ufc": "npx tsx scripts/etl/backfill_ufc_new.ts",
+    "etl:wwe": "npx tsx scripts/etl/backfill_wwe_new.ts",
+    "etl:all": "npm run etl:ufc && npm run etl:wwe",
+    "etl:health": "./scripts/deploy/run-etl.sh health",
+    "deploy:migrate": "./scripts/deploy/migrate-db.sh",
+    "deploy:build": "docker build -f Dockerfile.prod -t whowaschamp:latest .",
+    "deploy:up": "docker-compose -f docker-compose.prod.yml up -d",
+    "deploy:down": "docker-compose -f docker-compose.prod.yml down",
+    "validate:apis": "node scripts/validate_apis.mjs"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
     "@hookform/resolvers": "^3.9.0",
     "@next/swc-wasm-nodejs": "13.5.1",
     "@radix-ui/react-accordion": "^1.2.0",
@@ -58,6 +70,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
     "embla-carousel-react": "^8.3.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
@@ -82,12 +95,13 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@prisma/client": "^6.16.1",
     "@types/cheerio": "^1.0.0",
     "cheerio": "^1.1.2",
     "node-fetch": "^3.3.2",
+    "prisma": "^6.16.1",
     "vitest": "^3.2.4"
-  }
-  ,
+  },
   "overrides": {
     "@types/node": "20.19.0"
   }

@@ -1,11 +1,13 @@
 import { DateTitleForm } from '@/components/DateTitleForm';
 import { Extras } from '@/components/Extras';
 import { Footer } from '@/components/Footer';
+import { getFeatureFlags } from '@/lib/feature-flags';
 import { Trophy, Calendar, Users, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-// No card tiles on the homepage for now
 
 export default function Home() {
+  const flags = getFeatureFlags();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero Section */}
@@ -42,6 +44,18 @@ export default function Home() {
           <DateTitleForm />
         </div>
       </section>
+
+      {/* PPV Feature Sections */}
+      {flags.ppvFlashback && (
+        <section className="py-8 bg-white">
+          <div className="max-w-screen-sm sm:max-w-4xl mx-auto px-4 sm:px-6">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold">PPV Flashback</h2>
+              <p className="text-gray-600">Feature temporarily disabled</p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-br from-white to-gray-50">

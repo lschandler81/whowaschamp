@@ -1,0 +1,94 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // Use the provider from the environment variable or default to SQLite
+  // For development: provider = "sqlite", url = "file:./dev.db"
+  // For production: provider = "postgresql", url = postgresql://...
+  provider = env("DATABASE_PROVIDER") 
+  url      = env("DATABASE_URL")
+}
+
+model Promotion {
+  id       String  @id @default(cuid())
+  name     String  @unique
+  slug     String  @unique
+  logoUrl  String?
+  color    String?
+  events   Event[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("promotions")
+}
+
+model Event {
+  id           String     @id @default(cuid())
+  promotionId  String
+  promotion    Promotion  @relation(fields: [promotionId], references: [id])
+  
+  name         String
+  brand        String?    // Raw, SmackDown, etc.
+  date         DateTime
+  venue        String?
+  city         String?
+  country      String?
+  
+  isPpv        Boolean    @default(false)
+  buyrate      Int?       // PPV buys in thousands
+  attendance   Int?
+  posterUrl    String?
+  sourceUrl    String?
+  
+  // Metadata
+  dataChecksum String?    // For ETL idempotency
+  lastScraped  DateTime?
+  
+  headliners   Headliner[]
+  titleChanges TitleChange[]
+  
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  
+  @@index([date])
+  @@index([promotionId, date])
+  @@index([isPpv, date])
+  @@map("events")
+}
+
+model Headliner {
+  id       String @id @default(cuid())
+  eventId  String
+  event    Event  @relation(fields: [eventId], references: [id])
+  
+  side     String // "main", "co-main", "featured"
+  name     String // Fighter/wrestler name
+  role     String // "challenger", "champion", "participant"
+  result   String? // "win", "loss", "draw", "no-contest"
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("headliners")
+}
+
+model TitleChange {
+  id          String @id @default(cuid())
+  eventId     String
+  event       Event  @relation(fields: [eventId], references: [id])
+  
+  titleName   String
+  changedHands Boolean @default(true)
+  newChampion String?
+  oldChampion String?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@map("title_changes")
+}
