@@ -54,12 +54,23 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
         throw new Error('Failed to fetch PPV event');
       }
       
-  const data = await response.json();
-  setEvent(data.event || null);
-  setCurrentWeek(data.currentWeek || null);
-  setContext(data.context || null);
-  setFallbackEvents(data.fallbackEvents || []);
-  setDebug(data.debug || null);
+      const data = await response.json();
+      console.log('[PPVFlashback] API response:', data);
+      setEvent(data.event || null);
+      setCurrentWeek(data.currentWeek || null);
+      setContext(data.context || null);
+      setFallbackEvents(data.fallbackEvents || []);
+      setDebug(data.debug || null);
+      // Log state after setting
+      setTimeout(() => {
+        console.log('[PPVFlashback] State:', {
+          event: data.event,
+          currentWeek: data.currentWeek,
+          context: data.context,
+          fallbackEvents: data.fallbackEvents,
+          debug: data.debug
+        });
+      }, 100);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
