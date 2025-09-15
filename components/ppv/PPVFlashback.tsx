@@ -28,6 +28,8 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
   const [error, setError] = useState<string | null>(null);
   const [currentWeek, setCurrentWeek] = useState<number | null>(null);
   const [context, setContext] = useState<any>(null);
+  const [fallbackEvents, setFallbackEvents] = useState<any[]>([]);
+  const [debug, setDebug] = useState<any>(null);
 
   useEffect(() => {
     fetchWeeklyPPV();
@@ -44,10 +46,12 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
         throw new Error('Failed to fetch PPV event');
       }
       
-      const data = await response.json();
-      setEvent(data.event || null);
-      setCurrentWeek(data.currentWeek || null);
-      setContext(data.context || null);
+  const data = await response.json();
+  setEvent(data.event || null);
+  setCurrentWeek(data.currentWeek || null);
+  setContext(data.context || null);
+  setFallbackEvents(data.fallbackEvents || []);
+  setDebug(data.debug || null);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
@@ -140,8 +144,31 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
             <Info className="h-12 w-12 mx-auto text-gray-400 mb-4" />
             <p className="text-gray-600 mb-2">No major PPVs this week in history</p>
             <p className="text-sm text-gray-500">
-              No legendary events happened during this week in wrestling history
+              No legendary events happened during this week in wrestling history.
             </p>
+            {fallbackEvents.length > 0 && (
+              <div className="mt-8">
+                <h3 className="text-lg font-semibold mb-2">Most Recent PPVs:</h3>
+                <ul className="space-y-2">
+                  {fallbackEvents.map((ev, idx) => (
+                    <li key={ev.id} className="border rounded p-3 bg-gray-50">
+                      <div className="font-bold">{ev.name}</div>
+                      <div className="text-sm text-gray-600">{formatDate(ev.date)} &middot; {ev.promotion}</div>
+                      {ev.attendance && <div className="text-xs text-gray-500">Attendance: {formatNumber(ev.attendance)}</div>}
+                      {ev.buyrate && <div className="text-xs text-gray-500">Buyrate: {formatNumber(ev.buyrate)}</div>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {debug && (
+              <div className="mt-6 text-left text-xs text-gray-400">
+                <div>Debug Info:</div>
+                <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
+                  {JSON.stringify(debug, null, 2)}
+                </pre>
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>
