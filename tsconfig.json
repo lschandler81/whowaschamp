@@ -32,6 +32,8 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "vitest.config.ts",
-    "vitest.config.*"
+    "vitest.config.*",
+    "scripts/etl/backfill_ufc.ts",
+    "scripts/etl/update_daily.ts"
   ]
 }

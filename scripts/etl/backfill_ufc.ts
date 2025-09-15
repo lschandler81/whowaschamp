@@ -32,12 +32,17 @@ class UFCETLService {
   private readonly since?: Date;
   private readonly dryRun: boolean;
   private readonly limit?: number;
-  private readonly dryRun: boolean;
+  private readonly rateLimitDelay: number;
+  private readonly cacheDir: string;
 
-  constructor(options: { since?: string; dryRun?: boolean } = {}) {
+  constructor(options: { since?: string; dryRun?: boolean; limit?: number } = {}) {
+    this.db = new ETLDatabase();
+    this.http = new HTTPClient(2000); // 2 second delay between requests
     this.rateLimitDelay = parseInt(process.env.RATE_LIMIT_DELAY_MS || '1000');
     this.cacheDir = path.join(process.cwd(), '.cache', 'ufc');
     this.since = options.since ? new Date(options.since) : undefined;
+    this.dryRun = options.dryRun || false;
+    this.limit = options.limit;
     this.dryRun = options.dryRun || false;
   }
 
