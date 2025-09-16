@@ -22,28 +22,28 @@ export function OnThisDay({ month, day }: OnThisDayProps) {
   const targetDay = day ?? today.getDate();
 
   useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const response = await fetch(`/api/events/on-this-day?month=${targetMonth}&day=${targetDay}`);
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch events');
+        }
+
+        const data = await response.json();
+        setEvents(data.events || []);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred');
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchEvents();
   }, [targetMonth, targetDay]);
-
-  const fetchEvents = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      
-      const response = await fetch(`/api/events/on-this-day?month=${targetMonth}&day=${targetDay}`);
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch events');
-      }
-      
-      const data = await response.json();
-      setEvents(data.events || []);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const formatDate = (date: string | Date) => {
     const d = new Date(date);

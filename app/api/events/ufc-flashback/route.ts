@@ -174,9 +174,16 @@ export async function GET(request: NextRequest) {
         const staticFilePath = path.join(process.cwd(), 'public', 'data', 'ufc-flashback.json');
         const staticData = JSON.parse(fs.readFileSync(staticFilePath, 'utf8'));
         const weekData = staticData[currentWeek.toString()];
-        
+
         if (weekData && weekData.event) {
-          selectedEvent = weekData.event;
+          const alternatives = weekData.alternatives || weekData.alternativeEvents || [];
+
+          selectedEvent = {
+            ...weekData.event,
+            alternativeEvents: alternatives,
+            totalMatchingEvents:
+              weekData.totalEvents ?? (Array.isArray(alternatives) ? alternatives.length + 1 : 1),
+          };
           fallbackUsed = true;
         }
       } catch (staticError) {

@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { 
   Calendar, 
   MapPin, 
@@ -262,10 +263,13 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
             {event.posterUrl && (
               <Card className="bg-white shadow-sm">
                 <CardContent className="p-4">
-                  <img
+                  <Image
                     src={event.posterUrl}
                     alt={`${event.name} poster`}
-                    className="w-full h-auto rounded-lg"
+                    width={600}
+                    height={900}
+                    className="w-full h-auto rounded-lg object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
                   />
                 </CardContent>
               </Card>
