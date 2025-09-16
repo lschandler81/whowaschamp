@@ -1,49 +1,13 @@
 import { DateTitleForm } from '@/components/DateTitleForm';
 import { Extras } from '@/components/Extras';
 import { Footer } from '@/components/Footer';
-import { PPVFlashbackCard } from '@/components/PPVFlashbackCard';
+import { PPVFlashbackSection } from '@/components/PPVFlashbackSection';
 import { getFeatureFlags } from '@/lib/feature-flags';
-import { mapUfcEvent, mapWweEvent } from '@/lib/mappers/ppv-event';
-import { PPVEvent } from '@/lib/types/ppv-card';
 import { Trophy, Calendar, Users, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
-async function getUFCFlashbackEvent(): Promise<PPVEvent | null> {
-  try {
-    const response = await fetch(`${process.env.NEXTJS_URL || 'http://localhost:3000'}/api/events/ufc-flashback`, {
-      next: { revalidate: 60 * 60 * 12 } // 12 hours
-    });
-    if (!response.ok) return null;
-    const data = await response.json();
-    return data.event ? mapUfcEvent(data.event) : null;
-  } catch (error) {
-    console.error('Failed to fetch UFC flashback:', error);
-    return null;
-  }
-}
-
-async function getWWEFlashbackEvent(): Promise<PPVEvent | null> {
-  try {
-    const response = await fetch(`${process.env.NEXTJS_URL || 'http://localhost:3000'}/api/events/wwe-flashback`, {
-      next: { revalidate: 60 * 60 * 12 } // 12 hours
-    });
-    if (!response.ok) return null;
-    const data = await response.json();
-    return data.event ? mapWweEvent(data.event) : null;
-  } catch (error) {
-    console.error('Failed to fetch WWE flashback:', error);
-    return null;
-  }
-}
-
-export default async function Home() {
+export default function Home() {
   const flags = getFeatureFlags();
-  
-  // Fetch PPV events data
-  const [ufcEvent, wweEvent] = await Promise.all([
-    getUFCFlashbackEvent(),
-    getWWEFlashbackEvent()
-  ]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -83,28 +47,7 @@ export default async function Home() {
       </section>
 
       {/* PPV Feature Sections */}
-      {flags.ppvFlashback && (
-        <section className="py-8 bg-gray-50">
-          <div className="max-w-screen-sm sm:max-w-4xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Pay-Per-View Flashback</h2>
-              <p className="text-gray-600">Relive the greatest moments in combat sports and wrestling history</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <PPVFlashbackCard
-                org="UFC"
-                heading="This Week in Combat Sports History"
-                event={ufcEvent}
-              />
-              <PPVFlashbackCard
-                org="WWE"
-                heading="This Week in Wrestling History"
-                event={wweEvent}
-              />
-            </div>
-          </div>
-        </section>
-      )}
+      {flags.ppvFlashback && <PPVFlashbackSection />}
 
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-br from-white to-gray-50">

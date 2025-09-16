@@ -47,6 +47,17 @@ export function PPVFlashbackCard({ org, heading, event, loading = false, error =
     }
   };
 
+  const getOrgAccentColor = (promotion: 'UFC' | 'WWE') => {
+    switch (promotion) {
+      case 'UFC':
+        return 'border-l-red-400';
+      case 'WWE': 
+        return 'border-l-yellow-400';
+      default: 
+        return 'border-l-gray-200';
+    }
+  };
+
   if (loading) {
     return (
       <Card className="bg-white shadow-sm">
@@ -108,33 +119,33 @@ export function PPVFlashbackCard({ org, heading, event, loading = false, error =
   }
 
   return (
-    <Card className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
+    <Card className={`bg-white shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 ${getOrgAccentColor(org)}`}>
       <CardHeader className="pb-4">
         <div className="space-y-2">
-          <CardTitle className="flex items-center gap-2">
-            <Star className="h-5 w-5" />
+          <CardTitle className="flex items-center gap-2 text-gray-700">
+            <Star className="h-5 w-5 text-yellow-500" />
             {heading}
           </CardTitle>
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Event Header */}
-        <div className="space-y-2">
+        <div className="space-y-3">
           <div className="flex flex-wrap gap-2">
             <Badge 
               variant="outline" 
-              className={getPromotionColor(org)}
+              className={`${getPromotionColor(org)} font-semibold`}
             >
               {org}
             </Badge>
             <Badge 
               variant="outline" 
-              className="bg-purple-100 text-purple-800 border-purple-300"
+              className="bg-purple-100 text-purple-800 border-purple-300 font-semibold"
             >
               PPV
             </Badge>
           </div>
-          <h3 className="text-xl font-bold text-gray-900">{event.title}</h3>
+          <h3 className="text-xl font-bold text-gray-900 leading-tight">{event.title}</h3>
         </div>
 
         {/* Date and Location */}
@@ -154,23 +165,23 @@ export function PPVFlashbackCard({ org, heading, event, loading = false, error =
         {/* Key Stats - Always show both slots */}
         <div className="grid grid-cols-2 gap-4">
           {/* Attendance - always show */}
-          <div className="text-center p-3 bg-blue-50 rounded-lg">
-            <div className="flex items-center justify-center gap-1 text-blue-600 mb-1">
+          <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border border-blue-200">
+            <div className="flex items-center justify-center gap-1 text-blue-700 mb-2">
               <Users className="h-4 w-4" />
-              <span className="text-sm font-medium">Attendance</span>
+              <span className="text-sm font-semibold">Attendance</span>
             </div>
-            <p className="text-lg font-bold text-gray-900">
+            <p className="text-xl font-bold text-gray-900">
               {event.attendance ? formatNumber(event.attendance) : '—'}
             </p>
           </div>
           
           {/* Buyrate - always show */}
-          <div className="text-center p-3 bg-green-50 rounded-lg">
-            <div className="flex items-center justify-center gap-1 text-green-600 mb-1">
+          <div className="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
+            <div className="flex items-center justify-center gap-1 text-green-700 mb-2">
               <TrendingUp className="h-4 w-4" />
-              <span className="text-sm font-medium">PPV Buys</span>
+              <span className="text-sm font-semibold">PPV Buys</span>
             </div>
-            <p className="text-lg font-bold text-gray-900">
+            <p className="text-xl font-bold text-gray-900">
               {event.buyrate ? `${formatNumber(event.buyrate)}k` : '—'}
             </p>
           </div>
@@ -179,7 +190,7 @@ export function PPVFlashbackCard({ org, heading, event, loading = false, error =
         {/* Action Button */}
         <div className="pt-2">
           <Link href={`/ppv-flashback?org=${org}&slug=${event.slug}`}>
-            <Button variant="outline" className="w-full">
+            <Button variant="outline" className="w-full font-semibold border-2 hover:shadow-md transition-all duration-200">
               View Full Event Details
             </Button>
           </Link>
