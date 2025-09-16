@@ -1,82 +1,148 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, MapPin, Users, TrendingUp } from 'lucide-react';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { 
+  Calendar, 
+  MapPin, 
+  Users, 
+  TrendingUp, 
+  Trophy, 
+  Info, 
+  RefreshCw,
+  Star,
+  DollarSign
+} from 'lucide-react';
 import { PPVFlashbackEvent } from '@/lib/types/ppv';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
-export default function WWEFlashback() {
+interface WWEFlashbackProps {
+  compact?: boolean; // For homepage vs dedicated page
+}
+
+export default function WWEFlashback({ compact = false }: WWEFlashbackProps) {
   const [event, setEvent] = useState<PPVFlashbackEvent | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [currentWeek, setCurrentWeek] = useState<number | null>(null);
   const [context, setContext] = useState<any>(null);
+  const [fallbackEvents, setFallbackEvents] = useState<any[]>([]);
+  const [debug, setDebug] = useState<any>(null);
 
-  const getPromotionColor = (promotionName: string): string => {
-    const colors: { [key: string]: string } = {
-      'world wrestling entertainment': '#CE302C',
-      'wwe': '#CE302C',
-    };
-    return colors[promotionName.toLowerCase()] || '#888888';
-  };
-
+  // Always reset state and fetch fresh data on mount and when navigating
   useEffect(() => {
-    const fetchFlashbackEvent = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        
-        const response = await fetch('/api/events/wwe-flashback');
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        setEvent(data.event || null);
-        setContext(data.context || null);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchFlashbackEvent();
+    setEvent(null);
+    setError(null);
+    setLoading(true);
+    setCurrentWeek(null);
+    setContext(null);
+    setFallbackEvents([]);
+    setDebug(null);
+    fetchWeeklyPPV();
   }, []);
 
-  const LoadingSkeleton = () => (
-    <Card className="w-full max-w-4xl mx-auto shadow-lg">
-      <CardContent className="p-6">
-        <div className="space-y-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="space-y-2 flex-1">
-              <Skeleton className="h-8 w-3/4" />
-              <Skeleton className="h-4 w-1/2" />
-            </div>
-            <Skeleton className="h-6 w-16 mt-4 md:mt-0" />
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Skeleton className="h-16" />
-            <Skeleton className="h-16" />
-            <Skeleton className="h-16" />
-            <Skeleton className="h-16" />
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  );
+  const fetchWeeklyPPV = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      const response = await fetch('/api/events/wwe-flashback');
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch PPV event');
+      }
+      
+      const data = await response.json();
+      console.log('[WWEFlashback] API response:', data);
+      setEvent(data.event || null);
+      setCurrentWeek(data.currentWeek || null);
+      setContext(data.context || null);
+      setFallbackEvents(data.fallbackEvents || []);
+      setDebug(data.debug || null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  if (loading) return <LoadingSkeleton />;
-  
+  const formatDate = (date: string | Date) => {
+    const d = new Date(date);
+    return d.toLocaleDateString('en-GB', { 
+      day: 'numeric', 
+      month: 'long', 
+      year: 'numeric' 
+    });
+  };
+
+  const formatNumber = (num: number) => {
+    return num.toLocaleString();
+  };
+
+  const getPromotionName = (promotion: PPVFlashbackEvent['promotion']) => {
+    if (typeof promotion === 'string') {
+      return promotion;
+    }
+    return promotion?.name ?? 'Unknown Promotion';
+  };
+
+  const getPromotionColor = (promotion: string) => {
+    switch (promotion.toUpperCase()) {
+      case 'WWE':
+      case 'WORLD WRESTLING ENTERTAINMENT': 
+        return 'bg-yellow-100 text-yellow-800 border-yellow-300';
+      case 'UFC':
+      case 'ULTIMATE FIGHTING CHAMPIONSHIP': 
+        return 'bg-red-100 text-red-800 border-red-300';
+      case 'WCW': 
+        return 'bg-blue-100 text-blue-800 border-blue-300';
+      case 'AEW': 
+        return 'bg-green-100 text-green-800 border-green-300';
+      default: 
+        return 'bg-gray-100 text-gray-800 border-gray-300';
+    }
+  };
+
+  if (loading) {
+    return (
+      <Card className="bg-white shadow-sm">
+        <CardHeader className="pb-4">
+          <CardTitle className="flex items-center gap-2">
+            <Star className="h-5 w-5" />
+            PPV Flashback
+          </CardTitle>
+          <p className="text-sm text-gray-600 mt-2">This week in wrestling history</p>
+        </CardHeader>
+        <CardContent>
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-200 rounded mb-4"></div>
+            <div className="h-4 bg-gray-200 rounded mb-2"></div>
+            <div className="h-4 bg-gray-200 rounded mb-4 w-2/3"></div>
+            <div className="h-24 bg-gray-200 rounded"></div>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
   if (error) {
     return (
-      <Card className="w-full max-w-4xl mx-auto shadow-lg border-red-200 bg-red-50">
-        <CardContent className="p-6 text-center">
-          <p className="text-red-600 mb-2 font-semibold">Error Loading WWE Event</p>
-          <p className="text-red-500 text-sm">{error}</p>
+      <Card className="bg-white shadow-sm">
+        <CardHeader className="pb-4">
+          <CardTitle className="flex items-center gap-2">
+            <Star className="h-5 w-5" />
+            PPV Flashback
+          </CardTitle>
+          <p className="text-sm text-gray-600 mt-2">This week in wrestling history</p>
+        </CardHeader>
+        <CardContent>
+          <div className="text-center py-8">
+            <Info className="h-12 w-12 mx-auto text-gray-400 mb-4" />
+            <p className="text-gray-600 mb-2">Unable to load this week's WWE PPV</p>
+            <p className="text-sm text-gray-500">{error}</p>
+          </div>
         </CardContent>
       </Card>
     );
@@ -84,133 +150,203 @@ export default function WWEFlashback() {
 
   if (!event) {
     return (
-      <Card className="w-full max-w-4xl mx-auto shadow-lg border-gray-200">
-        <CardContent className="p-6 text-center">
-          <p className="text-gray-600">No WWE event found for this week.</p>
+      <Card className="bg-white shadow-sm">
+        <CardHeader className="pb-4">
+          <CardTitle className="flex items-center gap-2">
+            <Star className="h-5 w-5" />
+            PPV Flashback
+          </CardTitle>
+          <p className="text-sm text-gray-600 mt-2">This week in wrestling history</p>
+        </CardHeader>
+        <CardContent>
+          <div className="text-center py-8">
+            <Info className="h-12 w-12 mx-auto text-gray-400 mb-4" />
+            <p className="text-gray-600 mb-2">No major WWE PPVs this week in history</p>
+            <p className="text-sm text-gray-500">
+              No legendary WWE events happened during this week in wrestling history.
+            </p>
+          </div>
         </CardContent>
       </Card>
     );
   }
 
-  const eventDate = new Date(event.date);
-  const currentDate = new Date();
-  const yearsAgo = context?.yearsAgo || (currentDate.getFullYear() - eventDate.getFullYear());
-  const promotionName = typeof event.promotion === 'string' 
-    ? event.promotion 
-    : event.promotion?.name ?? 'WWE';
-  const promotionColor = getPromotionColor(promotionName);
-
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-6">
-      <Card className="shadow-lg border-2" style={{ borderColor: promotionColor }}>
-        <CardContent className="p-6">
-          <div className="space-y-6">
-            {/* Event Header */}
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between">
-              <div className="space-y-2 flex-1">
-                <h2 className="text-3xl font-bold text-gray-900 leading-tight">
-                  {event.name}
-                </h2>
-                <p className="text-gray-600 text-lg">
-                  {eventDate.toLocaleDateString('en-US', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })} • {yearsAgo} years ago
-                </p>
-              </div>
-              <Badge 
-                variant="secondary" 
-                className="mt-4 md:mt-0 text-white font-semibold px-3 py-1"
-                style={{ backgroundColor: promotionColor }}
-              >
-                {promotionName}
-              </Badge>
-            </div>
-
-            {/* Event Details Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
-                <Calendar className="mx-auto mb-2 text-gray-600" size={24} />
-                <p className="text-sm text-gray-600 mb-1">Date</p>
-                <p className="font-semibold text-gray-900">
-                  {eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
-                <MapPin className="mx-auto mb-2 text-gray-600" size={24} />
-                <p className="text-sm text-gray-600 mb-1">Location</p>
-                <p className="font-semibold text-gray-900 text-sm leading-tight">
-                  {event.city}, {event.country}
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
-                <div className="w-6 h-6 mx-auto mb-2 flex items-center justify-center">
-                  <div className="w-4 h-4 bg-gray-600 rounded-sm"></div>
-                </div>
-                <p className="text-sm text-gray-600 mb-1">Venue</p>
-                <p className="font-semibold text-gray-900 text-sm leading-tight">
-                  {event.venue}
-                </p>
-              </div>
-              
-              {event.attendance && (
-                <div className="bg-gray-50 rounded-lg p-4 text-center">
-                  <Users className="mx-auto mb-2 text-gray-600" size={24} />
-                  <p className="text-sm text-gray-600 mb-1">Attendance</p>
-                  <p className="font-semibold text-gray-900">
-                    {event.attendance.toLocaleString()}
-                  </p>
-                </div>
-              )}
-              
-              {!event.attendance && (
-                <div className="bg-gray-50 rounded-lg p-4 text-center">
-                  <TrendingUp className="mx-auto mb-2 text-gray-600" size={24} />
-                  <p className="text-sm text-gray-600 mb-1">Score</p>
-                  <p className="font-semibold text-gray-900">
-                    {event.score || 'N/A'}
-                  </p>
-                </div>
-              )}
-            </div>
+    <Card className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
+      <CardHeader className="pb-4">
+        <div className="space-y-2">
+          <CardTitle className="flex items-center gap-2">
+            <Star className="h-5 w-5" />
+            PPV Flashback
+          </CardTitle>
+          <p className="text-sm text-gray-600">
+            This week in wrestling history
+          </p>
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {/* Event Header */}
+        <div className="space-y-2">
+          <div className="flex flex-wrap gap-2">
+            <Badge 
+              variant="outline" 
+              className={getPromotionColor(getPromotionName(event.promotion))}
+            >
+              {getPromotionName(event.promotion)}
+            </Badge>
+            <Badge 
+              variant="outline" 
+              className="bg-purple-100 text-purple-800 border-purple-300"
+            >
+              PPV
+            </Badge>
           </div>
-        </CardContent>
-      </Card>
+          <h3 className="text-xl font-bold text-gray-900">{event.name}</h3>
+        </div>
 
-      {/* Other Events This Week */}
-      {context?.alternativeEvents && Array.isArray(context.alternativeEvents) && context.alternativeEvents.length > 0 && (
-        <Card className="shadow-lg">
-          <CardContent className="p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              Other Events This Week in History
-            </h3>
-            <div className="space-y-3">
-              {context.alternativeEvents.map((altEvent: any, index: number) => (
-                <div key={altEvent.id || index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                  <div>
-                    <p className="font-semibold text-gray-900">{altEvent.name || 'Unknown Event'}</p>
-                    <p className="text-sm text-gray-600">
-                      {altEvent.venue && altEvent.city ? `${altEvent.venue}, ${altEvent.city}` : 'Location TBA'}
-                    </p>
-                  </div>
-                  <p className="text-sm text-gray-500">
-                    {altEvent.date ? new Date(altEvent.date).getFullYear() : 'Unknown Year'}
-                  </p>
-                </div>
-              ))}
+        {/* Date and Location */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div className="flex items-center gap-2 text-gray-600">
+            <Calendar className="h-4 w-4" />
+            <span>{formatDate(event.date)}</span>
+          </div>
+          {event.venue && (
+            <div className="flex items-center gap-2 text-gray-600">
+              <MapPin className="h-4 w-4" />
+              <span>{event.venue}</span>
             </div>
-            {(context.totalMatchingEvents || 0) > context.alternativeEvents.length + 1 && (
-              <p className="text-sm text-gray-500 mt-3 text-center">
-                ...and {(context.totalMatchingEvents || 0) - context.alternativeEvents.length - 1} more events happened this week in history
-              </p>
+          )}
+        </div>
+
+        {/* Key Stats */}
+        <div className="grid grid-cols-2 gap-4">
+          {event.attendance && (
+            <div className="text-center p-3 bg-blue-50 rounded-lg">
+              <div className="flex items-center justify-center gap-1 text-blue-600 mb-1">
+                <Users className="h-4 w-4" />
+                <span className="text-sm font-medium">Attendance</span>
+              </div>
+              <div className="text-lg font-bold text-gray-900">
+                {formatNumber(event.attendance)}
+              </div>
+            </div>
+          )}
+          
+          {event.buyrate && (
+            <div className="text-center p-3 bg-green-50 rounded-lg">
+              <div className="flex items-center justify-center gap-1 text-green-600 mb-1">
+                <DollarSign className="h-4 w-4" />
+                <span className="text-sm font-medium">Buyrate</span>
+              </div>
+              <div className="text-lg font-bold text-gray-900">
+                {formatNumber(event.buyrate)}K
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Headliners */}
+        {event.headliners && event.headliners.length > 0 && (
+          <div>
+            <h5 className="text-sm font-medium text-gray-500 mb-2 flex items-center gap-2">
+          {/* Title Changes (if any) */}
+          {event.titleChanges && event.titleChanges.length > 0 && (
+            <div>
+              <h4 className="text-sm font-medium text-gray-700 mb-2">
+                Title Changes
+              </h4>
+              <div className="space-y-2">
+                {event.titleChanges.map((change, index) => (
+                  <div key={index} className="text-sm bg-yellow-50 p-2 rounded">
+                    {change}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+              <Trophy className="h-4 w-4" />
+              Main Event
+            </h5>
+            <p className="text-lg font-semibold text-gray-900">
+              {event.headliners.map((headliner, index) => (
+                <span key={index}>
+                  {headliner}
+                  {index < event.headliners.length - 1 && (
+                    <span className="text-gray-400 mx-2">vs</span>
+                  )}
+                </span>
+              ))}
+            </p>
+          </div>
+        )}
+
+        {/* Additional Context (non-compact mode) */}
+        {!compact && context && (
+          <div className="border-t pt-4 space-y-4">
+            {/* Years Ago */}
+            <div className="text-center p-3 bg-purple-50 rounded-lg">
+              <div className="text-sm text-purple-600 font-medium">This happened</div>
+              <div className="text-2xl font-bold text-purple-900">
+                {context.yearsAgo} year{context.yearsAgo !== 1 ? 's' : ''} ago
+              </div>
+            </div>
+
+            {/* Other Events This Week */}
+            {context.alternativeEvents && context.alternativeEvents.length > 0 && (
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+                  <Info className="h-4 w-4" />
+                  Other Events This Week in History
+                </h4>
+                <div className="space-y-2">
+                  {context.alternativeEvents.map((altEvent: any, index: number) => (
+                    <div key={index} className="text-sm bg-gray-50 p-3 rounded">
+                      <div className="font-medium">{altEvent.name}</div>
+                      <div className="text-gray-600">
+                        {typeof altEvent.promotion === 'string'
+                          ? altEvent.promotion
+                          : altEvent.promotion?.name || 'WWE'} • {new Date(altEvent.date).getFullYear()}
+                        {altEvent.attendance && (
+                          <span> • {formatNumber(altEvent.attendance)} attendance</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {context.totalMatchingEvents > context.alternativeEvents.length + 1 && (
+                  <div className="text-xs text-gray-500 mt-2">
+                    ...and {context.totalMatchingEvents - context.alternativeEvents.length - 1} more events happened this week in history
+                  </div>
+                )}
+              </div>
             )}
-          </CardContent>
-        </Card>
-      )}
-    </div>
+          </div>
+        )}
+
+        {/* View Full Event Link (for compact version) */}
+        {compact && (
+          <div className="border-t pt-4">
+            {context && (
+              <div className="mb-3 text-xs text-gray-600">
+                This happened {context.yearsAgo} year{context.yearsAgo !== 1 ? 's' : ''} ago
+                {context.totalMatchingEvents > 1 && (
+                  <span> • {context.totalMatchingEvents - 1} other events this week in history</span>
+                )}
+              </div>
+            )}
+            <Link 
+              href="/ppv-flashback" 
+              className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-500 transition-colors"
+            >
+              View Full Event Details
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        )}
+      </CardContent>
+    </Card>
   );
 }
