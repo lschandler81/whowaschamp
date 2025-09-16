@@ -163,7 +163,7 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
             <Info className="h-12 w-12 mx-auto text-gray-400 mb-4" />
             <p className="text-gray-600 mb-2">No major PPVs this week in history</p>
             <p className="text-sm text-gray-500">
-              No legendary events happened during this week in wrestling history.
+              No legendary events happened during this week in combat sports history.
             </p>
             {fallbackEvents.length > 0 && (
               <div className="mt-8">
@@ -203,7 +203,7 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
             PPV Flashback
           </CardTitle>
           <p className="text-sm text-gray-600">
-            This week in wrestling history
+            This week in combat sports history
           </p>
         </div>
       </CardHeader>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-16T07:33:13.103Z",
+  "generatedAt": "2025-09-16T07:58:02.280Z",
   "totalWeeks": 53,
   "weeksWithEvents": 53,
   "totalPPVEvents": 609,
@@ -12,9 +12,9 @@
     },
     {
       "week": 2,
-      "name": "UFC on ESPN: Kattar vs. Chikadze",
-      "promotion": "Ultimate Fighting Championship",
-      "date": "2022-01-15"
+      "name": "Royal Rumble (1989)",
+      "promotion": "World Wrestling Entertainment",
+      "date": "1989-01-15"
     },
     {
       "week": 3,
@@ -24,7 +24,7 @@
     },
     {
       "week": 4,
-      "name": "Royal Rumble (2024)",
+      "name": "Royal Rumble 2024",
       "promotion": "World Wrestling Entertainment",
       "date": "2024-01-27"
     },

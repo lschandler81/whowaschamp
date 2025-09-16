@@ -42,6 +42,51 @@ function getISOWeekNumber(date: Date): number {
   return 1 + Math.round(((tempDate.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
 }
 
+// Smart scoring system for PPV events
+function calculateEventScore(event: any): number {
+  let score = 0;
+  
+  // Base promotion scores (WWE generally has bigger cultural impact)
+  const promotion = event.promotion.name.toLowerCase();
+  if (promotion.includes('wrestling') || promotion.includes('wwe') || promotion.includes('wwf')) {
+    score += 1000; // WWE base score
+  } else if (promotion.includes('ultimate fighting') || promotion.includes('ufc')) {
+    score += 800; // UFC base score  
+  } else {
+    score += 500; // Other promotions
+  }
+  
+  // Major event name bonuses (these are historically significant)
+  const name = event.name.toLowerCase();
+  if (name.includes('wrestlemania')) score += 500;
+  else if (name.includes('summerslam')) score += 300;
+  else if (name.includes('royal rumble')) score += 200;
+  else if (name.includes('survivor series')) score += 150;
+  else if (name.includes('money in the bank')) score += 100;
+  
+  // UFC numbered event bonus (main cards are more significant)
+  if (name.match(/ufc \d+[^a-z]/)) score += 200;
+  
+  // Attendance scoring (but capped to prevent dominance)
+  const attendance = event.attendance || 0;
+  if (attendance > 0) {
+    score += Math.min(attendance / 100, 300); // Max 300 points from attendance
+  }
+  
+  // Buyrate scoring (more reliable metric)
+  const buyrate = event.buyrate || 0;
+  if (buyrate > 0) {
+    score += buyrate / 1000; // Convert to reasonable scale
+  }
+  
+  // Recency bonus (newer events get slight preference)
+  const eventDate = new Date(event.date);
+  const yearsOld = (Date.now() - eventDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+  if (yearsOld < 5) score += 50 - yearsOld * 10; // Small recency bonus
+  
+  return score;
+}
+
 async function generateStaticPPVData() {
   try {
     console.log('🚀 Generating static PPV data...');
@@ -83,17 +128,11 @@ async function generateStaticPPVData() {
         continue;
       }
 
-      // Sort by biggest: attendance > buyrate > recency
+      // Sort by biggest: smarter scoring system that balances UFC and WWE
       const sortedEvents = weekEvents.sort((a, b) => {
-        const attendanceA = a.attendance || 0;
-        const attendanceB = b.attendance || 0;
-        if (attendanceA !== attendanceB) return attendanceB - attendanceA;
-
-        const buyrateA = a.buyrate || 0;
-        const buyrateB = b.buyrate || 0;
-        if (buyrateA !== buyrateB) return buyrateB - buyrateA;
-
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
+        const scoreA = calculateEventScore(a);
+        const scoreB = calculateEventScore(b);
+        return scoreB - scoreA;
       });
 
       const selectedEvent = sortedEvents[0];
