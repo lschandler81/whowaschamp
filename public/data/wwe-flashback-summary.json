@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2025-09-16T09:32:38.769Z",
+  "generatedAt": "2025-09-16T12:57:59.889Z",
   "totalWeeks": 53,
   "weeksWithEvents": 53,
-  "totalWWEEvents": 84,
+  "totalWWEEvents": 550,
   "sampleEvents": [
     {
       "week": 1,
-      "name": "Royal Rumble (1989)",
+      "name": "WWE New Year's Revolution 2005",
       "promotion": "World Wrestling Entertainment",
-      "date": "1989-01-15T00:00:00.000Z"
+      "date": "2005-01-09T00:00:00.000Z"
     },
     {
       "week": 2,
@@ -18,9 +18,9 @@
     },
     {
       "week": 3,
-      "name": "Royal Rumble (1988)",
+      "name": "Royal Rumble (1997)",
       "promotion": "World Wrestling Entertainment",
-      "date": "1988-01-24T00:00:00.000Z"
+      "date": "1997-01-19T00:00:00.000Z"
     },
     {
       "week": 4,

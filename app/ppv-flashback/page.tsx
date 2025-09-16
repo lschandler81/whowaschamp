@@ -1,4 +1,5 @@
 import { PPVFlashback } from '@/components/ppv/PPVFlashback';
+import WWEFlashback from '@/components/ppv/WWEFlashback';
 import { getFeatureFlags } from '@/lib/feature-flags';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
@@ -50,10 +51,25 @@ export default function PPVFlashbackPage() {
         </div>
       </section>
 
-      {/* PPV Event Section */}
+      {/* PPV Event Section - UFC */}
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">UFC This Week in History</h2>
+            <p className="text-gray-600">The biggest UFC event from this week in combat sports history</p>
+          </div>
           <PPVFlashback compact={false} />
+        </div>
+      </section>
+
+      {/* PPV Event Section - WWE */}
+      <section className="py-12 bg-white/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">WWE This Week in History</h2>
+            <p className="text-gray-600">The biggest WWE event from this week in wrestling history</p>
+          </div>
+          <WWEFlashback />
         </div>
       </section>
 

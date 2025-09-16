@@ -37,6 +37,10 @@
     "generate-ufc-data": "npx tsx scripts/generate-ufc-data.ts",
     "generate-wwe-data": "npx tsx scripts/generate-wwe-data.ts",
     "generate-split-data": "npm run generate-ufc-data && npm run generate-wwe-data",
+    "create-complete-wwe-dataset": "npx tsx scripts/create-complete-wwe-dataset.ts",
+    "scrape-wwe-wikipedia": "npx tsx scripts/scrape-complete-wwe-wikipedia.ts",
+    "add-remaining-wwe-events": "npx tsx scripts/add-remaining-wwe-events.ts",
+    "add-final-wwe-events": "npx tsx scripts/add-final-wwe-events.ts",
     "add-ppv": "node scripts/add-ppv.js",
     "update-static-data": "npm run generate-ppv-data && git add public/data/ && git commit -m 'Update static PPV data' && git push"
   },
@@ -75,6 +79,7 @@
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "axios": "^1.12.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",

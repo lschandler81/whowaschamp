@@ -59,7 +59,15 @@ export interface OnThisDayEvent {
 
 export interface PPVFlashbackEvent {
   id: string;
-  promotion: string;
+  promotion: 
+    | string
+    | {
+        id?: string;
+        name: string;
+        slug?: string;
+        logoUrl?: string;
+        color?: string;
+      };
   name: string;
   date: Date;
   venue?: string;

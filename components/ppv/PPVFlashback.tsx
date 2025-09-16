@@ -48,7 +48,7 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
       setLoading(true);
       setError(null);
       
-      const response = await fetch('/api/events/ppv-flashback');
+      const response = await fetch('/api/events/ufc-flashback');
       
       if (!response.ok) {
         throw new Error('Failed to fetch PPV event');
@@ -89,6 +89,13 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
 
   const formatNumber = (num: number) => {
     return num.toLocaleString();
+  };
+
+  const getPromotionName = (promotion: PPVFlashbackEvent['promotion']) => {
+    if (typeof promotion === 'string') {
+      return promotion;
+    }
+    return promotion?.name ?? 'Unknown Promotion';
   };
 
   const getPromotionColor = (promotion: string) => {
@@ -172,7 +179,7 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
                   {fallbackEvents.map((ev, idx) => (
                     <li key={ev.id} className="border rounded p-3 bg-gray-50">
                       <div className="font-bold">{ev.name}</div>
-                      <div className="text-sm text-gray-600">{formatDate(ev.date)} &middot; {ev.promotion}</div>
+                      <div className="text-sm text-gray-600">{formatDate(ev.date)} &middot; {ev.promotion?.name || ev.promotion}</div>
                       {ev.attendance && <div className="text-xs text-gray-500">Attendance: {formatNumber(ev.attendance)}</div>}
                       {ev.buyrate && <div className="text-xs text-gray-500">Buyrate: {formatNumber(ev.buyrate)}</div>}
                     </li>
@@ -213,9 +220,9 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
           <div className="flex flex-wrap gap-2">
             <Badge 
               variant="outline" 
-              className={getPromotionColor(event.promotion)}
+              className={getPromotionColor(getPromotionName(event.promotion))}
             >
-              {event.promotion}
+              {getPromotionName(event.promotion)}
             </Badge>
             <Badge 
               variant="outline" 
@@ -327,7 +334,9 @@ export function PPVFlashback({ compact = false }: PPVFlashbackProps) {
                     <div key={index} className="text-sm bg-gray-50 p-3 rounded">
                       <div className="font-medium">{altEvent.name}</div>
                       <div className="text-gray-600">
-                        {altEvent.promotion} • {new Date(altEvent.date).getFullYear()}
+                        {typeof altEvent.promotion === 'string'
+                          ? altEvent.promotion
+                          : altEvent.promotion?.name || 'UFC'} • {new Date(altEvent.date).getFullYear()}
                         {altEvent.attendance && (
                           <span> • {formatNumber(altEvent.attendance)} attendance</span>
                         )}

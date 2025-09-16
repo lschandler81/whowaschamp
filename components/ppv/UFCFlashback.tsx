@@ -139,6 +139,10 @@ export function UFCFlashback({ compact = false }: UFCFlashbackProps) {
     );
   }
 
+  const promotionName = typeof event.promotion === 'string' 
+    ? event.promotion 
+    : event.promotion?.name ?? 'Ultimate Fighting Championship';
+
   return (
     <Card className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
       <CardHeader className="pb-4">
@@ -155,9 +159,9 @@ export function UFCFlashback({ compact = false }: UFCFlashbackProps) {
           <div className="flex flex-wrap gap-2">
             <Badge 
               variant="outline" 
-              className={getPromotionColor(event.promotion)}
+              className={getPromotionColor(promotionName)}
             >
-              {event.promotion === 'Ultimate Fighting Championship' ? 'UFC' : event.promotion}
+              {promotionName === 'Ultimate Fighting Championship' ? 'UFC' : promotionName}
             </Badge>
             <Badge 
               variant="outline" 

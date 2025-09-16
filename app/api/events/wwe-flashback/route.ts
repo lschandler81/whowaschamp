@@ -109,6 +109,30 @@ export async function GET(request: NextRequest) {
           // Sort by score and pick the best event
           weekEvents.sort((a, b) => b.score - a.score);
           selectedEvent = weekEvents[0];
+          
+          // Get alternative events from the same week (excluding the selected one)
+          const alternativeEvents = weekEvents
+            .filter(event => event.id !== selectedEvent.id)
+            .slice(0, 3) // Limit to 3 alternative events
+            .map(event => ({
+              id: event.id,
+              name: event.name,
+              date: event.date,
+              venue: event.venue,
+              city: event.city,
+              country: event.country,
+              promotion: event.promotion
+            }));
+
+          // Calculate years ago
+          const eventDate = new Date(selectedEvent.date);
+          const currentDate = new Date();
+          const yearsAgo = currentDate.getFullYear() - eventDate.getFullYear();
+
+          // Add additional context to the selected event
+          selectedEvent.alternativeEvents = alternativeEvents;
+          selectedEvent.yearsAgo = yearsAgo;
+          selectedEvent.totalMatchingEvents = weekEvents.length;
         }
       }
 
@@ -117,7 +141,10 @@ export async function GET(request: NextRequest) {
       
       // Fallback to static data
       try {
-        const staticData = require('@/public/data/wwe-flashback.json');
+        const path = require('path');
+        const fs = require('fs');
+        const staticFilePath = path.join(process.cwd(), 'public', 'data', 'wwe-flashback.json');
+        const staticData = JSON.parse(fs.readFileSync(staticFilePath, 'utf8'));
         const weekData = staticData[currentWeek.toString()];
         
         if (weekData && weekData.event) {
@@ -152,7 +179,10 @@ export async function GET(request: NextRequest) {
       fallbackUsed,
       context: {
         source: fallbackUsed ? 'static' : 'database',
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        alternativeEvents: selectedEvent?.alternativeEvents || [],
+        yearsAgo: selectedEvent?.yearsAgo || 0,
+        totalMatchingEvents: selectedEvent?.totalMatchingEvents || 1
       }
     };
 
