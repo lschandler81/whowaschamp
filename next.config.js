@@ -4,6 +4,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client', 'prisma']
+  }
 };
 
 module.exports = nextConfig;
