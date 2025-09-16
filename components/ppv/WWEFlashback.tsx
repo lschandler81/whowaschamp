@@ -246,25 +246,22 @@ export default function WWEFlashback({ compact = false }: WWEFlashbackProps) {
         </div>
 
         {/* Headliners */}
+        {event.titleChanges && event.titleChanges.length > 0 && (
+          <div>
+            <h4 className="text-sm font-medium text-gray-700 mb-2">Title Changes</h4>
+            <div className="space-y-2">
+              {event.titleChanges.map((change, index) => (
+                <div key={index} className="text-sm bg-yellow-50 p-2 rounded">
+                  {change}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {event.headliners && event.headliners.length > 0 && (
           <div>
             <h5 className="text-sm font-medium text-gray-500 mb-2 flex items-center gap-2">
-          {/* Title Changes (if any) */}
-          {event.titleChanges && event.titleChanges.length > 0 && (
-            <div>
-              <h4 className="text-sm font-medium text-gray-700 mb-2">
-                Title Changes
-              </h4>
-              <div className="space-y-2">
-                {event.titleChanges.map((change, index) => (
-                  <div key={index} className="text-sm bg-yellow-50 p-2 rounded">
-                    {change}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
               <Trophy className="h-4 w-4" />
               Main Event
             </h5>
@@ -293,30 +290,31 @@ export default function WWEFlashback({ compact = false }: WWEFlashbackProps) {
             </div>
 
             {/* Other Events This Week */}
-            {context.alternativeEvents && context.alternativeEvents.length > 0 && (
+            {(context.totalMatchingEvents > 1) && (
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                   <Info className="h-4 w-4" />
                   Other Events This Week in History
                 </h4>
-                <div className="space-y-2">
-                  {context.alternativeEvents.map((altEvent: any, index: number) => (
-                    <div key={index} className="text-sm bg-gray-50 p-3 rounded">
-                      <div className="font-medium">{altEvent.name}</div>
-                      <div className="text-gray-600">
-                        {typeof altEvent.promotion === 'string'
-                          ? altEvent.promotion
-                          : altEvent.promotion?.name || 'WWE'} • {new Date(altEvent.date).getFullYear()}
-                        {altEvent.attendance && (
-                          <span> • {formatNumber(altEvent.attendance)} attendance</span>
-                        )}
+                {context.alternativeEvents && context.alternativeEvents.length > 0 ? (
+                  <div className="space-y-2">
+                    {context.alternativeEvents.map((altEvent: any, index: number) => (
+                      <div key={index} className="text-sm bg-gray-50 p-3 rounded">
+                        <div className="font-medium">{altEvent.name}</div>
+                        <div className="text-gray-600">
+                          {typeof altEvent.promotion === 'string'
+                            ? altEvent.promotion
+                            : altEvent.promotion?.name || 'WWE'} • {new Date(altEvent.date).getFullYear()}
+                          {altEvent.attendance && (
+                            <span> • {formatNumber(altEvent.attendance)} attendance</span>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-                {context.totalMatchingEvents > context.alternativeEvents.length + 1 && (
-                  <div className="text-xs text-gray-500 mt-2">
-                    ...and {context.totalMatchingEvents - context.alternativeEvents.length - 1} more events happened this week in history
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-sm text-gray-600">
+                    {context.totalMatchingEvents - 1} other events happened this week in history.
                   </div>
                 )}
               </div>
