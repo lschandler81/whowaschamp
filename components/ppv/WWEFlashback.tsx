@@ -352,6 +352,16 @@ export default function WWEFlashback({ compact = false }: WWEFlashbackProps) {
         {/* Additional Context (non-compact mode) */}
         {!compact && context && (
           <div className="border-t pt-4 space-y-4">
+            {console.log('[WWEFlashback] Render context:', context)}
+            
+            {/* Debug info (only in production to diagnose) */}
+            {process.env.NODE_ENV !== 'development' && (
+              <div className="text-xs text-gray-400 bg-gray-50 p-2 rounded">
+                Debug: totalMatchingEvents={context.totalMatchingEvents}, 
+                alternativeEvents={context.alternativeEvents?.length || 0}
+              </div>
+            )}
+            
             {/* Years Ago */}
             <div className="text-center p-3 bg-purple-50 rounded-lg">
               <div className="text-sm text-purple-600 font-medium">This happened</div>
@@ -360,7 +370,7 @@ export default function WWEFlashback({ compact = false }: WWEFlashbackProps) {
               </div>
             </div>
 
-            {/* Other Events This Week */}
+            {/* Other Events This Week - Always show when totalMatchingEvents > 1 */}
             {(context.totalMatchingEvents > 1) && (
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
