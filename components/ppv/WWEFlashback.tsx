@@ -185,7 +185,7 @@ export function WWEFlashback({ compact = false }: WWEFlashbackProps) {
 
         {/* Action Button */}
         <div className="pt-2">
-          <Link href={`/events/wwe/${event.id}`}>
+          <Link href="/ppv-flashback">
             <Button variant="outline" className="w-full bg-yellow-50 border-yellow-200 text-yellow-700 hover:bg-yellow-100">
               View Full Event Details
             </Button>

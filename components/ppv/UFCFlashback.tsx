@@ -207,7 +207,7 @@ export function UFCFlashback({ compact = false }: UFCFlashbackProps) {
 
         {/* Action Button */}
         <div className="pt-2">
-          <Link href={`/events/ufc/${event.id}`}>
+          <Link href="/ppv-flashback">
             <Button variant="outline" className="w-full">
               View Full Event Details
             </Button>
