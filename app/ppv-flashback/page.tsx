@@ -1,12 +1,11 @@
-import { UFCFlashback } from '@/components/ppv/UFCFlashback';
-import { WWEFlashback } from '@/components/ppv/WWEFlashback';
+import { PPVFlashback } from '@/components/ppv/PPVFlashback';
 import { getFeatureFlags } from '@/lib/feature-flags';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
-  title: 'Pay-Per-View Flashback - Combat Sports & Wrestling History',
-  description: 'Relive the greatest moments in combat sports and wrestling history with our weekly PPV flashback featuring UFC and WWE events.',
+  title: 'PPV Flashback - This Week in Wrestling History',
+  description: 'Discover the biggest pay-per-view event that happened during this same week in wrestling history.',
 };
 
 export default function PPVFlashbackPage() {
@@ -16,7 +15,7 @@ export default function PPVFlashbackPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Pay-Per-View Flashback</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">PPV Flashback</h1>
           <p className="text-gray-600 mb-6">This feature is currently disabled.</p>
           <Link href="/" className="text-blue-600 hover:text-blue-500">
             Return to Home
@@ -42,9 +41,10 @@ export default function PPVFlashbackPage() {
           </div>
           
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight mb-4">Pay-Per-View Flashback</h1>
+            <h1 className="text-4xl font-bold tracking-tight mb-4">PPV Flashback</h1>
             <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-              Relive the greatest moments in combat sports and wrestling history
+              Each week we spotlight a major pay-per-view event that happened during this same ISO week in wrestling history. 
+              Discover legendary moments from the same time period across different years.
             </p>
           </div>
         </div>
@@ -52,11 +52,8 @@ export default function PPVFlashbackPage() {
 
       {/* PPV Event Section */}
       <section className="py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid gap-6 md:grid-cols-2">
-            <UFCFlashback compact={false} />
-            <WWEFlashback compact={false} />
-          </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <PPVFlashback compact={false} />
         </div>
       </section>
 
@@ -67,20 +64,19 @@ export default function PPVFlashbackPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Select Events</h2>
             <div className="prose prose-lg max-w-2xl mx-auto text-gray-700">
               <p className="mb-4">
-                Our Pay-Per-View Flashback feature showcases the most significant combat sports and wrestling 
-                events from this week in history across both UFC and WWE.
+                Our PPV Flashback feature uses ISO week numbering to find events that happened during 
+                the same week of the year across wrestling history.
               </p>
               <p className="mb-4">
-                We rank events by several criteria to highlight the most impactful moments:
+                We rank events by three criteria in order of priority:
               </p>
               <ol className="text-left list-decimal list-inside space-y-2 mb-4">
                 <li><strong>Attendance:</strong> Higher attendance indicates bigger, more significant events</li>
                 <li><strong>Buyrate:</strong> Pay-per-view buyrates show commercial success and fan interest</li>
-                <li><strong>Historical Significance:</strong> Events featuring title changes, career-defining moments, and legendary performances</li>
                 <li><strong>Recency:</strong> More recent events are given slight preference as a tiebreaker</li>
               </ol>
               <p>
-                This ensures we highlight the most memorable combat sports and wrestling events that happened 
+                This ensures we highlight the most impactful wrestling events that happened 
                 during this time of year throughout history.
               </p>
             </div>
