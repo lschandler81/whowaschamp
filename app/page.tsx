@@ -1,15 +1,49 @@
 import { DateTitleForm } from '@/components/DateTitleForm';
 import { Extras } from '@/components/Extras';
 import { Footer } from '@/components/Footer';
-import { PPVFlashback } from '@/components/ppv/PPVFlashback';
-import { UFCFlashback } from '@/components/ppv/UFCFlashback';
-import { WWEFlashback } from '@/components/ppv/WWEFlashback';
+import { PPVFlashbackCard } from '@/components/PPVFlashbackCard';
 import { getFeatureFlags } from '@/lib/feature-flags';
+import { mapUfcEvent, mapWweEvent } from '@/lib/mappers/ppv-event';
+import { PPVEvent } from '@/lib/types/ppv-card';
 import { Trophy, Calendar, Users, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
-export default function Home() {
+async function getUFCFlashbackEvent(): Promise<PPVEvent | null> {
+  try {
+    const response = await fetch(`${process.env.NEXTJS_URL || 'http://localhost:3000'}/api/events/ufc-flashback`, {
+      next: { revalidate: 60 * 60 * 12 } // 12 hours
+    });
+    if (!response.ok) return null;
+    const data = await response.json();
+    return data.event ? mapUfcEvent(data.event) : null;
+  } catch (error) {
+    console.error('Failed to fetch UFC flashback:', error);
+    return null;
+  }
+}
+
+async function getWWEFlashbackEvent(): Promise<PPVEvent | null> {
+  try {
+    const response = await fetch(`${process.env.NEXTJS_URL || 'http://localhost:3000'}/api/events/wwe-flashback`, {
+      next: { revalidate: 60 * 60 * 12 } // 12 hours
+    });
+    if (!response.ok) return null;
+    const data = await response.json();
+    return data.event ? mapWweEvent(data.event) : null;
+  } catch (error) {
+    console.error('Failed to fetch WWE flashback:', error);
+    return null;
+  }
+}
+
+export default async function Home() {
   const flags = getFeatureFlags();
+  
+  // Fetch PPV events data
+  const [ufcEvent, wweEvent] = await Promise.all([
+    getUFCFlashbackEvent(),
+    getWWEFlashbackEvent()
+  ]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -57,8 +91,16 @@ export default function Home() {
               <p className="text-gray-600">Relive the greatest moments in combat sports and wrestling history</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <UFCFlashback compact={true} />
-              <WWEFlashback compact={true} />
+              <PPVFlashbackCard
+                org="UFC"
+                heading="This Week in Combat Sports History"
+                event={ufcEvent}
+              />
+              <PPVFlashbackCard
+                org="WWE"
+                heading="This Week in Wrestling History"
+                event={wweEvent}
+              />
             </div>
           </div>
         </section>
