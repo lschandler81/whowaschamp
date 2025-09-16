@@ -122,15 +122,25 @@ export async function GET(request: NextRequest) {
               promotion: event.promotion
             }));
 
-          // Calculate years ago
+          // Calculate years ago more robustly
           const eventDate = new Date(selectedEvent.date);
           const currentDate = new Date();
-          const yearsAgo = currentDate.getFullYear() - eventDate.getFullYear();
+          let yearsAgo = currentDate.getFullYear() - eventDate.getFullYear();
+          
+          // Adjust if the event hasn't occurred this year yet
+          const monthDiff = currentDate.getMonth() - eventDate.getMonth();
+          if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < eventDate.getDate())) {
+            yearsAgo--;
+          }
 
           // Add additional context to the selected event
           selectedEvent.alternativeEvents = alternativeEvents;
           selectedEvent.yearsAgo = yearsAgo;
           selectedEvent.totalMatchingEvents = weekEvents.length;
+          
+          console.log('[UFC Flashback API] Selected event:', selectedEvent.name);
+          console.log('[UFC Flashback API] Years ago calculated:', yearsAgo);
+          console.log('[UFC Flashback API] Alternative events count:', alternativeEvents.length);
         }
       }
 
