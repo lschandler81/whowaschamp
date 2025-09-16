@@ -181,6 +181,28 @@ export async function GET(request: NextRequest) {
       fallbackUsed = true;
     }
 
+    // Final response preparation
+    let yearsAgo = 0;
+    let alternativeEvents: any[] = [];
+    let totalMatchingEvents = 1;
+
+    if (selectedEvent) {
+      // Calculate years ago consistently
+      const eventDate = new Date(selectedEvent.date);
+      const currentDate = new Date();
+      yearsAgo = currentDate.getFullYear() - eventDate.getFullYear();
+      
+      // Adjust if the event hasn't occurred this year yet
+      const monthDiff = currentDate.getMonth() - eventDate.getMonth();
+      if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < eventDate.getDate())) {
+        yearsAgo--;
+      }
+
+      // Get alternative events and total count
+      alternativeEvents = selectedEvent.alternativeEvents || [];
+      totalMatchingEvents = selectedEvent.totalMatchingEvents || 1;
+    }
+
     const response = {
       event: selectedEvent,
       currentWeek,
@@ -188,9 +210,9 @@ export async function GET(request: NextRequest) {
       context: {
         source: fallbackUsed ? 'static' : 'database',
         timestamp: new Date().toISOString(),
-        alternativeEvents: selectedEvent?.alternativeEvents || [],
-        yearsAgo: selectedEvent?.yearsAgo || 0,
-        totalMatchingEvents: selectedEvent?.totalMatchingEvents || 1
+        alternativeEvents,
+        yearsAgo,
+        totalMatchingEvents
       }
     };
 
