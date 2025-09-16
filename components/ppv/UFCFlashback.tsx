@@ -69,12 +69,22 @@ export function UFCFlashback({ compact = false }: UFCFlashbackProps) {
     return num.toLocaleString();
   };
 
+  const getPromotionColor = (promotion: string) => {
+    switch (promotion.toUpperCase()) {
+      case 'UFC':
+      case 'ULTIMATE FIGHTING CHAMPIONSHIP': 
+        return 'bg-red-100 text-red-800 border-red-300';
+      default: 
+        return 'bg-gray-100 text-gray-800 border-gray-300';
+    }
+  };
+
   if (loading) {
     return (
-      <Card className="bg-white shadow-sm h-full">
+      <Card className="bg-white shadow-sm">
         <CardHeader className="pb-4">
           <CardTitle className="flex items-center gap-2">
-            <Trophy className="h-5 w-5 text-red-600" />
+            <Star className="h-5 w-5" />
             This Week in Combat Sports History
           </CardTitle>
         </CardHeader>
@@ -92,10 +102,10 @@ export function UFCFlashback({ compact = false }: UFCFlashbackProps) {
 
   if (error) {
     return (
-      <Card className="bg-white shadow-sm h-full">
+      <Card className="bg-white shadow-sm">
         <CardHeader className="pb-4">
           <CardTitle className="flex items-center gap-2">
-            <Trophy className="h-5 w-5 text-red-600" />
+            <Star className="h-5 w-5" />
             This Week in Combat Sports History
           </CardTitle>
         </CardHeader>
@@ -112,10 +122,10 @@ export function UFCFlashback({ compact = false }: UFCFlashbackProps) {
 
   if (!event) {
     return (
-      <Card className="bg-white shadow-sm h-full">
+      <Card className="bg-white shadow-sm">
         <CardHeader className="pb-4">
           <CardTitle className="flex items-center gap-2">
-            <Trophy className="h-5 w-5 text-red-600" />
+            <Star className="h-5 w-5" />
             This Week in Combat Sports History
           </CardTitle>
         </CardHeader>
@@ -130,55 +140,67 @@ export function UFCFlashback({ compact = false }: UFCFlashbackProps) {
   }
 
   return (
-    <Card className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300 h-full">
+    <Card className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
       <CardHeader className="pb-4">
-        <CardTitle className="flex items-center gap-2">
-          <Trophy className="h-5 w-5 text-red-600" />
-          This Week in Combat Sports History
-        </CardTitle>
+        <div className="space-y-2">
+          <CardTitle className="flex items-center gap-2">
+            <Star className="h-5 w-5" />
+            This Week in Combat Sports History
+          </CardTitle>
+        </div>
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Event Header */}
-        <div>
-          <div className="flex items-center gap-2 mb-2">
-            <Badge className="bg-red-100 text-red-800 border-red-300">
-              UFC
+        <div className="space-y-2">
+          <div className="flex flex-wrap gap-2">
+            <Badge 
+              variant="outline" 
+              className={getPromotionColor(event.promotion)}
+            >
+              {event.promotion === 'Ultimate Fighting Championship' ? 'UFC' : event.promotion}
+            </Badge>
+            <Badge 
+              variant="outline" 
+              className="bg-purple-100 text-purple-800 border-purple-300"
+            >
+              PPV
             </Badge>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 leading-tight">
-            {event.name}
-          </h3>
+          <h3 className="text-xl font-bold text-gray-900">{event.name}</h3>
         </div>
 
-        {/* Event Details */}
-        <div className="space-y-2 text-sm text-gray-600">
-          <div className="flex items-center gap-2">
-            <Calendar className="h-4 w-4 flex-shrink-0" />
+        {/* Date and Location */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div className="flex items-center gap-2 text-gray-600">
+            <Calendar className="h-4 w-4" />
             <span>{formatDate(event.date)}</span>
           </div>
-          
           {event.venue && (
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 flex-shrink-0" />
-              <span>
-                {event.venue}
-                {event.city && `, ${event.city}`}
-                {event.country && event.country !== 'USA' && `, ${event.country}`}
-              </span>
+            <div className="flex items-center gap-2 text-gray-600">
+              <MapPin className="h-4 w-4" />
+              <span>{event.venue}</span>
             </div>
           )}
+        </div>
 
+        {/* Key Stats */}
+        <div className="grid grid-cols-2 gap-4">
           {event.attendance && (
-            <div className="flex items-center gap-2">
-              <Users className="h-4 w-4 flex-shrink-0" />
-              <span>{formatNumber(event.attendance)} in attendance</span>
+            <div className="text-center p-3 bg-blue-50 rounded-lg">
+              <div className="flex items-center justify-center gap-1 text-blue-600 mb-1">
+                <Users className="h-4 w-4" />
+                <span className="text-sm font-medium">Attendance</span>
+              </div>
+              <p className="text-lg font-bold text-gray-900">{formatNumber(event.attendance)}</p>
             </div>
           )}
-
           {event.buyrate && (
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-4 w-4 flex-shrink-0" />
-              <span>{formatNumber(event.buyrate)}k PPV buys</span>
+            <div className="text-center p-3 bg-green-50 rounded-lg">
+              <div className="flex items-center justify-center gap-1 text-green-600 mb-1">
+                <TrendingUp className="h-4 w-4" />
+                <span className="text-sm font-medium">PPV Buys</span>
+              </div>
+              <p className="text-lg font-bold text-gray-900">{formatNumber(event.buyrate)}k</p>
             </div>
           )}
         </div>
@@ -186,7 +208,7 @@ export function UFCFlashback({ compact = false }: UFCFlashbackProps) {
         {/* Action Button */}
         <div className="pt-2">
           <Link href={`/events/ufc/${event.id}`}>
-            <Button variant="outline" className="w-full bg-red-50 border-red-200 text-red-700 hover:bg-red-100">
+            <Button variant="outline" className="w-full">
               View Full Event Details
             </Button>
           </Link>
