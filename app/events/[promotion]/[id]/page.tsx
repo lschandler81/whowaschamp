@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import { PrismaClient } from '@prisma/client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -15,9 +14,6 @@ import {
   ExternalLink
 } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
-
-const prisma = new PrismaClient();
 
 interface EventDetailPageProps {
   params: {
@@ -26,35 +22,54 @@ interface EventDetailPageProps {
   };
 }
 
+// Simple function to find event in static data
 async function getEvent(id: string, promotion: string) {
-  const promotionName = promotion === 'ufc' 
-    ? 'Ultimate Fighting Championship' 
-    : 'World Wrestling Entertainment';
-
-  const event = await prisma.event.findFirst({
-    where: {
-      id: id,
-      isPpv: true,
-      promotion: {
-        name: promotionName
+  try {
+    // Load static data as fallback
+    const dataFile = promotion === 'ufc' ? 'ufc-flashback.json' : 'wwe-flashback.json';
+    const staticData = require(`@/public/data/${dataFile}`);
+    
+    // Search through all weeks for the event
+    for (const weekData of Object.values(staticData) as any[]) {
+      // Check main event
+      if (weekData.event && weekData.event.id === id) {
+        return weekData.event;
       }
-    },
-    include: {
-      promotion: true,
-      headliners: true,
-      titleChanges: true
+      
+      // Check alternatives
+      if (weekData.alternatives) {
+        for (const alt of weekData.alternatives) {
+          if (alt.id === id) {
+            return alt;
+          }
+        }
+      }
     }
-  });
-
-  return event;
+    
+    return null;
+  } catch (error) {
+    console.error('Error loading event:', error);
+    return null;
+  }
 }
 
 export default async function EventDetailPage({ params }: EventDetailPageProps) {
-  const event = await getEvent(params.id, params.promotion);
+  try {
+    // Validate params
+    if (!params.id || !params.promotion) {
+      notFound();
+    }
 
-  if (!event) {
-    notFound();
-  }
+    // Validate promotion
+    if (params.promotion !== 'ufc' && params.promotion !== 'wwe') {
+      notFound();
+    }
+
+    const event = await getEvent(params.id, params.promotion);
+
+    if (!event) {
+      notFound();
+    }
 
   const formatDate = (date: string | Date) => {
     const d = new Date(date);
@@ -71,35 +86,26 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
   };
 
   const getPromotionColor = (promotion: string) => {
-    switch (promotion.toUpperCase()) {
-      case 'WWE':
-      case 'WORLD WRESTLING ENTERTAINMENT': 
-        return {
-          badge: 'bg-yellow-100 text-yellow-800 border-yellow-300',
-          accent: 'text-yellow-600',
-          bg: 'bg-yellow-50',
-          border: 'border-yellow-200'
-        };
-      case 'UFC':
-      case 'ULTIMATE FIGHTING CHAMPIONSHIP': 
-        return {
-          badge: 'bg-red-100 text-red-800 border-red-300',
-          accent: 'text-red-600',
-          bg: 'bg-red-50',
-          border: 'border-red-200'
-        };
-      default: 
-        return {
-          badge: 'bg-gray-100 text-gray-800 border-gray-300',
-          accent: 'text-gray-600',
-          bg: 'bg-gray-50',
-          border: 'border-gray-200'
-        };
+    const isWWE = promotion === 'World Wrestling Entertainment';
+    if (isWWE) {
+      return {
+        badge: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+        accent: 'text-yellow-600',
+        bg: 'bg-yellow-50',
+        border: 'border-yellow-200'
+      };
+    } else {
+      return {
+        badge: 'bg-red-100 text-red-800 border-red-300',
+        accent: 'text-red-600',
+        bg: 'bg-red-50',
+        border: 'border-red-200'
+      };
     }
   };
 
-  const colors = getPromotionColor(event.promotion.name);
-  const isWWE = event.promotion.name === 'World Wrestling Entertainment';
+  const colors = getPromotionColor(event.promotion);
+  const isWWE = event.promotion === 'World Wrestling Entertainment';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -193,7 +199,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               </CardContent>
             </Card>
 
-            {/* Headliners Card */}
+            {/* Headliners Card - Only show if we have headliners */}
             {event.headliners && event.headliners.length > 0 && (
               <Card className="bg-white shadow-sm">
                 <CardHeader>
@@ -204,7 +210,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {event.headliners.map((headliner, index) => (
+                    {event.headliners.map((headliner: any, index: number) => (
                       <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                         <div>
                           <p className="font-medium text-gray-900">{headliner.name}</p>
@@ -222,7 +228,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               </Card>
             )}
 
-            {/* Title Changes Card */}
+            {/* Title Changes Card - Only show if we have title changes */}
             {event.titleChanges && event.titleChanges.length > 0 && (
               <Card className="bg-white shadow-sm">
                 <CardHeader>
@@ -233,7 +239,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {event.titleChanges.map((change, index) => (
+                    {event.titleChanges.map((change: any, index: number) => (
                       <div key={index} className="p-3 bg-yellow-50 rounded-lg border border-yellow-200">
                         <p className="font-medium text-gray-900">{change.titleName}</p>
                         {change.newChampion && change.oldChampion && (
@@ -252,15 +258,13 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
           {/* Sidebar */}
           <div className="space-y-6">
             
-            {/* Event Poster */}
+            {/* Event Poster - Only show if we have posterUrl */}
             {event.posterUrl && (
               <Card className="bg-white shadow-sm">
                 <CardContent className="p-4">
-                  <Image
+                  <img
                     src={event.posterUrl}
                     alt={`${event.name} poster`}
-                    width={300}
-                    height={400}
                     className="w-full h-auto rounded-lg"
                   />
                 </CardContent>
@@ -315,4 +319,8 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
       </div>
     </div>
   );
+  } catch (error) {
+    console.error('Error in EventDetailPage:', error);
+    notFound();
+  }
 }
