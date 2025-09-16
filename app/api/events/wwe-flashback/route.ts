@@ -51,7 +51,7 @@ export async function GET(request: NextRequest) {
     const currentWeek = getISOWeek(now);
     console.log(`[WWE Flashback API] Current week: ${currentWeek}`);
 
-    let selectedEvent = null;
+    let selectedEvent: any = null;
     let fallbackUsed = false;
 
     try {

@@ -1050,7 +1050,8 @@ export async function createCompleteWWEDataset() {
 
       // Add headliners
       if (eventData.headliners) {
-        for (const [index, headliner] of eventData.headliners.entries()) {
+        for (let index = 0; index < eventData.headliners.length; index++) {
+          const headliner = eventData.headliners[index];
           await prisma.headliner.create({
             data: {
               eventId: event.id,
