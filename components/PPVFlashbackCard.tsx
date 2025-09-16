@@ -18,11 +18,12 @@ interface PPVFlashbackCardProps {
   org: 'UFC' | 'WWE';
   heading: string;
   event: PPVEvent | null;
+  context?: any;
   loading?: boolean;
   error?: string | null;
 }
 
-export function PPVFlashbackCard({ org, heading, event, loading = false, error = null }: PPVFlashbackCardProps) {
+export function PPVFlashbackCard({ org, heading, event, context, loading = false, error = null }: PPVFlashbackCardProps) {
   const formatDate = (date: string | Date) => {
     const d = new Date(date);
     return d.toLocaleDateString('en-GB', { 
@@ -186,6 +187,46 @@ export function PPVFlashbackCard({ org, heading, event, loading = false, error =
             </p>
           </div>
         </div>
+
+        {/* Other Events This Week in History */}
+        {context && (
+          <div className="border-t pt-4">
+            <div className="text-center p-3 bg-purple-50 rounded-lg mb-4">
+              <div className="text-sm text-purple-600 font-medium">This happened</div>
+              <div className="text-2xl font-bold text-purple-900">
+                {context.yearsAgo} year{context.yearsAgo !== 1 ? 's' : ''} ago
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+                <Info className="h-4 w-4" />
+                Other Events This Week in History
+              </h4>
+              {context.alternativeEvents && context.alternativeEvents.length > 0 ? (
+                <div className="space-y-2">
+                  {context.alternativeEvents.map((altEvent: any, index: number) => (
+                    <div key={index} className="text-sm bg-gray-50 p-3 rounded">
+                      <div className="font-medium">{altEvent.name}</div>
+                      <div className="text-gray-600">
+                        {typeof altEvent.promotion === 'string'
+                          ? altEvent.promotion
+                          : altEvent.promotion?.name || org} • {new Date(altEvent.date).getFullYear()}
+                        {altEvent.attendance && (
+                          <span> • {formatNumber(altEvent.attendance)} attendance</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-sm text-gray-600">
+                  {context.totalMatchingEvents ? context.totalMatchingEvents - 1 : 0} other events happened this week in history.
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Action Button */}
         <div className="pt-2">
