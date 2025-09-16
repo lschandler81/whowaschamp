@@ -178,7 +178,14 @@ export async function GET(request: NextRequest) {
         const weekData = staticData[currentWeek.toString()];
         
         if (weekData && weekData.event) {
-          selectedEvent = weekData.event;
+          const alternatives = weekData.alternatives || weekData.alternativeEvents || [];
+
+          selectedEvent = {
+            ...weekData.event,
+            alternativeEvents: alternatives,
+            totalMatchingEvents:
+              weekData.totalEvents ?? (Array.isArray(alternatives) ? alternatives.length + 1 : 1),
+          };
           fallbackUsed = true;
         }
       } catch (staticError) {
