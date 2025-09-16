@@ -78,6 +78,7 @@ export async function GET(request: NextRequest) {
       if (events.length > 0) {
         // Group events by week and score them
         const eventsByWeek: { [key: number]: any[] } = {};
+        const allEvents = events.map(e => ({ ...e }));
         
         events.forEach(event => {
           const eventWeek = getISOWeek(new Date(event.date));
@@ -92,14 +93,13 @@ export async function GET(request: NextRequest) {
 
         // Get events for current week, or fallback to another week
         let weekEvents = eventsByWeek[currentWeek];
+        // Find the closest week list for potential fallbacks
+        const availableWeeks = Object.keys(eventsByWeek).map(Number).sort((a, b) => {
+          const diffA = Math.abs(a - currentWeek);
+          const diffB = Math.abs(b - currentWeek);
+          return diffA - diffB;
+        });
         if (!weekEvents || weekEvents.length === 0) {
-          // Find the closest week with events
-          const availableWeeks = Object.keys(eventsByWeek).map(Number).sort((a, b) => {
-            const diffA = Math.abs(a - currentWeek);
-            const diffB = Math.abs(b - currentWeek);
-            return diffA - diffB;
-          });
-          
           if (availableWeeks.length > 0) {
             weekEvents = eventsByWeek[availableWeeks[0]];
           }
@@ -111,7 +111,7 @@ export async function GET(request: NextRequest) {
           selectedEvent = weekEvents[0];
           
           // Get alternative events from the same week (excluding the selected one)
-          const alternativeEvents = weekEvents
+          let alternativeEvents = weekEvents
             .filter(event => event.id !== selectedEvent.id)
             .slice(0, 3) // Limit to 3 alternative events
             .map(event => ({
@@ -123,6 +123,26 @@ export async function GET(request: NextRequest) {
               country: event.country,
               promotion: event.promotion
             }));
+
+          // If no alternative events in this week, pull from nearest weeks to ensure UI richness
+          if (!alternativeEvents || alternativeEvents.length === 0) {
+            for (const wk of availableWeeks) {
+              const candidates = (eventsByWeek[wk] || [])
+                .filter(ev => ev.id !== selectedEvent.id)
+                .slice(0, 3 - alternativeEvents.length)
+                .map(ev => ({
+                  id: ev.id,
+                  name: ev.name,
+                  date: ev.date,
+                  venue: ev.venue,
+                  city: ev.city,
+                  country: ev.country,
+                  promotion: ev.promotion
+                }));
+              alternativeEvents = [...alternativeEvents, ...candidates];
+              if (alternativeEvents.length >= 3) break;
+            }
+          }
 
           // Calculate years ago more robustly
           const eventDate = new Date(selectedEvent.date);
