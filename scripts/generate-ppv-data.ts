@@ -46,14 +46,13 @@ function getISOWeekNumber(date: Date): number {
 function calculateEventScore(event: any): number {
   let score = 0;
   
-  // Base promotion scores (WWE generally has bigger cultural impact)
-  const promotion = event.promotion.name.toLowerCase();
-  if (promotion.includes('wrestling') || promotion.includes('wwe') || promotion.includes('wwf')) {
-    score += 1000; // WWE base score
-  } else if (promotion.includes('ultimate fighting') || promotion.includes('ufc')) {
-    score += 800; // UFC base score  
+  // Base score by promotion - heavily favor WWE
+  if (event.promotion.name === 'World Wrestling Entertainment') {
+    score += 2000; // WWE gets much higher base score
+  } else if (event.promotion.name === 'Ultimate Fighting Championship') {
+    score += 800; // UFC gets lower base score
   } else {
-    score += 500; // Other promotions
+    score += 600; // Other promotions get even lower
   }
   
   // Major event name bonuses (these are historically significant)

@@ -1,0 +1,2242 @@
+{
+  "1": {
+    "event": {
+      "id": "cmflifna4015isepro2fbw5pw",
+      "name": "UFC 18: The Road to the Heavyweight Title",
+      "date": "1999-01-08T00:00:00.000Z",
+      "venue": "Pontchartrain Center",
+      "city": "New Orleans, Louisiana, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn3y00pqseprorybdq47",
+        "name": "UFC 182: Jones vs. Cormier",
+        "date": "2015-01-03T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "2": {
+    "event": {
+      "id": "cmflifn9q014ksepr50ajy20w",
+      "name": "UFC 35: Throwdown",
+      "date": "2002-01-11T00:00:00.000Z",
+      "venue": "Mohegan Sun Arena",
+      "city": "Uncasville, Connecticut, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn6c00vyseprvwg9p6ku",
+        "name": "UFC 142: Aldo vs. Mendes",
+        "date": "2012-01-14T00:00:00.000Z",
+        "venue": "HSBC Arena",
+        "city": "Rio de Janeiro, Brazil",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifmyl00buseprcrc71nh1",
+        "name": "UFC on ABC: Holloway vs. Kattar",
+        "date": "2021-01-16T00:00:00.000Z",
+        "venue": null,
+        "city": null,
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "3": {
+    "event": {
+      "id": "cmflifn940132seprcbpxts5x",
+      "name": "UFC Ultimate Fight Night 3",
+      "date": "2006-01-16T00:00:00.000Z",
+      "venue": "Hard Rock Hotel and Casino",
+      "city": "1,008",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn8c0110sepr5zikrj11",
+        "name": "UFC 80: Rapid Fire",
+        "date": "2008-01-19T00:00:00.000Z",
+        "venue": "Metro Radio Arena",
+        "city": "Newcastle upon Tyne, England, UK",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7v00zwsepr3wi6i5tj",
+        "name": "UFC 93: Franklin vs. Henderson",
+        "date": "2009-01-17T00:00:00.000Z",
+        "venue": "3Arena",
+        "city": "Dublin, Ireland",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "4": {
+    "event": {
+      "id": "cmflifn6a00vuseprynlufelt",
+      "name": "UFC on Fox: Evans vs. Davis",
+      "date": "2012-01-28T00:00:00.000Z",
+      "venue": "United Center",
+      "city": "Chicago, Illinois, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn5n00u4sepro1tjyw5j",
+        "name": "UFC on Fox: Johnson vs. Dodson",
+        "date": "2013-01-26T00:00:00.000Z",
+        "venue": "United Center",
+        "city": "Chicago, Illinois, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn4x00s8sepr66d8ubok",
+        "name": "UFC on Fox: Henderson vs. Thomson",
+        "date": "2014-01-25T00:00:00.000Z",
+        "venue": "United Center",
+        "city": "Chicago, Illinois, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "5": {
+    "event": {
+      "id": "cmflifn9f013wseprembedan1",
+      "name": "UFC 46: Supernatural",
+      "date": "2004-01-31T00:00:00.000Z",
+      "venue": "10,700",
+      "city": null,
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9c013msepr6xs0lfgz",
+        "name": "UFC 51: Super Saturday",
+        "date": "2005-02-05T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "11,072",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn930130seprkd3146bq",
+        "name": "UFC 57: Liddell vs. Couture 3",
+        "date": "2006-02-04T00:00:00.000Z",
+        "venue": "10,659",
+        "city": null,
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "6": {
+    "event": {
+      "id": "cmfl8pyww000ise42ot41j4pj",
+      "name": "UFC 12",
+      "date": "1997-02-07T00:00:00.000Z",
+      "venue": "Niagara Falls Convention Center",
+      "city": "Dothan",
+      "country": "USA",
+      "attendance": 4500,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_12"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnaa015yseprujsr67xd",
+        "name": "UFC 12: Judgement Day",
+        "date": "1997-02-07T00:00:00.000Z",
+        "venue": "Dothan Civic Center",
+        "city": "Dothan, Alabama, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn2200kyseprnhhb3xl5",
+        "name": "UFC 208: Holm vs. de Randamie",
+        "date": "2017-02-11T00:00:00.000Z",
+        "venue": "Barclays Center",
+        "city": "New York City, New York, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "7": {
+    "event": {
+      "id": "cmflifnae0168sepr9fqo690y",
+      "name": "UFC 8: David vs. Goliath",
+      "date": "1996-02-16T00:00:00.000Z",
+      "venue": "Coliseo Rubén Rodríguez",
+      "city": "Bayamón, Puerto Rico",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7e00ymsepr7bcnqco6",
+        "name": "UFC 110: Nogueira vs. Velasquez",
+        "date": "2010-02-21T00:00:00.000Z",
+        "venue": "Qudos Bank Arena",
+        "city": "Sydney, Australia",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn6900vqseprknhcpuij",
+        "name": "UFC on Fuel TV: Sanchez vs. Ellenberger",
+        "date": "2012-02-15T00:00:00.000Z",
+        "venue": "Omaha Civic Auditorium",
+        "city": "Omaha, Nebraska, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "8": {
+    "event": {
+      "id": "cmfl8pywz000ose421p60hy27",
+      "name": "UFC 30",
+      "date": "2001-02-23T00:00:00.000Z",
+      "venue": "Trump Taj Mahal",
+      "city": "Atlantic City",
+      "country": "USA",
+      "attendance": 3500,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_30"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9u014useprp2ehg8pv",
+        "name": "UFC 30: Battle on the Boardwalk",
+        "date": "2001-02-23T00:00:00.000Z",
+        "venue": "3,000",
+        "city": null,
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7t00zqseprzpuze4i5",
+        "name": "UFC 95: Sanchez vs. Stevenson",
+        "date": "2009-02-21T00:00:00.000Z",
+        "venue": "The O2 Arena",
+        "city": "London, England, UK",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "9": {
+    "event": {
+      "id": "cmfl8s6uu000sseztcopw1zcj",
+      "name": "UFC 196",
+      "date": "2016-03-05T00:00:00.000Z",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 16516,
+      "buyrate": 1317,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_196"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifna3015gseprs06xsyo5",
+        "name": "UFC 19: Ultimate Young Guns",
+        "date": "1999-03-05T00:00:00.000Z",
+        "venue": "Casino Magic Bay St. Louis",
+        "city": "Bay St. Louis, Mississippi, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn9k0146seprdqji8c2v",
+        "name": "UFC 41: Onslaught",
+        "date": "2003-02-28T00:00:00.000Z",
+        "venue": "Boardwalk Hall",
+        "city": "Atlantic City, New Jersey, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "10": {
+    "event": {
+      "id": "cmfl8pywr0007se42zoabbptz",
+      "name": "UFC 2",
+      "date": "1994-03-11T00:00:00.000Z",
+      "venue": "Mammoth Gardens",
+      "city": "Denver",
+      "country": "USA",
+      "attendance": 2800,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_2"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnaj016mseprxlgg0cjp",
+        "name": "UFC 2: No Way Out",
+        "date": "1994-03-11T00:00:00.000Z",
+        "venue": "Mammoth Gardens",
+        "city": "Denver, Colorado, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn9z0156seprulvzp8yk",
+        "name": "UFC 24: First Defense",
+        "date": "2000-03-10T00:00:00.000Z",
+        "venue": "Lake Charles Civic Center",
+        "city": "Lake Charles, Louisiana, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "11": {
+    "event": {
+      "id": "cmflifna6015oseprlomn62f3",
+      "name": "UFC 16: Battle in the Bayou",
+      "date": "1998-03-13T00:00:00.000Z",
+      "venue": "Pontchartrain Center",
+      "city": "New Orleans, Louisiana, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7d00yksepr2z3retw8",
+        "name": "UFC Live: Vera vs. Jones",
+        "date": "2010-03-21T00:00:00.000Z",
+        "venue": "1stBank Center",
+        "city": "Broomfield, Colorado, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn6r00x6seprqgoqokxf",
+        "name": "UFC 128: Shogun vs. Jones",
+        "date": "2011-03-19T00:00:00.000Z",
+        "venue": "Prudential Center",
+        "city": "Newark, New Jersey, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "12": {
+    "event": {
+      "id": "cmflifn9q014isepr0g9zz3vq",
+      "name": "UFC 36: Worlds Collide",
+      "date": "2002-03-22T00:00:00.000Z",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7c00yiseprb2ld0t8j",
+        "name": "UFC 111: St-Pierre vs. Hardy",
+        "date": "2010-03-27T00:00:00.000Z",
+        "venue": "Prudential Center",
+        "city": "Newark, New Jersey, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifmyd00basepr68pzd3av",
+        "name": "UFC 260: Miocic vs. Ngannou 2",
+        "date": "2021-03-27T00:00:00.000Z",
+        "venue": null,
+        "city": null,
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "13": {
+    "event": {
+      "id": "cmflifn0900g8seprb5g71n7h",
+      "name": "UFC on ESPN: Barboza vs. Gaethje",
+      "date": "2019-03-30T00:00:00.000Z",
+      "venue": "Wells Fargo Center",
+      "city": "Philadelphia, Pennsylvania, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifmzd00dwsepra5mqt6j1",
+        "name": "UFC on ESPN: Ngannou vs. Rozenstruik",
+        "date": "2020-03-28T00:00:00.000Z",
+        "venue": "Nationwide Arena",
+        "city": "Columbus, Ohio, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifmvl0046seprc3zbr49n",
+        "name": "UFC on ESPN: Blanchfield vs. Fiorot",
+        "date": "2024-03-30T00:00:00.000Z",
+        "venue": "Boardwalk Hall",
+        "city": "Atlantic City, New Jersey, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "14": {
+    "event": {
+      "id": "cmfl8pywu000dse42zajpbvlv",
+      "name": "UFC 5",
+      "date": "1995-04-07T00:00:00.000Z",
+      "venue": "Independence Arena",
+      "city": "Charlotte",
+      "country": "USA",
+      "attendance": 5500,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_5"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnah016gseprcoy35uam",
+        "name": "UFC 5: The Return of the Beast",
+        "date": "1995-04-06T00:00:00.000Z",
+        "venue": "Independence Arena",
+        "city": "Charlotte, North Carolina, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn9f013useprte0e40hw",
+        "name": "UFC 47: It's On!",
+        "date": "2004-04-01T00:00:00.000Z",
+        "venue": "11,437",
+        "city": null,
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "15": {
+    "event": {
+      "id": "cmfl7hx48000nse2nwo55vwqu",
+      "name": "UFC 300",
+      "date": "2024-04-13T00:00:00.000Z",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 17846,
+      "buyrate": 1300,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_300"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifmvk0042sepryuu1hfu2",
+        "name": "UFC 300: Pereira vs. Hill",
+        "date": "2024-04-12T00:00:00.000Z",
+        "venue": "T-Mobile Arena",
+        "city": "20,067",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmfl8s6uj000csezt5xhtcwaj",
+        "name": "UFC 52",
+        "date": "2005-04-16T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "Las Vegas",
+        "country": "USA",
+        "attendance": 14562,
+        "buyrate": 280,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/UFC_52"
+      }
+    ]
+  },
+  "16": {
+    "event": {
+      "id": "cmflifn8n011sseprnl21f53g",
+      "name": "UFC 70: Nations Collide",
+      "date": "2007-04-20T00:00:00.000Z",
+      "venue": "Manchester Evening News Arena",
+      "city": "Manchester, England, UK",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn87010qseprzxmj0cva",
+        "name": "UFC 83: Serra vs. St-Pierre 2",
+        "date": "2008-04-18T00:00:00.000Z",
+        "venue": "Bell Centre",
+        "city": "Montreal, Quebec, Canada",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7r00zksepr6qmcjtew",
+        "name": "UFC 97: Redemption",
+        "date": "2009-04-17T00:00:00.000Z",
+        "venue": "Bell Centre",
+        "city": "Montreal, Quebec, Canada",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "17": {
+    "event": {
+      "id": "cmfl8s6ur000nseztqf4w3s3o",
+      "name": "UFC 129",
+      "date": "2011-04-30T00:00:00.000Z",
+      "venue": "Rogers Centre",
+      "city": "Toronto",
+      "country": "Canada",
+      "attendance": 55724,
+      "buyrate": 800,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_129"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9j0144seprq2lxe10m",
+        "name": "UFC 42: Sudden Impact",
+        "date": "2003-04-24T00:00:00.000Z",
+        "venue": "Kaseya Center",
+        "city": "Miami, Florida, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn6q00x2seprvm30yzpx",
+        "name": "UFC 129: St-Pierre vs. Shields",
+        "date": "2011-04-29T00:00:00.000Z",
+        "venue": "Rogers Centre",
+        "city": "Toronto, Ontario, Canada",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "18": {
+    "event": {
+      "id": "cmflifna2015eseprqveyk3ko",
+      "name": "UFC 20: Battle for the Gold",
+      "date": "1999-05-06T00:00:00.000Z",
+      "venue": "Boutwell Memorial Auditorium",
+      "city": "Birmingham, Alabama, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9t014ssepr65mm8t9v",
+        "name": "UFC 31: Locked and Loaded",
+        "date": "2001-05-03T00:00:00.000Z",
+        "venue": "Etess Arena at Trump Taj Mahal",
+        "city": "Atlantic City, New Jersey, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7a00ycseprscriwrhe",
+        "name": "UFC 113: Machida vs. Shogun 2",
+        "date": "2010-05-07T00:00:00.000Z",
+        "venue": "Bell Centre",
+        "city": "Montreal, Quebec, Canada",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "19": {
+    "event": {
+      "id": "cmflifn9p014gsepr0ygzhd8k",
+      "name": "UFC 37: High Impact",
+      "date": "2002-05-09T00:00:00.000Z",
+      "venue": "CenturyTel Center",
+      "city": "Bossier City, Louisiana, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn2s00mssepra98jw5zg",
+        "name": "UFC 198: Werdum vs. Miocic",
+        "date": "2016-05-13T00:00:00.000Z",
+        "venue": "Arena da Baixada",
+        "city": "Curitiba, Brazil",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn1w00kiseprqnq8mu0t",
+        "name": "UFC 211: Miocic vs. dos Santos 2",
+        "date": "2017-05-12T00:00:00.000Z",
+        "venue": "American Airlines Center",
+        "city": "Dallas, Texas, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "20": {
+    "event": {
+      "id": "cmflifnad0166sepreguv21od",
+      "name": "UFC 9: Motor City Madness",
+      "date": "1996-05-16T00:00:00.000Z",
+      "venue": "Cobo Arena",
+      "city": "Detroit, Michigan, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifna6015mseprvwlaknh9",
+        "name": "UFC 17: Redemption",
+        "date": "1998-05-14T00:00:00.000Z",
+        "venue": "Mobile Civic Center",
+        "city": "Mobile, Alabama, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn6400veseprej8nm9dp",
+        "name": "UFC on Fuel TV: The Korean Zombie vs. Poirier",
+        "date": "2012-05-14T00:00:00.000Z",
+        "venue": "EagleBank Arena",
+        "city": "Fairfax, Virginia, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "21": {
+    "event": {
+      "id": "cmflifn90012sseprliz3rbzo",
+      "name": "UFC 60: Hughes vs. Gracie",
+      "date": "2006-05-26T00:00:00.000Z",
+      "venue": "Crypto.com Arena",
+      "city": "Los Angeles, California, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn8m011qseprh3elohop",
+        "name": "UFC 71: Liddell vs. Jackson",
+        "date": "2007-05-25T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn86010oseprapbnjewv",
+        "name": "UFC 84: Ill Will",
+        "date": "2008-05-23T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "22": {
+    "event": {
+      "id": "cmflifnaa015wsepr0kngxs9c",
+      "name": "UFC 13: The Ultimate Force",
+      "date": "1997-05-29T00:00:00.000Z",
+      "venue": "Augusta Civic Center",
+      "city": "Augusta, Georgia, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn99013gseprighxayma",
+        "name": "UFC 53: Heavy Hitters",
+        "date": "2005-06-03T00:00:00.000Z",
+        "venue": "Boardwalk Hall",
+        "city": "Atlantic City, New Jersey, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn6o00wyseprt1e5e7kx",
+        "name": "The Ultimate Fighter: Team Lesnar vs. Team dos Santos Finale",
+        "date": "2011-06-03T00:00:00.000Z",
+        "venue": "Palms Casino Resort",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "23": {
+    "event": {
+      "id": "cmflifmz700dgsepryer4f5zd",
+      "name": "UFC 250: Nunes vs. Spencer",
+      "date": "2020-06-05T00:00:00.000Z",
+      "venue": null,
+      "city": null,
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9x0152seprvuvij4w4",
+        "name": "UFC 26: Ultimate Field of Dreams",
+        "date": "2000-06-08T00:00:00.000Z",
+        "venue": "Five Seasons Events Center",
+        "city": "Cedar Rapids, Iowa, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn9i0142seprwjwrwhc9",
+        "name": "UFC 43: Meltdown",
+        "date": "2003-06-05T00:00:00.000Z",
+        "venue": "Thomas & Mack Center",
+        "city": "9,800",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "24": {
+    "event": {
+      "id": "cmflifn8k011mseprhz00xej9",
+      "name": "UFC 72: Victory",
+      "date": "2007-06-15T00:00:00.000Z",
+      "venue": "The Odyssey",
+      "city": "Belfast, Northern Ireland, UK",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7p00zgseprrm201a7u",
+        "name": "UFC 99: The Comeback",
+        "date": "2009-06-12T00:00:00.000Z",
+        "venue": "Lanxess Arena",
+        "city": "Cologne, Germany",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7500y6seprz234r8f1",
+        "name": "The Ultimate Fighter: Team Liddell vs. Team Ortiz Finale",
+        "date": "2010-06-18T00:00:00.000Z",
+        "venue": "Palms Casino Resort",
+        "city": "1,708",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "25": {
+    "event": {
+      "id": "cmflifn9o014esepr4jfjcg4n",
+      "name": "UFC 37.5: As Real As It Gets",
+      "date": "2002-06-21T00:00:00.000Z",
+      "venue": "Bellagio",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9e013sseprwcj44yna",
+        "name": "UFC 48: Payback",
+        "date": "2004-06-18T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "10,000",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn90012qseprujtxjgaj",
+        "name": "The Ultimate Fighter: Team Ortiz vs. Team Shamrock Finale",
+        "date": "2006-06-23T00:00:00.000Z",
+        "venue": "849",
+        "city": null,
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "26": {
+    "event": {
+      "id": "cmflifn9t014qseprcamdr1ej",
+      "name": "UFC 32: Showdown in the Meadowlands",
+      "date": "2001-06-28T00:00:00.000Z",
+      "venue": "Continental Airlines Arena",
+      "city": "East Rutherford, New Jersey, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn8z012oseprnyfcjrjk",
+        "name": "UFC Ultimate Fight Night 5",
+        "date": "2006-06-27T00:00:00.000Z",
+        "venue": "Hard Rock Hotel and Casino",
+        "city": "606",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7400y4seprn9pmpi9d",
+        "name": "UFC 116: Lesnar vs. Carwin",
+        "date": "2010-07-02T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "27": {
+    "event": {
+      "id": "cmfl7hx45000fse2nx9pq40p4",
+      "name": "UFC 200",
+      "date": "2016-07-09T00:00:00.000Z",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 18202,
+      "buyrate": 1009,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_200"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn2m00mgsepr8gh2el9z",
+        "name": "UFC 200: Tate vs. Nunes",
+        "date": "2016-07-08T00:00:00.000Z",
+        "venue": "T-Mobile Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn8y012msepr4p9betb3",
+        "name": "UFC 61: Bitter Rivals",
+        "date": "2006-07-07T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "28": {
+    "event": {
+      "id": "cmfl7hx3z0008se2n4qpri140",
+      "name": "UFC 100",
+      "date": "2009-07-11T00:00:00.000Z",
+      "venue": "Mandalay Bay Events Center",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 10871,
+      "buyrate": 1600,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_100"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7o00zcseprvvrhpuzu",
+        "name": "UFC 100",
+        "date": "2009-07-10T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifnag016esepruwe3sm2z",
+        "name": "UFC 6: Clash of the Titans",
+        "date": "1995-07-13T00:00:00.000Z",
+        "venue": "Casper Events Center",
+        "city": "Casper, Wyoming, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "29": {
+    "event": {
+      "id": "cmflifn5y00uyseprse4es94e",
+      "name": "UFC 149: Faber vs. Barão",
+      "date": "2012-07-20T00:00:00.000Z",
+      "venue": "Scotiabank Saddledome",
+      "city": "Calgary, Alberta, Canada",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn2l00mcsepretfty8ol",
+        "name": "UFC on Fox: Holm vs. Shevchenko",
+        "date": "2016-07-22T00:00:00.000Z",
+        "venue": "United Center",
+        "city": "Chicago, Illinois, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn1q00k0seprucll41st",
+        "name": "UFC on Fox: Weidman vs. Gastelum",
+        "date": "2017-07-21T00:00:00.000Z",
+        "venue": "Nassau Veterans Memorial Coliseum",
+        "city": "Uniondale, New York, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "30": {
+    "event": {
+      "id": "cmflifna9015usepr9y9fqa6d",
+      "name": "UFC 14: Showdown",
+      "date": "1997-07-26T00:00:00.000Z",
+      "venue": "Boutwell Memorial Auditorium",
+      "city": "Birmingham, Alabama, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7400y2seprtiyse82i",
+        "name": "UFC Live: Jones vs. Matyushenko",
+        "date": "2010-07-31T00:00:00.000Z",
+        "venue": "Pechanga Arena",
+        "city": "San Diego, California, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn5b00tasepr8uw5a1p5",
+        "name": "UFC on Fox: Johnson vs. Moraga",
+        "date": "2013-07-26T00:00:00.000Z",
+        "venue": "Climate Pledge Arena",
+        "city": "Seattle, Washington, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "31": {
+    "event": {
+      "id": "cmflifn99013eseprrdkzcuyj",
+      "name": "UFC Ultimate Fight Night",
+      "date": "2005-08-05T00:00:00.000Z",
+      "venue": "Cox Pavilion",
+      "city": "—",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7300y0seprw12t154q",
+        "name": "UFC 117: Silva vs. Sonnen",
+        "date": "2010-08-06T00:00:00.000Z",
+        "venue": "Oracle Arena",
+        "city": "Oakland, California, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn6l00wqseprvq7mngrs",
+        "name": "UFC 133: Evans vs. Ortiz",
+        "date": "2011-08-05T00:00:00.000Z",
+        "venue": "Wells Fargo Center",
+        "city": "Philadelphia, Pennsylvania, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "32": {
+    "event": {
+      "id": "cmflifn5x00uuseprqgg6afsu",
+      "name": "UFC 150: Henderson vs. Edgar II",
+      "date": "2012-08-10T00:00:00.000Z",
+      "venue": "Ball Arena",
+      "city": "Denver, Colorado, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn82010esepryg22supp",
+        "name": "UFC 87: Seek and Destroy",
+        "date": "2008-08-08T00:00:00.000Z",
+        "venue": "Target Center",
+        "city": "Minneapolis, Minnesota, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7n00zaseprmsyece4a",
+        "name": "UFC 101: Declaration",
+        "date": "2009-08-07T00:00:00.000Z",
+        "venue": "Wachovia Center",
+        "city": "Philadelphia, Pennsylvania, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "33": {
+    "event": {
+      "id": "cmflifn98013cseprf6rwquhv",
+      "name": "UFC 54: Boiling Point",
+      "date": "2005-08-19T00:00:00.000Z",
+      "venue": "MGM Grand Garden Arena",
+      "city": "13,520",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn2i00m6seprn0hsmb9i",
+        "name": "UFC 202: Diaz vs. McGregor 2",
+        "date": "2016-08-19T00:00:00.000Z",
+        "venue": "T-Mobile Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifmzx00faseprb5xct4sq",
+        "name": "UFC 241: Cormier vs. Miocic 2",
+        "date": "2019-08-16T00:00:00.000Z",
+        "venue": "Honda Center",
+        "city": "Anaheim, California, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "34": {
+    "event": {
+      "id": "cmflifn9d013qseprksv5b1cj",
+      "name": "UFC 49: Unfinished Business",
+      "date": "2004-08-20T00:00:00.000Z",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn8x012iseprlsahli5a",
+        "name": "UFC 62: Liddell vs. Sobral",
+        "date": "2006-08-25T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn8i011gseprqcoud3aa",
+        "name": "UFC 74: Respect",
+        "date": "2007-08-24T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "35": {
+    "event": {
+      "id": "cmflifn7m00z8seprf4kbq8wy",
+      "name": "UFC 102: Couture vs. Nogueira",
+      "date": "2009-08-28T00:00:00.000Z",
+      "venue": "Rose Garden",
+      "city": "Portland, Oregon, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn5w00usseprcgjhq8mt",
+        "name": "UFC 151: Jones vs. Henderson",
+        "date": "2012-08-31T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn5800t2sepr1hksw42l",
+        "name": "UFC 164: Henderson vs. Pettis 2",
+        "date": "2013-08-30T00:00:00.000Z",
+        "venue": "BMO Harris Bradley Center",
+        "city": "Milwaukee, Wisconsin, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "36": {
+    "event": {
+      "id": "cmflifnaj016kseprbiy6y9pj",
+      "name": "UFC 3: The American Dream",
+      "date": "1994-09-08T00:00:00.000Z",
+      "venue": "Grady Cole Center",
+      "city": "Charlotte, North Carolina, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnag016cseprxxvpjgg1",
+        "name": "UFC 7: The Brawl in Buffalo",
+        "date": "1995-09-07T00:00:00.000Z",
+        "venue": "Buffalo Memorial Auditorium",
+        "city": "Buffalo, New York, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn8h011esepr93u68857",
+        "name": "UFC 75: Champion vs. Champion",
+        "date": "2007-09-07T00:00:00.000Z",
+        "venue": "The O2 Arena",
+        "city": "London, England, UK",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "37": {
+    "event": {
+      "id": "cmfl6joxq0008sey4zwn4aeii",
+      "name": "UFC Test Event",
+      "date": "2024-09-15T00:00:00.000Z",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 20000,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmfli44gv0008sek454fa1hso",
+        "name": "UFC Test Event",
+        "date": "2024-09-15T00:00:00.000Z",
+        "venue": "T-Mobile Arena",
+        "city": "Las Vegas",
+        "country": "USA",
+        "attendance": 20000,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifmv60032seprvozr4ber",
+        "name": "UFC 306: O'Malley vs. Dvalishvili",
+        "date": "2024-09-13T00:00:00.000Z",
+        "venue": "Sphere",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "38": {
+    "event": {
+      "id": "cmflifmxx00a4seprfube4wef",
+      "name": "UFC 266: Volkanovski vs. Ortega",
+      "date": "2021-09-24T00:00:00.000Z",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 19029,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnac0162seprjcqc7fxo",
+        "name": "UFC 11: The Proving Ground",
+        "date": "1996-09-19T00:00:00.000Z",
+        "venue": "Augusta Civic Center",
+        "city": "Augusta, Georgia, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifna0015aseprbrfosfq3",
+        "name": "UFC 22: Only One Can be Champion",
+        "date": "1999-09-23T00:00:00.000Z",
+        "venue": "Lake Charles Civic Center",
+        "city": "Lake Charles, Louisiana, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "39": {
+    "event": {
+      "id": "cmflifn9s014oseprip6byfxg",
+      "name": "UFC 33: Victory in Vegas",
+      "date": "2001-09-27T00:00:00.000Z",
+      "venue": "Mandalay Bay Events Center",
+      "city": "9,500",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9m014asepr3ok6stwe",
+        "name": "UFC 39: The Warriors Return",
+        "date": "2002-09-26T00:00:00.000Z",
+        "venue": "Mohegan Sun Arena",
+        "city": "Montville, Connecticut, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn9h0140sepr6m1xlzz3",
+        "name": "UFC 44: Undisputed",
+        "date": "2003-09-25T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "40": {
+    "event": {
+      "id": "cmfl8s6v20017seztdhyj3rj5",
+      "name": "UFC 243",
+      "date": "2019-10-05T00:00:00.000Z",
+      "venue": "Marvel Stadium",
+      "city": "Melbourne",
+      "country": "Australia",
+      "attendance": 57127,
+      "buyrate": 600,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_243"
+    },
+    "alternatives": [
+      {
+        "id": "cmfl8s6ux000xseztk9w63ap6",
+        "name": "UFC 229",
+        "date": "2018-10-06T00:00:00.000Z",
+        "venue": "T-Mobile Arena",
+        "city": "Las Vegas",
+        "country": "USA",
+        "attendance": 20034,
+        "buyrate": 2400,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/UFC_229"
+      },
+      {
+        "id": "cmfl8s6v00012sezt3xznve5a",
+        "name": "UFC 204",
+        "date": "2016-10-08T00:00:00.000Z",
+        "venue": "Manchester Arena",
+        "city": "Manchester",
+        "country": "United Kingdom",
+        "attendance": 19500,
+        "buyrate": 380,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/UFC_204"
+      }
+    ]
+  },
+  "41": {
+    "event": {
+      "id": "cmflifn8u012csepr14xu9a2t",
+      "name": "UFC 64: Unstoppable",
+      "date": "2006-10-13T00:00:00.000Z",
+      "venue": "Mandalay Bay Events Center",
+      "city": "10,173",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7000xsseprww9t2xwk",
+        "name": "UFC 120: Bisping vs. Akiyama",
+        "date": "2010-10-15T00:00:00.000Z",
+        "venue": "The O2 Arena",
+        "city": "London, England, UK",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn5t00ukseprrxs51pn6",
+        "name": "UFC 153: Silva vs. Bonnar",
+        "date": "2012-10-12T00:00:00.000Z",
+        "venue": "Farmasi Arena",
+        "city": "Rio de Janeiro, Brazil",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "42": {
+    "event": {
+      "id": "cmflifna8015sseprobos3nf2",
+      "name": "UFC 15: Collision Course",
+      "date": "1997-10-16T00:00:00.000Z",
+      "venue": "Casino Magic Bay St. Louis",
+      "city": "Bay St. Louis, Mississippi, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifna4015ksepreehuj3cj",
+        "name": "UFC Brazil: Ultimate Brazil",
+        "date": "1998-10-15T00:00:00.000Z",
+        "venue": "Ginásio da Portuguesa",
+        "city": "São Paulo, Brazil",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn8f0118seprh13n944d",
+        "name": "UFC 77: Hostile Territory",
+        "date": "2007-10-19T00:00:00.000Z",
+        "venue": "U.S. Bank Arena",
+        "city": "Cincinnati, Ohio, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "43": {
+    "event": {
+      "id": "cmflifn9c013oseprxwrdw3fq",
+      "name": "UFC 50: The War of '04",
+      "date": "2004-10-21T00:00:00.000Z",
+      "venue": "Boardwalk Hall",
+      "city": "Atlantic City, New Jersey, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn7z0106seprtb3gbhlm",
+        "name": "UFC 90: Silva vs. Côté",
+        "date": "2008-10-24T00:00:00.000Z",
+        "venue": "Allstate Arena",
+        "city": "Rosemont, Illinois, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7j00z2seprjcs1yaig",
+        "name": "UFC 104: Machida vs. Shogun",
+        "date": "2009-10-23T00:00:00.000Z",
+        "venue": "Crypto.com Arena",
+        "city": "Los Angeles, California, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "44": {
+    "event": {
+      "id": "cmflifn9r014mseprt6a3yphw",
+      "name": "UFC 34: High Voltage",
+      "date": "2001-11-02T00:00:00.000Z",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn960136sepr7srth4zs",
+        "name": "The Ultimate Fighter: Team Hughes vs. Team Franklin Finale",
+        "date": "2005-11-05T00:00:00.000Z",
+        "venue": "Hard Rock Hotel and Casino",
+        "city": "—",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn6g00waseprbo8xbo7s",
+        "name": "UFC 138: Leben vs. Muñoz",
+        "date": "2011-11-05T00:00:00.000Z",
+        "venue": "LG Arena",
+        "city": "Birmingham, England, UK",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "45": {
+    "event": {
+      "id": "cmfl7hx3t0002se2nwn9dt2je",
+      "name": "UFC 1",
+      "date": "1993-11-12T00:00:00.000Z",
+      "venue": "McNichols Sports Arena",
+      "city": "Denver",
+      "country": "USA",
+      "attendance": 7800,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_1"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnak016osepr49dm6n0w",
+        "name": "UFC 1: The Beginning",
+        "date": "1993-11-12T00:00:00.000Z",
+        "venue": "McNichols Sports Arena",
+        "city": "7,800",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn8t012aseprc7lwc6cn",
+        "name": "The Ultimate Fighter: The Comeback Finale",
+        "date": "2006-11-11T00:00:00.000Z",
+        "venue": "Hard Rock Hotel and Casino",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "46": {
+    "event": {
+      "id": "cmflifn9z0158seprjiwb8ku0",
+      "name": "UFC 23: Ultimate Japan 2",
+      "date": "1999-11-19T00:00:00.000Z",
+      "venue": "Tokyo Bay NK Hall",
+      "city": "Chiba, Japan",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9w014ysepruu6psjti",
+        "name": "UFC 28: High Stakes",
+        "date": "2000-11-17T00:00:00.000Z",
+        "venue": "Etess Arena at Trump Taj Mahal",
+        "city": "Atlantic City, New Jersey, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn950134seprs1zdj1vs",
+        "name": "UFC 56: Full Force",
+        "date": "2005-11-19T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "12,000",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "47": {
+    "event": {
+      "id": "cmfl8pyx2000tse42dsnj0boi",
+      "name": "UFC 40",
+      "date": "2002-11-22T00:00:00.000Z",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 11500,
+      "buyrate": 150,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_40"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn9l0148seprie999xto",
+        "name": "UFC 40: Vendetta",
+        "date": "2002-11-22T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn9g013ysepr2r3a0fhz",
+        "name": "UFC 45: Revolution",
+        "date": "2003-11-21T00:00:00.000Z",
+        "venue": "Mohegan Sun Arena",
+        "city": "Montville, Connecticut, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "48": {
+    "event": {
+      "id": "cmflifn6x00xksepryiuu7go3",
+      "name": "The Ultimate Fighter: Team GSP vs. Team Koscheck Finale",
+      "date": "2010-12-04T00:00:00.000Z",
+      "venue": "Palms Casino Resort",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn6e00w4seprrkadszog",
+        "name": "The Ultimate Fighter: Team Bisping vs. Team Miller Finale",
+        "date": "2011-12-03T00:00:00.000Z",
+        "venue": "Palms Casino Resort",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn5100sksepry1xxqzyr",
+        "name": "The Ultimate Fighter: Team Rousey vs. Team Tate Finale",
+        "date": "2013-11-30T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "49": {
+    "event": {
+      "id": "cmflifnab0160seprx3w0pbl3",
+      "name": "UFC: The Ultimate Ultimate 2",
+      "date": "1996-12-07T00:00:00.000Z",
+      "venue": "Fair Park Arena",
+      "city": "Birmingham, Alabama, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn8d0114sepr34xgjhb1",
+        "name": "The Ultimate Fighter: Team Hughes vs. Team Serra Finale",
+        "date": "2007-12-08T00:00:00.000Z",
+        "venue": "Palms Casino Resort",
+        "city": "—",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn7h00ywsepr583a7ozr",
+        "name": "The Ultimate Fighter: Heavyweights Finale",
+        "date": "2009-12-05T00:00:00.000Z",
+        "venue": "Palms Casino Resort",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "50": {
+    "event": {
+      "id": "cmflifnai016iseprc6pc5fcb",
+      "name": "UFC 4: Revenge of the Warriors",
+      "date": "1994-12-16T00:00:00.000Z",
+      "venue": "Expo Square Pavilion",
+      "city": "Tulsa, Oklahoma, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnaf016asepr4b8zzs4l",
+        "name": "UFC: The Ultimate Ultimate",
+        "date": "1995-12-16T00:00:00.000Z",
+        "venue": "Mammoth Gardens",
+        "city": "Denver, Colorado, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn9v014wsepr49hc7xiu",
+        "name": "UFC 29: Defense of the Belts",
+        "date": "2000-12-16T00:00:00.000Z",
+        "venue": "Differ Ariake Arena",
+        "city": "Tokyo, Japan",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "51": {
+    "event": {
+      "id": "cmflifna7015qsepr2z2ugaj9",
+      "name": "UFC Japan: Ultimate Japan",
+      "date": "1997-12-21T00:00:00.000Z",
+      "venue": "Yokohama Arena",
+      "city": "Yokohama, Japan",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn3200nisepr0vxsbgm0",
+        "name": "UFC on Fox: dos Anjos vs. Cowboy 2",
+        "date": "2015-12-19T00:00:00.000Z",
+        "venue": "Amway Center",
+        "city": "Orlando, Florida, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "52": {
+    "event": {
+      "id": "cmfl8s6un000iseztxwuimq0x",
+      "name": "UFC 66",
+      "date": "2006-12-30T00:00:00.000Z",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 16562,
+      "buyrate": 1050,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/UFC_66"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn8r0124seprj0ypgftz",
+        "name": "UFC 66: Liddell vs. Ortiz",
+        "date": "2006-12-30T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifn8d0112seprlun08g5j",
+        "name": "UFC 79: Nemesis",
+        "date": "2007-12-29T00:00:00.000Z",
+        "venue": "Mandalay Bay Events Center",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "53": {
+    "event": {
+      "id": "cmflifn7g00ysseprq58oa8e9",
+      "name": "UFC 108: Evans vs. Silva",
+      "date": "2010-01-02T00:00:00.000Z",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "Ultimate Fighting Championship",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifn3100ngseprp6bhltpa",
+        "name": "UFC 195: Lawler vs. Condit",
+        "date": "2016-01-02T00:00:00.000Z",
+        "venue": "MGM Grand Garden Arena",
+        "city": "Las Vegas, Nevada, U.S.",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "Ultimate Fighting Championship",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,1244 @@
+{
+  "1": {
+    "event": {
+      "id": "cmflifnb80181seprb4yprnwp",
+      "name": "Royal Rumble (1989)",
+      "date": "1989-01-15T00:00:00.000Z",
+      "venue": "The Summit",
+      "city": "Houston",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "2": {
+    "event": {
+      "id": "cmflifnb80181seprb4yprnwp",
+      "name": "Royal Rumble (1989)",
+      "date": "1989-01-15T00:00:00.000Z",
+      "venue": "The Summit",
+      "city": "Houston",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "3": {
+    "event": {
+      "id": "cmfl8s7p1003nseztuzj9swtp",
+      "name": "Royal Rumble (1988)",
+      "date": "1988-01-24T00:00:00.000Z",
+      "venue": "Copps Coliseum",
+      "city": "Hamilton",
+      "country": "Canada",
+      "attendance": 18946,
+      "buyrate": 10,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Rumble_(1988)"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnb90183sepr2k8iv5he",
+        "name": "Royal Rumble (1990)",
+        "date": "1990-01-21T00:00:00.000Z",
+        "venue": "Orlando Arena",
+        "city": "Orlando",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifnba0185seprpogereqk",
+        "name": "Royal Rumble (1991)",
+        "date": "1991-01-19T00:00:00.000Z",
+        "venue": "Miami Arena",
+        "city": "Miami",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "4": {
+    "event": {
+      "id": "cmfl7i36z000xse62twlrepwo",
+      "name": "Royal Rumble 2024",
+      "date": "2024-01-27T00:00:00.000Z",
+      "venue": "Tropicana Field",
+      "city": "St. Petersburg",
+      "country": "USA",
+      "attendance": 38459,
+      "buyrate": 750,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Rumble_(2024)"
+    },
+    "alternatives": [
+      {
+        "id": "cmfl8s7p4003rsezt9m1m83gs",
+        "name": "Royal Rumble (2024)",
+        "date": "2024-01-27T00:00:00.000Z",
+        "venue": "Tropicana Field",
+        "city": "St. Petersburg",
+        "country": "USA",
+        "attendance": 38935,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Rumble_(2024)"
+      }
+    ]
+  },
+  "5": {
+    "event": {
+      "id": "cmflifnbi018pseprdi6u077m",
+      "name": "The Main Event",
+      "date": "1988-02-05T00:00:00.000Z",
+      "venue": "Market Square Arena",
+      "city": "Indianapolis",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "6": {
+    "event": {
+      "id": "cmflifnbi018pseprdi6u077m",
+      "name": "The Main Event",
+      "date": "1988-02-05T00:00:00.000Z",
+      "venue": "Market Square Arena",
+      "city": "Indianapolis",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "7": {
+    "event": {
+      "id": "cmflifnbt019hsepr5j4j1811",
+      "name": "Elimination Chamber (2010)",
+      "date": "2010-02-21T00:00:00.000Z",
+      "venue": "Scottrade Center",
+      "city": "St. Louis",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "8": {
+    "event": {
+      "id": "cmflifnbt019hsepr5j4j1811",
+      "name": "Elimination Chamber (2010)",
+      "date": "2010-02-21T00:00:00.000Z",
+      "venue": "Scottrade Center",
+      "city": "St. Louis",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "9": {
+    "event": {
+      "id": "cmflifnbt019hsepr5j4j1811",
+      "name": "Elimination Chamber (2010)",
+      "date": "2010-02-21T00:00:00.000Z",
+      "venue": "Scottrade Center",
+      "city": "St. Louis",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "10": {
+    "event": {
+      "id": "cmfl8pzqe002ese42i89q02q9",
+      "name": "WrestleMania X8",
+      "date": "2002-03-17T00:00:00.000Z",
+      "venue": "SkyDome",
+      "city": "Toronto",
+      "country": "Canada",
+      "attendance": 68237,
+      "buyrate": 880,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_X8"
+    },
+    "alternatives": [
+      {
+        "id": "cmfl8pzpw001lse42btknsxen",
+        "name": "WrestleMania X",
+        "date": "1994-03-20T00:00:00.000Z",
+        "venue": "Madison Square Garden",
+        "city": "New York",
+        "country": "USA",
+        "attendance": 18065,
+        "buyrate": 420,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_X"
+      },
+      {
+        "id": "cmflifnaw017bsepr5qphkvtg",
+        "name": "WrestleMania XX",
+        "date": "2004-03-14T00:00:00.000Z",
+        "venue": "Madison Square Garden",
+        "city": "New York",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "11": {
+    "event": {
+      "id": "cmfl8pzqe002ese42i89q02q9",
+      "name": "WrestleMania X8",
+      "date": "2002-03-17T00:00:00.000Z",
+      "venue": "SkyDome",
+      "city": "Toronto",
+      "country": "Canada",
+      "attendance": 68237,
+      "buyrate": 880,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_X8"
+    },
+    "alternatives": [
+      {
+        "id": "cmfl8pzpw001lse42btknsxen",
+        "name": "WrestleMania X",
+        "date": "1994-03-20T00:00:00.000Z",
+        "venue": "Madison Square Garden",
+        "city": "New York",
+        "country": "USA",
+        "attendance": 18065,
+        "buyrate": 420,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_X"
+      },
+      {
+        "id": "cmflifnaw017bsepr5qphkvtg",
+        "name": "WrestleMania XX",
+        "date": "2004-03-14T00:00:00.000Z",
+        "venue": "Madison Square Garden",
+        "city": "New York",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "12": {
+    "event": {
+      "id": "cmfl8pzq4001wse42m4lt4gpn",
+      "name": "WrestleMania 13",
+      "date": "1997-03-23T00:00:00.000Z",
+      "venue": "Rosemont Horizon",
+      "city": "Rosemont",
+      "country": "USA",
+      "attendance": 18197,
+      "buyrate": 237,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_13"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnan016tsepr5z02ua9j",
+        "name": "WrestleMania IV",
+        "date": "1988-03-27T00:00:00.000Z",
+        "venue": "Trump Plaza",
+        "city": "Atlantic City",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifnap016xseprfxr6s2sd",
+        "name": "WrestleMania VII",
+        "date": "1991-03-24T00:00:00.000Z",
+        "venue": "Los Angeles Memorial Sports Arena",
+        "city": "Los Angeles",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "13": {
+    "event": {
+      "id": "cmfl7i36l0008se62vgr2l7zc",
+      "name": "WrestleMania III",
+      "date": "1987-03-29T00:00:00.000Z",
+      "venue": "Pontiac Silverdome",
+      "city": "Pontiac",
+      "country": "USA",
+      "attendance": 93173,
+      "buyrate": 1600,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_III"
+    },
+    "alternatives": [
+      {
+        "id": "cmfl8s7oe002eseztm1mej0m6",
+        "name": "WrestleMania XXVIII",
+        "date": "2012-04-01T00:00:00.000Z",
+        "venue": "Sun Life Stadium",
+        "city": "Miami",
+        "country": "USA",
+        "attendance": 78363,
+        "buyrate": 1217,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_XXVIII"
+      },
+      {
+        "id": "cmfl8s7on002xsezty1tizxo3",
+        "name": "WrestleMania 32",
+        "date": "2016-04-03T00:00:00.000Z",
+        "venue": "AT&T Stadium",
+        "city": "Arlington",
+        "country": "USA",
+        "attendance": 101763,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_32"
+      }
+    ]
+  },
+  "14": {
+    "event": {
+      "id": "cmfl6joxt000csey461lmliuj",
+      "name": "WrestleMania Test",
+      "date": "2024-04-07T00:00:00.000Z",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "country": "USA",
+      "attendance": 78453,
+      "buyrate": 1200,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmfli44gw000csek41agf7c0j",
+        "name": "WrestleMania Test",
+        "date": "2024-04-07T00:00:00.000Z",
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford",
+        "country": "USA",
+        "attendance": 78453,
+        "buyrate": 1200,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmfl7i36w000ose62ycwmghg9",
+        "name": "WrestleMania 40",
+        "date": "2024-04-06T00:00:00.000Z",
+        "venue": "Lincoln Financial Field",
+        "city": "Philadelphia",
+        "country": "USA",
+        "attendance": 72543,
+        "buyrate": 1300,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/WrestleMania_40"
+      }
+    ]
+  },
+  "15": {
+    "event": {
+      "id": "cmflifnam016rsepr4pbpfoyp",
+      "name": "WrestleMania 2",
+      "date": "1986-04-07T00:00:00.000Z",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "city": "Uniondale",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "16": {
+    "event": {
+      "id": "cmflifnam016rsepr4pbpfoyp",
+      "name": "WrestleMania 2",
+      "date": "1986-04-07T00:00:00.000Z",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "city": "Uniondale",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "17": {
+    "event": {
+      "id": "cmflifnam016rsepr4pbpfoyp",
+      "name": "WrestleMania 2",
+      "date": "1986-04-07T00:00:00.000Z",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "city": "Uniondale",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "18": {
+    "event": {
+      "id": "cmflifnam016rsepr4pbpfoyp",
+      "name": "WrestleMania 2",
+      "date": "1986-04-07T00:00:00.000Z",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "city": "Uniondale",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "19": {
+    "event": {
+      "id": "cmflifnam016rsepr4pbpfoyp",
+      "name": "WrestleMania 2",
+      "date": "1986-04-07T00:00:00.000Z",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "city": "Uniondale",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "20": {
+    "event": {
+      "id": "cmflifnam016rsepr4pbpfoyp",
+      "name": "WrestleMania 2",
+      "date": "1986-04-07T00:00:00.000Z",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "city": "Uniondale",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "21": {
+    "event": {
+      "id": "cmfl8pzq1001rse42xbt2igsg",
+      "name": "King of the Ring (1996)",
+      "date": "1996-06-23T00:00:00.000Z",
+      "venue": "MECCA Arena",
+      "city": "Milwaukee",
+      "country": "USA",
+      "attendance": 9500,
+      "buyrate": 205,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/King_of_the_Ring_(1996)"
+    },
+    "alternatives": []
+  },
+  "22": {
+    "event": {
+      "id": "cmfl8pzq1001rse42xbt2igsg",
+      "name": "King of the Ring (1996)",
+      "date": "1996-06-23T00:00:00.000Z",
+      "venue": "MECCA Arena",
+      "city": "Milwaukee",
+      "country": "USA",
+      "attendance": 9500,
+      "buyrate": 205,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/King_of_the_Ring_(1996)"
+    },
+    "alternatives": []
+  },
+  "23": {
+    "event": {
+      "id": "cmfl8pzq1001rse42xbt2igsg",
+      "name": "King of the Ring (1996)",
+      "date": "1996-06-23T00:00:00.000Z",
+      "venue": "MECCA Arena",
+      "city": "Milwaukee",
+      "country": "USA",
+      "attendance": 9500,
+      "buyrate": 205,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/King_of_the_Ring_(1996)"
+    },
+    "alternatives": []
+  },
+  "24": {
+    "event": {
+      "id": "cmfl8pzq1001rse42xbt2igsg",
+      "name": "King of the Ring (1996)",
+      "date": "1996-06-23T00:00:00.000Z",
+      "venue": "MECCA Arena",
+      "city": "Milwaukee",
+      "country": "USA",
+      "attendance": 9500,
+      "buyrate": 205,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/King_of_the_Ring_(1996)"
+    },
+    "alternatives": []
+  },
+  "25": {
+    "event": {
+      "id": "cmfl8pzq1001rse42xbt2igsg",
+      "name": "King of the Ring (1996)",
+      "date": "1996-06-23T00:00:00.000Z",
+      "venue": "MECCA Arena",
+      "city": "Milwaukee",
+      "country": "USA",
+      "attendance": 9500,
+      "buyrate": 205,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/King_of_the_Ring_(1996)"
+    },
+    "alternatives": []
+  },
+  "26": {
+    "event": {
+      "id": "cmfl8pzq1001rse42xbt2igsg",
+      "name": "King of the Ring (1996)",
+      "date": "1996-06-23T00:00:00.000Z",
+      "venue": "MECCA Arena",
+      "city": "Milwaukee",
+      "country": "USA",
+      "attendance": 9500,
+      "buyrate": 205,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/King_of_the_Ring_(1996)"
+    },
+    "alternatives": []
+  },
+  "27": {
+    "event": {
+      "id": "cmfl8s7pi004iseztjv96xsva",
+      "name": "Money in the Bank (2024)",
+      "date": "2024-07-06T00:00:00.000Z",
+      "venue": "Scotiabank Arena",
+      "city": "Toronto",
+      "country": "Canada",
+      "attendance": 16100,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Money_in_the_Bank_(2024)"
+    },
+    "alternatives": []
+  },
+  "28": {
+    "event": {
+      "id": "cmflifnbq019bseprlz08qfri",
+      "name": "Money in the Bank (2010)",
+      "date": "2010-07-18T00:00:00.000Z",
+      "venue": "Sprint Center",
+      "city": "Kansas City",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "29": {
+    "event": {
+      "id": "cmflifnbq019bseprlz08qfri",
+      "name": "Money in the Bank (2010)",
+      "date": "2010-07-18T00:00:00.000Z",
+      "venue": "Sprint Center",
+      "city": "Kansas City",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "30": {
+    "event": {
+      "id": "cmfl7i3720013se62mdlyeocz",
+      "name": "SummerSlam 2023",
+      "date": "2023-08-05T00:00:00.000Z",
+      "venue": "Ford Field",
+      "city": "Detroit",
+      "country": "USA",
+      "attendance": 59194,
+      "buyrate": 850,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(2023)"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnbl018xsepr2kr3gy0r",
+        "name": "SummerSlam (2023)",
+        "date": "2023-08-05T00:00:00.000Z",
+        "venue": "Ford Field",
+        "city": "Detroit",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifnbl018zseprxtniflbp",
+        "name": "SummerSlam (2024)",
+        "date": "2024-08-03T00:00:00.000Z",
+        "venue": "Cleveland Browns Stadium",
+        "city": "Cleveland",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "31": {
+    "event": {
+      "id": "cmfl7i3720013se62mdlyeocz",
+      "name": "SummerSlam 2023",
+      "date": "2023-08-05T00:00:00.000Z",
+      "venue": "Ford Field",
+      "city": "Detroit",
+      "country": "USA",
+      "attendance": 59194,
+      "buyrate": 850,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(2023)"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnbl018xsepr2kr3gy0r",
+        "name": "SummerSlam (2023)",
+        "date": "2023-08-05T00:00:00.000Z",
+        "venue": "Ford Field",
+        "city": "Detroit",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifnbl018zseprxtniflbp",
+        "name": "SummerSlam (2024)",
+        "date": "2024-08-03T00:00:00.000Z",
+        "venue": "Cleveland Browns Stadium",
+        "city": "Cleveland",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "32": {
+    "event": {
+      "id": "cmfl7i3720013se62mdlyeocz",
+      "name": "SummerSlam 2023",
+      "date": "2023-08-05T00:00:00.000Z",
+      "venue": "Ford Field",
+      "city": "Detroit",
+      "country": "USA",
+      "attendance": 59194,
+      "buyrate": 850,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(2023)"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnbl018xsepr2kr3gy0r",
+        "name": "SummerSlam (2023)",
+        "date": "2023-08-05T00:00:00.000Z",
+        "venue": "Ford Field",
+        "city": "Detroit",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifnbl018zseprxtniflbp",
+        "name": "SummerSlam (2024)",
+        "date": "2024-08-03T00:00:00.000Z",
+        "venue": "Cleveland Browns Stadium",
+        "city": "Cleveland",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "33": {
+    "event": {
+      "id": "cmfl8s7p90041sezte5m42eb4",
+      "name": "SummerSlam (2013)",
+      "date": "2013-08-18T00:00:00.000Z",
+      "venue": "Staples Center",
+      "city": "Los Angeles",
+      "country": "USA",
+      "attendance": 17739,
+      "buyrate": 296,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(2013)"
+    },
+    "alternatives": []
+  },
+  "34": {
+    "event": {
+      "id": "cmfl8s7p90041sezte5m42eb4",
+      "name": "SummerSlam (2013)",
+      "date": "2013-08-18T00:00:00.000Z",
+      "venue": "Staples Center",
+      "city": "Los Angeles",
+      "country": "USA",
+      "attendance": 17739,
+      "buyrate": 296,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(2013)"
+    },
+    "alternatives": []
+  },
+  "35": {
+    "event": {
+      "id": "cmfl8s7p7003wsezt12cb63vk",
+      "name": "SummerSlam (1992)",
+      "date": "1992-08-29T00:00:00.000Z",
+      "venue": "Wembley Stadium",
+      "city": "London",
+      "country": "United Kingdom",
+      "attendance": 80355,
+      "buyrate": 300,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(1992)"
+    },
+    "alternatives": [
+      {
+        "id": "cmfl8pzpp001ase422727yb0n",
+        "name": "SummerSlam (1988)",
+        "date": "1988-08-29T00:00:00.000Z",
+        "venue": "Madison Square Garden",
+        "city": "New York",
+        "country": "USA",
+        "attendance": 20000,
+        "buyrate": 550,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(1988)"
+      },
+      {
+        "id": "cmflifnbi018rseprsmvdmckr",
+        "name": "SummerSlam (1989)",
+        "date": "1989-08-28T00:00:00.000Z",
+        "venue": "Meadowlands Arena",
+        "city": "East Rutherford",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "36": {
+    "event": {
+      "id": "cmfl8s7p7003wsezt12cb63vk",
+      "name": "SummerSlam (1992)",
+      "date": "1992-08-29T00:00:00.000Z",
+      "venue": "Wembley Stadium",
+      "city": "London",
+      "country": "United Kingdom",
+      "attendance": 80355,
+      "buyrate": 300,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(1992)"
+    },
+    "alternatives": [
+      {
+        "id": "cmfl8pzpp001ase422727yb0n",
+        "name": "SummerSlam (1988)",
+        "date": "1988-08-29T00:00:00.000Z",
+        "venue": "Madison Square Garden",
+        "city": "New York",
+        "country": "USA",
+        "attendance": 20000,
+        "buyrate": 550,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/SummerSlam_(1988)"
+      },
+      {
+        "id": "cmflifnbi018rseprsmvdmckr",
+        "name": "SummerSlam (1989)",
+        "date": "1989-08-28T00:00:00.000Z",
+        "venue": "Meadowlands Arena",
+        "city": "East Rutherford",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "37": {
+    "event": {
+      "id": "cmfl6joxp0003sey4uxawow32",
+      "name": "WWE Test Event",
+      "date": "2023-09-15T00:00:00.000Z",
+      "venue": "Test Arena",
+      "city": "Test City",
+      "country": "USA",
+      "attendance": 15000,
+      "buyrate": 800,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmfli44gs0003sek4hj4j07ls",
+        "name": "WWE Test Event",
+        "date": "2023-09-15T00:00:00.000Z",
+        "venue": "Test Arena",
+        "city": "Test City",
+        "country": "USA",
+        "attendance": 15000,
+        "buyrate": 800,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "38": {
+    "event": {
+      "id": "cmfl6joxp0003sey4uxawow32",
+      "name": "WWE Test Event",
+      "date": "2023-09-15T00:00:00.000Z",
+      "venue": "Test Arena",
+      "city": "Test City",
+      "country": "USA",
+      "attendance": 15000,
+      "buyrate": 800,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmfli44gs0003sek4hj4j07ls",
+        "name": "WWE Test Event",
+        "date": "2023-09-15T00:00:00.000Z",
+        "venue": "Test Arena",
+        "city": "Test City",
+        "country": "USA",
+        "attendance": 15000,
+        "buyrate": 800,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "39": {
+    "event": {
+      "id": "cmflifnbr019dseprtol0ppq6",
+      "name": "Hell in a Cell (2009)",
+      "date": "2009-10-04T00:00:00.000Z",
+      "venue": "Prudential Center",
+      "city": "Newark",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "40": {
+    "event": {
+      "id": "cmflifnbr019dseprtol0ppq6",
+      "name": "Hell in a Cell (2009)",
+      "date": "2009-10-04T00:00:00.000Z",
+      "venue": "Prudential Center",
+      "city": "Newark",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "41": {
+    "event": {
+      "id": "cmflifnbr019dseprtol0ppq6",
+      "name": "Hell in a Cell (2009)",
+      "date": "2009-10-04T00:00:00.000Z",
+      "venue": "Prudential Center",
+      "city": "Newark",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "42": {
+    "event": {
+      "id": "cmflifnbr019dseprtol0ppq6",
+      "name": "Hell in a Cell (2009)",
+      "date": "2009-10-04T00:00:00.000Z",
+      "venue": "Prudential Center",
+      "city": "Newark",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "43": {
+    "event": {
+      "id": "cmflifnbr019dseprtol0ppq6",
+      "name": "Hell in a Cell (2009)",
+      "date": "2009-10-04T00:00:00.000Z",
+      "venue": "Prudential Center",
+      "city": "Newark",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "44": {
+    "event": {
+      "id": "cmfl8s7pg004csezt6zf5h4mx",
+      "name": "Survivor Series (1998)",
+      "date": "1998-11-15T00:00:00.000Z",
+      "venue": "Kiel Center",
+      "city": "St. Louis",
+      "country": "USA",
+      "attendance": 21151,
+      "buyrate": 550,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Survivor_Series_(1998)"
+    },
+    "alternatives": []
+  },
+  "45": {
+    "event": {
+      "id": "cmfl8s7pg004csezt6zf5h4mx",
+      "name": "Survivor Series (1998)",
+      "date": "1998-11-15T00:00:00.000Z",
+      "venue": "Kiel Center",
+      "city": "St. Louis",
+      "country": "USA",
+      "attendance": 21151,
+      "buyrate": 550,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Survivor_Series_(1998)"
+    },
+    "alternatives": []
+  },
+  "46": {
+    "event": {
+      "id": "cmfl8s7pg004csezt6zf5h4mx",
+      "name": "Survivor Series (1998)",
+      "date": "1998-11-15T00:00:00.000Z",
+      "venue": "Kiel Center",
+      "city": "St. Louis",
+      "country": "USA",
+      "attendance": 21151,
+      "buyrate": 550,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Survivor_Series_(1998)"
+    },
+    "alternatives": []
+  },
+  "47": {
+    "event": {
+      "id": "cmflifnbm0191seprb969p4f6",
+      "name": "Survivor Series (1988)",
+      "date": "1988-11-24T00:00:00.000Z",
+      "venue": "Richfield Coliseum",
+      "city": "Richfield",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnbn0193seprd3ol9gve",
+        "name": "Survivor Series (1989)",
+        "date": "1989-11-23T00:00:00.000Z",
+        "venue": "Rosemont Horizon",
+        "city": "Rosemont",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      },
+      {
+        "id": "cmflifnbo0195sepr4f10wazo",
+        "name": "Survivor Series (1990)",
+        "date": "1990-11-22T00:00:00.000Z",
+        "venue": "Hartford Civic Center",
+        "city": "Hartford",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "48": {
+    "event": {
+      "id": "cmfl8s7pd0047seztf7f2q60a",
+      "name": "Survivor Series (1987)",
+      "date": "1987-11-26T00:00:00.000Z",
+      "venue": "Richfield Coliseum",
+      "city": "Richfield",
+      "country": "USA",
+      "attendance": 13500,
+      "buyrate": 400,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Survivor_Series_(1987)"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnbp0197seprur1h8qg6",
+        "name": "Survivor Series (1991)",
+        "date": "1991-11-27T00:00:00.000Z",
+        "venue": "Joe Louis Arena",
+        "city": "Detroit",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "49": {
+    "event": {
+      "id": "cmfl8s7pd0047seztf7f2q60a",
+      "name": "Survivor Series (1987)",
+      "date": "1987-11-26T00:00:00.000Z",
+      "venue": "Richfield Coliseum",
+      "city": "Richfield",
+      "country": "USA",
+      "attendance": 13500,
+      "buyrate": 400,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Survivor_Series_(1987)"
+    },
+    "alternatives": [
+      {
+        "id": "cmflifnbp0197seprur1h8qg6",
+        "name": "Survivor Series (1991)",
+        "date": "1991-11-27T00:00:00.000Z",
+        "venue": "Joe Louis Arena",
+        "city": "Detroit",
+        "country": "USA",
+        "attendance": null,
+        "buyrate": null,
+        "promotion": "World Wrestling Entertainment",
+        "posterUrl": null,
+        "sourceUrl": null
+      }
+    ]
+  },
+  "50": {
+    "event": {
+      "id": "cmflifnbs019fsepr8trbmy2b",
+      "name": "TLC: Tables, Ladders & Chairs (2009)",
+      "date": "2009-12-13T00:00:00.000Z",
+      "venue": "AT&T Center",
+      "city": "San Antonio",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "51": {
+    "event": {
+      "id": "cmflifnbs019fsepr8trbmy2b",
+      "name": "TLC: Tables, Ladders & Chairs (2009)",
+      "date": "2009-12-13T00:00:00.000Z",
+      "venue": "AT&T Center",
+      "city": "San Antonio",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "52": {
+    "event": {
+      "id": "cmflifnbs019fsepr8trbmy2b",
+      "name": "TLC: Tables, Ladders & Chairs (2009)",
+      "date": "2009-12-13T00:00:00.000Z",
+      "venue": "AT&T Center",
+      "city": "San Antonio",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  },
+  "53": {
+    "event": {
+      "id": "cmflifnbs019fsepr8trbmy2b",
+      "name": "TLC: Tables, Ladders & Chairs (2009)",
+      "date": "2009-12-13T00:00:00.000Z",
+      "venue": "AT&T Center",
+      "city": "San Antonio",
+      "country": "USA",
+      "attendance": null,
+      "buyrate": null,
+      "promotion": "World Wrestling Entertainment",
+      "posterUrl": null,
+      "sourceUrl": null
+    },
+    "alternatives": []
+  }
+}

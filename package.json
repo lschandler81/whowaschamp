@@ -34,6 +34,9 @@
     "deploy:down": "docker-compose -f docker-compose.prod.yml down",
     "validate:apis": "node scripts/validate_apis.mjs",
     "generate-ppv-data": "npx tsx scripts/generate-ppv-data.ts",
+    "generate-ufc-data": "npx tsx scripts/generate-ufc-data.ts",
+    "generate-wwe-data": "npx tsx scripts/generate-wwe-data.ts",
+    "generate-split-data": "npm run generate-ufc-data && npm run generate-wwe-data",
     "add-ppv": "node scripts/add-ppv.js",
     "update-static-data": "npm run generate-ppv-data && git add public/data/ && git commit -m 'Update static PPV data' && git push"
   },

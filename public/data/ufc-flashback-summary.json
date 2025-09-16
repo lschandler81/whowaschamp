@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2025-09-16T09:31:59.597Z",
+  "totalWeeks": 53,
+  "weeksWithEvents": 53,
+  "totalUFCEvents": 525,
+  "sampleEvents": [
+    {
+      "week": 1,
+      "name": "UFC 18: The Road to the Heavyweight Title",
+      "promotion": "Ultimate Fighting Championship",
+      "date": "1999-01-08T00:00:00.000Z"
+    },
+    {
+      "week": 2,
+      "name": "UFC 35: Throwdown",
+      "promotion": "Ultimate Fighting Championship",
+      "date": "2002-01-11T00:00:00.000Z"
+    },
+    {
+      "week": 3,
+      "name": "UFC Ultimate Fight Night 3",
+      "promotion": "Ultimate Fighting Championship",
+      "date": "2006-01-16T00:00:00.000Z"
+    },
+    {
+      "week": 4,
+      "name": "UFC on Fox: Evans vs. Davis",
+      "promotion": "Ultimate Fighting Championship",
+      "date": "2012-01-28T00:00:00.000Z"
+    },
+    {
+      "week": 5,
+      "name": "UFC 46: Supernatural",
+      "promotion": "Ultimate Fighting Championship",
+      "date": "2004-01-31T00:00:00.000Z"
+    }
+  ]
+}

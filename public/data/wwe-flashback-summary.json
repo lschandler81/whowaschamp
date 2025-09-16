@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2025-09-16T08:09:08.003Z",
+  "generatedAt": "2025-09-16T09:32:38.769Z",
   "totalWeeks": 53,
   "weeksWithEvents": 53,
-  "totalPPVEvents": 609,
+  "totalWWEEvents": 84,
   "sampleEvents": [
     {
       "week": 1,
-      "name": "UFC 182: Jones vs. Cormier",
-      "promotion": "Ultimate Fighting Championship",
-      "date": "2015-01-03"
+      "name": "Royal Rumble (1989)",
+      "promotion": "World Wrestling Entertainment",
+      "date": "1989-01-15T00:00:00.000Z"
     },
     {
       "week": 2,
       "name": "Royal Rumble (1989)",
       "promotion": "World Wrestling Entertainment",
-      "date": "1989-01-15"
+      "date": "1989-01-15T00:00:00.000Z"
     },
     {
       "week": 3,
       "name": "Royal Rumble (1988)",
       "promotion": "World Wrestling Entertainment",
-      "date": "1988-01-24"
+      "date": "1988-01-24T00:00:00.000Z"
     },
     {
       "week": 4,
       "name": "Royal Rumble 2024",
       "promotion": "World Wrestling Entertainment",
-      "date": "2024-01-27"
+      "date": "2024-01-27T00:00:00.000Z"
     },
     {
       "week": 5,
       "name": "The Main Event",
       "promotion": "World Wrestling Entertainment",
-      "date": "1988-02-05"
+      "date": "1988-02-05T00:00:00.000Z"
     }
   ]
 }

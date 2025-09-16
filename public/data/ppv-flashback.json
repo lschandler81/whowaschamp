@@ -130,18 +130,23 @@
   },
   "5": {
     "event": {
-      "id": "cmflifn3v00pkseprskaohjxt",
-      "name": "UFC 183: Silva vs. Diaz",
-      "date": "2015-01-31",
-      "promotion": "Ultimate Fighting Championship",
-      "venue": "MGM Grand Garden Arena",
-      "city": "Las Vegas, Nevada, U.S.",
+      "id": "cmflifnbi018pseprdi6u077m",
+      "name": "The Main Event",
+      "date": "1988-02-05",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Market Square Arena",
+      "city": "Indianapolis",
       "country": "USA",
       "headliners": [],
       "titleChanges": [],
-      "yearsAgo": 10
+      "yearsAgo": 37
     },
     "alternativeEvents": [
+      {
+        "name": "UFC 183: Silva vs. Diaz",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2015-01-31"
+      },
       {
         "name": "UFC 169: Barão vs. Faber 2",
         "promotion": "Ultimate Fighting Championship",
@@ -151,11 +156,6 @@
         "name": "UFC 156: Aldo vs. Edgar",
         "promotion": "Ultimate Fighting Championship",
         "date": "2013-02-02"
-      },
-      {
-        "name": "UFC 143: Diaz vs. Condit",
-        "promotion": "Ultimate Fighting Championship",
-        "date": "2012-02-04"
       }
     ],
     "totalEvents": 13
@@ -200,22 +200,22 @@
   },
   "7": {
     "event": {
-      "id": "cmflifmvq004isepr8zmjqhq2",
-      "name": "UFC 298: Volkanovski vs. Topuria",
-      "date": "2024-02-17",
-      "promotion": "Ultimate Fighting Championship",
-      "venue": "Honda Center",
-      "city": "Anaheim, California, U.S.",
+      "id": "cmflifnbt019hsepr5j4j1811",
+      "name": "Elimination Chamber (2010)",
+      "date": "2010-02-21",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Scottrade Center",
+      "city": "St. Louis",
       "country": "USA",
       "headliners": [],
       "titleChanges": [],
-      "yearsAgo": 1
+      "yearsAgo": 15
     },
     "alternativeEvents": [
       {
-        "name": "Elimination Chamber (2010)",
-        "promotion": "World Wrestling Entertainment",
-        "date": "2010-02-21"
+        "name": "UFC 298: Volkanovski vs. Topuria",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-02-17"
       },
       {
         "name": "UFC 110: Nogueira vs. Velasquez",
@@ -943,29 +943,24 @@
   },
   "28": {
     "event": {
-      "id": "cmfl7hx3z0008se2n4qpri140",
-      "name": "UFC 100",
-      "date": "2009-07-11",
-      "promotion": "Ultimate Fighting Championship",
-      "venue": "Mandalay Bay Events Center",
-      "city": "Las Vegas",
+      "id": "cmflifnbq019bseprlz08qfri",
+      "name": "Money in the Bank (2010)",
+      "date": "2010-07-18",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Sprint Center",
+      "city": "Kansas City",
       "country": "USA",
-      "attendance": 10871,
-      "buyrate": 1600,
-      "headliners": [
-        "Dan Henderson",
-        "Michael Bisping",
-        "Brock Lesnar",
-        "Frank Mir"
-      ],
+      "headliners": [],
       "titleChanges": [],
-      "yearsAgo": 16
+      "yearsAgo": 15
     },
     "alternativeEvents": [
       {
-        "name": "Money in the Bank (2010)",
-        "promotion": "World Wrestling Entertainment",
-        "date": "2010-07-18"
+        "name": "UFC 100",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2009-07-11",
+        "attendance": 10871,
+        "buyrate": 1600
       },
       {
         "name": "UFC 251: Usman vs. Masvidal",
@@ -1366,25 +1361,25 @@
   },
   "40": {
     "event": {
-      "id": "cmfl8s6v20017seztdhyj3rj5",
-      "name": "UFC 243",
-      "date": "2019-10-05",
-      "promotion": "Ultimate Fighting Championship",
-      "venue": "Marvel Stadium",
-      "city": "Melbourne",
-      "country": "Australia",
-      "attendance": 57127,
-      "buyrate": 600,
-      "headliners": [
-        "Israel Adesanya",
-        "Robert Whittaker"
-      ],
-      "titleChanges": [
-        "UFC Middleweight Championship: Israel Adesanya defeats Robert Whittaker"
-      ],
-      "yearsAgo": 5
+      "id": "cmflifnbr019dseprtol0ppq6",
+      "name": "Hell in a Cell (2009)",
+      "date": "2009-10-04",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Prudential Center",
+      "city": "Newark",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 15
     },
     "alternativeEvents": [
+      {
+        "name": "UFC 243",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2019-10-05",
+        "attendance": 57127,
+        "buyrate": 600
+      },
       {
         "name": "UFC 229",
         "promotion": "Ultimate Fighting Championship",
@@ -1398,11 +1393,6 @@
         "date": "2016-10-08",
         "attendance": 19500,
         "buyrate": 380
-      },
-      {
-        "name": "UFC 320: Ankalaev vs. Pereira 2",
-        "promotion": "Ultimate Fighting Championship",
-        "date": "2025-10-03"
       }
     ],
     "totalEvents": 15
@@ -1704,18 +1694,23 @@
   },
   "50": {
     "event": {
-      "id": "cmflifmvv004sseprb4ao8009",
-      "name": "UFC 296: Edwards vs. Covington",
-      "date": "2023-12-16",
-      "promotion": "Ultimate Fighting Championship",
-      "venue": "T-Mobile Arena",
-      "city": "19,039",
+      "id": "cmflifnbs019fsepr8trbmy2b",
+      "name": "TLC: Tables, Ladders & Chairs (2009)",
+      "date": "2009-12-13",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "AT&T Center",
+      "city": "San Antonio",
       "country": "USA",
       "headliners": [],
       "titleChanges": [],
-      "yearsAgo": 1
+      "yearsAgo": 15
     },
     "alternativeEvents": [
+      {
+        "name": "UFC 296: Edwards vs. Covington",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-12-16"
+      },
       {
         "name": "UFC 256: Figueiredo vs. Moreno",
         "promotion": "Ultimate Fighting Championship",
@@ -1725,11 +1720,6 @@
         "name": "UFC 245: Usman vs. Covington",
         "promotion": "Ultimate Fighting Championship",
         "date": "2019-12-14"
-      },
-      {
-        "name": "UFC 194: Aldo vs. McGregor",
-        "promotion": "Ultimate Fighting Championship",
-        "date": "2015-12-12"
       }
     ],
     "totalEvents": 21
