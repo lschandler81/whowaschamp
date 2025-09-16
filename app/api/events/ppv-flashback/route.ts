@@ -2,95 +2,104 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { PPVFlashbackEvent } from '@/lib/types/ppv';
 import { getISOWeekNumber, getCurrentISOWeek, getISOWeekMatcher } from '@/lib/iso-week';
+import fs from 'fs';
+import path from 'path';
 
 // Ensure this route runs on the Node.js runtime (Prisma is not supported on Edge)
 export const runtime = 'nodejs';
 
-type EventWithRelations = {
-  id: string;
-  name: string;
-  date: Date;
-  venue: string | null;
-  city: string | null;
-  country: string | null;
-  buyrate: number | null;
-  attendance: number | null;
-  isPpv: boolean;
-  promotion: { name: string };
-  headliners: Array<{ name: string; side: string }>;
-  titleChanges: Array<{
-    titleName: string;
-    newChampion: string | null;
-    oldChampion: string | null;
-    changedHands: boolean;
-  }>;
-};
-
-type ScoredEvent = EventWithRelations & { score: number };
-
 /**
- * GET /api/events/ppv-flashback
- * Returns the biggest PPV event that happened during the current ISO week in history
- * "Biggest" is determined by attendance > buyrate > recency as tiebreaker
+ * Try to load static PPV data as fallback when database is unavailable
  */
-export async function GET(request: NextRequest) {
+async function getStaticPPVData(isoWeek: number) {
   try {
-    console.log('PPV Flashback API: Starting request...');
+    const staticDataPath = path.join(process.cwd(), 'public', 'data', 'ppv-flashback.json');
     
-    // Test database connection first
-    try {
-      await prisma.$connect();
-      console.log('PPV Flashback API: Database connection successful');
-    } catch (dbError) {
-      console.error('PPV Flashback API: Database connection failed:', dbError);
-      return NextResponse.json(
-        { 
-          error: 'Database connection failed',
-          details: dbError instanceof Error ? dbError.message : 'Unknown database error'
-        },
-        { status: 500 }
-      );
+    if (!fs.existsSync(staticDataPath)) {
+      console.log('PPV Flashback API: No static data file found');
+      return null;
     }
 
-    // Get the current ISO week number (1-53)
-    const currentISOWeek = getCurrentISOWeek();
-    console.log('PPV Flashback API: Current ISO week:', currentISOWeek);
+    const staticData = JSON.parse(fs.readFileSync(staticDataPath, 'utf8'));
+    const weekData = staticData[isoWeek.toString()];
     
-    // Get all PPV events
-    console.log('PPV Flashback API: Querying database...');
-    const allPPVEvents = await prisma.event.findMany({
-      where: {
-        isPpv: true
+    if (!weekData || !weekData.event) {
+      console.log('PPV Flashback API: No static data for ISO week', isoWeek);
+      return null;
+    }
+
+    return {
+      event: weekData.event,
+      currentWeek: isoWeek,
+      context: {
+        yearsAgo: weekData.event.yearsAgo,
+        totalMatchingEvents: weekData.totalEvents,
+        alternativeEvents: weekData.alternativeEvents
       },
-      include: {
-        promotion: true,
-        headliners: {
-          orderBy: { side: 'asc' }
+      source: 'static',
+      debugInfo: {
+        totalPPVs: Object.values(staticData).reduce((sum: number, week: any) => 
+          sum + (week.event ? 1 : 0), 0),
+        weekMatchingPPVs: weekData.totalEvents
+      }
+    };
+  } catch (error) {
+    console.error('PPV Flashback API: Error loading static data:', error);
+    return null;
+  }
+}
+
+/**
+ * Returns the biggest PPV event that happened during the current ISO week in wrestling history.
+ * Uses hybrid approach: tries database first, falls back to static data if database fails.
+ */
+export async function GET(request: NextRequest) {
+  const currentISOWeek = getCurrentISOWeek();
+  
+  try {
+    console.log('PPV Flashback API: Starting request (hybrid mode)...');
+    
+    // Try database first
+    try {
+      await prisma.$connect();
+      console.log('PPV Flashback API: Database connection successful, using live data');
+      
+      const allPPVEvents = await prisma.event.findMany({
+        where: { isPpv: true },
+        include: {
+          promotion: true,
+          headliners: { orderBy: { side: 'asc' } },
+          titleChanges: { where: { changedHands: true } }
         },
-        titleChanges: {
-          where: { changedHands: true }
-        }
-      },
-      orderBy: { date: 'desc' }
-    });
+        orderBy: { date: 'desc' }
+      });
 
-    console.log('PPV Flashback API: Found', allPPVEvents.length, 'PPV events total');
+      console.log(`PPV Flashback API: Found ${allPPVEvents.length} PPV events total`);
+      console.log(`PPV Flashback API: Current ISO week: ${currentISOWeek}`);
 
-    // Filter events to only those that happened in the same ISO week
-    const isoWeekMatcher = getISOWeekMatcher();
-    const weekMatchingEvents = allPPVEvents.filter(event => 
-      isoWeekMatcher(new Date(event.date))
-    );
+      const isoWeekMatcher = getISOWeekMatcher();
+      const weekMatchingEvents = allPPVEvents.filter(event => 
+        isoWeekMatcher(new Date(event.date))
+      );
 
-    console.log('PPV Flashback API: Found', weekMatchingEvents.length, 'events matching current week');
+      console.log(`PPV Flashback API: Found ${weekMatchingEvents.length} events matching current week`);
 
       if (weekMatchingEvents.length === 0) {
-        console.log('PPV Flashback API: No matching events for ISO week', currentISOWeek);
-        // Fallback: show the 3 most recent PPV events
+        // Try static fallback
+        const staticResult = await getStaticPPVData(currentISOWeek);
+        if (staticResult) {
+          return NextResponse.json({
+            ...staticResult,
+            message: 'Using static data fallback - no live events for this week',
+            source: 'static-fallback'
+          });
+        }
+
+        // Ultimate fallback: recent events
         const fallbackEvents = allPPVEvents.slice(0, 3);
         return NextResponse.json({
           event: null,
-          message: `No major PPV events happened during ISO week ${currentISOWeek}. Showing most recent PPVs as fallback.`,
+          message: `No major PPV events happened during this week in wrestling history`,
           currentWeek: currentISOWeek,
           totalPPVs: allPPVEvents.length,
           fallbackEvents: fallbackEvents.map(e => ({
@@ -101,119 +110,95 @@ export async function GET(request: NextRequest) {
             attendance: e.attendance,
             buyrate: e.buyrate
           })),
-          debug: {
-            isoWeek: currentISOWeek,
-            today: new Date().toISOString(),
-            allPPVDates: allPPVEvents.map(e => e.date)
-          }
+          source: 'database-fallback'
         });
       }
 
-    // Sort by "biggest" criteria: attendance > buyrate > recency
-    const sortedEvents = weekMatchingEvents.sort((a: EventWithRelations, b: EventWithRelations) => {
-      // Primary: attendance (higher is better)
-      const attendanceA = a.attendance || 0;
-      const attendanceB = b.attendance || 0;
-      if (attendanceA !== attendanceB) {
-        return attendanceB - attendanceA;
-      }
+      // Sort by biggest: attendance > buyrate > recency
+      const sortedEvents = weekMatchingEvents.sort((a, b) => {
+        const attendanceA = a.attendance || 0;
+        const attendanceB = b.attendance || 0;
+        if (attendanceA !== attendanceB) return attendanceB - attendanceA;
 
-      // Secondary: buyrate (higher is better)
-      const buyrateA = a.buyrate || 0;
-      const buyrateB = b.buyrate || 0;
-      if (buyrateA !== buyrateB) {
-        return buyrateB - buyrateA;
-      }
+        const buyrateA = a.buyrate || 0;
+        const buyrateB = b.buyrate || 0;
+        if (buyrateA !== buyrateB) return buyrateB - buyrateA;
 
-      // Tertiary: recency (more recent is better)
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    });
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      });
 
-    const selectedEvent = sortedEvents[0];
-    
-    // Calculate years ago for context
-    const eventDate = new Date(selectedEvent.date);
-    const now = new Date();
-    const yearsAgo = Math.floor((now.getTime() - eventDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000));
+      const selectedEvent = sortedEvents[0];
+      const eventDate = new Date(selectedEvent.date);
+      const now = new Date();
+      const yearsAgo = Math.floor((now.getTime() - eventDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000));
 
-    // Format for API response
-    const flashbackEvent: PPVFlashbackEvent = {
-      id: selectedEvent.id,
-      promotion: selectedEvent.promotion.name,
-      name: selectedEvent.name,
-      date: selectedEvent.date,
-      venue: selectedEvent.venue || undefined,
-      city: selectedEvent.city || undefined,
-      country: selectedEvent.country || undefined,
-      buyrate: selectedEvent.buyrate || undefined,
-      attendance: selectedEvent.attendance || undefined,
-      headliners: selectedEvent.headliners.map((h: { name: string }) => h.name),
-      titleChanges: selectedEvent.titleChanges
-        .filter((tc: any) => tc.newChampion && tc.oldChampion)
-        .map((tc: any) => 
-          `${tc.titleName}: ${tc.newChampion} defeats ${tc.oldChampion}`
-        )
-    };
+      const flashbackEvent: PPVFlashbackEvent = {
+        id: selectedEvent.id,
+        promotion: selectedEvent.promotion.name,
+        name: selectedEvent.name,
+        date: selectedEvent.date,
+        venue: selectedEvent.venue || undefined,
+        city: selectedEvent.city || undefined,
+        country: selectedEvent.country || undefined,
+        buyrate: selectedEvent.buyrate || undefined,
+        attendance: selectedEvent.attendance || undefined,
+        headliners: selectedEvent.headliners.map(h => h.name),
+        titleChanges: selectedEvent.titleChanges
+          .filter(tc => tc.newChampion && tc.oldChampion)
+          .map(tc => `${tc.titleName}: ${tc.newChampion} defeats ${tc.oldChampion}`)
+      };
 
-    return NextResponse.json({
-      event: flashbackEvent,
-      currentWeek: currentISOWeek,
-      context: {
-        yearsAgo,
-        totalMatchingEvents: weekMatchingEvents.length,
-        alternativeEvents: sortedEvents.slice(1, 4).map((e: EventWithRelations) => ({
-          name: e.name,
-          promotion: e.promotion.name,
-          date: e.date.toISOString().split('T')[0],
-          attendance: e.attendance,
-          buyrate: e.buyrate
-        }))
-      },
-      debugInfo: {
-        totalPPVs: allPPVEvents.length,
-        weekMatchingPPVs: weekMatchingEvents.length,
-        selectedReason: {
-          attendance: selectedEvent.attendance,
-          buyrate: selectedEvent.buyrate,
-          date: selectedEvent.date.toISOString().split('T')[0]
+      return NextResponse.json({
+        event: flashbackEvent,
+        currentWeek: currentISOWeek,
+        context: {
+          yearsAgo,
+          totalMatchingEvents: weekMatchingEvents.length,
+          alternativeEvents: sortedEvents.slice(1, 4).map(e => ({
+            name: e.name,
+            promotion: e.promotion.name,
+            date: e.date.toISOString().split('T')[0],
+            attendance: e.attendance,
+            buyrate: e.buyrate
+          }))
+        },
+        source: 'database',
+        debugInfo: {
+          totalPPVs: allPPVEvents.length,
+          weekMatchingPPVs: weekMatchingEvents.length,
+          selectedReason: {
+            attendance: selectedEvent.attendance,
+            buyrate: selectedEvent.buyrate,
+            date: selectedEvent.date.toISOString().split('T')[0]
+          }
         }
+      });
+
+    } catch (dbError) {
+      console.log('PPV Flashback API: Database failed, trying static fallback...');
+      console.error('PPV Flashback API: Database error:', dbError);
+      
+      // Try static data fallback
+      const staticResult = await getStaticPPVData(currentISOWeek);
+      if (staticResult) {
+        return NextResponse.json({
+          ...staticResult,
+          message: 'Database unavailable, using static data',
+          source: 'static-fallback'
+        });
       }
-    });
+
+      throw dbError; // If static also fails, throw original error
+    }
 
   } catch (error) {
-    // Print error type, message, stack, and any custom fields
-    console.error('PPV Flashback API: Caught error:', error);
-    if (error instanceof Error) {
-      console.error('PPV Flashback API: Error name:', error.name);
-      console.error('PPV Flashback API: Error message:', error.message);
-      console.error('PPV Flashback API: Error stack:', error.stack);
-      // Print any custom fields
-      for (const key of Object.keys(error)) {
-        if (!['name', 'message', 'stack'].includes(key)) {
-          console.error(`PPV Flashback API: Error custom field ${key}:`, (error as any)[key]);
-        }
-      }
-    } else {
-      console.error('PPV Flashback API: Non-Error object:', error);
-    }
-    // Print request info
-    console.error('PPV Flashback API: Request info:', {
-      method: request.method,
-      url: request.url,
-      headers: Object.fromEntries(request.headers.entries()),
-      timestamp: new Date().toISOString()
-    });
+    console.error('PPV Flashback API: All methods failed:', error);
     return NextResponse.json(
       {
-        error: 'Failed to fetch PPV flashback',
+        error: 'PPV Flashback service temporarily unavailable',
         details: error instanceof Error ? error.message : 'Unknown error',
-        stack: error instanceof Error ? error.stack : null,
-        request: {
-          method: request.method,
-          url: request.url,
-          headers: Object.fromEntries(request.headers.entries()),
-          timestamp: new Date().toISOString()
-        }
+        currentWeek: currentISOWeek,
+        source: 'error'
       },
       { status: 500 }
     );

@@ -1,0 +1,1838 @@
+{
+  "1": {
+    "event": {
+      "id": "cmflifn3y00pqseprorybdq47",
+      "name": "UFC 182: Jones vs. Cormier",
+      "date": "2015-01-03",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 10
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 18: The Road to the Heavyweight Title",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "1999-01-08"
+      }
+    ],
+    "totalEvents": 2
+  },
+  "2": {
+    "event": {
+      "id": "cmflifmxo009gseprxvfjy14p",
+      "name": "UFC on ESPN: Kattar vs. Chikadze",
+      "date": "2022-01-15",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "UFC Apex",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 3
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ABC: Holloway vs. Kattar",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2021-01-16"
+      },
+      {
+        "name": "UFC 142: Aldo vs. Mendes",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2012-01-14"
+      },
+      {
+        "name": "UFC 35: Throwdown",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2002-01-11"
+      }
+    ],
+    "totalEvents": 5
+  },
+  "3": {
+    "event": {
+      "id": "cmfl8s7p1003nseztuzj9swtp",
+      "name": "Royal Rumble (1988)",
+      "date": "1988-01-24",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Copps Coliseum",
+      "city": "Hamilton",
+      "country": "Canada",
+      "attendance": 18946,
+      "buyrate": 10,
+      "headliners": [
+        "Jim Duggan"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 37
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 311: Makhachev vs. Moicano",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-01-18"
+      },
+      {
+        "name": "UFC 297: Strickland vs. du Plessis",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-01-20"
+      },
+      {
+        "name": "UFC 283: Teixeira vs. Hill",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-01-21"
+      }
+    ],
+    "totalEvents": 26
+  },
+  "4": {
+    "event": {
+      "id": "cmfl8s7p4003rsezt9m1m83gs",
+      "name": "Royal Rumble (2024)",
+      "date": "2024-01-27",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Tropicana Field",
+      "city": "St. Petersburg",
+      "country": "USA",
+      "attendance": 38935,
+      "headliners": [
+        "Bayley",
+        "Cody Rhodes"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 1
+    },
+    "alternativeEvents": [
+      {
+        "name": "Royal Rumble 2024",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2024-01-27",
+        "attendance": 38459,
+        "buyrate": 750
+      },
+      {
+        "name": "UFC 233: Cejudo vs. Dillashaw",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2019-01-26"
+      },
+      {
+        "name": "UFC on Fox: Jacaré vs. Brunson 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2018-01-27"
+      }
+    ],
+    "totalEvents": 10
+  },
+  "5": {
+    "event": {
+      "id": "cmflifn3v00pkseprskaohjxt",
+      "name": "UFC 183: Silva vs. Diaz",
+      "date": "2015-01-31",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 10
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 169: Barão vs. Faber 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2014-02-01"
+      },
+      {
+        "name": "UFC 156: Aldo vs. Edgar",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2013-02-02"
+      },
+      {
+        "name": "UFC 143: Diaz vs. Condit",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2012-02-04"
+      }
+    ],
+    "totalEvents": 13
+  },
+  "6": {
+    "event": {
+      "id": "cmfl8pyww000ise42ot41j4pj",
+      "name": "UFC 12",
+      "date": "1997-02-07",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Niagara Falls Convention Center",
+      "city": "Dothan",
+      "country": "USA",
+      "attendance": 4500,
+      "headliners": [
+        "Maurice Smith",
+        "Mark Coleman"
+      ],
+      "titleChanges": [
+        "UFC Heavyweight Championship: Maurice Smith defeats Mark Coleman"
+      ],
+      "yearsAgo": 28
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 312: du Plessis vs. Strickland 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-02-08"
+      },
+      {
+        "name": "UFC 284: Makhachev vs. Volkanovski",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-02-12"
+      },
+      {
+        "name": "UFC 271: Adesanya vs. Whittaker 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-02-12"
+      }
+    ],
+    "totalEvents": 10
+  },
+  "7": {
+    "event": {
+      "id": "cmflifmvq004isepr8zmjqhq2",
+      "name": "UFC 298: Volkanovski vs. Topuria",
+      "date": "2024-02-17",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Honda Center",
+      "city": "Anaheim, California, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 1
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Ngannou vs. Velasquez",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2019-02-17"
+      },
+      {
+        "name": "UFC on Fuel TV: Barão vs. McDonald",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2013-02-16"
+      },
+      {
+        "name": "UFC on Fuel TV: Sanchez vs. Ellenberger",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2012-02-15"
+      }
+    ],
+    "totalEvents": 7
+  },
+  "8": {
+    "event": {
+      "id": "cmfl8pywz000ose421p60hy27",
+      "name": "UFC 30",
+      "date": "2001-02-23",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Trump Taj Mahal",
+      "city": "Atlantic City",
+      "country": "USA",
+      "attendance": 3500,
+      "headliners": [
+        "Tito Ortiz",
+        "Evan Tanner"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 24
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on Fox: Emmett vs. Stephens",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2018-02-24"
+      },
+      {
+        "name": "UFC 170: Rousey vs. McMann",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2014-02-22"
+      },
+      {
+        "name": "UFC 157: Rousey vs. Carmouche",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2013-02-23"
+      }
+    ],
+    "totalEvents": 8
+  },
+  "9": {
+    "event": {
+      "id": "cmfl8s6uu000sseztcopw1zcj",
+      "name": "UFC 196",
+      "date": "2016-03-05",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 16516,
+      "buyrate": 1317,
+      "headliners": [
+        "Nate Diaz",
+        "Conor McGregor"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 9
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 285: Jones vs. Gane",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-03-04"
+      },
+      {
+        "name": "UFC 272: Covington vs. Masvidal",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-03-05"
+      },
+      {
+        "name": "UFC 259: Błachowicz vs. Adesanya",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2021-03-06"
+      }
+    ],
+    "totalEvents": 18
+  },
+  "10": {
+    "event": {
+      "id": "cmfl8pywr0007se42zoabbptz",
+      "name": "UFC 2",
+      "date": "1994-03-11",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Mammoth Gardens",
+      "city": "Denver",
+      "country": "USA",
+      "attendance": 2800,
+      "headliners": [
+        "Royce Gracie",
+        "Patrick Smith"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 31
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 313: Pereira vs. Ankalaev",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-03-08"
+      },
+      {
+        "name": "UFC 299: O'Malley vs. Vera 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-03-09"
+      },
+      {
+        "name": "UFC 248: Adesanya vs. Romero",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2020-03-07"
+      }
+    ],
+    "totalEvents": 7
+  },
+  "11": {
+    "event": {
+      "id": "cmfl8pzqe002ese42i89q02q9",
+      "name": "WrestleMania X8",
+      "date": "2002-03-17",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "SkyDome",
+      "city": "Toronto",
+      "country": "Canada",
+      "attendance": 68237,
+      "buyrate": 880,
+      "headliners": [
+        "The Rock",
+        "Hulk Hogan",
+        "Triple H",
+        "Chris Jericho"
+      ],
+      "titleChanges": [
+        "Undisputed WWF Championship: Triple H defeats Chris Jericho"
+      ],
+      "yearsAgo": 23
+    },
+    "alternativeEvents": [
+      {
+        "name": "WrestleMania X",
+        "promotion": "World Wrestling Entertainment",
+        "date": "1994-03-20",
+        "attendance": 18065,
+        "buyrate": 420
+      },
+      {
+        "name": "UFC 286: Edwards vs. Usman 3",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-03-18"
+      },
+      {
+        "name": "UFC on ESPN: Brunson vs. Holland",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2021-03-20"
+      }
+    ],
+    "totalEvents": 11
+  },
+  "12": {
+    "event": {
+      "id": "cmfl8pzq4001wse42m4lt4gpn",
+      "name": "WrestleMania 13",
+      "date": "1997-03-23",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Rosemont Horizon",
+      "city": "Rosemont",
+      "country": "USA",
+      "attendance": 18197,
+      "buyrate": 237,
+      "headliners": [
+        "The Undertaker",
+        "Sycho Sid"
+      ],
+      "titleChanges": [
+        "WWF Championship: The Undertaker defeats Sycho Sid"
+      ],
+      "yearsAgo": 28
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Ribas vs. Namajunas",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-03-23"
+      },
+      {
+        "name": "UFC on ESPN: Vera vs. Sandhagen",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-03-25"
+      },
+      {
+        "name": "UFC on ESPN: Blaydes vs. Daukaus",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-03-26"
+      }
+    ],
+    "totalEvents": 11
+  },
+  "13": {
+    "event": {
+      "id": "cmfl8s7on002xsezty1tizxo3",
+      "name": "WrestleMania 32",
+      "date": "2016-04-03",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "country": "USA",
+      "attendance": 101763,
+      "headliners": [
+        "Roman Reigns",
+        "Triple H"
+      ],
+      "titleChanges": [
+        "WWE World Heavyweight Championship: Roman Reigns defeats Triple H"
+      ],
+      "yearsAgo": 9
+    },
+    "alternativeEvents": [
+      {
+        "name": "WrestleMania III",
+        "promotion": "World Wrestling Entertainment",
+        "date": "1987-03-29",
+        "attendance": 93173,
+        "buyrate": 1600
+      },
+      {
+        "name": "WrestleMania XXVIII",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2012-04-01",
+        "attendance": 78363,
+        "buyrate": 1217
+      },
+      {
+        "name": "WrestleMania 31",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2015-03-29",
+        "attendance": 76976
+      }
+    ],
+    "totalEvents": 27
+  },
+  "14": {
+    "event": {
+      "id": "cmfl8s7oq0033sezt1o27mopz",
+      "name": "WrestleMania 35",
+      "date": "2019-04-07",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "country": "USA",
+      "attendance": 82265,
+      "headliners": [
+        "Becky Lynch",
+        "Charlotte Flair",
+        "Ronda Rousey"
+      ],
+      "titleChanges": [
+        "Raw Women's Championship: Becky Lynch defeats Ronda Rousey",
+        "SmackDown Women's Championship: Becky Lynch defeats Charlotte Flair"
+      ],
+      "yearsAgo": 6
+    },
+    "alternativeEvents": [
+      {
+        "name": "WrestleMania Test",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2024-04-07",
+        "attendance": 78453,
+        "buyrate": 1200
+      },
+      {
+        "name": "WrestleMania Test",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2024-04-07",
+        "attendance": 78453,
+        "buyrate": 1200
+      },
+      {
+        "name": "WrestleMania 30",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2014-04-06",
+        "attendance": 75167,
+        "buyrate": 667
+      }
+    ],
+    "totalEvents": 26
+  },
+  "15": {
+    "event": {
+      "id": "cmfl7hx48000nse2nwo55vwqu",
+      "name": "UFC 300",
+      "date": "2024-04-13",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 17846,
+      "buyrate": 1300,
+      "headliners": [
+        "Zhang Weili",
+        "Yan Xiaonan",
+        "Alex Pereira",
+        "Jamahal Hill"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 1
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 52",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2005-04-16",
+        "attendance": 14562,
+        "buyrate": 280
+      },
+      {
+        "name": "UFC 314: Volkanovski vs. Lopes",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-04-11"
+      },
+      {
+        "name": "UFC 300: Pereira vs. Hill",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-04-12"
+      }
+    ],
+    "totalEvents": 17
+  },
+  "16": {
+    "event": {
+      "id": "cmflifmya00b4sepren5wqe5x",
+      "name": "UFC 261: Usman vs. Masvidal 2",
+      "date": "2021-04-23",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "VyStar Veterans Memorial Arena",
+      "city": "Jacksonville, Florida, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 4
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 197: Jones vs. Saint Preux",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2016-04-22"
+      },
+      {
+        "name": "UFC on Fox: Machida vs. Rockhold",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2015-04-17"
+      },
+      {
+        "name": "UFC on Fox: Werdum vs. Browne",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2014-04-18"
+      }
+    ],
+    "totalEvents": 10
+  },
+  "17": {
+    "event": {
+      "id": "cmfl8s6ur000nseztqf4w3s3o",
+      "name": "UFC 129",
+      "date": "2011-04-30",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Rogers Centre",
+      "city": "Toronto",
+      "country": "Canada",
+      "attendance": 55724,
+      "buyrate": 800,
+      "headliners": [
+        "Georges St-Pierre",
+        "Jake Shields"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 14
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Machado Garry vs. Prates",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-04-25"
+      },
+      {
+        "name": "UFC on ESPN: Nicolau vs. Perez",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-04-26"
+      },
+      {
+        "name": "UFC on ESPN: Song vs. Simón",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-04-28"
+      }
+    ],
+    "totalEvents": 11
+  },
+  "18": {
+    "event": {
+      "id": "cmflifmul001mseprkegj4jxz",
+      "name": "UFC on ESPN: Sandhagen vs. Figueiredo",
+      "date": "2025-05-02",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Wells Fargo Arena",
+      "city": "Des Moines, Iowa, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 301: Pantoja vs. Erceg",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-05-03"
+      },
+      {
+        "name": "UFC 288: Sterling vs. Cejudo",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-05-05"
+      },
+      {
+        "name": "UFC 274: Oliveira vs. Gaethje",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-05-06"
+      }
+    ],
+    "totalEvents": 9
+  },
+  "19": {
+    "event": {
+      "id": "cmflifmul001kseprpbxjp0xu",
+      "name": "UFC 315: Muhammad vs. Della Maddalena",
+      "date": "2025-05-09",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Bell Centre",
+      "city": "Montreal, Quebec, Canada",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Lewis vs. Nascimento",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-05-10"
+      },
+      {
+        "name": "UFC on ABC: Rozenstruik vs. Almeida",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-05-12"
+      },
+      {
+        "name": "UFC on ESPN: Błachowicz vs. Rakić",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-05-13"
+      }
+    ],
+    "totalEvents": 11
+  },
+  "20": {
+    "event": {
+      "id": "cmflifmz800dkseprdwrvq849",
+      "name": "UFC on ESPN: Overeem vs. Harris",
+      "date": "2020-05-15",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "VyStar Veterans Memorial Arena",
+      "city": "Jacksonville, Florida, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 5
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on FX: Belfort vs. Rockhold",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2013-05-17"
+      },
+      {
+        "name": "UFC on Fuel TV: The Korean Zombie vs. Poirier",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2012-05-14"
+      },
+      {
+        "name": "UFC 17: Redemption",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "1998-05-14"
+      }
+    ],
+    "totalEvents": 5
+  },
+  "21": {
+    "event": {
+      "id": "cmflifn3m00owseprmgy9dgn6",
+      "name": "UFC 187: Johnson vs. Cormier",
+      "date": "2015-05-22",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 10
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 173: Barão vs. Dillashaw",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2014-05-23"
+      },
+      {
+        "name": "UFC 160: Velasquez vs. Bigfoot 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2013-05-24"
+      },
+      {
+        "name": "UFC 146: dos Santos vs. Mir",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2012-05-25"
+      }
+    ],
+    "totalEvents": 10
+  },
+  "22": {
+    "event": {
+      "id": "cmflifmtw0002seproxbvon6x",
+      "name": "UFC White House",
+      "date": "2026-05-31",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "White House",
+      "city": "Washington, D.C., U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": -1
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Gamrot vs. Klein",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-05-30"
+      },
+      {
+        "name": "UFC 302: Makhachev vs. Poirier",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-05-31"
+      },
+      {
+        "name": "UFC on ESPN: Kara-France vs. Albazi",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-06-02"
+      }
+    ],
+    "totalEvents": 12
+  },
+  "23": {
+    "event": {
+      "id": "cmflifmuj001eseprmi35ehx3",
+      "name": "UFC 316: Dvalishvili vs. O'Malley 2",
+      "date": "2025-06-06",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Prudential Center",
+      "city": "Newark, New Jersey, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Cannonier vs. Imavov",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-06-07"
+      },
+      {
+        "name": "UFC 289: Nunes vs. Aldana",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-06-09"
+      },
+      {
+        "name": "UFC 275: Teixeira vs. Procházka",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-06-11"
+      }
+    ],
+    "totalEvents": 15
+  },
+  "24": {
+    "event": {
+      "id": "cmflifmui001csepr7obkszop",
+      "name": "UFC on ESPN: Usman vs. Buckley",
+      "date": "2025-06-13",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "State Farm Arena",
+      "city": "Atlanta, Georgia, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Perez vs. Taira",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-06-14"
+      },
+      {
+        "name": "UFC on ESPN: Vettori vs. Cannonier",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-06-16"
+      },
+      {
+        "name": "UFC on ESPN: Kattar vs. Emmett",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-06-17"
+      }
+    ],
+    "totalEvents": 12
+  },
+  "25": {
+    "event": {
+      "id": "cmfl8pzq1001rse42xbt2igsg",
+      "name": "King of the Ring (1996)",
+      "date": "1996-06-23",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "MECCA Arena",
+      "city": "Milwaukee",
+      "country": "USA",
+      "attendance": 9500,
+      "buyrate": 205,
+      "headliners": [
+        "Shawn Michaels",
+        "British Bulldog"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 29
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ABC: Hill vs. Rountree Jr.",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-06-20"
+      },
+      {
+        "name": "UFC on ABC: Whittaker vs. Aliskerov",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-06-21"
+      },
+      {
+        "name": "UFC on ABC: Emmett vs. Topuria",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-06-23"
+      }
+    ],
+    "totalEvents": 15
+  },
+  "26": {
+    "event": {
+      "id": "cmflifmug0018seprpcpcaxvf",
+      "name": "UFC 317: Topuria vs. Oliveira",
+      "date": "2025-06-27",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 303: Pereira vs. Procházka 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-06-28"
+      },
+      {
+        "name": "UFC on ESPN: Strickland vs. Magomedov",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-06-30"
+      },
+      {
+        "name": "UFC 276: Adesanya vs. Cannonier",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-07-01"
+      }
+    ],
+    "totalEvents": 10
+  },
+  "27": {
+    "event": {
+      "id": "cmfl7hx45000fse2nx9pq40p4",
+      "name": "UFC 200",
+      "date": "2016-07-09",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 18202,
+      "buyrate": 1009,
+      "headliners": [
+        "Brock Lesnar",
+        "Mark Hunt",
+        "Amanda Nunes",
+        "Miesha Tate"
+      ],
+      "titleChanges": [
+        "UFC Women's Bantamweight Championship: Amanda Nunes defeats Miesha Tate"
+      ],
+      "yearsAgo": 9
+    },
+    "alternativeEvents": [
+      {
+        "name": "Money in the Bank (2024)",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2024-07-06",
+        "attendance": 16100
+      },
+      {
+        "name": "UFC 290: Volkanovski vs. Rodríguez",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-07-07"
+      },
+      {
+        "name": "UFC on ESPN: dos Anjos vs. Fiziev",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-07-08"
+      }
+    ],
+    "totalEvents": 19
+  },
+  "28": {
+    "event": {
+      "id": "cmfl7hx3z0008se2n4qpri140",
+      "name": "UFC 100",
+      "date": "2009-07-11",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Mandalay Bay Events Center",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 10871,
+      "buyrate": 1600,
+      "headliners": [
+        "Dan Henderson",
+        "Michael Bisping",
+        "Brock Lesnar",
+        "Frank Mir"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 16
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Lewis vs. Teixeira",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-07-11"
+      },
+      {
+        "name": "UFC on ESPN: Namajunas vs. Cortez",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-07-12"
+      },
+      {
+        "name": "UFC on ESPN: Holm vs. Bueno Silva",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-07-14"
+      }
+    ],
+    "totalEvents": 16
+  },
+  "29": {
+    "event": {
+      "id": "cmflifmuf0014seprphkk50iu",
+      "name": "UFC 318: Holloway vs. Poirier 3",
+      "date": "2025-07-18",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Smoothie King Center",
+      "city": "New Orleans, Louisiana, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Lemos vs. Jandiroba",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-07-19"
+      },
+      {
+        "name": "UFC on ESPN: Sandhagen vs. Dillashaw",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2021-07-23"
+      },
+      {
+        "name": "UFC on ESPN: Kattar vs. Ige",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2020-07-15"
+      }
+    ],
+    "totalEvents": 8
+  },
+  "30": {
+    "event": {
+      "id": "cmflifmue0012seproa1ex156",
+      "name": "UFC on ABC: Whittaker vs. de Ridder",
+      "date": "2025-07-25",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Etihad Arena",
+      "city": "Abu Dhabi, United Arab Emirates",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 304: Edwards vs. Muhammad 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-07-26"
+      },
+      {
+        "name": "UFC 291: Poirier vs. Gaethje 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-07-28"
+      },
+      {
+        "name": "UFC 277: Peña vs. Nunes 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-07-29"
+      }
+    ],
+    "totalEvents": 15
+  },
+  "31": {
+    "event": {
+      "id": "cmfl7i3720013se62mdlyeocz",
+      "name": "SummerSlam 2023",
+      "date": "2023-08-05",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Ford Field",
+      "city": "Detroit",
+      "country": "USA",
+      "attendance": 59194,
+      "buyrate": 850,
+      "headliners": [
+        "Cody Rhodes",
+        "Brock Lesnar",
+        "Roman Reigns",
+        "Jey Uso"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 2
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Taira vs. Park",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-08-01"
+      },
+      {
+        "name": "SummerSlam (2024)",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2024-08-03"
+      },
+      {
+        "name": "UFC on ABC: Sandhagen vs. Nurmagomedov",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-08-02"
+      }
+    ],
+    "totalEvents": 17
+  },
+  "32": {
+    "event": {
+      "id": "cmflifmuc000yseprnl9x89v9",
+      "name": "UFC on ESPN: Dolidze vs. Hernandez",
+      "date": "2025-08-08",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "UFC Apex",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Tybura vs. Spivac 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-08-09"
+      },
+      {
+        "name": "UFC on ESPN: Luque vs. dos Anjos",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-08-11"
+      },
+      {
+        "name": "UFC on ESPN: Vera vs. Cruz",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-08-12"
+      }
+    ],
+    "totalEvents": 8
+  },
+  "33": {
+    "event": {
+      "id": "cmfl8s7p90041sezte5m42eb4",
+      "name": "SummerSlam (2013)",
+      "date": "2013-08-18",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Staples Center",
+      "city": "Los Angeles",
+      "country": "USA",
+      "attendance": 17739,
+      "buyrate": 296,
+      "headliners": [
+        "John Cena",
+        "Daniel Bryan"
+      ],
+      "titleChanges": [
+        "WWE Championship: Daniel Bryan defeats John Cena"
+      ],
+      "yearsAgo": 12
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 319: du Plessis vs. Chimaev",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-08-15"
+      },
+      {
+        "name": "UFC 305: du Plessis vs. Adesanya",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-08-17"
+      },
+      {
+        "name": "UFC 292: Sterling vs. O'Malley",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-08-18"
+      }
+    ],
+    "totalEvents": 10
+  },
+  "34": {
+    "event": {
+      "id": "cmflifmv80036seprw00fwiqn",
+      "name": "UFC on ESPN: Cannonier vs. Borralho",
+      "date": "2024-08-23",
+      "promotion": "Ultimate Fighting Championship",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 1
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Barboza vs. Chikadze",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2021-08-27"
+      },
+      {
+        "name": "UFC on ESPN: Munhoz vs. Edgar",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2020-08-21"
+      },
+      {
+        "name": "UFC on Fox: Maia vs. Condit",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2016-08-26"
+      }
+    ],
+    "totalEvents": 9
+  },
+  "35": {
+    "event": {
+      "id": "cmfl8s7p7003wsezt12cb63vk",
+      "name": "SummerSlam (1992)",
+      "date": "1992-08-29",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Wembley Stadium",
+      "city": "London",
+      "country": "United Kingdom",
+      "attendance": 80355,
+      "buyrate": 300,
+      "headliners": [
+        "Bret Hart",
+        "British Bulldog"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 33
+    },
+    "alternativeEvents": [
+      {
+        "name": "SummerSlam (1988)",
+        "promotion": "World Wrestling Entertainment",
+        "date": "1988-08-29",
+        "attendance": 20000,
+        "buyrate": 550
+      },
+      {
+        "name": "UFC 177: Dillashaw vs. Soto",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2014-08-29"
+      },
+      {
+        "name": "UFC 164: Henderson vs. Pettis 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2013-08-30"
+      }
+    ],
+    "totalEvents": 9
+  },
+  "36": {
+    "event": {
+      "id": "cmflifmw3005esepr22ql5o65",
+      "name": "UFC 293: Adesanya vs. Strickland",
+      "date": "2023-09-09",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Qudos Bank Arena",
+      "city": "Sydney, Australia",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 2
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 279: Diaz vs. Ferguson",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-09-09"
+      },
+      {
+        "name": "UFC 242: Khabib vs. Poirier",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2019-09-06"
+      },
+      {
+        "name": "UFC 228: Woodley vs. Till",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2018-09-07"
+      }
+    ],
+    "totalEvents": 11
+  },
+  "37": {
+    "event": {
+      "id": "cmfli44gv0008sek454fa1hso",
+      "name": "UFC Test Event",
+      "date": "2024-09-15",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 20000,
+      "headliners": [
+        "Jon Jones",
+        "Stipe Miocic"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 1
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC Test Event",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-09-15",
+        "attendance": 20000
+      },
+      {
+        "name": "WWE Test Event",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2023-09-15",
+        "attendance": 15000,
+        "buyrate": 800
+      },
+      {
+        "name": "WWE Test Event",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2023-09-15",
+        "attendance": 15000,
+        "buyrate": 800
+      }
+    ],
+    "totalEvents": 5
+  },
+  "38": {
+    "event": {
+      "id": "cmflifmxx00a4seprfube4wef",
+      "name": "UFC 266: Volkanovski vs. Ortega",
+      "date": "2021-09-24",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 19029,
+      "headliners": [
+        "Alexander Volkanovski",
+        "Brian Ortega"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 3
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 165: Jones vs. Gustafsson",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2013-09-20"
+      },
+      {
+        "name": "UFC 152: Jones vs. Belfort",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2012-09-21"
+      },
+      {
+        "name": "UFC 135: Jones vs. Rampage",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2011-09-23"
+      }
+    ],
+    "totalEvents": 11
+  },
+  "39": {
+    "event": {
+      "id": "cmflifmyu00cksepr7gti3yjj",
+      "name": "UFC 253: Adesanya vs. Costa",
+      "date": "2020-09-26",
+      "promotion": "Ultimate Fighting Championship",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 4
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 178: Johnson vs. Cariaso",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2014-09-26"
+      },
+      {
+        "name": "UFC on Fuel TV: Struve vs. Miocic",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2012-09-28"
+      },
+      {
+        "name": "UFC Live: Cruz vs. Johnson",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2011-09-30"
+      }
+    ],
+    "totalEvents": 8
+  },
+  "40": {
+    "event": {
+      "id": "cmfl8s6v20017seztdhyj3rj5",
+      "name": "UFC 243",
+      "date": "2019-10-05",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Marvel Stadium",
+      "city": "Melbourne",
+      "country": "Australia",
+      "attendance": 57127,
+      "buyrate": 600,
+      "headliners": [
+        "Israel Adesanya",
+        "Robert Whittaker"
+      ],
+      "titleChanges": [
+        "UFC Middleweight Championship: Israel Adesanya defeats Robert Whittaker"
+      ],
+      "yearsAgo": 5
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 229",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2018-10-06",
+        "attendance": 20034,
+        "buyrate": 2400
+      },
+      {
+        "name": "UFC 204",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2016-10-08",
+        "attendance": 19500,
+        "buyrate": 380
+      },
+      {
+        "name": "UFC 320: Ankalaev vs. Pereira 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-10-03"
+      }
+    ],
+    "totalEvents": 15
+  },
+  "41": {
+    "event": {
+      "id": "cmflifn5t00ukseprrxs51pn6",
+      "name": "UFC 153: Silva vs. Bonnar",
+      "date": "2012-10-12",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Farmasi Arena",
+      "city": "Rio de Janeiro, Brazil",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 12
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 120: Bisping vs. Akiyama",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2010-10-15"
+      },
+      {
+        "name": "UFC 64: Unstoppable",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2006-10-13"
+      }
+    ],
+    "totalEvents": 3
+  },
+  "42": {
+    "event": {
+      "id": "cmflifmvz0054seprvxizwhbx",
+      "name": "UFC 294: Makhachev vs. Volkanovski 2",
+      "date": "2023-10-20",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Etihad Arena",
+      "city": "Abu Dhabi, United Arab Emirates",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 1
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 280: Oliveira vs. Makhachev",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-10-21"
+      },
+      {
+        "name": "UFC on ESPN: Reyes vs. Weidman",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2019-10-17"
+      },
+      {
+        "name": "UFC 166: Velasquez vs. dos Santos III",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2013-10-18"
+      }
+    ],
+    "totalEvents": 9
+  },
+  "43": {
+    "event": {
+      "id": "cmflifmu3000gsepr0bs26zmj",
+      "name": "UFC 321: Aspinall vs. Gane",
+      "date": "2025-10-24",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Etihad Arena",
+      "city": "Abu Dhabi, United Arab Emirates",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": -1
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 308: Topuria vs. Holloway",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-10-25"
+      },
+      {
+        "name": "UFC 267: Błachowicz vs. Teixeira",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2021-10-29"
+      },
+      {
+        "name": "UFC 254: Khabib vs. Gaethje",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2020-10-23"
+      }
+    ],
+    "totalEvents": 9
+  },
+  "44": {
+    "event": {
+      "id": "cmflifmxs009sseprkdwrosty",
+      "name": "UFC 268: Usman vs. Covington 2",
+      "date": "2021-11-06",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Madison Square Garden",
+      "city": "New York City, New York, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 3
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 244: Masvidal vs. Diaz",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2019-11-02"
+      },
+      {
+        "name": "UFC 230: Cormier vs. Lewis",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2018-11-03"
+      },
+      {
+        "name": "UFC 217: Bisping vs. St-Pierre",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2017-11-04"
+      }
+    ],
+    "totalEvents": 8
+  },
+  "45": {
+    "event": {
+      "id": "cmfl7hx3t0002se2nwn9dt2je",
+      "name": "UFC 1",
+      "date": "1993-11-12",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "McNichols Sports Arena",
+      "city": "Denver",
+      "country": "USA",
+      "attendance": 7800,
+      "headliners": [
+        "Royce Gracie",
+        "Gerard Gordeau"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 31
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 295: Procházka vs. Pereira",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-11-11"
+      },
+      {
+        "name": "UFC 281: Adesanya vs. Pereira",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-11-12"
+      },
+      {
+        "name": "UFC on ESPN: Santos vs. Teixeira",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2020-11-07"
+      }
+    ],
+    "totalEvents": 11
+  },
+  "46": {
+    "event": {
+      "id": "cmfl8s7pg004csezt6zf5h4mx",
+      "name": "Survivor Series (1998)",
+      "date": "1998-11-15",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Kiel Center",
+      "city": "St. Louis",
+      "country": "USA",
+      "attendance": 21151,
+      "buyrate": 550,
+      "headliners": [
+        "The Rock",
+        "Mankind"
+      ],
+      "titleChanges": [
+        "WWF Championship: The Rock defeats Mankind"
+      ],
+      "yearsAgo": 26
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 322: Della Maddalena vs. Makhachev",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2025-11-15"
+      },
+      {
+        "name": "UFC 309: Jones vs. Miocic",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-11-16"
+      },
+      {
+        "name": "UFC 193: Rousey vs. Holm",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2015-11-15"
+      }
+    ],
+    "totalEvents": 16
+  },
+  "47": {
+    "event": {
+      "id": "cmfl8pyx2000tse42dsnj0boi",
+      "name": "UFC 40",
+      "date": "2002-11-22",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 11500,
+      "buyrate": 150,
+      "headliners": [
+        "Tito Ortiz",
+        "Ken Shamrock"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 22
+    },
+    "alternativeEvents": [
+      {
+        "name": "Survivor Series (2023)",
+        "promotion": "World Wrestling Entertainment",
+        "date": "2023-11-25"
+      },
+      {
+        "name": "UFC 255: Figueiredo vs. Perez",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2020-11-21"
+      },
+      {
+        "name": "The Ultimate Fighter Latin America 2 Finale: Magny vs. Gastelum",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2015-11-21"
+      }
+    ],
+    "totalEvents": 10
+  },
+  "48": {
+    "event": {
+      "id": "cmfl8s7pd0047seztf7f2q60a",
+      "name": "Survivor Series (1987)",
+      "date": "1987-11-26",
+      "promotion": "World Wrestling Entertainment",
+      "venue": "Richfield Coliseum",
+      "city": "Richfield",
+      "country": "USA",
+      "attendance": 13500,
+      "buyrate": 400,
+      "headliners": [
+        "Andre the Giant",
+        "Hulk Hogan"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 37
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC on ESPN: Dariush vs. Tsarukyan",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-12-02"
+      },
+      {
+        "name": "UFC on ESPN: Thompson vs. Holland",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-12-03"
+      },
+      {
+        "name": "UFC on ESPN: Font vs. Aldo",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2021-12-04"
+      }
+    ],
+    "totalEvents": 13
+  },
+  "49": {
+    "event": {
+      "id": "cmflifmtz0006sepr1qq49vdf",
+      "name": "UFC 323",
+      "date": "2025-12-06",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "T-Mobile Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": -1
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 310: Pantoja vs. Asakura",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2024-12-07"
+      },
+      {
+        "name": "UFC 282: Błachowicz vs. Ankalaev",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2022-12-10"
+      },
+      {
+        "name": "UFC 269: Oliveira vs. Poirier",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2021-12-11"
+      }
+    ],
+    "totalEvents": 15
+  },
+  "50": {
+    "event": {
+      "id": "cmflifmux002gseprtste1v3t",
+      "name": "UFC on ESPN: Covington vs. Buckley",
+      "date": "2024-12-14",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Amalie Arena",
+      "city": "Tampa, Florida, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 0
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 296: Edwards vs. Covington",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2023-12-16"
+      },
+      {
+        "name": "UFC 256: Figueiredo vs. Moreno",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2020-12-12"
+      },
+      {
+        "name": "UFC 245: Usman vs. Covington",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2019-12-14"
+      }
+    ],
+    "totalEvents": 21
+  },
+  "51": {
+    "event": {
+      "id": "cmflifn3200nisepr0vxsbgm0",
+      "name": "UFC on Fox: dos Anjos vs. Cowboy 2",
+      "date": "2015-12-19",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "Amway Center",
+      "city": "Orlando, Florida, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 9
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC Japan: Ultimate Japan",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "1997-12-21"
+      }
+    ],
+    "totalEvents": 2
+  },
+  "52": {
+    "event": {
+      "id": "cmfl8s6un000iseztxwuimq0x",
+      "name": "UFC 66",
+      "date": "2006-12-30",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas",
+      "country": "USA",
+      "attendance": 16562,
+      "buyrate": 1050,
+      "headliners": [
+        "Chuck Liddell",
+        "Tito Ortiz"
+      ],
+      "titleChanges": [],
+      "yearsAgo": 18
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 232: Jones vs. Gustafsson 2",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2018-12-29"
+      },
+      {
+        "name": "UFC 219: Cyborg vs. Holm",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2017-12-30"
+      },
+      {
+        "name": "UFC 207: Nunes vs. Rousey",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2016-12-30"
+      }
+    ],
+    "totalEvents": 11
+  },
+  "53": {
+    "event": {
+      "id": "cmflifn3100ngseprp6bhltpa",
+      "name": "UFC 195: Lawler vs. Condit",
+      "date": "2016-01-02",
+      "promotion": "Ultimate Fighting Championship",
+      "venue": "MGM Grand Garden Arena",
+      "city": "Las Vegas, Nevada, U.S.",
+      "country": "USA",
+      "headliners": [],
+      "titleChanges": [],
+      "yearsAgo": 9
+    },
+    "alternativeEvents": [
+      {
+        "name": "UFC 108: Evans vs. Silva",
+        "promotion": "Ultimate Fighting Championship",
+        "date": "2010-01-02"
+      }
+    ],
+    "totalEvents": 2
+  }
+}

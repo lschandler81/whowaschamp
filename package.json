@@ -32,7 +32,10 @@
     "deploy:build": "docker build -f Dockerfile.prod -t whowaschamp:latest .",
     "deploy:up": "docker-compose -f docker-compose.prod.yml up -d",
     "deploy:down": "docker-compose -f docker-compose.prod.yml down",
-    "validate:apis": "node scripts/validate_apis.mjs"
+    "validate:apis": "node scripts/validate_apis.mjs",
+    "generate-ppv-data": "npx tsx scripts/generate-ppv-data.ts",
+    "add-ppv": "node scripts/add-ppv.js",
+    "update-static-data": "npm run generate-ppv-data && git add public/data/ && git commit -m 'Update static PPV data' && git push"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
