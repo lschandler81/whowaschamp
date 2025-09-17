@@ -1,4 +1,6 @@
 {
+  "/on-this-day/page": "app/on-this-day/page.js",
   "/page": "app/page.js",
-  "/on-this-day/page": "app/on-this-day/page.js"
+  "/api/events/ufc-flashback/route": "app/api/events/ufc-flashback/route.js",
+  "/api/events/wwe-flashback/route": "app/api/events/wwe-flashback/route.js"
 }
