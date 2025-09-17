@@ -11,10 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/ppv-flashback/page": [
+    "/on-this-day/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/ppv-flashback/page.js"
+      "static/chunks/app/on-this-day/page.js"
     ]
   }
 }
