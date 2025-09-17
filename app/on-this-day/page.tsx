@@ -53,25 +53,8 @@ export default async function OnThisDayPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">On This Day</h1>
         </div>
         <p className="text-lg text-gray-600 mb-8">
-          {flags.ppvFlashback 
-            ? "Major wrestling and MMA events, plus championship changes that happened today in history"
-            : "Championship title changes that happened on this day in wrestling history"
-          }
+          Championship title changes that happened on this day in wrestling history
         </p>
-
-        {/* New PPV Features Section */}
-        {flags.ppvFlashback && (
-          <div className="mb-12">
-            <Card className="border rounded-xl bg-white shadow-sm">
-              <CardHeader>
-                <CardTitle>PPV Flashback</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">Feature temporarily disabled</p>
-              </CardContent>
-            </Card>
-          </div>
-        )}
 
         {deduped.length === 0 && (
           <Card className="border rounded-xl bg-white shadow-sm">
