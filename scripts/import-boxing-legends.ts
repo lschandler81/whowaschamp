@@ -545,17 +545,18 @@ async function importBoxingLegends() {
       }
 
       // Import championships
-      for (const championship of boxer.championships) {
+      for (let i = 0; i < boxer.championships.length; i++) {
+        const championship = boxer.championships[i];
         await prisma.championship.create({
           data: {
-            title: championship.title,
+            titleName: championship.title,
             promotionId: promotion.id,
             profileId: profile.id,
+            reignNumber: i + 1,
             wonDate: new Date(championship.firstWon),
             lostDate: championship.lastWon ? new Date(championship.lastWon) : null,
             daysHeld: championship.totalDays,
-            defenses: 0,
-            notes: championship.notes
+            isCurrentChampion: !championship.lastWon
           }
         });
       }

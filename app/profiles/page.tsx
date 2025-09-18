@@ -1,17 +1,10 @@
 import { Metadata } from 'next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
-} from '@/components/ui/select';
 import { filterProfiles, getProfileUrl, getAllProfiles } from '@/lib/profiles';
 import { Profile, ProfilesFilter } from '@/lib/types/profiles';
+import { ProfilesSearch } from '@/components/ProfilesSearch';
+import ProfilesDebug from '@/components/ProfilesDebug';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
@@ -109,66 +102,6 @@ function ProfileCard({ profile }: { profile: Profile }) {
   );
 }
 
-function SearchAndFilters({ searchParams }: { searchParams: ProfilesPageProps['searchParams'] }) {
-  return (
-    <div className="bg-card rounded-lg border p-6 space-y-4">
-      <div>
-        <Input
-          placeholder="Search by name, nickname, or promotion..."
-          defaultValue={searchParams.search || ''}
-          name="search"
-          className="max-w-md"
-        />
-      </div>
-      
-      <div className="flex flex-wrap gap-4">
-        <Select defaultValue={searchParams.type || 'all'} name="type">
-          <SelectTrigger className="w-[140px]">
-            <SelectValue placeholder="Type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Types</SelectItem>
-            <SelectItem value="wrestler">Wrestlers</SelectItem>
-            <SelectItem value="fighter">Fighters</SelectItem>
-          </SelectContent>
-        </Select>
-        
-        <Select defaultValue={searchParams.promotion || 'all'} name="promotion">
-          <SelectTrigger className="w-[160px]">
-            <SelectValue placeholder="Promotion" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Promotions</SelectItem>
-            <SelectItem value="WWE">WWE</SelectItem>
-            <SelectItem value="UFC">UFC</SelectItem>
-            <SelectItem value="WCW">WCW</SelectItem>
-            <SelectItem value="AEW">AEW</SelectItem>
-          </SelectContent>
-        </Select>
-        
-        <Select defaultValue={searchParams.era || 'all'} name="era">
-          <SelectTrigger className="w-[160px]">
-            <SelectValue placeholder="Era" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Eras</SelectItem>
-            <SelectItem value="Golden">Golden Era</SelectItem>
-            <SelectItem value="New Generation">New Generation</SelectItem>
-            <SelectItem value="Attitude">Attitude Era</SelectItem>
-            <SelectItem value="Ruthless Aggression">Ruthless Aggression</SelectItem>
-            <SelectItem value="PG">PG Era</SelectItem>
-            <SelectItem value="Reality">Reality Era</SelectItem>
-          </SelectContent>
-        </Select>
-        
-        <Button variant="outline" size="sm">
-          Clear Filters
-        </Button>
-      </div>
-    </div>
-  );
-}
-
 async function ProfilesGrid({ searchParams }: { searchParams: ProfilesPageProps['searchParams'] }) {
   const allProfiles = await getAllProfiles();
   
@@ -225,9 +158,18 @@ export default async function ProfilesPage({ searchParams }: ProfilesPageProps) 
         </p>
       </div>
       
+      {/* Debug Info */}
+      <ProfilesDebug />
+      
       {/* Search and Filters */}
       <div className="mb-8">
-        <SearchAndFilters searchParams={searchParams} />
+        <ProfilesSearch
+          initialSearch={searchParams.search}
+          initialType={searchParams.type}
+          initialPromotion={searchParams.promotion}
+          initialEra={searchParams.era}
+          initialDivision={searchParams.division}
+        />
       </div>
       
       {/* Results */}
