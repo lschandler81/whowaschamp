@@ -1,5 +1,7 @@
 import { Profile, WrestlerProfile, FighterProfile, ProfilesFilter } from '@/lib/types/profiles';
 import { PrismaClient } from '@prisma/client';
+import fs from 'fs';
+import path from 'path';
 
 const prisma = new PrismaClient();
 
@@ -80,10 +82,11 @@ function transformDatabaseProfile(dbProfile: any): Profile {
 }
 
 /**
- * Get all profiles from database
+ * Get all profiles from database with JSON fallback
  */
 export async function getAllProfiles(): Promise<Profile[]> {
   try {
+    // Try database first
     const dbProfiles = await prisma.profile.findMany({
       include: {
         wrestler: true,
@@ -103,11 +106,30 @@ export async function getAllProfiles(): Promise<Profile[]> {
       }
     });
 
-    return dbProfiles.map(transformDatabaseProfile);
+    if (dbProfiles.length > 0) {
+      console.log(`Loaded ${dbProfiles.length} profiles from database`);
+      return dbProfiles.map(transformDatabaseProfile);
+    }
   } catch (error) {
-    console.error('Error fetching profiles:', error);
-    return [];
+    console.warn('Database unavailable, trying JSON fallback:', error);
   }
+
+  // Fallback to JSON file
+  try {
+    const jsonPath = path.join(process.cwd(), 'public', 'data', 'profiles.json');
+    
+    if (fs.existsSync(jsonPath)) {
+      const jsonData = fs.readFileSync(jsonPath, 'utf8');
+      const profiles = JSON.parse(jsonData) as Profile[];
+      console.log(`Loaded ${profiles.length} profiles from JSON fallback`);
+      return profiles;
+    }
+  } catch (error) {
+    console.error('JSON fallback failed:', error);
+  }
+
+  console.error('No profiles available from database or JSON fallback');
+  return [];
 }
 
 /**
