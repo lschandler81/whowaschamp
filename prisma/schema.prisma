@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,52 +8,44 @@ datasource db {
 }
 
 model Promotion {
-  id       String  @id @default(cuid())
-  name     String  @unique
-  slug     String  @unique
-  logoUrl  String?
-  color    String?
-  events   Event[]
-  
-  // Profile relationships
-  profilePromotions ProfilePromotion[]
+  id                String             @id @default(cuid())
+  name              String             @unique
+  slug              String             @unique
+  logoUrl           String?
+  color             String?
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
   championships     Championship[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  events            Event[]
+  profilePromotions ProfilePromotion[]
+  rivalries         Rivalry[]
 
   @@map("promotions")
 }
 
 model Event {
-  id           String     @id @default(cuid())
+  id           String        @id @default(cuid())
   promotionId  String
-  promotion    Promotion  @relation(fields: [promotionId], references: [id])
-  
   name         String
-  brand        String?    // Raw, SmackDown, etc.
+  brand        String?
   date         DateTime
   venue        String?
   city         String?
   country      String?
-  
-  isPpv        Boolean    @default(false)
-  buyrate      Int?       // PPV buys in thousands
+  isPpv        Boolean       @default(false)
+  buyrate      Int?
   attendance   Int?
   posterUrl    String?
   sourceUrl    String?
-  
-  // Metadata
-  dataChecksum String?    // For ETL idempotency
+  dataChecksum String?
   lastScraped  DateTime?
-  
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  promotion    Promotion     @relation(fields: [promotionId], references: [id])
   headliners   Headliner[]
-  titleChanges TitleChange[]
   matches      Match[]
-  
-  createdAt    DateTime   @default(now())
-  updatedAt    DateTime   @updatedAt
-  
+  titleChanges TitleChange[]
+
   @@index([date])
   @@index([promotionId, date])
   @@index([isPpv, date])
@@ -64,112 +53,93 @@ model Event {
 }
 
 model Headliner {
-  id       String @id @default(cuid())
-  eventId  String
-  event    Event  @relation(fields: [eventId], references: [id])
-  
-  side     String // "main", "co-main", "featured"
-  name     String // Fighter/wrestler name
-  role     String // "challenger", "champion", "participant"
-  result   String? // "win", "loss", "draw", "no-contest"
-  
+  id        String   @id @default(cuid())
+  eventId   String
+  side      String
+  name      String
+  role      String
+  result    String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
+  event     Event    @relation(fields: [eventId], references: [id])
+
   @@map("headliners")
 }
 
 model TitleChange {
-  id          String @id @default(cuid())
-  eventId     String
-  event       Event  @relation(fields: [eventId], references: [id])
-  
-  titleName   String
-  changedHands Boolean @default(true)
-  newChampion String?
-  oldChampion String?
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
+  id           String   @id @default(cuid())
+  eventId      String
+  titleName    String
+  changedHands Boolean  @default(true)
+  newChampion  String?
+  oldChampion  String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  event        Event    @relation(fields: [eventId], references: [id])
+
   @@map("title_changes")
 }
 
 model Profile {
-  id          String   @id @default(cuid())
-  slug        String   @unique
-  name        String   @unique
-  nickname    String?
-  type        String   // "wrestler" or "fighter"
-  
-  // Basic info
-  hometown    String?
-  nationality String?
-  height      String?
-  weight      String?
-  thumbnail   String?  // Profile photo URL
-  
-  // Career details
-  debut       DateTime?
-  retired     DateTime?
-  tagline     String?
-  bio         String?
-  
-  // Promotions (many-to-many)
-  promotions  ProfilePromotion[]
-  
-  // Career statistics
-  championships Championship[]
-  matches       MatchParticipant[]
-  
-  // Type-specific data
-  wrestler    WrestlerProfile?
-  fighter     FighterProfile?
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
+  id                   String             @id @default(cuid())
+  slug                 String             @unique
+  name                 String             @unique
+  nickname             String?
+  type                 String
+  hometown             String?
+  nationality          String?
+  height               String?
+  weight               String?
+  thumbnail            String?
+  debut                DateTime?
+  retired              DateTime?
+  tagline              String?
+  bio                  String?
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+  championships        Championship[]
+  fighter              FighterProfile?
+  matches              MatchParticipant[]
+  promotions           ProfilePromotion[]
+  rivalriesAsWrestler2 Rivalry[]          @relation("RivalryWrestler2")
+  rivalriesAsWrestler1 Rivalry[]          @relation("RivalryWrestler1")
+  wrestler             WrestlerProfile?
+
   @@index([type])
   @@index([slug])
   @@map("profiles")
 }
 
 model WrestlerProfile {
-  id                      String  @id @default(cuid())
-  profileId               String  @unique
-  profile                 Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
-  
-  finisher                String?
-  era                     String? // "Golden", "Attitude", etc.
-  worldTitleReigns        Int     @default(0)
-  combinedDaysAsChampion  Int     @default(0)
-  firstReignDate          DateTime?
-  lastReignDate           DateTime?
-  
-  createdAt               DateTime @default(now())
-  updatedAt               DateTime @updatedAt
-  
+  id                     String    @id @default(cuid())
+  profileId              String    @unique
+  finisher               String?
+  era                    String?
+  worldTitleReigns       Int       @default(0)
+  combinedDaysAsChampion Int       @default(0)
+  firstReignDate         DateTime?
+  lastReignDate          DateTime?
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+  profile                Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
   @@map("wrestler_profiles")
 }
 
 model FighterProfile {
-  id           String  @id @default(cuid())
-  profileId    String  @unique
-  profile      Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
-  
-  stance       String? // "Orthodox", "Southpaw", "Switch"
-  reach        String?
-  wins         Int     @default(0)
-  losses       Int     @default(0)
-  draws        Int     @default(0)
-  titleReigns  Int     @default(0)
-  
-  // Fighting divisions
-  divisions    FighterDivision[]
-  
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  
+  id          String            @id @default(cuid())
+  profileId   String            @unique
+  stance      String?
+  reach       String?
+  wins        Int               @default(0)
+  losses      Int               @default(0)
+  draws       Int               @default(0)
+  titleReigns Int               @default(0)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  divisions   FighterDivision[]
+  profile     Profile           @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
   @@map("fighter_profiles")
 }
 
@@ -177,59 +147,49 @@ model ProfilePromotion {
   id          String    @id @default(cuid())
   profileId   String
   promotionId String
-  
-  profile     Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
-  promotion   Promotion @relation(fields: [promotionId], references: [id], onDelete: Cascade)
-  
   startDate   DateTime?
   endDate     DateTime?
   isActive    Boolean   @default(true)
-  
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
-  
+  promotion   Promotion @relation(fields: [promotionId], references: [id], onDelete: Cascade)
+  profile     Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
   @@unique([profileId, promotionId])
   @@map("profile_promotions")
 }
 
 model FighterDivision {
-  id              String        @id @default(cuid())
+  id               String         @id @default(cuid())
   fighterProfileId String
-  fighterProfile  FighterProfile @relation(fields: [fighterProfileId], references: [id], onDelete: Cascade)
-  
-  divisionName    String
-  isActive        Boolean       @default(true)
-  
-  createdAt       DateTime      @default(now())
-  updatedAt       DateTime      @updatedAt
-  
+  divisionName     String
+  isActive         Boolean        @default(true)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  fighterProfile   FighterProfile @relation(fields: [fighterProfileId], references: [id], onDelete: Cascade)
+
   @@map("fighter_divisions")
 }
 
 model Championship {
-  id                 String   @id @default(cuid())
-  profileId          String
-  profile            Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
-  
-  titleName          String
-  promotionId        String
-  promotion          Promotion @relation(fields: [promotionId], references: [id])
-  
-  reignNumber        Int      // 1st, 2nd, 3rd reign, etc.
-  wonDate            DateTime
-  lostDate           DateTime?
-  daysHeld           Int?
-  
-  wonFrom            String?  // Previous champion name
-  lostTo             String?  // Next champion name
-  wonAt              String?  // Event where title was won
-  lostAt             String?  // Event where title was lost
-  
-  isCurrentChampion  Boolean  @default(false)
-  
-  createdAt          DateTime @default(now())
-  updatedAt          DateTime @updatedAt
-  
+  id                String    @id @default(cuid())
+  profileId         String
+  titleName         String
+  promotionId       String
+  reignNumber       Int
+  wonDate           DateTime
+  lostDate          DateTime?
+  daysHeld          Int?
+  wonFrom           String?
+  lostTo            String?
+  wonAt             String?
+  lostAt            String?
+  isCurrentChampion Boolean   @default(false)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  promotion         Promotion @relation(fields: [promotionId], references: [id])
+  profile           Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
   @@index([profileId])
   @@index([titleName])
   @@index([wonDate])
@@ -237,36 +197,54 @@ model Championship {
 }
 
 model Match {
-  id          String   @id @default(cuid())
-  eventId     String?
-  event       Event?   @relation(fields: [eventId], references: [id])
-  
-  matchType   String   // "singles", "tag", "triple-threat", etc.
-  stipulation String?  // "cage", "ladder", "no-holds-barred", etc.
-  isMainEvent Boolean  @default(false)
-  
+  id           String             @id @default(cuid())
+  eventId      String?
+  matchType    String
+  stipulation  String?
+  isMainEvent  Boolean            @default(false)
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
   participants MatchParticipant[]
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
+  event        Event?             @relation(fields: [eventId], references: [id])
+
   @@map("matches")
 }
 
 model MatchParticipant {
   id        String   @id @default(cuid())
   matchId   String
-  match     Match    @relation(fields: [matchId], references: [id], onDelete: Cascade)
-  
   profileId String
-  profile   Profile  @relation(fields: [profileId], references: [id])
-  
-  result    String?  // "win", "loss", "draw", "no-contest"
-  role      String?  // "challenger", "champion", "participant"
-  
+  result    String?
+  role      String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
+  profile   Profile  @relation(fields: [profileId], references: [id])
+  match     Match    @relation(fields: [matchId], references: [id], onDelete: Cascade)
+
   @@unique([matchId, profileId])
   @@map("match_participants")
+}
+
+model Rivalry {
+  id             String     @id @default(cuid())
+  wrestler1Id    String
+  wrestler2Id    String
+  rivalryName    String?
+  startDate      DateTime?
+  endDate        DateTime?
+  description    String?
+  notableMatches String?
+  feudIntensity  Int?
+  totalMatches   Int?
+  promotionId    String?
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  promotion      Promotion? @relation(fields: [promotionId], references: [id])
+  wrestler2      Profile    @relation("RivalryWrestler2", fields: [wrestler2Id], references: [id])
+  wrestler1      Profile    @relation("RivalryWrestler1", fields: [wrestler1Id], references: [id])
+
+  @@unique([wrestler1Id, wrestler2Id])
+  @@index([wrestler1Id])
+  @@index([wrestler2Id])
+  @@map("rivalries")
 }
