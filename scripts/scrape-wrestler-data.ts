@@ -102,7 +102,7 @@ const WWE_WRESTLERS: WrestlerData[] = [
     height: "6'1\"",
     weight: "251 lbs",
     debut: "2002-06-27",
-    retired: null,
+    retired: undefined,
     promotion: "WWE",
     biography: "John Cena is a 16-time World Champion and one of WWE's biggest stars. Known for his 'Never Give Up' motto, colorful merchandise, and dedication to Make-A-Wish Foundation (over 650 wishes granted). Cena dominated WWE for over a decade as the face of the company, while also building a successful acting career in Hollywood.",
     championships: [

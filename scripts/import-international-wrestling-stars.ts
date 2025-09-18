@@ -580,7 +580,7 @@ async function importInternationalWrestlers() {
       }
 
       // Get or create promotions
-      const promotionIds: number[] = [];
+      const promotionIds: string[] = [];
       for (const promotionName of wrestler.promotions) {
         let promotion = await prisma.promotion.findFirst({
           where: { name: promotionName }
@@ -613,7 +613,7 @@ async function importInternationalWrestlers() {
           wrestler: {
             create: {
               era: wrestler.era,
-              finisher: wrestler.finishers?.join(', ') || null
+              finisher: null
             }
           },
           promotions: {

@@ -10,7 +10,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from '@/components/ui/select';
-import { getMockProfiles, filterProfiles, getProfileUrl, getAllProfiles } from '@/lib/profiles';
+import { filterProfiles, getProfileUrl, getAllProfiles } from '@/lib/profiles';
 import { Profile, ProfilesFilter } from '@/lib/types/profiles';
 import Link from 'next/link';
 import { Suspense } from 'react';

@@ -54,7 +54,7 @@ const UFC_FIGHTERS: FighterData[] = [
     reach: "74\"",
     stance: "Southpaw",
     debut: "2008-02-17",
-    retired: null,
+    retired: undefined,
     promotion: "UFC",
     biography: "Conor McGregor is a former UFC Featherweight and Lightweight Champion who became the biggest star in MMA history. Known for his flashy lifestyle, trash-talking ability, and knockout power, McGregor was the first fighter to hold titles in two weight classes simultaneously. His fights regularly broke pay-per-view records and brought mainstream attention to UFC.",
     championships: [
@@ -142,7 +142,7 @@ const UFC_FIGHTERS: FighterData[] = [
     reach: "84.5\"",
     stance: "Orthodox",
     debut: "2008-04-12",
-    retired: null,
+    retired: undefined,
     promotion: "UFC",
     biography: "Jon Jones is widely regarded as one of the greatest mixed martial artists of all time. The youngest champion in UFC history at age 23, Jones dominated the light heavyweight division for over a decade. Known for his exceptional reach, creativity, and fight IQ, Jones recently moved to heavyweight and captured that title as well, cementing his legacy as a two-division champion.",
     championships: [
@@ -158,7 +158,7 @@ const UFC_FIGHTERS: FighterData[] = [
         title: "UFC Heavyweight Championship",
         reigns: 1,
         firstWon: "2023-03-04",
-        lastWon: null,
+        lastWon: undefined,
         totalDays: 563,
         notes: "Current heavyweight champion"
       }
@@ -230,7 +230,7 @@ const UFC_FIGHTERS: FighterData[] = [
     reach: "71.5\"",
     stance: "Orthodox",
     debut: "2012-09-15",
-    retired: null,
+    retired: undefined,
     promotion: "UFC",
     biography: "Alexander Volkanovski is a former UFC Featherweight Champion known for his exceptional cardio, boxing skills, and fight IQ. Despite being one of the shorter fighters in his division, Volkanovski's well-rounded skill set and relentless pressure made him nearly unbeatable. His trilogy with Max Holloway is considered one of the best in featherweight history.",
     championships: [
@@ -266,7 +266,7 @@ const UFC_FIGHTERS: FighterData[] = [
     reach: "70\"",
     stance: "Orthodox",
     debut: "2010-09-19",
-    retired: null,
+    retired: undefined,
     promotion: "UFC",
     biography: "Islam Makhachev is the current UFC Lightweight Champion and a dominant wrestler from Dagestan. Training alongside Khabib Nurmagomedov, Islam combines elite wrestling with improved striking to control his opponents. His rise to the top of the lightweight division has been methodical and impressive, carrying on the legacy of Dagestani dominance in MMA.",
     championships: [
@@ -274,7 +274,7 @@ const UFC_FIGHTERS: FighterData[] = [
         title: "UFC Lightweight Championship",
         reigns: 1,
         firstWon: "2022-10-22",
-        lastWon: null,
+        lastWon: undefined,
         totalDays: 698,
         notes: "Current lightweight champion"
       }
@@ -380,8 +380,8 @@ async function importFighterProfile(fighterData: FighterData) {
       // Find or create division
       let division = await prisma.fighterDivision.findFirst({
         where: { 
-          name: divisionName,
-          fighterId: profile.id
+          divisionName: divisionName,
+          fighterProfileId: profile.id
         }
       });
 
@@ -394,9 +394,8 @@ async function importFighterProfile(fighterData: FighterData) {
         if (fighterProfile) {
           await prisma.fighterDivision.create({
             data: {
-              fighterId: fighterProfile.id,
-              name: divisionName,
-              weightClass: getWeightClass(divisionName),
+              fighterProfileId: fighterProfile.id,
+              divisionName: divisionName,
               isActive: !fighterData.retired
             }
           });
