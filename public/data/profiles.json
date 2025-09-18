@@ -248,6 +248,36 @@
     "titleReigns": 2
   },
   {
+    "id": "cmfpvy66t0000se3bt1f66k33",
+    "slug": "anderson-silva",
+    "name": "Anderson Silva",
+    "nickname": "The Spider",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 1997,
+      "end": 2020
+    },
+    "hometown": "São Paulo, Brazil",
+    "nationality": "",
+    "height": "6'2\"",
+    "weight": "185 lbs",
+    "debut": "1997-06-08",
+    "bio": "Anderson Silva is widely regarded as one of the greatest mixed martial artists of all time. The former UFC Middleweight Champion holds the longest title reign in UFC history at 2,457 days. Known for his precision striking, creativity, and incredible reflexes, Silva dominated the middleweight division for over 6 years.",
+    "divisions": [],
+    "record": {
+      "wins": 34,
+      "losses": 11
+    },
+    "stance": "Orthodox",
+    "reach": "77.5\"",
+    "titleReigns": 1
+  },
+  {
     "id": "cmfprotsl000wser7ygj7rzep",
     "slug": "andre-the-giant",
     "name": "Andre the Giant",
@@ -354,6 +384,37 @@
     "combinedDaysAsChampion": 1173,
     "firstReign": "2018-01-01",
     "lastReign": "2015-01-01"
+  },
+  {
+    "id": "cmfpvy684001jse3b681q0bgv",
+    "slug": "bj-penn",
+    "name": "BJ Penn",
+    "nickname": "The Prodigy",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2001,
+      "end": 2019
+    },
+    "hometown": "Kailua, Hawaii",
+    "nationality": "",
+    "height": "5'9\"",
+    "weight": "155 lbs",
+    "debut": "2001-05-04",
+    "bio": "BJ Penn was the first fighter to win UFC titles in two different weight classes. Known for his exceptional boxing, Brazilian Jiu-Jitsu skills, and natural fighting ability, Penn was dominant in both the lightweight and welterweight divisions. He was inducted into the UFC Hall of Fame in 2015.",
+    "divisions": [],
+    "record": {
+      "wins": 16,
+      "losses": 14,
+      "draws": 2
+    },
+    "stance": "Orthodox",
+    "reach": "70\"",
+    "titleReigns": 3
   },
   {
     "id": "cmfpta9ad001ase3ec6v3f720",
@@ -1126,6 +1187,37 @@
     "combinedDaysAsChampion": 0
   },
   {
+    "id": "cmfpwb7me0028sef5wsl9tli2",
+    "slug": "carla-esparza",
+    "name": "Carla Esparza",
+    "nickname": "Cookie Monster",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2010
+    },
+    "hometown": "Torrance, California",
+    "nationality": "",
+    "height": "5'1\"",
+    "weight": "115 lbs",
+    "debut": "2010-05-14",
+    "bio": "Carla Esparza was the first-ever UFC Women's Strawweight Champion, winning the inaugural title on The Ultimate Fighter. Known for her wrestling and grappling skills, she reclaimed the title years later, becoming a two-time champion and one of the division's most accomplished fighters.",
+    "divisions": [
+      "Strawweight"
+    ],
+    "record": {
+      "wins": 20,
+      "losses": 6
+    },
+    "stance": "Orthodox",
+    "reach": "63\"",
+    "titleReigns": 2
+  },
+  {
     "id": "cmfps0grj0044seplbbiljzjq",
     "slug": "carlito",
     "name": "Carlito",
@@ -1339,6 +1431,36 @@
     "lastReign": "2008-01-01"
   },
   {
+    "id": "cmfpvy67l000ise3bu8chb538",
+    "slug": "chuck-liddell",
+    "name": "Chuck Liddell",
+    "nickname": "The Iceman",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 1998,
+      "end": 2018
+    },
+    "hometown": "Santa Barbara, California",
+    "nationality": "",
+    "height": "6'2\"",
+    "weight": "205 lbs",
+    "debut": "1998-04-07",
+    "bio": "Chuck Liddell was one of the first UFC superstars and helped bring mixed martial arts into the mainstream. Known for his knockout power, takedown defense, and exciting fighting style, Liddell was the face of the UFC during its explosive growth period in the mid-2000s.",
+    "divisions": [],
+    "record": {
+      "wins": 21,
+      "losses": 9
+    },
+    "stance": "Orthodox",
+    "reach": "74\"",
+    "titleReigns": 1
+  },
+  {
     "id": "cmfprotw3005gser79df2sxhp",
     "slug": "chyna",
     "name": "Chyna",
@@ -1446,6 +1568,38 @@
     "era": "Attitude",
     "worldTitleReigns": 0,
     "combinedDaysAsChampion": 0
+  },
+  {
+    "id": "cmfpwb7lw000usef5tckuobe8",
+    "slug": "cris-cyborg",
+    "name": "Cris Cyborg",
+    "nickname": "Cyborg",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2005
+    },
+    "hometown": "Curitiba, Brazil",
+    "nationality": "",
+    "height": "5'8\"",
+    "weight": "145 lbs",
+    "debut": "2005-05-21",
+    "bio": "Cris Cyborg is widely considered one of the greatest women's featherweights of all time. Known for her aggressive striking and knockout power, she held titles in Strikeforce, Invicta FC, UFC, and Bellator. Her 13-year unbeaten streak established her as one of the most feared fighters in women's MMA.",
+    "divisions": [
+      "Featherweight"
+    ],
+    "record": {
+      "wins": 26,
+      "losses": 2,
+      "draws": 1
+    },
+    "stance": "Orthodox",
+    "reach": "69\"",
+    "titleReigns": 3
   },
   {
     "id": "cmfpsmllg004rsev6jvoz1xxa",
@@ -2234,6 +2388,37 @@
     "lastReign": "2024-01-01"
   },
   {
+    "id": "cmfpvnrna0017senmbs1snckh",
+    "slug": "evander-holyfield",
+    "name": "Evander Holyfield",
+    "nickname": "The Real Deal",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1984,
+      "end": 2011
+    },
+    "hometown": "Atmore, Alabama",
+    "nationality": "",
+    "height": "6'2\"",
+    "weight": "215 lbs",
+    "debut": "1984-11-15",
+    "bio": "Evander Holyfield is the only four-time heavyweight champion in history. He successfully moved up from cruiserweight to heavyweight and defeated Mike Tyson twice, including the infamous 'Bite Fight.' Known for his heart, determination, and warrior spirit.",
+    "divisions": [],
+    "record": {
+      "wins": 44,
+      "losses": 10,
+      "draws": 2
+    },
+    "stance": "Orthodox",
+    "reach": "77\"",
+    "titleReigns": 5
+  },
+  {
     "id": "cmfptigro000osefy3ulj548t",
     "slug": "eve-torres",
     "name": "Eve Torres",
@@ -2288,6 +2473,36 @@
     "lastReign": "1956-01-01"
   },
   {
+    "id": "cmfpvy67t0010se3b9zt6j90v",
+    "slug": "fedor-emelianenko",
+    "name": "Fedor Emelianenko",
+    "nickname": "The Last Emperor",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "PRIDE FC"
+    ],
+    "activeYears": {
+      "start": 2000
+    },
+    "hometown": "Rubizhne, Ukraine",
+    "nationality": "",
+    "height": "6'0\"",
+    "weight": "230 lbs",
+    "debut": "2000-05-21",
+    "bio": "Fedor Emelianenko is widely considered the greatest heavyweight mixed martial artist of all time. Dominant in PRIDE FC for nearly a decade, Fedor was known for his calm demeanor, incredible hand speed for a heavyweight, and submission skills. He went undefeated for over 9 years.",
+    "divisions": [],
+    "record": {
+      "wins": 40,
+      "losses": 6,
+      "draws": 1
+    },
+    "stance": "Orthodox",
+    "reach": "73\"",
+    "titleReigns": 2
+  },
+  {
     "id": "cmfps0gqq002hseplfq19b8kh",
     "slug": "finn-balor",
     "name": "Finn Balor",
@@ -2313,6 +2528,66 @@
     "combinedDaysAsChampion": 23,
     "firstReign": "2016-01-01",
     "lastReign": "2019-01-01"
+  },
+  {
+    "id": "cmfpvnrn5000vsenm0bqnx07b",
+    "slug": "floyd-mayweather-jr",
+    "name": "Floyd Mayweather Jr.",
+    "nickname": "Money",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1996,
+      "end": 2017
+    },
+    "hometown": "Grand Rapids, Michigan",
+    "nationality": "",
+    "height": "5'8\"",
+    "weight": "150 lbs",
+    "debut": "1996-10-11",
+    "bio": "Floyd Mayweather Jr. retired undefeated with a perfect 50-0 record. Known for his defensive genius, precise counter-punching, and business acumen, Mayweather won world titles in five weight divisions and became the highest-paid athlete in sports history.",
+    "divisions": [],
+    "record": {
+      "wins": 50,
+      "losses": 0
+    },
+    "stance": "Orthodox",
+    "reach": "72\"",
+    "titleReigns": 4
+  },
+  {
+    "id": "cmfpvy68c0021se3b7sc2p6e1",
+    "slug": "forrest-griffin",
+    "name": "Forrest Griffin",
+    "nickname": "The Ultimate Fighter",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2001,
+      "end": 2013
+    },
+    "hometown": "Columbus, Ohio",
+    "nationality": "",
+    "height": "6'3\"",
+    "weight": "205 lbs",
+    "debut": "2001-11-02",
+    "bio": "Forrest Griffin was the winner of the first season of The Ultimate Fighter reality show, which helped launch the UFC into mainstream popularity. Known for his heart, determination, and fan-friendly fighting style, Griffin became a UFC champion and Hall of Famer.",
+    "divisions": [],
+    "record": {
+      "wins": 19,
+      "losses": 7
+    },
+    "stance": "Orthodox",
+    "reach": "77\"",
+    "titleReigns": 1
   },
   {
     "id": "cmfpsijrn002zseoy61erf7nw",
@@ -2367,6 +2642,99 @@
     "era": "Ruthless Aggression",
     "worldTitleReigns": 0,
     "combinedDaysAsChampion": 0
+  },
+  {
+    "id": "cmfpvnrn3000psenmpi2kgas9",
+    "slug": "george-foreman",
+    "name": "George Foreman",
+    "nickname": "Big George",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1969,
+      "end": 1997
+    },
+    "hometown": "Marshall, Texas",
+    "nationality": "",
+    "height": "6'3\"",
+    "weight": "220 lbs",
+    "debut": "1969-06-23",
+    "bio": "George Foreman had two distinct careers - dominating the 1970s as a feared puncher, then making an incredible comeback in the 1990s to become the oldest heavyweight champion ever at age 45. His knockout power was legendary, and his grilling empire made him a household name.",
+    "divisions": [],
+    "record": {
+      "wins": 76,
+      "losses": 5
+    },
+    "stance": "Orthodox",
+    "reach": "78\"",
+    "titleReigns": 4
+  },
+  {
+    "id": "cmfpvy67e0006se3bndc7qnmz",
+    "slug": "georges-st-pierre",
+    "name": "Georges St-Pierre",
+    "nickname": "GSP",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2002,
+      "end": 2017
+    },
+    "hometown": "Saint-Isidore, Quebec, Canada",
+    "nationality": "",
+    "height": "5'10\"",
+    "weight": "170 lbs",
+    "debut": "2002-01-25",
+    "bio": "Georges St-Pierre is considered one of the greatest welterweights and pound-for-pound fighters of all time. A two-division UFC champion, GSP was known for his incredible athleticism, game planning, and well-rounded skill set. He successfully defended the welterweight title 9 times.",
+    "divisions": [],
+    "record": {
+      "wins": 26,
+      "losses": 2
+    },
+    "stance": "Southpaw",
+    "reach": "76\"",
+    "titleReigns": 3
+  },
+  {
+    "id": "cmfpwb7mh002gsef5nbcrtizm",
+    "slug": "germaine-de-randamie",
+    "name": "Germaine de Randamie",
+    "nickname": "The Iron Lady",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2008,
+      "end": 2019
+    },
+    "hometown": "Utrecht, Netherlands",
+    "nationality": "",
+    "height": "5'9\"",
+    "weight": "145 lbs",
+    "debut": "2008-12-06",
+    "bio": "Germaine de Randamie was the inaugural UFC Women's Featherweight Champion, known for her elite kickboxing background. A former kickboxing world champion, she brought high-level striking to women's MMA and was one of the pioneers of the featherweight division.",
+    "divisions": [
+      "Featherweight",
+      "Bantamweight"
+    ],
+    "record": {
+      "wins": 10,
+      "losses": 5
+    },
+    "stance": "Orthodox",
+    "reach": "68\"",
+    "titleReigns": 1
   },
   {
     "id": "cmfps0grt004tseplskhx7y68",
@@ -2808,6 +3176,38 @@
     "combinedDaysAsChampion": 216,
     "firstReign": "2006-10-09",
     "lastReign": "2009-10-12"
+  },
+  {
+    "id": "cmfpwb7lo000asef5fncatysj",
+    "slug": "holly-holm",
+    "name": "Holly Holm",
+    "nickname": "The Preacher's Daughter",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2011
+    },
+    "hometown": "Albuquerque, New Mexico",
+    "nationality": "",
+    "height": "5'8\"",
+    "weight": "135 lbs",
+    "debut": "2011-02-04",
+    "bio": "Holly Holm shocked the world by ending Ronda Rousey's undefeated streak with a devastating head kick knockout. A former professional boxer with an 18-fight winning streak, Holm brought elite striking to women's MMA. She's one of the few fighters to hold titles in both boxing and MMA.",
+    "divisions": [
+      "Bantamweight",
+      "Featherweight"
+    ],
+    "record": {
+      "wins": 15,
+      "losses": 6
+    },
+    "stance": "Southpaw",
+    "reach": "70\"",
+    "titleReigns": 1
   },
   {
     "id": "cmfprotup004wser7risz6xd1",
@@ -3355,6 +3755,39 @@
     "combinedDaysAsChampion": 0
   },
   {
+    "id": "cmfpwb7mb001wsef5w3ma7q56",
+    "slug": "jessica-andrade",
+    "name": "Jessica Andrade",
+    "nickname": "Bate Estaca",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2011
+    },
+    "hometown": "Niterói, Brazil",
+    "nationality": "",
+    "height": "5'2\"",
+    "weight": "115 lbs",
+    "debut": "2011-11-05",
+    "bio": "Jessica Andrade is known for her incredible power and relentless pressure despite her smaller stature. A former UFC Women's Strawweight Champion, she's competed successfully across multiple weight classes and is known for her devastating knockout power and granite chin.",
+    "divisions": [
+      "Strawweight",
+      "Flyweight",
+      "Bantamweight"
+    ],
+    "record": {
+      "wins": 25,
+      "losses": 11
+    },
+    "stance": "Orthodox",
+    "reach": "62\"",
+    "titleReigns": 1
+  },
+  {
     "id": "cmfpsijsr005tseoymor1vjd6",
     "slug": "jimmy-hart",
     "name": "Jimmy Hart",
@@ -3380,6 +3813,70 @@
     "era": "Territory",
     "worldTitleReigns": 0,
     "combinedDaysAsChampion": 0
+  },
+  {
+    "id": "cmfpwb7m00016sef5m9vbisfo",
+    "slug": "joanna-jedrzejczyk",
+    "name": "Joanna Jedrzejczyk",
+    "nickname": "Joanna Champion",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2012,
+      "end": 2022
+    },
+    "hometown": "Olsztyn, Poland",
+    "nationality": "",
+    "height": "5'6\"",
+    "weight": "115 lbs",
+    "debut": "2012-05-19",
+    "bio": "Joanna Jedrzejczyk was one of the most dominant UFC Women's Strawweight Champions, known for her elite Muay Thai striking and volume. The former champion defended her title five times and was involved in some of the greatest women's fights in UFC history, including her wars with Zhang Weili.",
+    "divisions": [
+      "Strawweight",
+      "Flyweight"
+    ],
+    "record": {
+      "wins": 16,
+      "losses": 4
+    },
+    "stance": "Orthodox",
+    "reach": "66\"",
+    "titleReigns": 1
+  },
+  {
+    "id": "cmfpvnrn0000jsenmkjia5tot",
+    "slug": "joe-frazier",
+    "name": "Joe Frazier",
+    "nickname": "Smokin' Joe",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1965,
+      "end": 1981
+    },
+    "hometown": "Beaufort, South Carolina",
+    "nationality": "",
+    "height": "5'11\"",
+    "weight": "210 lbs",
+    "debut": "1965-08-16",
+    "bio": "Joe Frazier was the first man to defeat Muhammad Ali and held the undisputed heavyweight championship from 1970-1973. Known for his relentless pressure, devastating left hook, and incredible heart, Frazier engaged in one of boxing's greatest rivalries with Ali.",
+    "divisions": [],
+    "record": {
+      "wins": 32,
+      "losses": 4,
+      "draws": 1
+    },
+    "stance": "Orthodox",
+    "reach": "73\"",
+    "titleReigns": 2
   },
   {
     "id": "cmfpqd3u40000se5536wgj27g",
@@ -3886,6 +4383,36 @@
     "lastReign": "2016-08-29"
   },
   {
+    "id": "cmfpvy67i000cse3bt2y5jwpg",
+    "slug": "khabib-nurmagomedov",
+    "name": "Khabib Nurmagomedov",
+    "nickname": "The Eagle",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2008,
+      "end": 2020
+    },
+    "hometown": "Sildi, Dagestan, Russia",
+    "nationality": "",
+    "height": "5'10\"",
+    "weight": "155 lbs",
+    "debut": "2008-09-20",
+    "bio": "Khabib Nurmagomedov retired as the undefeated UFC Lightweight Champion with a perfect 29-0 record. Known for his dominant wrestling, ground control, and incredible pressure, Khabib never lost a round in any of his UFC title fights. His rivalry with Conor McGregor was one of the biggest in UFC history.",
+    "divisions": [],
+    "record": {
+      "wins": 29,
+      "losses": 0
+    },
+    "stance": "Orthodox",
+    "reach": "70\"",
+    "titleReigns": 1
+  },
+  {
     "id": "cmfps44td003esevujlznsrqr",
     "slug": "king-kong-bundy",
     "name": "King Kong Bundy",
@@ -4238,6 +4765,36 @@
     "lastReign": "2019-01-01"
   },
   {
+    "id": "cmfpvy689001vse3b0ywwy5j6",
+    "slug": "lyoto-machida",
+    "name": "Lyoto Machida",
+    "nickname": "The Dragon",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2003,
+      "end": 2020
+    },
+    "hometown": "Salvador, Brazil",
+    "nationality": "",
+    "height": "6'1\"",
+    "weight": "185 lbs",
+    "debut": "2003-05-17",
+    "bio": "Lyoto Machida brought traditional karate to MMA with devastating effectiveness. Known for his elusive movement, counter-striking, and unique karate-based style, Machida was nearly unbeatable during his prime. His knockout of Rashad Evans is considered one of the greatest in UFC history.",
+    "divisions": [],
+    "record": {
+      "wins": 26,
+      "losses": 10
+    },
+    "stance": "Southpaw",
+    "reach": "74\"",
+    "titleReigns": 1
+  },
+  {
     "id": "cmfpssc4x0014se32jrzyd0bx",
     "slug": "mjf",
     "name": "MJF",
@@ -4321,6 +4878,37 @@
     "combinedDaysAsChampion": 0
   },
   {
+    "id": "cmfpvnrn70011senmcgltwk5q",
+    "slug": "manny-pacquiao",
+    "name": "Manny Pacquiao",
+    "nickname": "Pac-Man",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1995,
+      "end": 2021
+    },
+    "hometown": "Kibawe, Philippines",
+    "nationality": "",
+    "height": "5'5\"",
+    "weight": "147 lbs",
+    "debut": "1995-01-22",
+    "bio": "Manny Pacquiao is the only boxer to win world titles in eight different weight divisions. Known for his explosive power, relentless pace, and incredible heart, Pacquiao became a global icon and national hero in the Philippines. His rivalry with Floyd Mayweather captivated the boxing world.",
+    "divisions": [],
+    "record": {
+      "wins": 62,
+      "losses": 8,
+      "draws": 2
+    },
+    "stance": "Southpaw",
+    "reach": "67\"",
+    "titleReigns": 3
+  },
+  {
     "id": "cmfpt7fgt0008sey1rcfp4ro6",
     "slug": "mark-henry",
     "name": "Mark Henry",
@@ -4373,6 +4961,40 @@
     "lastReign": "1999-08-22"
   },
   {
+    "id": "cmfpwb7mp0030sef5vpxrm5ui",
+    "slug": "marloes-coenen",
+    "name": "Marloes Coenen",
+    "nickname": "Rumina",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Strikeforce"
+    ],
+    "activeYears": {
+      "start": 2000,
+      "end": 2017
+    },
+    "hometown": "Olst, Netherlands",
+    "nationality": "",
+    "height": "5'7\"",
+    "weight": "135 lbs",
+    "debut": "2000-12-02",
+    "bio": "Marloes Coenen was a pioneer of women's MMA and former Strikeforce Women's Bantamweight Champion. With a career spanning over 16 years, she was one of the most experienced women fighters and helped pave the way for the current generation of female athletes in MMA.",
+    "divisions": [
+      "Bantamweight",
+      "Featherweight"
+    ],
+    "record": {
+      "wins": 23,
+      "losses": 8,
+      "draws": 1
+    },
+    "stance": "Orthodox",
+    "reach": "68\"",
+    "titleReigns": 1
+  },
+  {
     "id": "cmfps71vx002qse0h4neyk64o",
     "slug": "maryse",
     "name": "Maryse",
@@ -4399,6 +5021,36 @@
     "combinedDaysAsChampion": 216,
     "firstReign": "2008-01-01",
     "lastReign": "2008-01-01"
+  },
+  {
+    "id": "cmfpvy680001dse3bhci4gi3f",
+    "slug": "matt-hughes",
+    "name": "Matt Hughes",
+    "nickname": "The Country Boy",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 1999,
+      "end": 2013
+    },
+    "hometown": "Hillsboro, Illinois",
+    "nationality": "",
+    "height": "5'9\"",
+    "weight": "170 lbs",
+    "debut": "1999-05-29",
+    "bio": "Matt Hughes was one of the most dominant welterweight champions in UFC history. Known for his incredible strength, wrestling ability, and ground-and-pound, Hughes successfully defended the welterweight title 7 times and was inducted into the UFC Hall of Fame in 2010.",
+    "divisions": [],
+    "record": {
+      "wins": 45,
+      "losses": 9
+    },
+    "stance": "Orthodox",
+    "reach": "73\"",
+    "titleReigns": 2
   },
   {
     "id": "cmfps71vj001qse0henvqg2hf",
@@ -4566,6 +5218,68 @@
     "combinedDaysAsChampion": 0
   },
   {
+    "id": "cmfpwb7li0000sef5m9ey1byg",
+    "slug": "miesha-tate",
+    "name": "Miesha Tate",
+    "nickname": "Cupcake",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2007,
+      "end": 2022
+    },
+    "hometown": "Tacoma, Washington",
+    "nationality": "",
+    "height": "5'6\"",
+    "weight": "135 lbs",
+    "debut": "2007-01-12",
+    "bio": "Miesha Tate was a pioneer of women's MMA and played a crucial role in the sport's growth. A former UFC and Strikeforce champion, she was known for her wrestling background, heart, and never-give-up attitude. Her rivalries with Ronda Rousey helped bring women's MMA to the mainstream.",
+    "divisions": [
+      "Bantamweight"
+    ],
+    "record": {
+      "wins": 19,
+      "losses": 8
+    },
+    "stance": "Orthodox",
+    "reach": "66\"",
+    "titleReigns": 2
+  },
+  {
+    "id": "cmfpvnrmr0007senms2omsyrm",
+    "slug": "mike-tyson",
+    "name": "Mike Tyson",
+    "nickname": "Iron Mike",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1985,
+      "end": 2005
+    },
+    "hometown": "Brooklyn, New York",
+    "nationality": "",
+    "height": "5'10\"",
+    "weight": "220 lbs",
+    "debut": "1985-03-06",
+    "bio": "Mike Tyson became the youngest heavyweight champion in history at age 20. Known for his ferocious power, intimidating presence, and explosive knockout ability, Tyson dominated the late 1980s heavyweight division. His personal troubles and prison sentence interrupted what could have been an even more dominant career.",
+    "divisions": [],
+    "record": {
+      "wins": 50,
+      "losses": 6
+    },
+    "stance": "Orthodox",
+    "reach": "71\"",
+    "titleReigns": 3
+  },
+  {
     "id": "cmfpta9ai001use3e72b59cbc",
     "slug": "mikey-whipwreck",
     "name": "Mikey Whipwreck",
@@ -4705,6 +5419,36 @@
     "lastReign": "1987-01-01"
   },
   {
+    "id": "cmfpvnrlv0000senmaeahmvb8",
+    "slug": "muhammad-ali",
+    "name": "Muhammad Ali",
+    "nickname": "The Greatest",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1960,
+      "end": 1981
+    },
+    "hometown": "Louisville, Kentucky",
+    "nationality": "",
+    "height": "6'3\"",
+    "weight": "210 lbs",
+    "debut": "1960-10-29",
+    "bio": "Muhammad Ali is widely regarded as the greatest heavyweight boxer of all time. Known for his lightning-fast footwork, powerful jab, and psychological warfare, Ali was a three-time heavyweight champion who transcended sports to become a global icon. His fights with Joe Frazier, George Foreman, and Sonny Liston are legendary.",
+    "divisions": [],
+    "record": {
+      "wins": 56,
+      "losses": 5
+    },
+    "stance": "Orthodox",
+    "reach": "78\"",
+    "titleReigns": 4
+  },
+  {
     "id": "cmfptigrl000gsefy1dfo5g1e",
     "slug": "natalya",
     "name": "Natalya",
@@ -4781,6 +5525,38 @@
     "combinedDaysAsChampion": 112,
     "firstReign": "2018-01-01",
     "lastReign": "2024-01-01"
+  },
+  {
+    "id": "cmfpwb7ml002qsef5khoz7mem",
+    "slug": "nicco-montano",
+    "name": "Nicco Montano",
+    "nickname": "Sudden Impact",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2015
+    },
+    "hometown": "Albuquerque, New Mexico",
+    "nationality": "",
+    "height": "5'4\"",
+    "weight": "125 lbs",
+    "debut": "2015-02-14",
+    "bio": "Nicco Montano was the inaugural UFC Women's Flyweight Champion, winning the title on The Ultimate Fighter reality show. Though her championship reign was brief, she made history as the first flyweight champion and helped establish the 125-pound division in women's MMA.",
+    "divisions": [
+      "Flyweight",
+      "Bantamweight"
+    ],
+    "record": {
+      "wins": 4,
+      "losses": 3
+    },
+    "stance": "Orthodox",
+    "reach": "65\"",
+    "titleReigns": 1
   },
   {
     "id": "cmfpsijr1001lseoyqqyn3ce4",
@@ -5111,6 +5887,66 @@
     "era": "Monday Night Wars",
     "worldTitleReigns": 0,
     "combinedDaysAsChampion": 0
+  },
+  {
+    "id": "cmfpvy687001pse3bf3ef3i4u",
+    "slug": "quinton-jackson",
+    "name": "Quinton Jackson",
+    "nickname": "Rampage",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 1999,
+      "end": 2019
+    },
+    "hometown": "Memphis, Tennessee",
+    "nationality": "",
+    "height": "6'1\"",
+    "weight": "205 lbs",
+    "debut": "1999-12-18",
+    "bio": "Quinton 'Rampage' Jackson was known for his explosive knockout power, entertaining personality, and successful crossover into acting. A former UFC and PRIDE champion, Rampage was one of the biggest stars in MMA and helped bring the sport to mainstream audiences.",
+    "divisions": [],
+    "record": {
+      "wins": 38,
+      "losses": 14
+    },
+    "stance": "Orthodox",
+    "reach": "73\"",
+    "titleReigns": 2
+  },
+  {
+    "id": "cmfpvy67r000use3bouop6ala",
+    "slug": "randy-couture",
+    "name": "Randy Couture",
+    "nickname": "The Natural",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 1997,
+      "end": 2011
+    },
+    "hometown": "Everett, Washington",
+    "nationality": "",
+    "height": "6'1\"",
+    "weight": "220 lbs",
+    "debut": "1997-05-17",
+    "bio": "Randy Couture is a UFC Hall of Famer and one of the few fighters to win titles in two weight classes. Known for his wrestling background, 'dirty boxing' in the clinch, and incredible longevity, Couture competed at the highest level well into his 40s and was a five-time UFC champion.",
+    "divisions": [],
+    "record": {
+      "wins": 19,
+      "losses": 11
+    },
+    "stance": "Orthodox",
+    "reach": "74\"",
+    "titleReigns": 5
   },
   {
     "id": "cmfprottv003cser794x0xg21",
@@ -5600,6 +6436,36 @@
     "lastReign": "2006-01-01"
   },
   {
+    "id": "cmfpvnrnd001dsenmg66wbi3c",
+    "slug": "roberto-duran",
+    "name": "Roberto Duran",
+    "nickname": "Hands of Stone",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1968,
+      "end": 2001
+    },
+    "hometown": "Guarare, Panama",
+    "nationality": "",
+    "height": "5'7\"",
+    "weight": "135 lbs",
+    "debut": "1968-02-23",
+    "bio": "Roberto Duran was a ferocious fighter who won world titles in four weight divisions during a career that spanned five decades. Known for his granite chin, devastating body shots, and intimidating persona, Duran's rivalry with Sugar Ray Leonard produced some of boxing's greatest fights.",
+    "divisions": [],
+    "record": {
+      "wins": 103,
+      "losses": 16
+    },
+    "stance": "Orthodox",
+    "reach": "67\"",
+    "titleReigns": 3
+  },
+  {
     "id": "cmfprottz003kser76luqay3m",
     "slug": "roman-reigns",
     "name": "Roman Reigns",
@@ -5676,6 +6542,68 @@
     "combinedDaysAsChampion": 258,
     "firstReign": "2018-01-01",
     "lastReign": "2023-01-01"
+  },
+  {
+    "id": "cmfpwb7m4001gsef5yqcqlzcw",
+    "slug": "rose-namajunas",
+    "name": "Rose Namajunas",
+    "nickname": "Thug Rose",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2013
+    },
+    "hometown": "Milwaukee, Wisconsin",
+    "nationality": "",
+    "height": "5'5\"",
+    "weight": "115 lbs",
+    "debut": "2013-04-13",
+    "bio": "Rose Namajunas is a two-time UFC Women's Strawweight Champion known for her well-rounded skills and mental toughness. She shocked the world by knocking out Joanna Jedrzejczyk to win her first title and has been involved in some of the most technical women's fights in UFC history.",
+    "divisions": [
+      "Strawweight"
+    ],
+    "record": {
+      "wins": 12,
+      "losses": 5
+    },
+    "stance": "Orthodox",
+    "reach": "65\"",
+    "titleReigns": 2
+  },
+  {
+    "id": "cmfpvy67w0017se3b5oreiqmf",
+    "slug": "royce-gracie",
+    "name": "Royce Gracie",
+    "nickname": "The Gracies",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 1993,
+      "end": 2007
+    },
+    "hometown": "Rio de Janeiro, Brazil",
+    "nationality": "",
+    "height": "6'0\"",
+    "weight": "180 lbs",
+    "debut": "1993-11-12",
+    "bio": "Royce Gracie revolutionized martial arts by winning the first, second, and fourth UFC tournaments despite being the smallest competitor. He introduced Brazilian Jiu-Jitsu to the world and proved that technique could overcome size and strength. Royce is a UFC Hall of Famer and MMA pioneer.",
+    "divisions": [],
+    "record": {
+      "wins": 15,
+      "losses": 2,
+      "draws": 3
+    },
+    "stance": "Orthodox",
+    "reach": "73\"",
+    "titleReigns": 3
   },
   {
     "id": "cmfpteydy001isebp35uhbr45",
@@ -5839,6 +6767,39 @@
     "era": "Attitude",
     "worldTitleReigns": 0,
     "combinedDaysAsChampion": 0
+  },
+  {
+    "id": "cmfpwb7mv003bsef5rbhidpm8",
+    "slug": "sarah-kaufman",
+    "name": "Sarah Kaufman",
+    "nickname": "Stitch",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Strikeforce"
+    ],
+    "activeYears": {
+      "start": 2006,
+      "end": 2019
+    },
+    "hometown": "Victoria, British Columbia",
+    "nationality": "",
+    "height": "5'5\"",
+    "weight": "135 lbs",
+    "debut": "2006-06-02",
+    "bio": "Sarah Kaufman was one of the early stars of women's MMA and a former Strikeforce Women's Bantamweight Champion. Known for her boxing skills and professionalism, she was a consistent top contender who helped establish credibility for women's MMA during its early growth period.",
+    "divisions": [
+      "Bantamweight"
+    ],
+    "record": {
+      "wins": 20,
+      "losses": 5,
+      "draws": 1
+    },
+    "stance": "Orthodox",
+    "reach": "67\"",
+    "titleReigns": 1
   },
   {
     "id": "cmfprotwb005sser7ly9rzfsu",
@@ -6272,6 +7233,68 @@
     "combinedDaysAsChampion": 0,
     "firstReign": "1998-03-29",
     "lastReign": "2001-10-08"
+  },
+  {
+    "id": "cmfpvnrnf001jsenm0m6x1qgd",
+    "slug": "sugar-ray-leonard",
+    "name": "Sugar Ray Leonard",
+    "nickname": "Sugar Ray",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1977,
+      "end": 1997
+    },
+    "hometown": "Wilmington, North Carolina",
+    "nationality": "",
+    "height": "5'10\"",
+    "weight": "147 lbs",
+    "debut": "1977-02-05",
+    "bio": "Sugar Ray Leonard was the face of boxing in the 1980s, combining exceptional skill with charisma and showmanship. He won world titles in five weight divisions and engaged in legendary rivalries with Roberto Duran, Thomas Hearns, and Marvin Hagler.",
+    "divisions": [],
+    "record": {
+      "wins": 36,
+      "losses": 3,
+      "draws": 1
+    },
+    "stance": "Orthodox",
+    "reach": "74\"",
+    "titleReigns": 4
+  },
+  {
+    "id": "cmfpvnrmw000dsenm42y3bgxw",
+    "slug": "sugar-ray-robinson",
+    "name": "Sugar Ray Robinson",
+    "nickname": "Sugar",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Boxing"
+    ],
+    "activeYears": {
+      "start": 1940,
+      "end": 1965
+    },
+    "hometown": "Ailey, Georgia",
+    "nationality": "",
+    "height": "5'11\"",
+    "weight": "160 lbs",
+    "debut": "1940-10-04",
+    "bio": "Sugar Ray Robinson is often considered pound-for-pound the greatest boxer of all time. He held the world middleweight title five times and had a professional record of 173-19-6. Robinson was known for his hand speed, footwork, and ability to throw combinations from any angle.",
+    "divisions": [],
+    "record": {
+      "wins": 173,
+      "losses": 19,
+      "draws": 6
+    },
+    "stance": "Orthodox",
+    "reach": "73\"",
+    "titleReigns": 6
   },
   {
     "id": "cmfps44u9005gsevuvbl10avk",
@@ -6999,6 +8022,37 @@
     "lastReign": "2023-01-01"
   },
   {
+    "id": "cmfpvy67o000ose3b1wfmmg8x",
+    "slug": "tito-ortiz",
+    "name": "Tito Ortiz",
+    "nickname": "The Huntington Beach Bad Boy",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 1997,
+      "end": 2012
+    },
+    "hometown": "Huntington Beach, California",
+    "nationality": "",
+    "height": "6'2\"",
+    "weight": "205 lbs",
+    "debut": "1997-05-17",
+    "bio": "Tito Ortiz was one of the biggest stars in early UFC history and helped establish the light heavyweight division. Known for his wrestling background, ground-and-pound style, and larger-than-life personality, Ortiz was instrumental in the UFC's rise to mainstream popularity.",
+    "divisions": [],
+    "record": {
+      "wins": 21,
+      "losses": 12,
+      "draws": 1
+    },
+    "stance": "Orthodox",
+    "reach": "75\"",
+    "titleReigns": 1
+  },
+  {
     "id": "cmfps44tu004jsevudl17hhhb",
     "slug": "tito-santana",
     "name": "Tito Santana",
@@ -7405,6 +8459,38 @@
     "combinedDaysAsChampion": 0
   },
   {
+    "id": "cmfpwb7lt000ksef51uu2r0rh",
+    "slug": "valentina-shevchenko",
+    "name": "Valentina Shevchenko",
+    "nickname": "Bullet",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2003
+    },
+    "hometown": "Frunze, Kyrgyzstan",
+    "nationality": "",
+    "height": "5'5\"",
+    "weight": "125 lbs",
+    "debut": "2003-02-07",
+    "bio": "Valentina Shevchenko is one of the most dominant champions in UFC history, with exceptional Muay Thai skills and fight IQ. The longtime UFC Women's Flyweight Champion has defended her title multiple times with precision striking and tactical brilliance. She's considered one of the pound-for-pound best.",
+    "divisions": [
+      "Flyweight",
+      "Bantamweight"
+    ],
+    "record": {
+      "wins": 23,
+      "losses": 4
+    },
+    "stance": "Southpaw",
+    "reach": "67\"",
+    "titleReigns": 1
+  },
+  {
     "id": "cmfpsijr7001wseoy2t25ljmb",
     "slug": "verne-gagne",
     "name": "Verne Gagne",
@@ -7647,6 +8733,37 @@
     "combinedDaysAsChampion": 191,
     "firstReign": "2024-04-06",
     "lastReign": "2024-04-06"
+  },
+  {
+    "id": "cmfpwb7m7001osef56ux16hvj",
+    "slug": "zhang-weili",
+    "name": "Zhang Weili",
+    "nickname": "Magnum",
+    "type": "fighter",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "Ultimate Fighting Championship"
+    ],
+    "activeYears": {
+      "start": 2013
+    },
+    "hometown": "Handan, China",
+    "nationality": "",
+    "height": "5'4\"",
+    "weight": "115 lbs",
+    "debut": "2013-01-19",
+    "bio": "Zhang Weili was the first Chinese champion in UFC history and has been involved in some of the greatest women's fights ever. Known for her powerful striking and cardio, her fights with Joanna Jedrzejczyk and Rose Namajunas are considered classics in women's MMA.",
+    "divisions": [
+      "Strawweight"
+    ],
+    "record": {
+      "wins": 24,
+      "losses": 3
+    },
+    "stance": "Orthodox",
+    "reach": "63\"",
+    "titleReigns": 2
   },
   {
     "id": "cmfps0grg003xsepl5luc4yz9",
