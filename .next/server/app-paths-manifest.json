@@ -1,7 +1,4 @@
 {
-  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/ppv-flashback/page": "app/ppv-flashback/page.js",
-  "/api/events/wwe-flashback/route": "app/api/events/wwe-flashback/route.js",
-  "/api/events/ufc-flashback/route": "app/api/events/ufc-flashback/route.js"
+  "/on-this-day/page": "app/on-this-day/page.js"
 }

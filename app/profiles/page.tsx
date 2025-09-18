@@ -175,7 +175,7 @@ function ProfilesGrid({ searchParams }: { searchParams: ProfilesPageProps['searc
   // Build filters from search params
   const filters: Partial<ProfilesFilter> = {
     search: searchParams.search || '',
-    type: searchParams.type === 'all' ? undefined : (searchParams.type as 'wrestler' | 'fighter'),
+    type: searchParams.type === 'all' ? 'all' : (searchParams.type as 'wrestler' | 'fighter' | undefined),
     promotions: searchParams.promotion && searchParams.promotion !== 'all' ? [searchParams.promotion] : undefined,
     eras: searchParams.era && searchParams.era !== 'all' ? [searchParams.era as any] : undefined,
   };

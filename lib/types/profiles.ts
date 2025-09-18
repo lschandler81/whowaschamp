@@ -74,7 +74,7 @@ export interface Rivalry {
 
 export interface ProfilesFilter {
   search: string;
-  type: 'all' | 'wrestlers' | 'fighters';
+  type: 'all' | 'wrestler' | 'fighter';
   promotions: string[];
   eras: string[];
   divisions: string[];

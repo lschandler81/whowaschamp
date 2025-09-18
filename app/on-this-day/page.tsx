@@ -90,7 +90,7 @@ export default async function OnThisDayPage() {
                     </Link>
                   </div>
                   <div className="text-gray-800">
-                    {prevHref ? (
+                    {prevHref && e.previous_champion ? (
                       <>
                         <Link href={getProfileUrl(e.previous_champion)} className="text-gray-900 font-semibold hover:text-red-600">
                           {e.previous_champion}
@@ -103,9 +103,13 @@ export default async function OnThisDayPage() {
                         <span className="mx-2" />
                       </>
                     )}
-                    <Link href={getProfileUrl(e.new_champion)} className="text-gray-900 font-semibold hover:text-red-600">
-                      {e.new_champion}
-                    </Link>
+                    {e.new_champion ? (
+                      <Link href={getProfileUrl(e.new_champion)} className="text-gray-900 font-semibold hover:text-red-600">
+                        {e.new_champion}
+                      </Link>
+                    ) : (
+                      <span className="text-gray-900 font-semibold">Unknown Champion</span>
+                    )}
                   </div>
                   {(e.event || e.location) && (
                     <div className="text-sm text-gray-600">
