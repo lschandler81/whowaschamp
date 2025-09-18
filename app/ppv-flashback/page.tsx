@@ -47,8 +47,8 @@ export default function PPVFlashbackPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight mb-4">PPV Flashback</h1>
             <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-              Each week we spotlight a major pay-per-view event that happened during this same ISO week in wrestling history. 
-              Discover legendary moments from the same time period across different years.
+              Each week we spotlight a major pay-per-view event that happened during this same time in wrestling history. 
+              Discover legendary moments from the same week across different years.
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function PPVFlashbackPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Select Events</h2>
             <div className="prose prose-lg max-w-2xl mx-auto text-gray-700">
               <p className="mb-4">
-                Our PPV Flashback feature uses ISO week numbering to find events that happened during 
+                Our PPV Flashback feature finds events that happened during 
                 the same week of the year across wrestling history.
               </p>
               <p className="mb-4">
