@@ -54,7 +54,8 @@ async function testWeeklyRotation() {
       }
       
     } catch (error) {
-      console.log(`❌ Error testing ${endpoint.name}:`, error.message);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      console.log(`❌ Error testing ${endpoint.name}:`, errorMessage);
     }
     
     console.log(''); // Empty line for readability
