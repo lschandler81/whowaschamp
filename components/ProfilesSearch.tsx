@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { 
@@ -28,7 +28,6 @@ export function ProfilesSearch({
   initialDivision = 'all'
 }: ProfilesSearchProps) {
   const router = useRouter();
-  const searchParams = useSearchParams();
   
   const [search, setSearch] = useState(initialSearch);
   const [type, setType] = useState(initialType);
@@ -36,7 +35,7 @@ export function ProfilesSearch({
   const [era, setEra] = useState(initialEra);
   const [division, setDivision] = useState(initialDivision);
 
-  const updateUrl = () => {
+  const applyFilters = () => {
     const params = new URLSearchParams();
     
     if (search.trim()) params.set('search', search.trim());
@@ -51,11 +50,6 @@ export function ProfilesSearch({
     router.push(newUrl);
   };
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    updateUrl();
-  };
-
   const clearFilters = () => {
     setSearch('');
     setType('all');
@@ -63,6 +57,11 @@ export function ProfilesSearch({
     setEra('all');
     setDivision('all');
     router.push('/profiles');
+  };
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    applyFilters();
   };
 
   return (
@@ -80,7 +79,7 @@ export function ProfilesSearch({
           </div>
           
           <div className="flex flex-wrap gap-4">
-            <Select value={type} onValueChange={(value) => { setType(value); }}>
+            <Select value={type} onValueChange={setType}>
               <SelectTrigger className="w-[140px]">
                 <SelectValue placeholder="Type" />
               </SelectTrigger>
@@ -91,7 +90,7 @@ export function ProfilesSearch({
               </SelectContent>
             </Select>
             
-            <Select value={promotion} onValueChange={(value) => { setPromotion(value); }}>
+            <Select value={promotion} onValueChange={setPromotion}>
               <SelectTrigger className="w-[160px]">
                 <SelectValue placeholder="Promotion" />
               </SelectTrigger>
@@ -111,7 +110,7 @@ export function ProfilesSearch({
               </SelectContent>
             </Select>
             
-            <Select value={era} onValueChange={(value) => { setEra(value); }}>
+            <Select value={era} onValueChange={setEra}>
               <SelectTrigger className="w-[160px]">
                 <SelectValue placeholder="Era" />
               </SelectTrigger>
@@ -126,7 +125,7 @@ export function ProfilesSearch({
             </Select>
             
             {type === 'fighter' && (
-              <Select value={division} onValueChange={(value) => { setDivision(value); }}>
+              <Select value={division} onValueChange={setDivision}>
                 <SelectTrigger className="w-[160px]">
                   <SelectValue placeholder="Division" />
                 </SelectTrigger>
@@ -151,7 +150,7 @@ export function ProfilesSearch({
             <Button 
               type="button" 
               variant="outline" 
-              onClick={updateUrl}
+              onClick={applyFilters}
               className="whitespace-nowrap"
             >
               Apply Filters

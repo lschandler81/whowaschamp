@@ -4,7 +4,6 @@ import { Badge } from '@/components/ui/badge';
 import { filterProfiles, getProfileUrl, getAllProfiles } from '@/lib/profiles';
 import { Profile, ProfilesFilter } from '@/lib/types/profiles';
 import { ProfilesSearch } from '@/components/ProfilesSearch';
-import ProfilesDebug from '@/components/ProfilesDebug';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
@@ -105,6 +104,9 @@ function ProfileCard({ profile }: { profile: Profile }) {
 async function ProfilesGrid({ searchParams }: { searchParams: ProfilesPageProps['searchParams'] }) {
   const allProfiles = await getAllProfiles();
   
+  // Debug: Log profile count
+  console.log(`ProfilesGrid loaded ${allProfiles.length} profiles`);
+  
   // Build filters from search params
   const filters: Partial<ProfilesFilter> = {
     search: searchParams.search || '',
@@ -157,9 +159,6 @@ export default async function ProfilesPage({ searchParams }: ProfilesPageProps) 
           from WWE, UFC, boxing, and beyond.
         </p>
       </div>
-      
-      {/* Debug Info */}
-      <ProfilesDebug />
       
       {/* Search and Filters */}
       <div className="mb-8">
