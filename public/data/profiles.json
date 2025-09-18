@@ -28,6 +28,33 @@
     "lastReign": "2013-01-01"
   },
   {
+    "id": "cmfpww5qp000ksehj6m5aycr0",
+    "slug": "aj-styles",
+    "name": "AJ Styles",
+    "nickname": "The Phenomenal One",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "TNA"
+    ],
+    "activeYears": {
+      "start": 1998
+    },
+    "hometown": "Jacksonville, North Carolina",
+    "nationality": "",
+    "height": "5'11\"",
+    "weight": "218 lbs",
+    "debut": "1998-09-01",
+    "bio": "AJ Styles is widely considered one of the greatest wrestlers of all time. Starting in independent promotions in the South, Styles became the face of TNA Wrestling for over a decade before successful runs in New Japan Pro Wrestling and WWE. His athletic ability and longevity are unmatched.",
+    "finisher": "Styles Clash",
+    "era": "Modern Era",
+    "worldTitleReigns": 7,
+    "combinedDaysAsChampion": 581,
+    "firstReign": "2009-04-19",
+    "lastReign": "2017-01-29"
+  },
+  {
     "id": "cmfpssc65003vse32rr6qrofh",
     "slug": "adam-cole",
     "name": "Adam Cole",
@@ -384,6 +411,33 @@
     "combinedDaysAsChampion": 1173,
     "firstReign": "2018-01-01",
     "lastReign": "2015-01-01"
+  },
+  {
+    "id": "cmfpww5r9001osehjrdmg3im9",
+    "slug": "austin-aries",
+    "name": "Austin Aries",
+    "nickname": "The Greatest Man That Ever Lived",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "ROH"
+    ],
+    "activeYears": {
+      "start": 2000
+    },
+    "hometown": "Milwaukee, Wisconsin",
+    "nationality": "",
+    "height": "5'9\"",
+    "weight": "202 lbs",
+    "debut": "2000-01-01",
+    "bio": "Austin Aries is known for his arrogant persona and exceptional in-ring ability. A former ROH World Champion who later found success in TNA and WWE's cruiserweight division, Aries is respected for his mic skills and athletic ability despite his controversial personality.",
+    "finisher": "Brainbuster",
+    "era": "Modern Era",
+    "worldTitleReigns": 2,
+    "combinedDaysAsChampion": 581,
+    "firstReign": "2009-12-19",
+    "lastReign": "2012-10-14"
   },
   {
     "id": "cmfpvy684001jse3b681q0bgv",
@@ -1431,6 +1485,33 @@
     "lastReign": "2008-01-01"
   },
   {
+    "id": "cmfpww5qt000ssehj61cqdl4j",
+    "slug": "christopher-daniels",
+    "name": "Christopher Daniels",
+    "nickname": "The Fallen Angel",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "ROH"
+    ],
+    "activeYears": {
+      "start": 1993
+    },
+    "hometown": "Kalamazoo, Michigan",
+    "nationality": "",
+    "height": "6'0\"",
+    "weight": "215 lbs",
+    "debut": "1993-01-01",
+    "bio": "Christopher Daniels is one of the most respected veterans of independent wrestling. Known for his longevity, professionalism, and incredible work ethic, Daniels has been a cornerstone of promotions like ROH, TNA, and AEW. His feuds with AJ Styles and Samoa Joe are legendary.",
+    "finisher": "Angel's Wings",
+    "era": "Modern Era",
+    "worldTitleReigns": 7,
+    "combinedDaysAsChampion": 427,
+    "firstReign": "2005-01-16",
+    "lastReign": "2012-07-08"
+  },
+  {
     "id": "cmfpvy67l000ise3bu8chb538",
     "slug": "chuck-liddell",
     "name": "Chuck Liddell",
@@ -2118,6 +2199,33 @@
     "lastReign": "2021-05-30"
   },
   {
+    "id": "cmfpwnpy0000gsekka2tl7tbq",
+    "slug": "dr-wagner-jr",
+    "name": "Dr. Wagner Jr.",
+    "nickname": "El Galeno del Mal",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "AAA"
+    ],
+    "activeYears": {
+      "start": 1986
+    },
+    "hometown": "Torreón, Coahuila, Mexico",
+    "nationality": "",
+    "height": "6'1\"",
+    "weight": "215 lbs",
+    "debut": "1986-08-15",
+    "bio": "Dr. Wagner Jr. is one of the most charismatic and successful luchadores of the modern era. Following in his father's footsteps, Wagner Jr. became a major star in both Mexico and Japan, known for his incredible mic skills, technical ability, and memorable feuds.",
+    "finisher": "Wagner Driver",
+    "era": "Modern Era",
+    "worldTitleReigns": 2,
+    "combinedDaysAsChampion": 418,
+    "firstReign": "2007-12-02",
+    "lastReign": "2020-08-29"
+  },
+  {
     "id": "cmfprotu1003oser7nlunkslo",
     "slug": "drew-mcintyre",
     "name": "Drew McIntyre",
@@ -2590,6 +2698,33 @@
     "titleReigns": 1
   },
   {
+    "id": "cmfpww5qw0010sehjgi38pkzh",
+    "slug": "frankie-kazarian",
+    "name": "Frankie Kazarian",
+    "nickname": "The Addiction",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "TNA"
+    ],
+    "activeYears": {
+      "start": 1998
+    },
+    "hometown": "Anaheim, California",
+    "nationality": "",
+    "height": "6'1\"",
+    "weight": "215 lbs",
+    "debut": "1998-01-01",
+    "bio": "Frankie Kazarian is a versatile wrestler who has been a mainstay of independent wrestling for over two decades. Known for his technical ability and tag team success with Christopher Daniels, Kazarian has held championships in multiple promotions and is respected as a veteran leader.",
+    "finisher": "Fade to Black",
+    "era": "Modern Era",
+    "worldTitleReigns": 4,
+    "combinedDaysAsChampion": 361,
+    "firstReign": "2007-10-14",
+    "lastReign": "2019-04-05"
+  },
+  {
     "id": "cmfpsijrn002zseoy61erf7nw",
     "slug": "fritz-von-erich",
     "name": "Fritz Von Erich",
@@ -2642,6 +2777,34 @@
     "era": "Ruthless Aggression",
     "worldTitleReigns": 0,
     "combinedDaysAsChampion": 0
+  },
+  {
+    "id": "cmfpws8k90000sexcsuf8ay6m",
+    "slug": "gene-kiniski",
+    "name": "Gene Kiniski",
+    "nickname": "Big Thunder",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "NWA"
+    ],
+    "activeYears": {
+      "start": 1952,
+      "end": 1992
+    },
+    "hometown": "Edmonton, Alberta, Canada",
+    "nationality": "",
+    "height": "6'0\"",
+    "weight": "265 lbs",
+    "debut": "1952-01-01",
+    "bio": "Gene Kiniski was one of the most hated heels of his era and a legitimate tough guy. Known for his intimidating presence and hard-hitting style, 'Big Thunder' was a former NWA World Heavyweight Champion who could get heat from any crowd and was respected throughout the wrestling world.",
+    "finisher": "Bearhug",
+    "era": "Golden Era",
+    "worldTitleReigns": 1,
+    "combinedDaysAsChampion": 1131,
+    "firstReign": "1966-01-07",
+    "lastReign": "1969-02-11"
   },
   {
     "id": "cmfpvnrn3000psenmpi2kgas9",
@@ -3262,6 +3425,34 @@
     "combinedDaysAsChampion": 0,
     "firstReign": "1984-01-23",
     "lastReign": "1999-07-11"
+  },
+  {
+    "id": "cmfpww5qh0006sehje7en4s4w",
+    "slug": "human-tornado",
+    "name": "Human Tornado",
+    "nickname": "Human Tornado",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "PWG"
+    ],
+    "activeYears": {
+      "start": 2000,
+      "end": 2012
+    },
+    "hometown": "Los Angeles, California",
+    "nationality": "",
+    "height": "5'11\"",
+    "weight": "195 lbs",
+    "debut": "2000-01-01",
+    "bio": "Human Tornado was one of the most unique and entertaining wrestlers in PWG history. Known for his flamboyant character, incredible athleticism, and ability to get the crowd involved, Tornado was a multiple-time PWG World Champion and helped define the promotion's fun atmosphere.",
+    "finisher": "DSD (Dat Shit Devastating)",
+    "era": "Modern Era",
+    "worldTitleReigns": 2,
+    "combinedDaysAsChampion": 298,
+    "firstReign": "2006-08-19",
+    "lastReign": "2008-12-13"
   },
   {
     "id": "cmfps0gow001nsepl93czgqhf",
@@ -3995,6 +4186,33 @@
     "combinedDaysAsChampion": 410,
     "firstReign": "1987-08-24",
     "lastReign": "1987-08-24"
+  },
+  {
+    "id": "cmfpwnpxn0000sekkftwiludu",
+    "slug": "jun-akiyama",
+    "name": "Jun Akiyama",
+    "nickname": "Mr. Wrist Clutch",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "AJPW"
+    ],
+    "activeYears": {
+      "start": 1992
+    },
+    "hometown": "Kawasaki, Kanagawa, Japan",
+    "nationality": "",
+    "height": "6'0\"",
+    "weight": "242 lbs",
+    "debut": "1992-10-10",
+    "bio": "Jun Akiyama was one of the most technically gifted wrestlers of his generation and a key figure in All Japan's golden era. Known for his innovative Wrist Clutch Exploder suplex, Akiyama had legendary feuds with Mitsuharu Misawa and Kenta Kobashi and helped define puroresu in the 1990s and 2000s.",
+    "finisher": "Wrist Clutch Exploder",
+    "era": "Attitude Era",
+    "worldTitleReigns": 3,
+    "combinedDaysAsChampion": 382,
+    "firstReign": "2001-05-01",
+    "lastReign": "2014-02-23"
   },
   {
     "id": "cmfps44ty004ssevucilexe3f",
@@ -4738,6 +4956,33 @@
     "lastReign": "2024-01-01"
   },
   {
+    "id": "cmfpww5qm000csehj1dmemp4b",
+    "slug": "low-ki",
+    "name": "Low Ki",
+    "nickname": "The Professional",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "ROH"
+    ],
+    "activeYears": {
+      "start": 1998
+    },
+    "hometown": "Brooklyn, New York",
+    "nationality": "",
+    "height": "5'8\"",
+    "weight": "180 lbs",
+    "debut": "1998-10-01",
+    "bio": "Low Ki is one of the most intense and technically gifted wrestlers in the world. Known for his martial arts background and hard-hitting style, he was part of Ring of Honor's first main event and held championships in multiple promotions including TNA and New Japan Pro Wrestling.",
+    "finisher": "Ki Crusher",
+    "era": "Modern Era",
+    "worldTitleReigns": 4,
+    "combinedDaysAsChampion": 586,
+    "firstReign": "2002-02-23",
+    "lastReign": "2015-01-07"
+  },
+  {
     "id": "cmfps0grq004mseplb4szk1zc",
     "slug": "ludwig-kaiser",
     "name": "Ludwig Kaiser",
@@ -5053,6 +5298,33 @@
     "titleReigns": 2
   },
   {
+    "id": "cmfpww5r20018sehjyj79wwfg",
+    "slug": "matt-sydal",
+    "name": "Matt Sydal",
+    "nickname": "The Zen Warrior",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "ROH"
+    ],
+    "activeYears": {
+      "start": 2000
+    },
+    "hometown": "St. Louis, Missouri",
+    "nationality": "",
+    "height": "5'9\"",
+    "weight": "175 lbs",
+    "debut": "2000-01-01",
+    "bio": "Matt Sydal (Evan Bourne) is known for his high-flying style and spiritual approach to wrestling. A veteran of the independent scene who found success in WWE, ROH, and internationally, Sydal is respected for his athletic ability and unique character work.",
+    "finisher": "Shooting Star Press",
+    "era": "Modern Era",
+    "worldTitleReigns": 2,
+    "combinedDaysAsChampion": 357,
+    "firstReign": "2009-07-31",
+    "lastReign": "2022-07-23"
+  },
+  {
     "id": "cmfps71vj001qse0henvqg2hf",
     "slug": "melina",
     "name": "Melina",
@@ -5304,6 +5576,33 @@
     "era": "Attitude",
     "worldTitleReigns": 0,
     "combinedDaysAsChampion": 0
+  },
+  {
+    "id": "cmfpwnpxw0008sekk14emwol5",
+    "slug": "mil-mascaras",
+    "name": "Mil Mascaras",
+    "nickname": "Man of a Thousand Masks",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "CMLL"
+    ],
+    "activeYears": {
+      "start": 1965
+    },
+    "hometown": "San Luis Potosí, Mexico",
+    "nationality": "",
+    "height": "5'10\"",
+    "weight": "240 lbs",
+    "debut": "1965-07-07",
+    "bio": "Mil Mascaras is a legendary luchador known for his incredible collection of masks and his role in popularizing lucha libre internationally. He was one of the first Mexican wrestlers to have major success in Japan and the United States, helping bridge different wrestling cultures.",
+    "finisher": "Flying Cross Body",
+    "era": "Golden Era",
+    "worldTitleReigns": 4,
+    "combinedDaysAsChampion": 880,
+    "firstReign": "1970-08-21",
+    "lastReign": "1978-06-02"
   },
   {
     "id": "cmfpt433g000aseo3wtgei6un",
@@ -6466,6 +6765,33 @@
     "titleReigns": 3
   },
   {
+    "id": "cmfpww5r6001gsehjmg08yz1f",
+    "slug": "roderick-strong",
+    "name": "Roderick Strong",
+    "nickname": "The Messiah of the Backbreaker",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "ROH"
+    ],
+    "activeYears": {
+      "start": 2000
+    },
+    "hometown": "Milwaukee, Wisconsin",
+    "nationality": "",
+    "height": "5'10\"",
+    "weight": "200 lbs",
+    "debut": "2000-09-01",
+    "bio": "Roderick Strong is one of the most technically sound wrestlers in the world, known for his devastating backbreakers and incredible conditioning. A longtime staple of Ring of Honor and other independent promotions, Strong later found success in NXT and is respected for his in-ring excellence.",
+    "finisher": "End of Heartache",
+    "era": "Modern Era",
+    "worldTitleReigns": 2,
+    "combinedDaysAsChampion": 169,
+    "firstReign": "2007-09-15",
+    "lastReign": "2008-07-26"
+  },
+  {
     "id": "cmfprottz003kser76luqay3m",
     "slug": "roman-reigns",
     "name": "Roman Reigns",
@@ -7297,6 +7623,34 @@
     "titleReigns": 6
   },
   {
+    "id": "cmfpww5q80000sehjz6plsg9x",
+    "slug": "super-dragon",
+    "name": "Super Dragon",
+    "nickname": "Super Dragon",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "PWG"
+    ],
+    "activeYears": {
+      "start": 1997,
+      "end": 2009
+    },
+    "hometown": "Los Angeles, California",
+    "nationality": "",
+    "height": "5'10\"",
+    "weight": "180 lbs",
+    "debut": "1997-03-01",
+    "bio": "Super Dragon was one of the founding figures of Pro Wrestling Guerrilla and helped establish Southern California's independent wrestling scene. Known for his high-flying moves mixed with hardcore elements, Super Dragon was both a wrestler and booker who helped create PWG's unique atmosphere.",
+    "finisher": "Psycho Driver",
+    "era": "Modern Era",
+    "worldTitleReigns": 2,
+    "combinedDaysAsChampion": 421,
+    "firstReign": "2003-07-26",
+    "lastReign": "2006-08-19"
+  },
+  {
     "id": "cmfps44u9005gsevuvbl10avk",
     "slug": "superfly-jimmy-snuka",
     "name": "Superfly Jimmy Snuka",
@@ -7567,6 +7921,34 @@
     "era": "Attitude",
     "worldTitleReigns": 0,
     "combinedDaysAsChampion": 0
+  },
+  {
+    "id": "cmfpws8kj0006sexcd4jvpo5f",
+    "slug": "the-crusher",
+    "name": "The Crusher",
+    "nickname": "The Crusher",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "AWA"
+    ],
+    "activeYears": {
+      "start": 1949,
+      "end": 1988
+    },
+    "hometown": "Milwaukee, Wisconsin",
+    "nationality": "",
+    "height": "5'10\"",
+    "weight": "251 lbs",
+    "debut": "1949-01-01",
+    "bio": "The Crusher was a beloved babyface who became synonymous with Milwaukee wrestling. Known for his blue-collar character, bowling shirt attire, and incredible charisma, The Crusher was one of the most popular wrestlers in AWA history and a multiple-time world champion.",
+    "finisher": "The Crusher Bolo Punch",
+    "era": "Golden Era",
+    "worldTitleReigns": 2,
+    "combinedDaysAsChampion": 189,
+    "firstReign": "1963-05-11",
+    "lastReign": "1965-08-28"
   },
   {
     "id": "cmfprotww006kser7m9eckx6k",
@@ -8573,6 +8955,31 @@
     "combinedDaysAsChampion": 0
   },
   {
+    "id": "cmfpwnpyc000wsekkz6uvy7mq",
+    "slug": "walter",
+    "name": "WALTER",
+    "nickname": "The Ring General",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "World Wrestling Entertainment"
+    ],
+    "activeYears": {
+      "start": 2005
+    },
+    "hometown": "Vienna, Austria",
+    "nationality": "",
+    "height": "6'4\"",
+    "weight": "270 lbs",
+    "debut": "2005-01-01",
+    "bio": "WALTER (now known as Gunther) is one of the most dominant champions in modern wrestling history. The Austrian powerhouse is known for his hard-hitting style, incredible conditioning, and record-breaking championship reigns that have redefined what it means to be a dominant champion.",
+    "finisher": "Powerbomb",
+    "era": "Modern Era",
+    "worldTitleReigns": 0,
+    "combinedDaysAsChampion": 1615
+  },
+  {
     "id": "cmfpteyds0010sebplb59hesp",
     "slug": "wade-barrett",
     "name": "Wade Barrett",
@@ -8653,6 +9060,32 @@
     "combinedDaysAsChampion": 93,
     "firstReign": "2024-01-04",
     "lastReign": "2024-01-04"
+  },
+  {
+    "id": "cmfpwnpy7000osekk9k723ov9",
+    "slug": "william-regal",
+    "name": "William Regal",
+    "nickname": "The Gentleman Villain",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": null,
+    "promotions": [
+      "World Wrestling Entertainment"
+    ],
+    "activeYears": {
+      "start": 1983,
+      "end": 2013
+    },
+    "hometown": "Codsall, Staffordshire, England",
+    "nationality": "",
+    "height": "6'3\"",
+    "weight": "243 lbs",
+    "debut": "1983-12-22",
+    "bio": "William Regal is one of the most respected wrestlers and trainers in the business. Known for his technical wrestling ability, old-school heel work, and later his role as a mentor and trainer, Regal bridged British wrestling traditions with American sports entertainment.",
+    "finisher": "Regal Stretch",
+    "era": "Attitude Era",
+    "worldTitleReigns": 0,
+    "combinedDaysAsChampion": 108
   },
   {
     "id": "cmfpteydg0008sebp8hi1tdyf",
