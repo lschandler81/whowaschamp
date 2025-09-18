@@ -5,6 +5,11 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Scheduled function for weekly PPV Flashback refresh
+[[functions]]
+  path = "/api/refresh/weekly"
+  schedule = "0 0 * * 0"
+
 [build.environment]
 # Install devDependencies during build so Prisma can generate the client.
 # Using legacy peer deps to avoid transient peer conflicts from test tooling.

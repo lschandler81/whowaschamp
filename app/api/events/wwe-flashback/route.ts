@@ -1,9 +1,10 @@
 import { PrismaClient } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
-import { getISOWeek } from 'date-fns';
+import { getISOWeek, getYear } from 'date-fns';
 
-// Force dynamic rendering
+// Force dynamic rendering and set revalidation
 export const dynamic = 'force-dynamic';
+export const revalidate = 60 * 60 * 6; // 6 hours - updates multiple times per day
 
 const prisma = new PrismaClient();
 
@@ -46,10 +47,12 @@ export async function GET(request: NextRequest) {
   try {
     console.log('[WWE Flashback API] Starting request...');
     
-    // Get current week
+    // Get current week - use consistent calculation
     const now = new Date();
     const currentWeek = getISOWeek(now);
-    console.log(`[WWE Flashback API] Current week: ${currentWeek}`);
+    const currentYear = getYear(now);
+    console.log(`[WWE Flashback API] Current week: ${currentWeek} of ${currentYear}`);
+    console.log(`[WWE Flashback API] Today: ${now.toLocaleDateString()}`);
 
     let selectedEvent: any = null;
     let fallbackUsed = false;

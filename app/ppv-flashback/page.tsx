@@ -9,6 +9,9 @@ export const metadata = {
   description: 'Discover the biggest pay-per-view event that happened during this same week in wrestling history.',
 };
 
+// Shorter revalidation for more frequent updates
+export const revalidate = 60 * 60 * 6; // 6 hours
+
 export default function PPVFlashbackPage() {
   const flags = getFeatureFlags();
 
