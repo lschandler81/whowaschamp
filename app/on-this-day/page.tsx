@@ -11,6 +11,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { getCurrentIsoWeekRange, getEventsForIsoWeek } from '@/lib/events';
+import { getProfileUrl } from '@/lib/profiles';
 
 export const revalidate = 60 * 60 * 4; // 4 hours - refresh more frequently to catch date changes
 
@@ -91,7 +92,7 @@ export default async function OnThisDayPage() {
                   <div className="text-gray-800">
                     {prevHref ? (
                       <>
-                        <Link href={prevHref} className="text-gray-900 font-semibold hover:text-red-600">
+                        <Link href={getProfileUrl(e.previous_champion)} className="text-gray-900 font-semibold hover:text-red-600">
                           {e.previous_champion}
                         </Link>
                         <span className="mx-2">→</span>
@@ -102,7 +103,7 @@ export default async function OnThisDayPage() {
                         <span className="mx-2" />
                       </>
                     )}
-                    <Link href={newHref} className="text-gray-900 font-semibold hover:text-red-600">
+                    <Link href={getProfileUrl(e.new_champion)} className="text-gray-900 font-semibold hover:text-red-600">
                       {e.new_champion}
                     </Link>
                   </div>

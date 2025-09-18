@@ -23,6 +23,9 @@ export function TopNav() {
             <Link href="/ppv-flashback" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
               PPV Flashback
             </Link>
+            <Link href="/profiles" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
+              Profiles
+            </Link>
             <Link href="/blog" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
               Articles
             </Link>
@@ -55,6 +58,13 @@ export function TopNav() {
                 onClick={() => setIsOpen(false)}
               >
                 PPV Flashback
+              </Link>
+              <Link 
+                href="/profiles" 
+                className="block text-xs font-medium text-gray-700 hover:text-red-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Profiles
               </Link>
               <Link 
                 href="/blog" 
