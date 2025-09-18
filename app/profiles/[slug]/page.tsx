@@ -15,7 +15,7 @@ interface ProfilePageProps {
 }
 
 export async function generateMetadata({ params }: ProfilePageProps): Promise<Metadata> {
-  const profile = getProfileBySlug(params.slug);
+  const profile = await getProfileBySlug(params.slug);
   
   if (!profile) {
     return {
@@ -169,8 +169,8 @@ function FighterDetails({ fighter }: { fighter: FighterProfile }) {
   );
 }
 
-export default function ProfilePage({ params }: ProfilePageProps) {
-  const profile = getProfileBySlug(params.slug);
+export default async function ProfilePage({ params }: ProfilePageProps) {
+  const profile = await getProfileBySlug(params.slug);
   
   if (!profile) {
     notFound();

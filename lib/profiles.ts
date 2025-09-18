@@ -1,4 +1,7 @@
 import { Profile, WrestlerProfile, FighterProfile, ProfilesFilter } from '@/lib/types/profiles';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 /**
  * Convert name to URL-safe slug
@@ -22,151 +25,89 @@ export function getProfileUrl(name: string, type?: 'wrestler' | 'fighter'): stri
 }
 
 /**
- * Mock data for development - replace with database queries
+ * Convert database profile to our Profile type
  */
-export function getMockProfiles(): Profile[] {
-  const wrestlers: WrestlerProfile[] = [
-    {
-      id: '1',
-      slug: 'john-cena',
-      name: 'John Cena',
-      nickname: 'The Cenation Leader',
-      type: 'wrestler',
-      thumbnail: undefined,
-      tagline: '16-time World Champion',
-      promotions: ['WWE'],
-      activeYears: { start: 2002, end: 2022 },
-      hometown: 'West Newbury, Massachusetts',
-      nationality: 'USA',
-      height: '6\'1"',
-      weight: '251 lbs',
-      debut: '2002-06-27',
-      bio: 'John Felix Anthony Cena Jr. is an American professional wrestler, actor, and former rapper currently signed to WWE.',
-      finisher: 'Attitude Adjustment',
-      era: 'Ruthless Aggression',
-      worldTitleReigns: 16,
-      combinedDaysAsChampion: 1254,
-      firstReign: '2005-04-03',
-      lastReign: '2017-01-29'
+function transformDatabaseProfile(dbProfile: any): Profile {
+  const baseProfile = {
+    id: dbProfile.id,
+    slug: dbProfile.slug,
+    name: dbProfile.name,
+    nickname: dbProfile.nickname,
+    type: dbProfile.type as 'wrestler' | 'fighter',
+    thumbnail: dbProfile.thumbnail,
+    tagline: dbProfile.tagline,
+    promotions: dbProfile.promotions?.map((p: any) => p.promotion.name) || [],
+    activeYears: {
+      start: dbProfile.debut ? new Date(dbProfile.debut).getFullYear() : 1980,
+      end: dbProfile.retired ? new Date(dbProfile.retired).getFullYear() : undefined
     },
-    {
-      id: '2',
-      slug: 'the-rock',
-      name: 'The Rock',
-      nickname: 'The People\'s Champion',
-      type: 'wrestler',
-      thumbnail: undefined,
-      tagline: '10-time World Champion',
-      promotions: ['WWE', 'WWF'],
-      activeYears: { start: 1996, end: 2019 },
-      hometown: 'Hayward, California',
-      nationality: 'USA',
-      height: '6\'5"',
-      weight: '260 lbs',
-      debut: '1996-11-04',
-      bio: 'Dwayne "The Rock" Johnson is an American actor, businessman, and former professional wrestler.',
-      finisher: 'Rock Bottom',
-      era: 'Attitude',
-      worldTitleReigns: 10,
-      combinedDaysAsChampion: 504,
-      firstReign: '1998-11-15',
-      lastReign: '2013-04-07'
-    },
-    {
-      id: '3',
-      slug: 'stone-cold-steve-austin',
-      name: 'Stone Cold Steve Austin',
-      nickname: 'The Texas Rattlesnake',
-      type: 'wrestler',
-      thumbnail: undefined,
-      tagline: '6-time WWE Champion',
-      promotions: ['WWE', 'WWF', 'WCW'],
-      activeYears: { start: 1989, end: 2003 },
-      hometown: 'Austin, Texas',
-      nationality: 'USA',
-      height: '6\'2"',
-      weight: '252 lbs',
-      debut: '1989-09-30',
-      bio: 'Steve Austin is an American retired professional wrestler, actor, producer, and television host.',
-      finisher: 'Stone Cold Stunner',
-      era: 'Attitude',
-      worldTitleReigns: 6,
-      combinedDaysAsChampion: 529,
-      firstReign: '1998-03-29',
-      lastReign: '2001-10-08'
-    }
-  ];
+    hometown: dbProfile.hometown || '',
+    nationality: dbProfile.nationality || '',
+    height: dbProfile.height || '',
+    weight: dbProfile.weight || '',
+    debut: dbProfile.debut ? dbProfile.debut.toISOString().split('T')[0] : undefined,
+    bio: dbProfile.bio || ''
+  };
 
-  const fighters: FighterProfile[] = [
-    {
-      id: '4',
-      slug: 'conor-mcgregor',
-      name: 'Conor McGregor',
-      nickname: 'The Notorious',
+  if (dbProfile.type === 'wrestler' && dbProfile.wrestler) {
+    return {
+      ...baseProfile,
+      type: 'wrestler',
+      finisher: dbProfile.wrestler.finisher,
+      era: dbProfile.wrestler.era,
+      worldTitleReigns: dbProfile.wrestler.worldTitleReigns,
+      combinedDaysAsChampion: dbProfile.wrestler.combinedDaysAsChampion,
+      firstReign: dbProfile.wrestler.firstReignDate?.toISOString().split('T')[0],
+      lastReign: dbProfile.wrestler.lastReignDate?.toISOString().split('T')[0]
+    } as WrestlerProfile;
+  } else if (dbProfile.type === 'fighter' && dbProfile.fighter) {
+    return {
+      ...baseProfile,
       type: 'fighter',
-      thumbnail: undefined,
-      tagline: 'Former UFC Featherweight & Lightweight Champion',
-      promotions: ['UFC'],
-      activeYears: { start: 2008 },
-      hometown: 'Dublin, Ireland',
-      nationality: 'Ireland',
-      height: '5\'9"',
-      weight: '155 lbs',
-      debut: '2008-02-17',
-      bio: 'Conor Anthony McGregor is an Irish professional mixed martial artist.',
-      divisions: ['Featherweight', 'Lightweight'],
-      record: { wins: 22, losses: 6 },
-      stance: 'Southpaw',
-      reach: '74"',
-      titleReigns: 2
-    },
-    {
-      id: '5',
-      slug: 'amanda-nunes',
-      name: 'Amanda Nunes',
-      nickname: 'The Lioness',
-      type: 'fighter',
-      thumbnail: undefined,
-      tagline: 'Former UFC Bantamweight & Featherweight Champion',
-      promotions: ['UFC'],
-      activeYears: { start: 2008, end: 2023 },
-      hometown: 'Salvador, Brazil',
-      nationality: 'Brazil',
-      height: '5\'7"',
-      weight: '135 lbs',
-      debut: '2008-03-08',
-      bio: 'Amanda Lourenço Nunes is a Brazilian mixed martial artist.',
-      divisions: ['Bantamweight', 'Featherweight'],
-      record: { wins: 22, losses: 5 },
-      stance: 'Orthodox',
-      reach: '69"',
-      titleReigns: 2
-    },
-    {
-      id: '6',
-      slug: 'jon-jones',
-      name: 'Jon Jones',
-      nickname: 'Bones',
-      type: 'fighter',
-      thumbnail: undefined,
-      tagline: 'UFC Light Heavyweight & Heavyweight Champion',
-      promotions: ['UFC'],
-      activeYears: { start: 2008 },
-      hometown: 'Rochester, New York',
-      nationality: 'USA',
-      height: '6\'4"',
-      weight: '245 lbs',
-      debut: '2008-04-12',
-      bio: 'Jonathan Dwight Jones is an American professional mixed martial artist.',
-      divisions: ['Light Heavyweight', 'Heavyweight'],
-      record: { wins: 27, losses: 1, draws: 1 },
-      stance: 'Orthodox',
-      reach: '84.5"',
-      titleReigns: 3
-    }
-  ];
+      divisions: dbProfile.fighter.divisions?.map((d: any) => d.divisionName) || [],
+      record: {
+        wins: dbProfile.fighter.wins,
+        losses: dbProfile.fighter.losses,
+        draws: dbProfile.fighter.draws > 0 ? dbProfile.fighter.draws : undefined
+      },
+      stance: dbProfile.fighter.stance,
+      reach: dbProfile.fighter.reach,
+      titleReigns: dbProfile.fighter.titleReigns
+    } as FighterProfile;
+  }
 
-  return [...wrestlers, ...fighters];
+  return baseProfile as Profile;
+}
+
+/**
+ * Get all profiles from database
+ */
+export async function getAllProfiles(): Promise<Profile[]> {
+  try {
+    const dbProfiles = await prisma.profile.findMany({
+      include: {
+        wrestler: true,
+        fighter: {
+          include: {
+            divisions: true
+          }
+        },
+        promotions: {
+          include: {
+            promotion: true
+          }
+        }
+      },
+      orderBy: {
+        name: 'asc'
+      }
+    });
+
+    return dbProfiles.map(transformDatabaseProfile);
+  } catch (error) {
+    console.error('Error fetching profiles:', error);
+    return [];
+  }
 }
 
 /**
@@ -237,9 +178,42 @@ export function filterProfiles(profiles: Profile[], filters: Partial<ProfilesFil
 }
 
 /**
- * Get profile by slug
+ * Get profile by slug from database
  */
-export function getProfileBySlug(slug: string): Profile | null {
-  const profiles = getMockProfiles();
-  return profiles.find(profile => profile.slug === slug) || null;
+export async function getProfileBySlug(slug: string): Promise<Profile | null> {
+  try {
+    const dbProfile = await prisma.profile.findUnique({
+      where: { slug },
+      include: {
+        wrestler: true,
+        fighter: {
+          include: {
+            divisions: true
+          }
+        },
+        promotions: {
+          include: {
+            promotion: true
+          }
+        },
+        championships: {
+          include: {
+            promotion: true
+          },
+          orderBy: {
+            wonDate: 'asc'
+          }
+        }
+      }
+    });
+
+    if (!dbProfile) {
+      return null;
+    }
+
+    return transformDatabaseProfile(dbProfile);
+  } catch (error) {
+    console.error(`Error fetching profile ${slug}:`, error);
+    return null;
+  }
 }

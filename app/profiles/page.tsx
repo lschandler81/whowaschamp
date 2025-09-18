@@ -10,7 +10,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from '@/components/ui/select';
-import { getMockProfiles, filterProfiles, getProfileUrl } from '@/lib/profiles';
+import { getMockProfiles, filterProfiles, getProfileUrl, getAllProfiles } from '@/lib/profiles';
 import { Profile, ProfilesFilter } from '@/lib/types/profiles';
 import Link from 'next/link';
 import { Suspense } from 'react';
@@ -169,8 +169,8 @@ function SearchAndFilters({ searchParams }: { searchParams: ProfilesPageProps['s
   );
 }
 
-function ProfilesGrid({ searchParams }: { searchParams: ProfilesPageProps['searchParams'] }) {
-  const allProfiles = getMockProfiles();
+async function ProfilesGrid({ searchParams }: { searchParams: ProfilesPageProps['searchParams'] }) {
+  const allProfiles = await getAllProfiles();
   
   // Build filters from search params
   const filters: Partial<ProfilesFilter> = {
@@ -213,7 +213,7 @@ function ProfilesGrid({ searchParams }: { searchParams: ProfilesPageProps['searc
   );
 }
 
-export default function ProfilesPage({ searchParams }: ProfilesPageProps) {
+export default async function ProfilesPage({ searchParams }: ProfilesPageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
