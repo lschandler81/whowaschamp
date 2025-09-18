@@ -12,7 +12,7 @@ import path from 'node:path';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { getCurrentIsoWeekRange, getEventsForIsoWeek } from '@/lib/events';
 
-export const revalidate = 60 * 60 * 24; // 24 hours
+export const revalidate = 60 * 60 * 4; // 4 hours - refresh more frequently to catch date changes
 
 async function getData(): Promise<{ date: string; items: TitleChangeEvent[] }> {
   const filePath = path.join(process.cwd(), 'public', 'data', 'on_this_day_events.min.json');
@@ -23,13 +23,20 @@ async function getData(): Promise<{ date: string; items: TitleChangeEvent[] }> {
   } catch {
     events = [];
   }
+  // Use local time instead of UTC to get the correct "today"
   const d = new Date();
-  const y = d.getUTCFullYear();
-  const m = String(d.getUTCMonth() + 1).padStart(2, '0');
-  const day = String(d.getUTCDate()).padStart(2, '0');
+  const y = d.getFullYear(); // Changed from getUTCFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, '0'); // Changed from getUTCMonth()
+  const day = String(d.getDate()).padStart(2, '0'); // Changed from getUTCDate()
   const today = `${y}-${m}-${day}`;
-  const md = today.slice(5, 10);
+  const md = today.slice(5, 10); // Get MM-DD format
+  
+  console.log(`[OnThisDay] Looking for events on ${md} (${today})`);
+  
   const items = events.filter((e) => e.date.slice(5, 10) === md);
+  
+  console.log(`[OnThisDay] Found ${items.length} events for today`);
+  
   return { date: today, items };
 }
 
@@ -53,13 +60,13 @@ export default async function OnThisDayPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">On This Day</h1>
         </div>
         <p className="text-lg text-gray-600 mb-8">
-          Championship title changes that happened on this day in wrestling history
+          Championship title changes that happened on {formatDateGB(date)} in wrestling history
         </p>
 
         {deduped.length === 0 && (
           <Card className="border rounded-xl bg-white shadow-sm">
             <CardContent className="p-6">
-              <p className="text-gray-700">A quiet day — no title changes on record.</p>
+              <p className="text-gray-700">A quiet day — no title changes on record for {formatDateGB(date)}.</p>
             </CardContent>
           </Card>
         )}
