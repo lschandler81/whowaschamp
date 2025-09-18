@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath, revalidateTag } from 'next/cache';
+import { getISOWeek } from 'date-fns';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -55,7 +56,7 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
       message: 'Weekly PPV Flashback refresh completed successfully',
       revalidatedPaths: pathsToRevalidate,
-      weekNumber: new Date().toLocaleDateString('en-US', { week: 'numeric' })
+      weekNumber: getISOWeek(new Date())
     });
 
   } catch (error) {
@@ -81,6 +82,7 @@ export async function GET() {
   return NextResponse.json({
     currentTime: now.toISOString(),
     currentWeek,
+    weekNumber: getISOWeek(now),
     message: 'Weekly PPV Flashback refresh endpoint is operational',
     instructions: 'Use POST with Authorization header to trigger refresh'
   });
