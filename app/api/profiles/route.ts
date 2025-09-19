@@ -65,23 +65,25 @@ export async function GET() {
   // Fallback to JSON file
   try {
     const jsonPath = path.join(process.cwd(), 'public', 'data', 'profiles.json');
-    let profiles: any[] | null = null;
+    let profiles: any[] = [];
     if (fs.existsSync(jsonPath)) {
       const jsonData = fs.readFileSync(jsonPath, 'utf8');
-      profiles = JSON.parse(jsonData);
+      const parsed = JSON.parse(jsonData);
+      profiles = Array.isArray(parsed) ? parsed : [];
       console.log(`API: Loaded ${profiles.length} profiles from JSON fallback (filesystem)`);
     } else {
       const baseUrl = process.env.URL || process.env.NETLIFY_URL || process.env.NEXT_PUBLIC_APP_URL;
       if (baseUrl) {
         const res = await fetch(`${baseUrl.replace(/\/$/, '')}/data/profiles.json`);
         if (res.ok) {
-          profiles = await res.json();
+          const parsed = await res.json();
+          profiles = Array.isArray(parsed) ? parsed : [];
           console.log(`API: Loaded ${profiles.length} profiles from JSON fallback (remote ${baseUrl})`);
         }
       }
     }
 
-    if (profiles) {
+    if (profiles.length > 0) {
       return NextResponse.json(profiles);
     }
   } catch (error) {

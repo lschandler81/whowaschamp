@@ -7,8 +7,6 @@ echo "🏗️  Starting Netlify build with rivalries data..."
 echo "📦 Generating Prisma client..."
 npx prisma generate
 
-#!/bin/bash
-
 set -euo pipefail
 
 # Push database schema (creates tables if they don't exist)

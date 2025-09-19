@@ -3,6 +3,16 @@ import { toSlug } from '../lib/slug';
 
 const prisma = new PrismaClient();
 
+async function getOrCreatePromotion(name: string) {
+  const slug = toSlug(name);
+  // Upsert on unique slug to avoid duplicate-creation race/slug-collisions
+  return prisma.promotion.upsert({
+    where: { slug },
+    update: {},
+    create: { name, slug }
+  });
+}
+
 const internationalWrestlers = [
   // Japanese Wrestling Legends (NJPW/AJPW)
   {
@@ -582,18 +592,7 @@ async function importInternationalWrestlers() {
       // Get or create promotions
       const promotionIds: string[] = [];
       for (const promotionName of wrestler.promotions) {
-        let promotion = await prisma.promotion.findFirst({
-          where: { name: promotionName }
-        });
-        
-        if (!promotion) {
-          promotion = await prisma.promotion.create({
-            data: {
-              name: promotionName,
-              slug: toSlug(promotionName)
-            }
-          });
-        }
+        const promotion = await getOrCreatePromotion(promotionName);
         promotionIds.push(promotion.id);
       }
 
@@ -629,18 +628,7 @@ async function importInternationalWrestlers() {
       for (const championship of wrestler.championships) {
         try {
           // Get or create promotion for championship
-          let promotion = await prisma.promotion.findFirst({
-            where: { name: championship.promotion }
-          });
-          
-          if (!promotion) {
-            promotion = await prisma.promotion.create({
-              data: {
-                name: championship.promotion,
-                slug: toSlug(championship.promotion)
-              }
-            });
-          }
+          const promotion = await getOrCreatePromotion(championship.promotion);
 
           // Create championship entry
           await prisma.championship.create({
