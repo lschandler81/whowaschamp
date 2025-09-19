@@ -127,6 +127,44 @@ export async function getAllProfiles(): Promise<Profile[]> {
           include: {
             promotion: true
           }
+        },
+        careerHighlights: {
+          orderBy: [
+            { importance: 'desc' },
+            { date: 'asc' }
+          ]
+        },
+        rivalriesAsWrestler1: {
+          include: {
+            wrestler2: {
+              select: {
+                id: true,
+                slug: true,
+                name: true,
+                thumbnail: true
+              }
+            }
+          }
+        },
+        rivalriesAsWrestler2: {
+          include: {
+            wrestler1: {
+              select: {
+                id: true,
+                slug: true,
+                name: true,
+                thumbnail: true
+              }
+            }
+          }
+        },
+        championships: {
+          include: {
+            promotion: true
+          },
+          orderBy: {
+            wonDate: 'asc'
+          }
         }
       },
       orderBy: {
