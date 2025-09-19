@@ -97,6 +97,7 @@ model Profile {
   bio                  String?
   createdAt            DateTime           @default(now())
   updatedAt            DateTime           @updatedAt
+  careerHighlights     CareerHighlight[]
   championships        Championship[]
   fighter              FighterProfile?
   matches              MatchParticipant[]
@@ -247,4 +248,24 @@ model Rivalry {
   @@index([wrestler1Id])
   @@index([wrestler2Id])
   @@map("rivalries")
+}
+
+model CareerHighlight {
+  id          String   @id @default(uuid())
+  profileId   String
+  title       String   // e.g. "WWE Championship Victory", "WrestleMania Debut"
+  description String?  // Detailed description of the highlight
+  date        DateTime // When this highlight occurred
+  category    String   // debut, championship, retirement, milestone, feud, special_match
+  importance  Int      @default(5) // 1-10 scale for ordering highlights
+  venue       String?  // Where it happened
+  opponent    String?  // If applicable (e.g., defeated opponent)
+  
+  // Relationship to profile
+  profile     Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@map("career_highlights")
 }

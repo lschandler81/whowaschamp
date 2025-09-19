@@ -17,6 +17,32 @@ export interface BaseProfile {
   weight?: string;
   debut?: string;
   bio?: string;
+  careerHighlights?: CareerHighlight[];
+  rivalries?: Rivalry[];
+}
+
+export interface CareerHighlight {
+  id: string;
+  title: string;
+  description?: string;
+  date: string;
+  category: 'debut' | 'championship' | 'retirement' | 'milestone' | 'feud' | 'special_match';
+  importance: number; // 1-10 scale
+  venue?: string;
+  opponent?: string;
+}
+
+export interface Rivalry {
+  id: string;
+  opponentId: string;
+  opponentName: string;
+  opponentSlug: string;
+  rivalryName: string;
+  description: string;
+  notableMatches: string; // Stored as string in database
+  feudIntensity: number; // 1-10 scale
+  startDate?: string;
+  endDate?: string;
 }
 
 export interface WrestlerProfile extends BaseProfile {
@@ -62,14 +88,6 @@ export interface CareerMilestone {
   titleStakes?: string;
   location?: string;
   type: 'title_match' | 'ppv_main' | 'debut' | 'retirement' | 'other';
-}
-
-export interface Rivalry {
-  opponentSlug: string;
-  opponentName: string;
-  matchesFaced: number;
-  record?: string; // e.g., "3-2-1"
-  notableMatches: string[];
 }
 
 export interface ProfilesFilter {

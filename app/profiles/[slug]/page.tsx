@@ -5,6 +5,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { getProfileBySlug } from '@/lib/profiles';
 import { WrestlerProfile, FighterProfile } from '@/lib/types/profiles';
+import CareerHighlightsSection from '@/components/CareerHighlights';
+import RivalriesSection from '@/components/Rivalries';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, MapPin, Trophy, Target, Users } from 'lucide-react';
 
@@ -268,17 +270,11 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
         <FighterDetails fighter={profile as FighterProfile} />
       )}
       
-      {/* Career Highlights Placeholder */}
-      <Card className="mt-8">
-        <CardHeader>
-          <CardTitle>Career Highlights</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">
-            Career highlights and notable matches/fights will be displayed here in a future update.
-          </p>
-        </CardContent>
-      </Card>
+      {/* Career Highlights */}
+      <CareerHighlightsSection highlights={profile.careerHighlights || []} />
+      
+      {/* Rivalries */}
+      <RivalriesSection rivalries={profile.rivalries || []} />
     </div>
   );
 }

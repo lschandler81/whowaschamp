@@ -30,6 +30,32 @@ export function getProfileUrl(name: string, type?: 'wrestler' | 'fighter'): stri
  * Convert database profile to our Profile type
  */
 function transformDatabaseProfile(dbProfile: any): Profile {
+  // Transform career highlights
+  const careerHighlights = dbProfile.careerHighlights?.map((highlight: any) => ({
+    id: highlight.id,
+    title: highlight.title,
+    description: highlight.description,
+    date: highlight.date instanceof Date ? highlight.date.toISOString().split('T')[0] : highlight.date,
+    category: highlight.category,
+    importance: highlight.importance,
+    venue: highlight.venue,
+    opponent: highlight.opponent
+  })) || [];
+
+  // Transform rivalries
+  const rivalries = dbProfile.rivalries?.map((rivalry: any) => ({
+    id: rivalry.id,
+    opponentId: rivalry.wrestler2Id || rivalry.wrestler1Id,
+    opponentName: rivalry.opponentName,
+    opponentSlug: rivalry.opponentSlug,
+    rivalryName: rivalry.rivalryName,
+    description: rivalry.description,
+    notableMatches: rivalry.notableMatches,
+    feudIntensity: rivalry.feudIntensity,
+    startDate: rivalry.startDate instanceof Date ? rivalry.startDate.toISOString().split('T')[0] : rivalry.startDate,
+    endDate: rivalry.endDate instanceof Date ? rivalry.endDate.toISOString().split('T')[0] : rivalry.endDate
+  })) || [];
+
   const baseProfile = {
     id: dbProfile.id,
     slug: dbProfile.slug,
@@ -48,7 +74,9 @@ function transformDatabaseProfile(dbProfile: any): Profile {
     height: dbProfile.height || '',
     weight: dbProfile.weight || '',
     debut: dbProfile.debut ? dbProfile.debut.toISOString().split('T')[0] : undefined,
-    bio: dbProfile.bio || ''
+    bio: dbProfile.bio || '',
+    careerHighlights,
+    rivalries
   };
 
   if (dbProfile.type === 'wrestler' && dbProfile.wrestler) {
@@ -230,7 +258,34 @@ export async function getProfileBySlug(slug: string): Promise<Profile | null> {
     });
 
     if (dbProfile) {
-      return transformDatabaseProfile(dbProfile);
+      // Get career highlights and rivalries separately 
+      const careerHighlights = await prisma.$queryRaw`
+        SELECT * FROM career_highlights 
+        WHERE profileId = ${dbProfile.id} 
+        ORDER BY importance DESC, date DESC
+      ` as any[];
+
+      const rivalries1 = await prisma.$queryRaw`
+        SELECT r.*, p.name as opponentName, p.slug as opponentSlug
+        FROM rivalries r
+        JOIN profiles p ON r.wrestler2Id = p.id
+        WHERE r.wrestler1Id = ${dbProfile.id}
+      ` as any[];
+
+      const rivalries2 = await prisma.$queryRaw`
+        SELECT r.*, p.name as opponentName, p.slug as opponentSlug
+        FROM rivalries r
+        JOIN profiles p ON r.wrestler1Id = p.id
+        WHERE r.wrestler2Id = ${dbProfile.id}
+      ` as any[];
+
+      const allRivalries = [...rivalries1, ...rivalries2];
+
+      return transformDatabaseProfile({
+        ...dbProfile,
+        careerHighlights,
+        rivalries: allRivalries
+      });
     }
   } catch (error) {
     console.warn(`Database unavailable for profile ${slug}, trying JSON fallback:`, error);
