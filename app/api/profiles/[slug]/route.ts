@@ -39,7 +39,53 @@ function transformProfile(dbProfile: any) {
       lostDate: champ.lostDate ? champ.lostDate.toISOString().split('T')[0] : null,
       daysHeld: champ.daysHeld || 0,
       defenses: champ.defenses || 0
-    })) || []
+    })) || [],
+
+    // Career Highlights
+    careerHighlights: dbProfile.careerHighlights?.map((highlight: any) => ({
+      id: highlight.id,
+      title: highlight.title,
+      description: highlight.description,
+      date: highlight.date ? highlight.date.toISOString().split('T')[0] : null,
+      category: highlight.category,
+      importance: highlight.importance,
+      venue: highlight.venue,
+      opponent: highlight.opponent
+    })) || [],
+
+    // Rivalries (combine both relationships)
+    rivalries: [
+      ...(dbProfile.rivalriesAsWrestler1?.map((rivalry: any) => ({
+        id: rivalry.id,
+        rivalryName: rivalry.rivalryName,
+        description: rivalry.description,
+        notableMatches: rivalry.notableMatches,
+        feudIntensity: rivalry.feudIntensity,
+        startDate: rivalry.startDate ? rivalry.startDate.toISOString().split('T')[0] : null,
+        endDate: rivalry.endDate ? rivalry.endDate.toISOString().split('T')[0] : null,
+        opponent: {
+          id: rivalry.wrestler2.id,
+          slug: rivalry.wrestler2.slug,
+          name: rivalry.wrestler2.name,
+          thumbnail: rivalry.wrestler2.thumbnail
+        }
+      })) || []),
+      ...(dbProfile.rivalriesAsWrestler2?.map((rivalry: any) => ({
+        id: rivalry.id,
+        rivalryName: rivalry.rivalryName,
+        description: rivalry.description,
+        notableMatches: rivalry.notableMatches,
+        feudIntensity: rivalry.feudIntensity,
+        startDate: rivalry.startDate ? rivalry.startDate.toISOString().split('T')[0] : null,
+        endDate: rivalry.endDate ? rivalry.endDate.toISOString().split('T')[0] : null,
+        opponent: {
+          id: rivalry.wrestler1.id,
+          slug: rivalry.wrestler1.slug,
+          name: rivalry.wrestler1.name,
+          thumbnail: rivalry.wrestler1.thumbnail
+        }
+      })) || [])
+    ]
   };
 
   // Add type-specific data
@@ -99,8 +145,38 @@ export async function GET(
           orderBy: {
             wonDate: 'asc'
           }
+        },
+        careerHighlights: {
+          orderBy: [
+            { importance: 'desc' },
+            { date: 'asc' }
+          ]
+        },
+        rivalriesAsWrestler1: {
+          include: {
+            wrestler2: {
+              select: {
+                id: true,
+                slug: true,
+                name: true,
+                thumbnail: true
+              }
+            }
+          }
+        },
+        rivalriesAsWrestler2: {
+          include: {
+            wrestler1: {
+              select: {
+                id: true,
+                slug: true,
+                name: true,
+                thumbnail: true
+              }
+            }
+          }
         }
-      }
+      } as any
     });
 
     if (dbProfile) {
