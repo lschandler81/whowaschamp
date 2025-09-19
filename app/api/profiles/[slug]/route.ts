@@ -3,7 +3,11 @@ import { PrismaClient } from '@prisma/client';
 import fs from 'fs';
 import path from 'path';
 
-const prisma = new PrismaClient();
+// Use explicit database path for Netlify functions
+const databaseUrl = process.env.NETLIFY ? 'file:./dev.db' : process.env.DATABASE_URL || 'file:./dev.db';
+const prisma = new PrismaClient({
+  datasourceUrl: databaseUrl
+});
 
 /**
  * Convert database profile to our Profile type
