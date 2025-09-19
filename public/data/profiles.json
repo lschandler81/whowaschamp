@@ -1485,6 +1485,33 @@
     "lastReign": "2008-01-01"
   },
   {
+    "id": "cmfqyxr960000sevygq91bc77",
+    "slug": "christian",
+    "name": "Christian",
+    "nickname": "Captain Charisma",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": "WWE Legend • 9-time World Champion",
+    "promotions": [
+      "TNA",
+      "AEW"
+    ],
+    "activeYears": {
+      "start": 1993,
+      "end": 2023
+    },
+    "hometown": "Toronto, Ontario, Canada",
+    "nationality": "Canada",
+    "height": "6'2\"",
+    "weight": "212 lbs",
+    "debut": "1993-06-26",
+    "bio": "Captain Charisma who formed one of the greatest tag teams with Edge before becoming a World Champion in his own right. Known for his charisma and in-ring psychology.",
+    "finisher": "Killswitch",
+    "era": "Attitude",
+    "worldTitleReigns": 9,
+    "combinedDaysAsChampion": 5121
+  },
+  {
     "id": "cmfpww5qt000ssehj61cqdl4j",
     "slug": "christopher-daniels",
     "name": "Christopher Daniels",
@@ -2609,6 +2636,32 @@
     "stance": "Orthodox",
     "reach": "73\"",
     "titleReigns": 2
+  },
+  {
+    "id": "cmfqyxr9u0014sevymqb1mqul",
+    "slug": "finlay",
+    "name": "Finlay",
+    "nickname": "The Fighting Irishman",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": "WWE Legend • Hall of Fame Worthy",
+    "promotions": [
+      "WCW"
+    ],
+    "activeYears": {
+      "start": 1974,
+      "end": 2012
+    },
+    "hometown": "Belfast, Northern Ireland",
+    "nationality": "Northern Ireland",
+    "height": "5'10\"",
+    "weight": "233 lbs",
+    "debut": "1974-01-01",
+    "bio": "Hard-hitting Irish brawler known for his shillelagh and his leprechaun sidekick Hornswoggle. Veteran wrestler and trainer.",
+    "finisher": "Celtic Cross",
+    "era": "Ruthless Aggression",
+    "worldTitleReigns": 0,
+    "combinedDaysAsChampion": 283
   },
   {
     "id": "cmfps0gqq002hseplfq19b8kh",
@@ -3889,6 +3942,58 @@
     "combinedDaysAsChampion": 0
   },
   {
+    "id": "cmfqyxr9o000usevyafrdp1zo",
+    "slug": "jeff-hardy",
+    "name": "Jeff Hardy",
+    "nickname": "The Charismatic Enigma",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": "WWE Legend • 12-time World Champion",
+    "promotions": [
+      "TNA",
+      "AEW"
+    ],
+    "activeYears": {
+      "start": 1993
+    },
+    "hometown": "Cameron, North Carolina",
+    "nationality": "North Carolina",
+    "height": "6'2\"",
+    "weight": "225 lbs",
+    "debut": "1993-05-23",
+    "bio": "The Charismatic Enigma known for his high-flying, death-defying moves. One half of the legendary Hardy Boyz and multiple-time world champion.",
+    "finisher": "Swanton Bomb",
+    "era": "Attitude",
+    "worldTitleReigns": 12,
+    "combinedDaysAsChampion": 2924
+  },
+  {
+    "id": "cmfqyxr9e0008sevytltyjwcg",
+    "slug": "jeff-jarrett",
+    "name": "Jeff Jarrett",
+    "nickname": "Double J",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": "WWE Legend • 10-time World Champion",
+    "promotions": [
+      "WCW",
+      "TNA"
+    ],
+    "activeYears": {
+      "start": 1986
+    },
+    "hometown": "Hendersonville, Tennessee",
+    "nationality": "Tennessee",
+    "height": "6'0\"",
+    "weight": "230 lbs",
+    "debut": "1986-04-06",
+    "bio": "The Chosen One and founder of TNA Wrestling. Multi-time world champion known for his guitar-smashing antics and 'Ain't I Great?' catchphrase.",
+    "finisher": "Stroke",
+    "era": "Monday Night Wars",
+    "worldTitleReigns": 10,
+    "combinedDaysAsChampion": 6078
+  },
+  {
     "id": "cmfpsijsk005aseoypqq19iin",
     "slug": "jerry-lawler",
     "name": "Jerry Lawler",
@@ -4458,6 +4563,30 @@
     "combinedDaysAsChampion": 392,
     "firstReign": "1979-01-01",
     "lastReign": "1979-01-01"
+  },
+  {
+    "id": "cmfqyxr9s0012sevy51hsiosy",
+    "slug": "ken-shamrock",
+    "name": "Ken Shamrock",
+    "nickname": "The World's Most Dangerous Man",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": "WWE Legend • 1-time World Champion",
+    "promotions": [],
+    "activeYears": {
+      "start": 1997,
+      "end": 1999
+    },
+    "hometown": "Lodi, California",
+    "nationality": "California",
+    "height": "6'0\"",
+    "weight": "243 lbs",
+    "debut": "1997-02-13",
+    "bio": "UFC Hall of Famer who brought legitimate fighting credentials to WWE. Known for his intensity and ankle lock submission.",
+    "finisher": "Ankle Lock",
+    "era": "Attitude",
+    "worldTitleReigns": 1,
+    "combinedDaysAsChampion": 117
   },
   {
     "id": "cmfpssc4c0000se32izb42nv7",
@@ -5266,6 +5395,33 @@
     "combinedDaysAsChampion": 216,
     "firstReign": "2008-01-01",
     "lastReign": "2008-01-01"
+  },
+  {
+    "id": "cmfqyxr9j000isevy1w75p7t5",
+    "slug": "matt-hardy",
+    "name": "Matt Hardy",
+    "nickname": "The Sensei of Mattitude",
+    "type": "wrestler",
+    "thumbnail": null,
+    "tagline": "WWE Legend • 8-time World Champion",
+    "promotions": [
+      "TNA",
+      "AEW",
+      "ROH"
+    ],
+    "activeYears": {
+      "start": 1992
+    },
+    "hometown": "Cameron, North Carolina",
+    "nationality": "North Carolina",
+    "height": "6'2\"",
+    "weight": "235 lbs",
+    "debut": "1992-09-23",
+    "bio": "Charismatic Enigma's brother who reinvented himself multiple times. From Hardy Boyz tag team specialist to singles champion to 'Broken' Matt Hardy phenomenon.",
+    "finisher": "Twist of Fate",
+    "era": "Attitude",
+    "worldTitleReigns": 8,
+    "combinedDaysAsChampion": 2545
   },
   {
     "id": "cmfpvy680001dse3bhci4gi3f",
