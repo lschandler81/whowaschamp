@@ -10,6 +10,7 @@ interface CareerHighlightTemplate {
   importance: number
   venue?: string
   opponent?: string
+  date?: string // ISO date (YYYY-MM-DD) when known
 }
 
 // Common career highlights for famous wrestlers
@@ -20,7 +21,8 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       description: 'Delivered the iconic "Austin 3:16" promo after winning King of the Ring',
       category: 'milestone',
       importance: 10,
-      venue: 'King of the Ring 1996'
+      venue: 'King of the Ring 1996',
+      date: '1996-06-23'
     },
     {
       title: 'First WWE Championship',
@@ -28,14 +30,16 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       category: 'championship',
       importance: 10,
       venue: 'WrestleMania XIV',
-      opponent: 'Shawn Michaels'
+      opponent: 'Shawn Michaels',
+      date: '1998-03-29'
     },
     {
       title: 'Beer Truck Incident',
       description: 'Drove a beer truck to the ring and sprayed The Corporation',
       category: 'special_match',
       importance: 9,
-      venue: 'WWE Raw'
+      venue: 'WWE Raw',
+      date: '1999-03-22'
     }
   ],
   'the-rock': [
@@ -68,21 +72,24 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       category: 'championship',
       importance: 10,
       venue: 'Madison Square Garden',
-      opponent: 'The Iron Sheik'
+      opponent: 'The Iron Sheik',
+      date: '1984-01-23'
     },
     {
       title: 'WrestleMania Main Event',
       description: 'Main evented the first WrestleMania alongside Mr. T',
       category: 'special_match',
       importance: 10,
-      venue: 'WrestleMania I'
+      venue: 'WrestleMania I',
+      date: '1985-03-31'
     },
     {
       title: 'NWO Formation',
       description: 'Shocked the wrestling world by turning heel and forming the NWO',
       category: 'milestone',
       importance: 10,
-      venue: 'WCW Bash at the Beach 1996'
+      venue: 'WCW Bash at the Beach 1996',
+      date: '1996-07-07'
     }
   ],
   'john-cena': [
@@ -136,7 +143,8 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       description: 'Betrayed Marty Jannetty by throwing him through Brutus Beefcake\'s Barber Shop window',
       category: 'milestone',
       importance: 9,
-      venue: 'The Barber Shop'
+      venue: 'The Barber Shop',
+      date: '1992-01-12'
     },
     {
       title: 'Iron Man Match Victory',
@@ -144,13 +152,15 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       category: 'championship',
       importance: 10,
       venue: 'WrestleMania XII',
-      opponent: 'Bret Hart'
+      opponent: 'Bret Hart',
+      date: '1996-03-31'
     },
     {
       title: 'Lost My Smile Controversy',
       description: 'Vacated the WWE Championship claiming he "lost his smile"',
       category: 'milestone',
-      importance: 8
+      importance: 8,
+      date: '1997-02-13'
     }
   ],
   'bret-hart': [
@@ -172,7 +182,8 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       description: 'Victim of the infamous Montreal Screwjob at Survivor Series',
       category: 'milestone',
       importance: 10,
-      venue: 'Survivor Series 1997'
+      venue: 'Survivor Series 1997',
+      date: '1997-11-09'
     }
   ],
   'ric-flair': [
@@ -203,7 +214,8 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       category: 'special_match',
       importance: 10,
       venue: 'King of the Ring 1998',
-      opponent: 'The Undertaker'
+      opponent: 'The Undertaker',
+      date: '1998-06-28'
     },
     {
       title: 'Three Faces of Foley',
@@ -216,7 +228,8 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       description: 'Won the WWE Championship on Raw, creating one of the biggest pops ever',
       category: 'championship',
       importance: 10,
-      venue: 'WWE Raw'
+      venue: 'WWE Raw',
+      date: '1999-01-04'
     }
   ],
   'kane': [
@@ -225,13 +238,15 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       description: 'Made shocking debut by attacking The Undertaker at Hell in a Cell',
       category: 'debut',
       importance: 10,
-      venue: 'Badd Blood 1997'
+      venue: 'Badd Blood 1997',
+      date: '1997-10-05'
     },
     {
       title: 'Unmasking',
       description: 'Removed his iconic mask after years of mystery',
       category: 'milestone',
-      importance: 9
+      importance: 9,
+      date: '2003-06-23'
     }
   ],
   'eddie-guerrero': [
@@ -247,7 +262,8 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       category: 'championship',
       importance: 10,
       venue: 'No Way Out 2004',
-      opponent: 'Brock Lesnar'
+      opponent: 'Brock Lesnar',
+      date: '2004-02-15'
     }
   ],
   'randy-savage': [
@@ -277,7 +293,8 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       category: 'special_match',
       importance: 10,
       venue: 'WrestleMania III',
-      opponent: 'Hulk Hogan'
+      opponent: 'Hulk Hogan',
+      date: '1987-03-29'
     }
   ],
   'goldberg': [
@@ -286,7 +303,8 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
       description: 'Built an incredible 173-match winning streak in WCW',
       category: 'milestone',
       importance: 10,
-      venue: 'WCW'
+      venue: 'WCW',
+      date: '1998-07-06'
     },
     {
       title: 'Spear and Jackhammer',
@@ -374,14 +392,15 @@ async function populateCareerHighlights() {
           })
 
           if (!existing) {
+            const when = highlight.date ? new Date(highlight.date) : new Date('2000-01-01')
             await prisma.careerHighlight.create({
               data: {
                 id: uuidv4(),
                 profileId: profile.id,
                 title: highlight.title,
                 description: highlight.description,
-                // keep a stable synthetic date for predefined highlights if actual date unknown
-                date: new Date('2000-01-01'),
+                // Prefer factual date when provided; otherwise a stable placeholder
+                date: when,
                 category: highlight.category,
                 importance: highlight.importance,
                 venue: highlight.venue || null,

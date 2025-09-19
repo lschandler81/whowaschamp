@@ -41,6 +41,10 @@ npx tsx scripts/populate-rivalries.ts || echo "⚠️  Rivalries population fail
 echo "🧹 Cleaning duplicate career highlights..."
 npx tsx scripts/cleanup-duplicate-highlights.ts || echo "⚠️  Cleanup duplicates failed, continuing..."
 
+# Normalize dates for known highlights
+echo "🗓  Normalizing known highlight dates..."
+npx tsx scripts/fix-highlight-dates.ts || echo "⚠️  Fix highlight dates failed, continuing..."
+
 # Run the regular build
 echo "🏃 Running Next.js build..."
 npm run build:onthisday
