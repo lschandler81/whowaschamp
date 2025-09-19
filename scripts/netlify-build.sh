@@ -37,6 +37,10 @@ npx tsx scripts/populate-career-highlights.ts || echo "⚠️  Career highlights
 echo "🥊 Populating rivalries data..."
 npx tsx scripts/populate-rivalries.ts || echo "⚠️  Rivalries population failed, continuing..."
 
+# Clean up any duplicate career highlights
+echo "🧹 Cleaning duplicate career highlights..."
+npx tsx scripts/cleanup-duplicate-highlights.ts || echo "⚠️  Cleanup duplicates failed, continuing..."
+
 # Run the regular build
 echo "🏃 Running Next.js build..."
 npm run build:onthisday

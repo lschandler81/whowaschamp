@@ -324,26 +324,37 @@ async function populateCareerHighlights() {
     
     console.log(`Found ${profiles.length} profiles`)
     
-    // Add predefined highlights for famous wrestlers
+    // Add predefined highlights for famous wrestlers (idempotent by profileId+title)
     for (const [slug, highlights] of Object.entries(wrestlerHighlights)) {
       const profile = profiles.find(p => p.slug === slug)
       if (profile) {
         console.log(`Adding predefined highlights for ${profile.name}...`)
         
         for (const highlight of highlights) {
-          await prisma.careerHighlight.create({
-            data: {
-              id: uuidv4(),
+          const existing = await prisma.careerHighlight.findFirst({
+            where: {
               profileId: profile.id,
               title: highlight.title,
-              description: highlight.description,
-              date: new Date(), // Use current date for predefined highlights
-              category: highlight.category,
-              importance: highlight.importance,
-              venue: highlight.venue || null,
-              opponent: highlight.opponent || null
+              category: highlight.category
             }
           })
+
+          if (!existing) {
+            await prisma.careerHighlight.create({
+              data: {
+                id: uuidv4(),
+                profileId: profile.id,
+                title: highlight.title,
+                description: highlight.description,
+                // keep a stable synthetic date for predefined highlights if actual date unknown
+                date: new Date('2000-01-01'),
+                category: highlight.category,
+                importance: highlight.importance,
+                venue: highlight.venue || null,
+                opponent: highlight.opponent || null
+              }
+            })
+          }
         }
       }
     }
@@ -367,52 +378,68 @@ async function populateCareerHighlights() {
       //   continue
       // }
       
-      // Add debut highlight
+      // Add debut highlight (idempotent by profileId+title)
       if (profile.debut) {
-        await prisma.careerHighlight.create({
-          data: {
-            id: uuidv4(),
-            profileId: profile.id,
-            title: 'Professional Debut',
-            description: `${profile.name} began their professional ${profile.type === 'wrestler' ? 'wrestling' : 'fighting'} career`,
-            date: profile.debut,
-            category: 'debut',
-            importance: 7
-          }
+        const existingDebut = await prisma.careerHighlight.findFirst({
+          where: { profileId: profile.id, title: 'Professional Debut' }
         })
-      }
-      
-      // Add championship highlights
-      for (const championship of profile.championships) {
-        if (championship.wonDate) {
+        if (!existingDebut) {
           await prisma.careerHighlight.create({
             data: {
               id: uuidv4(),
               profileId: profile.id,
-              title: `${championship.titleName} Victory`,
-              description: `Won the ${championship.titleName} championship`,
-              date: championship.wonDate,
-              category: 'championship',
-              importance: championship.titleName.includes('World') || championship.titleName.includes('WWE') ? 9 : 7,
-              venue: typeof championship.promotion === 'string' ? championship.promotion : championship.promotion?.name || null
+              title: 'Professional Debut',
+              description: `${profile.name} began their professional ${profile.type === 'wrestler' ? 'wrestling' : 'fighting'} career`,
+              date: profile.debut,
+              category: 'debut',
+              importance: 7
             }
           })
         }
       }
       
-      // Add retirement highlight if applicable
-      if (profile.retired) {
-        await prisma.careerHighlight.create({
-          data: {
-            id: uuidv4(),
-            profileId: profile.id,
-            title: 'Retirement',
-            description: `${profile.name} retired from active competition`,
-            date: profile.retired,
-            category: 'retirement',
-            importance: 8
+      // Add championship highlights (idempotent by profileId+title+date)
+      for (const championship of profile.championships) {
+        if (championship.wonDate) {
+          const title = `${championship.titleName} Victory`
+          const existingChamp = await prisma.careerHighlight.findFirst({
+            where: { profileId: profile.id, title, date: championship.wonDate }
+          })
+          if (!existingChamp) {
+            await prisma.careerHighlight.create({
+              data: {
+                id: uuidv4(),
+                profileId: profile.id,
+                title,
+                description: `Won the ${championship.titleName} championship`,
+                date: championship.wonDate,
+                category: 'championship',
+                importance: championship.titleName.includes('World') || championship.titleName.includes('WWE') ? 9 : 7,
+                venue: typeof championship.promotion === 'string' ? championship.promotion : championship.promotion?.name || null
+              }
+            })
           }
+        }
+      }
+      
+      // Add retirement highlight if applicable (idempotent by profileId+title)
+      if (profile.retired) {
+        const existingRetired = await prisma.careerHighlight.findFirst({
+          where: { profileId: profile.id, title: 'Retirement' }
         })
+        if (!existingRetired) {
+          await prisma.careerHighlight.create({
+            data: {
+              id: uuidv4(),
+              profileId: profile.id,
+              title: 'Retirement',
+              description: `${profile.name} retired from active competition`,
+              date: profile.retired,
+              category: 'retirement',
+              importance: 8
+            }
+          })
+        }
       }
     }
     
