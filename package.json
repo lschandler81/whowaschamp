@@ -7,7 +7,7 @@
     "build:ufc-events": "node scripts/build_ufc_events.mjs",
     "build:ufc-reigns": "node scripts/build_ufc_reigns.mjs",
     "build": "npm run build:onthisday && npx prisma generate && next build",
-    "build:netlify": "npx prisma db push --accept-data-loss && npx tsx scripts/populate-rivalries.ts && npx tsx scripts/populate-career-highlights.ts && npm run build",
+    "build:netlify": "npx prisma db push --accept-data-loss && npx tsx scripts/update-all-recent-data.ts && npm run build",
     "dev": "next dev",
     "start": "next start",
     "postbuild": "next-sitemap",
