@@ -1,5 +1,4 @@
 {
   "/profiles/page": "app/profiles/page.js",
-  "/profiles/[slug]/page": "app/profiles/[slug]/page.js",
-  "/api/profiles/[slug]/route": "app/api/profiles/[slug]/route.js"
+  "/profiles/[slug]/page": "app/profiles/[slug]/page.js"
 }
