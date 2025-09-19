@@ -300,6 +300,40 @@ const wrestlerHighlights: Record<string, CareerHighlightTemplate[]> = {
 async function populateCareerHighlights() {
   console.log('Starting to populate career highlights...')
   const now = new Date()
+  // Deceased profiles: do not create 'Retirement'; add a memorial highlight instead
+  const MEMORIALS_BY_NAME: Record<string, { date: string; title?: string; description?: string; category?: 'milestone' | 'special_match' }> = {
+    'Eddie Guerrero': { date: '2005-11-13', title: 'In Memoriam', description: 'Remembering the life and legacy of Eddie Guerrero (Latino Heat)', category: 'milestone' },
+    'Owen Hart': { date: '1999-05-23', title: 'In Memoriam', description: 'Remembering Owen Hart and his enduring legacy', category: 'milestone' },
+    'Andre the Giant': { date: '1993-01-27', title: 'In Memoriam', description: 'Remembering The Eighth Wonder of the World', category: 'milestone' },
+    'Randy Savage': { date: '2011-05-20', title: 'In Memoriam', description: 'Remembering “Macho Man” Randy Savage', category: 'milestone' },
+    'Ultimate Warrior': { date: '2014-04-08', title: 'In Memoriam', description: 'Remembering The Ultimate Warrior', category: 'milestone' },
+    'Yokozuna': { date: '2000-10-23', title: 'In Memoriam', description: 'Remembering Yokozuna', category: 'milestone' },
+    'Mr. Perfect': { date: '2003-02-10', title: 'In Memoriam', description: 'Remembering Mr. Perfect (Curt Hennig)', category: 'milestone' },
+    'Curt Hennig': { date: '2003-02-10', title: 'In Memoriam', description: 'Remembering Curt Hennig (Mr. Perfect)', category: 'milestone' },
+    'Rick Rude': { date: '1999-04-20', title: 'In Memoriam', description: 'Remembering “Ravishing” Rick Rude', category: 'milestone' },
+    'British Bulldog': { date: '2002-05-18', title: 'In Memoriam', description: 'Remembering The British Bulldog (Davey Boy Smith)', category: 'milestone' },
+    'Dynamite Kid': { date: '2018-12-05', title: 'In Memoriam', description: 'Remembering The Dynamite Kid', category: 'milestone' },
+    'Vader': { date: '2018-06-18', title: 'In Memoriam', description: 'Remembering Big Van Vader', category: 'milestone' },
+    'Chyna': { date: '2016-04-20', title: 'In Memoriam', description: 'Remembering Chyna, the Ninth Wonder of the World', category: 'milestone' },
+    'Test': { date: '2009-03-13', title: 'In Memoriam', description: 'Remembering Test (Andrew Martin)', category: 'milestone' },
+    'Big Boss Man': { date: '2004-09-22', title: 'In Memoriam', description: 'Remembering Big Boss Man', category: 'milestone' },
+    'Kamala': { date: '2020-08-09', title: 'In Memoriam', description: 'Remembering Kamala', category: 'milestone' },
+    'King Kong Bundy': { date: '2019-03-04', title: 'In Memoriam', description: 'Remembering King Kong Bundy', category: 'milestone' },
+    'Road Warrior Hawk': { date: '2003-10-19', title: 'In Memoriam', description: 'Remembering Road Warrior Hawk', category: 'milestone' },
+    'Bruno Sammartino': { date: '2018-04-18', title: 'In Memoriam', description: 'Remembering Bruno Sammartino', category: 'milestone' },
+    'Buddy Rogers': { date: '1992-06-26', title: 'In Memoriam', description: 'Remembering Buddy Rogers', category: 'milestone' },
+    'Pedro Morales': { date: '2019-02-12', title: 'In Memoriam', description: 'Remembering Pedro Morales', category: 'milestone' },
+    'Ivan Koloff': { date: '2017-02-18', title: 'In Memoriam', description: 'Remembering Ivan Koloff', category: 'milestone' },
+    'Superstar Billy Graham': { date: '2023-05-17', title: 'In Memoriam', description: 'Remembering “Superstar” Billy Graham', category: 'milestone' },
+    'The Iron Sheik': { date: '2023-06-07', title: 'In Memoriam', description: 'Remembering The Iron Sheik', category: 'milestone' },
+    'Dusty Rhodes': { date: '2015-06-11', title: 'In Memoriam', description: 'Remembering The American Dream, Dusty Rhodes', category: 'milestone' },
+    'Roddy Piper': { date: '2015-07-31', title: 'In Memoriam', description: 'Remembering “Rowdy” Roddy Piper', category: 'milestone' },
+    'Scott Hall': { date: '2022-03-14', title: 'In Memoriam', description: 'Remembering Scott Hall', category: 'milestone' },
+    'Razor Ramon': { date: '2022-03-14', title: 'In Memoriam', description: 'Remembering Razor Ramon (Scott Hall)', category: 'milestone' },
+    'Bam Bam Bigelow': { date: '2007-01-19', title: 'In Memoriam', description: 'Remembering Bam Bam Bigelow', category: 'milestone' },
+    'Chris Benoit': { date: '2007-06-24', title: 'In Memoriam', description: 'Remembering Chris Benoit', category: 'milestone' },
+    'Mitsuharu Misawa': { date: '2009-06-13', title: 'In Memoriam', description: 'Remembering Mitsuharu Misawa', category: 'milestone' }
+  }
   
   try {
     // Get all profiles to see what we have
@@ -422,23 +456,45 @@ async function populateCareerHighlights() {
         }
       }
       
-      // Add retirement highlight if applicable (idempotent by profileId+title)
+      // Add retirement highlight or memorial if applicable
       if (profile.retired) {
-        const existingRetired = await prisma.careerHighlight.findFirst({
-          where: { profileId: profile.id, title: 'Retirement' }
-        })
-        if (!existingRetired) {
-          await prisma.careerHighlight.create({
-            data: {
-              id: uuidv4(),
-              profileId: profile.id,
-              title: 'Retirement',
-              description: `${profile.name} retired from active competition`,
-              date: profile.retired,
-              category: 'retirement',
-              importance: 8
+        const memo = MEMORIALS_BY_NAME[profile.name]
+        if (memo) {
+          if (memo) {
+            const existingMemorial = await prisma.careerHighlight.findFirst({
+              where: { profileId: profile.id, title: memo.title || 'In Memoriam' }
+            })
+            if (!existingMemorial) {
+              await prisma.careerHighlight.create({
+                data: {
+                  id: uuidv4(),
+                  profileId: profile.id,
+                  title: memo.title || 'In Memoriam',
+                  description: memo.description || `${profile.name} is remembered for an incredible career`,
+                  date: new Date(memo.date),
+                  category: memo.category || 'milestone',
+                  importance: 9
+                }
+              })
             }
+          }
+        } else {
+          const existingRetired = await prisma.careerHighlight.findFirst({
+            where: { profileId: profile.id, title: 'Retirement' }
           })
+          if (!existingRetired) {
+            await prisma.careerHighlight.create({
+              data: {
+                id: uuidv4(),
+                profileId: profile.id,
+                title: 'Retirement',
+                description: `${profile.name} retired from active competition`,
+                date: profile.retired,
+                category: 'retirement',
+                importance: 8
+              }
+            })
+          }
         }
       }
     }
