@@ -31,15 +31,7 @@
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/page-7f32593f1105cd12.js"
-    ],
-    "/on-this-day/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/on-this-day/page-7abc8553bd70dbd6.js"
+      "static/chunks/app/blog/page-d3b8234ee9601e15.js"
     ],
     "/on-this-week/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
@@ -47,7 +39,25 @@
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/on-this-week/page-035784bdcf50f115.js"
+      "static/chunks/app/on-this-week/page-475831b75062f696.js"
+    ],
+    "/profiles/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/488-038331586e010ad4.js",
+      "static/chunks/130-b2ed66871e9486c4.js",
+      "static/chunks/app/profiles/page-344955d534aa7a46.js"
+    ],
+    "/on-this-day/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/on-this-day/page-ced7201a0fb73bba.js"
     ],
     "/ppv-flashback/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
@@ -64,17 +74,7 @@
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/this-week/page-61fa387dd2a6b16a.js"
-    ],
-    "/profiles/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/488-038331586e010ad4.js",
-      "static/chunks/130-b2ed66871e9486c4.js",
-      "static/chunks/app/profiles/page-344955d534aa7a46.js"
+      "static/chunks/app/this-week/page-eedd000530dfd39b.js"
     ],
     "/blog/belt-design-evolution/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
@@ -82,63 +82,7 @@
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/belt-design-evolution/page-8abcfb9f8319d982.js"
-    ],
-    "/blog/championship-cities/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/championship-cities/page-a984ca29e118eb2c.js"
-    ],
-    "/blog/championship-lineages/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/championship-lineages/page-8e846ea2fef8e712.js"
-    ],
-    "/blog/controversial-title-changes/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/controversial-title-changes/page-0c56595d3747d024.js"
-    ],
-    "/blog/age-records/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/age-records/page-c69d5624cd4fe2e8.js"
-    ],
-    "/blog/most-championship-reigns/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/most-championship-reigns/page-657ff5db77088236.js"
-    ],
-    "/blog/championship-curse/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/championship-curse/page-899d1f2b26c10508.js"
-    ],
-    "/blog/longest-reigns/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/longest-reigns/page-493b67a4ca9bf70c.js"
+      "static/chunks/app/blog/belt-design-evolution/page-d205c829e8fae3bb.js"
     ],
     "/blog/attitude-era/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
@@ -146,15 +90,55 @@
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/attitude-era/page-1f0a52bd6de98f55.js"
+      "static/chunks/app/blog/attitude-era/page-eda5c4eefbabe126.js"
     ],
-    "/blog/never-lost-title/page": [
+    "/blog/championship-lineages/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
       "static/chunks/fd9d1056-bdf5941409f84b34.js",
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/never-lost-title/page-22618d099edd0e27.js"
+      "static/chunks/app/blog/championship-lineages/page-e933c0eda73c4869.js"
+    ],
+    "/blog/age-records/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/blog/age-records/page-e6190824ca3bed70.js"
+    ],
+    "/blog/championship-cities/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/blog/championship-cities/page-01862dd9ce75c211.js"
+    ],
+    "/blog/championship-curse/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/blog/championship-curse/page-a093425db1430f3e.js"
+    ],
+    "/blog/controversial-title-changes/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/blog/controversial-title-changes/page-bbe31773c09d93bf.js"
+    ],
+    "/blog/most-championship-reigns/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/blog/most-championship-reigns/page-552e33cfcec1db45.js"
     ],
     "/blog/shortest-reigns/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
@@ -162,7 +146,15 @@
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/shortest-reigns/page-924efad808dc07cd.js"
+      "static/chunks/app/blog/shortest-reigns/page-d450a9263533b15f.js"
+    ],
+    "/blog/longest-reigns/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/blog/longest-reigns/page-6fb4e7349c365adc.js"
     ],
     "/boxing/this-week/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
@@ -170,7 +162,15 @@
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/boxing/this-week/page-78f1b08939203b91.js"
+      "static/chunks/app/boxing/this-week/page-2deabeffe4d6c8eb.js"
+    ],
+    "/blog/never-lost-title/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/blog/never-lost-title/page-2a05872b6896d2cc.js"
     ],
     "/blog/era-defining-reigns/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
@@ -178,7 +178,15 @@
       "static/chunks/864-fbdc1472b5ddf0ee.js",
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/blog/era-defining-reigns/page-c4932291637ac44c.js"
+      "static/chunks/app/blog/era-defining-reigns/page-d04f7c1b1cfff161.js"
+    ],
+    "/ufc/this-week/page": [
+      "static/chunks/webpack-89717a9cee0395e5.js",
+      "static/chunks/fd9d1056-bdf5941409f84b34.js",
+      "static/chunks/864-fbdc1472b5ddf0ee.js",
+      "static/chunks/main-app-82886988d850891e.js",
+      "static/chunks/724-d0c1f000768e4c30.js",
+      "static/chunks/app/ufc/this-week/page-be104aecac8cba95.js"
     ],
     "/profiles/[slug]/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
@@ -187,14 +195,6 @@
       "static/chunks/main-app-82886988d850891e.js",
       "static/chunks/724-d0c1f000768e4c30.js",
       "static/chunks/app/profiles/[slug]/page-b945a6a0d6b6dcfb.js"
-    ],
-    "/ufc/this-week/page": [
-      "static/chunks/webpack-89717a9cee0395e5.js",
-      "static/chunks/fd9d1056-bdf5941409f84b34.js",
-      "static/chunks/864-fbdc1472b5ddf0ee.js",
-      "static/chunks/main-app-82886988d850891e.js",
-      "static/chunks/724-d0c1f000768e4c30.js",
-      "static/chunks/app/ufc/this-week/page-5df946a4eaec7621.js"
     ],
     "/events/[promotion]/[id]/page": [
       "static/chunks/webpack-89717a9cee0395e5.js",
