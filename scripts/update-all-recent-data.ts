@@ -13,7 +13,11 @@
 
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+// Use explicit database path for build environment
+const databaseUrl = process.env.NETLIFY ? 'file:/opt/build/repo/dev.db' : process.env.DATABASE_URL || 'file:./dev.db';
+const prisma = new PrismaClient({
+  datasourceUrl: databaseUrl
+});
 
 interface ChampionshipUpdate {
   title: string;
