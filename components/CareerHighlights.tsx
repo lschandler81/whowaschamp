@@ -86,8 +86,21 @@ export default function CareerHighlightsSection({ highlights }: CareerHighlights
     );
   }
 
+  // Deduplicate highlights defensively in UI
+  const seen = new Set<string>();
+  const deduped: CareerHighlight[] = [];
+  for (const h of highlights) {
+    const key = h.category === 'championship'
+      ? `${h.title}::${new Date(h.date).toISOString().slice(0,10)}`
+      : `${h.title}::${h.category}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      deduped.push(h);
+    }
+  }
+
   // Sort by importance and then by date
-  const sortedHighlights = [...highlights].sort((a, b) => {
+  const sortedHighlights = deduped.sort((a, b) => {
     if (a.importance !== b.importance) {
       return b.importance - a.importance;
     }
@@ -101,7 +114,7 @@ export default function CareerHighlightsSection({ highlights }: CareerHighlights
           <Trophy className="h-5 w-5" />
           Career Highlights
           <Badge variant="secondary" className="ml-2">
-            {highlights.length}
+            {sortedHighlights.length}
           </Badge>
         </CardTitle>
       </CardHeader>

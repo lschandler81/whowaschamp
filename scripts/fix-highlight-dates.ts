@@ -66,6 +66,32 @@ async function main() {
     }
   }
 
+  // Generic fix: replace obviously wrong "today" dates for non-champ highlights
+  const todayISO = new Date().toISOString().slice(0, 10)
+  const profiles = await prisma.profile.findMany({
+    select: { id: true, slug: true, name: true, debut: true, retired: true }
+  })
+  for (const p of profiles) {
+    const hs = await prisma.careerHighlight.findMany({ where: { profileId: p.id } })
+    for (const h of hs) {
+      const hISO = h.date.toISOString().slice(0, 10)
+      if (hISO === todayISO && h.category !== 'championship') {
+        let newDate: Date | null = null
+        if (h.title === 'Professional Debut' && p.debut) newDate = p.debut
+        if (h.title === 'Retirement' && p.retired) newDate = p.retired
+        if (h.title === 'In Memoriam') {
+          // try from CANONICAL deceased in cleanup script data? fallback leave as is
+          newDate = null
+        }
+        if (!newDate) {
+          // Stable placeholder to avoid drifting "today" values
+          newDate = new Date('2000-01-01')
+        }
+        await prisma.careerHighlight.update({ where: { id: h.id }, data: { date: newDate } })
+      }
+    }
+  }
+
   console.log('✅ Highlight date normalization complete')
 }
 
@@ -75,4 +101,3 @@ main().catch((e) => {
 }).finally(async () => {
   await prisma.$disconnect()
 })
-
