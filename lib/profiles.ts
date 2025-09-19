@@ -200,7 +200,7 @@ export function filterProfiles(profiles: Profile[], filters: Partial<ProfilesFil
 }
 
 /**
- * Get profile by slug from database
+ * Get profile by slug from database with JSON fallback
  */
 export async function getProfileBySlug(slug: string): Promise<Profile | null> {
   try {
@@ -229,13 +229,31 @@ export async function getProfileBySlug(slug: string): Promise<Profile | null> {
       }
     });
 
-    if (!dbProfile) {
-      return null;
+    if (dbProfile) {
+      return transformDatabaseProfile(dbProfile);
     }
-
-    return transformDatabaseProfile(dbProfile);
   } catch (error) {
-    console.error(`Error fetching profile ${slug}:`, error);
-    return null;
+    console.warn(`Database unavailable for profile ${slug}, trying JSON fallback:`, error);
   }
+
+  // Fallback to JSON file
+  try {
+    const jsonPath = path.join(process.cwd(), 'public', 'data', 'profiles.json');
+    
+    if (fs.existsSync(jsonPath)) {
+      const jsonData = fs.readFileSync(jsonPath, 'utf8');
+      const profiles = JSON.parse(jsonData) as Profile[];
+      const profile = profiles.find(p => p.slug === slug);
+      
+      if (profile) {
+        console.log(`Found profile ${slug} in JSON fallback`);
+        return profile;
+      }
+    }
+  } catch (error) {
+    console.error(`JSON fallback failed for profile ${slug}:`, error);
+  }
+
+  console.error(`Profile ${slug} not found in database or JSON fallback`);
+  return null;
 }
