@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { getProfileBySlug } from '@/lib/profiles';
 import { WrestlerProfile, FighterProfile } from '@/lib/types/profiles';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, MapPin, Trophy, Target, Users } from 'lucide-react';
@@ -14,8 +13,24 @@ interface ProfilePageProps {
   };
 }
 
+async function getProfile(slug: string) {
+  try {
+    const response = await fetch(`${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'}/api/profiles/${slug}`, {
+      next: { revalidate: 3600 }
+    });
+    
+    if (response.ok) {
+      return await response.json();
+    }
+    return null;
+  } catch (error) {
+    console.error('Error fetching profile:', error);
+    return null;
+  }
+}
+
 export async function generateMetadata({ params }: ProfilePageProps): Promise<Metadata> {
-  const profile = await getProfileBySlug(params.slug);
+  const profile = await getProfile(params.slug);
   
   if (!profile) {
     return {
@@ -170,7 +185,7 @@ function FighterDetails({ fighter }: { fighter: FighterProfile }) {
 }
 
 export default async function ProfilePage({ params }: ProfilePageProps) {
-  const profile = await getProfileBySlug(params.slug);
+  const profile = await getProfile(params.slug);
   
   if (!profile) {
     notFound();
@@ -209,7 +224,7 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
               <Badge variant={isWrestler ? "default" : "secondary"} className="text-sm">
                 {profile.type === 'wrestler' ? 'Professional Wrestler' : 'MMA Fighter'}
               </Badge>
-              {profile.promotions.map(promotion => (
+              {profile.promotions.map((promotion: string) => (
                 <Badge key={promotion} variant="outline">
                   {promotion}
                 </Badge>
