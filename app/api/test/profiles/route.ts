@@ -19,7 +19,7 @@ export async function GET() {
     
     // Try to connect to database directly
     // Use explicit database path for Netlify functions
-    const databaseUrl = process.env.NETLIFY ? 'file:/opt/build/repo/dev.db' : process.env.DATABASE_URL || 'file:./dev.db';
+    const databaseUrl = process.env.NETLIFY ? 'file:../dev.db' : process.env.DATABASE_URL || 'file:./dev.db';
     const prisma = new PrismaClient({
       datasourceUrl: databaseUrl
     });
