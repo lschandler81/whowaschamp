@@ -1,16 +1,11 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/db';
 import { NextRequest, NextResponse } from 'next/server';
 import { getISOWeek, getYear } from 'date-fns';
 
 // Force dynamic rendering and set revalidation
 export const dynamic = 'force-dynamic';
 export const revalidate = 60 * 60 * 6; // 6 hours - updates multiple times per day
-
-// Use explicit database path for Netlify functions
-const databaseUrl = process.env.NETLIFY ? 'file:/opt/build/repo/dev.db' : process.env.DATABASE_URL || 'file:./dev.db';
-const prisma = new PrismaClient({
-  datasourceUrl: databaseUrl
-});
+export const runtime = 'nodejs';
 
 function calculateEventScore(event: any): number {
   let score = 0;
@@ -265,6 +260,6 @@ export async function GET(request: NextRequest) {
       { status: 500 }
     );
   } finally {
-    await prisma.$disconnect();
+    // keep prisma connection managed by singleton
   }
 }

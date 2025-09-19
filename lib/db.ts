@@ -1,13 +1,28 @@
 import { PrismaClient } from '@prisma/client';
 
 declare global {
+  // eslint-disable-next-line no-var
   var __globalPrisma: PrismaClient | undefined;
 }
 
-// Create a singleton Prisma client instance
-// This prevents multiple clients in development due to hot reloading
+function resolveDatabaseUrl(): string {
+  // In Netlify functions, we bundle the SQLite file alongside the function.
+  // Using a relative path makes it work at build time and at runtime.
+  const defaultUrl = 'file:./dev.db';
+
+  // If running on Netlify (build or runtime), prefer the bundled relative path
+  if (process.env.NETLIFY) {
+    return defaultUrl;
+  }
+
+  return process.env.DATABASE_URL || defaultUrl;
+}
+
+export const DATABASE_URL = resolveDatabaseUrl();
+
+// Create a singleton Prisma client instance with explicit datasourceUrl
 export const prisma = globalThis.__globalPrisma ?? new PrismaClient({
-  // Configure for production
+  datasourceUrl: DATABASE_URL,
   log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
 });
 

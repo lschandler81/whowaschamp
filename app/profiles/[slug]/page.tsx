@@ -9,6 +9,7 @@ import CareerHighlightsSection from '@/components/CareerHighlights';
 import RivalriesSection from '@/components/Rivalries';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, MapPin, Trophy, Target, Users } from 'lucide-react';
+export const runtime = 'nodejs';
 
 interface ProfilePageProps {
   params: {

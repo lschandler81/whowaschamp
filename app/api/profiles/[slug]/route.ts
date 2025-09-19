@@ -1,13 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/db';
 import fs from 'fs';
 import path from 'path';
-
-// Use explicit database path for Netlify functions
-const databaseUrl = process.env.NETLIFY ? 'file:/opt/build/repo/dev.db' : process.env.DATABASE_URL || 'file:./dev.db';
-const prisma = new PrismaClient({
-  datasourceUrl: databaseUrl
-});
+export const runtime = 'nodejs';
 
 /**
  * Convert database profile to our Profile type

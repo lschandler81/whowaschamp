@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import { getAllProfiles } from '@/lib/profiles';
-import { PrismaClient } from '@prisma/client';
+import { prisma, DATABASE_URL } from '@/lib/db';
 import fs from 'fs';
+
+export const runtime = 'nodejs';
 
 export async function GET() {
   try {
@@ -17,12 +19,7 @@ export async function GET() {
       console.log(`API: Database file size: ${stats.size} bytes`);
     }
     
-    // Try to connect to database directly
-    // Use explicit database path for Netlify functions
-    const databaseUrl = process.env.NETLIFY ? 'file:/opt/build/repo/dev.db' : process.env.DATABASE_URL || 'file:./dev.db';
-    const prisma = new PrismaClient({
-      datasourceUrl: databaseUrl
-    });
+    // Try to connect to database directly using shared Prisma client
     console.log('API: Testing Prisma connection...');
     
     try {
@@ -43,7 +40,7 @@ export async function GET() {
       directCount: await prisma.profile.count().catch(() => 0),
       getAllProfilesCount: profiles.length,
       environment: process.env.NODE_ENV,
-      databaseUrl: process.env.DATABASE_URL,
+      databaseUrl: DATABASE_URL,
       sampleProfiles: profiles.slice(0, 3).map(p => ({ 
         name: p.name, 
         type: p.type, 

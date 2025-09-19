@@ -7,7 +7,7 @@
     "build:ufc-events": "node scripts/build_ufc_events.mjs",
     "build:ufc-reigns": "node scripts/build_ufc_reigns.mjs",
     "build": "npm run build:onthisday && npx prisma generate && next build",
-    "build:netlify": "npx prisma db push --accept-data-loss && npx tsx scripts/update-all-recent-data.ts && mkdir -p netlify/functions && cp dev.db netlify/functions/ && npm run build",
+    "build:netlify": "bash scripts/netlify-build.sh && mkdir -p netlify/functions && cp -f dev.db netlify/functions/ || true",
     "dev": "next dev",
     "start": "next start",
     "postbuild": "next-sitemap",

@@ -1,13 +1,8 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/db';
 import fs from 'fs';
 import path from 'path';
-
-// Use explicit database path for Netlify functions
-const databaseUrl = process.env.NETLIFY ? 'file:/opt/build/repo/dev.db' : process.env.DATABASE_URL || 'file:./dev.db';
-const prisma = new PrismaClient({
-  datasourceUrl: databaseUrl
-});
+export const runtime = 'nodejs';
 
 /**
  * Transform database profile to simple format for client
@@ -57,8 +52,11 @@ export async function GET() {
     });
 
     if (dbProfiles.length > 0) {
-      console.log(`API: Loaded ${dbProfiles.length} profiles from database`);
-      return NextResponse.json(dbProfiles.map(transformProfile));
+      // If DB looks complete, return it; otherwise consider JSON fallback
+      if (dbProfiles.length >= 50) {
+        console.log(`API: Loaded ${dbProfiles.length} profiles from database`);
+        return NextResponse.json(dbProfiles.map(transformProfile));
+      }
     }
   } catch (error) {
     console.warn('Database unavailable, trying JSON fallback:', error);
@@ -67,11 +65,23 @@ export async function GET() {
   // Fallback to JSON file
   try {
     const jsonPath = path.join(process.cwd(), 'public', 'data', 'profiles.json');
-    
+    let profiles: any[] | null = null;
     if (fs.existsSync(jsonPath)) {
       const jsonData = fs.readFileSync(jsonPath, 'utf8');
-      const profiles = JSON.parse(jsonData);
-      console.log(`API: Loaded ${profiles.length} profiles from JSON fallback`);
+      profiles = JSON.parse(jsonData);
+      console.log(`API: Loaded ${profiles.length} profiles from JSON fallback (filesystem)`);
+    } else {
+      const baseUrl = process.env.URL || process.env.NETLIFY_URL || process.env.NEXT_PUBLIC_APP_URL;
+      if (baseUrl) {
+        const res = await fetch(`${baseUrl.replace(/\/$/, '')}/data/profiles.json`);
+        if (res.ok) {
+          profiles = await res.json();
+          console.log(`API: Loaded ${profiles.length} profiles from JSON fallback (remote ${baseUrl})`);
+        }
+      }
+    }
+
+    if (profiles) {
       return NextResponse.json(profiles);
     }
   } catch (error) {

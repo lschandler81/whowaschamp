@@ -1,9 +1,7 @@
 import { Profile, WrestlerProfile, FighterProfile, ProfilesFilter } from '@/lib/types/profiles';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/db';
 import fs from 'fs';
 import path from 'path';
-
-const prisma = new PrismaClient();
 
 /**
  * Convert name to URL-safe slug
@@ -172,8 +170,34 @@ export async function getAllProfiles(): Promise<Profile[]> {
       }
     });
 
-    if (dbProfiles.length > 0) {
+    if (dbProfiles.length >= 50) {
       console.log(`Loaded ${dbProfiles.length} profiles from database`);
+      return dbProfiles.map(transformDatabaseProfile);
+    }
+
+    // If database result is suspiciously small, try JSON and prefer the larger set
+    const jsonPath = path.join(process.cwd(), 'public', 'data', 'profiles.json');
+    let jsonProfiles: Profile[] | null = null;
+    try {
+      if (fs.existsSync(jsonPath)) {
+        const jsonData = fs.readFileSync(jsonPath, 'utf8');
+        jsonProfiles = JSON.parse(jsonData) as Profile[];
+      } else {
+        const baseUrl = process.env.URL || process.env.NETLIFY_URL || process.env.NEXT_PUBLIC_APP_URL;
+        if (baseUrl) {
+          const res = await fetch(`${baseUrl.replace(/\/$/, '')}/data/profiles.json`);
+          if (res.ok) jsonProfiles = await res.json();
+        }
+      }
+    } catch {}
+
+    if ((jsonProfiles?.length || 0) > dbProfiles.length) {
+      console.log(`Database had ${dbProfiles.length}; using JSON fallback with ${(jsonProfiles as Profile[]).length}`);
+      return jsonProfiles as Profile[];
+    }
+
+    if (dbProfiles.length > 0) {
+      console.log(`Loaded ${dbProfiles.length} profiles from database (no better JSON fallback available)`);
       return dbProfiles.map(transformDatabaseProfile);
     }
   } catch (error) {
@@ -183,12 +207,21 @@ export async function getAllProfiles(): Promise<Profile[]> {
   // Fallback to JSON file
   try {
     const jsonPath = path.join(process.cwd(), 'public', 'data', 'profiles.json');
-    
     if (fs.existsSync(jsonPath)) {
       const jsonData = fs.readFileSync(jsonPath, 'utf8');
       const profiles = JSON.parse(jsonData) as Profile[];
-      console.log(`Loaded ${profiles.length} profiles from JSON fallback`);
+      console.log(`Loaded ${profiles.length} profiles from JSON fallback (filesystem)`);
       return profiles;
+    }
+    // Try fetching from deployed static asset if file isn't bundled with the function
+    const baseUrl = process.env.URL || process.env.NETLIFY_URL || process.env.NEXT_PUBLIC_APP_URL;
+    if (baseUrl) {
+      const res = await fetch(`${baseUrl.replace(/\/$/, '')}/data/profiles.json`);
+      if (res.ok) {
+        const profiles = await res.json() as Profile[];
+        console.log(`Loaded ${profiles.length} profiles from JSON fallback (remote ${baseUrl})`);
+        return profiles;
+      }
     }
   } catch (error) {
     console.error('JSON fallback failed:', error);
@@ -332,15 +365,25 @@ export async function getProfileBySlug(slug: string): Promise<Profile | null> {
   // Fallback to JSON file
   try {
     const jsonPath = path.join(process.cwd(), 'public', 'data', 'profiles.json');
-    
     if (fs.existsSync(jsonPath)) {
       const jsonData = fs.readFileSync(jsonPath, 'utf8');
       const profiles = JSON.parse(jsonData) as Profile[];
       const profile = profiles.find(p => p.slug === slug);
-      
       if (profile) {
-        console.log(`Found profile ${slug} in JSON fallback`);
+        console.log(`Found profile ${slug} in JSON fallback (filesystem)`);
         return profile;
+      }
+    }
+    const baseUrl = process.env.URL || process.env.NETLIFY_URL || process.env.NEXT_PUBLIC_APP_URL;
+    if (baseUrl) {
+      const res = await fetch(`${baseUrl.replace(/\/$/, '')}/data/profiles.json`);
+      if (res.ok) {
+        const profiles = await res.json() as Profile[];
+        const profile = profiles.find(p => p.slug === slug) || null;
+        if (profile) {
+          console.log(`Found profile ${slug} in JSON fallback (remote ${baseUrl})`);
+          return profile;
+        }
       }
     }
   } catch (error) {

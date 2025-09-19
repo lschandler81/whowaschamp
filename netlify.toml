@@ -8,10 +8,17 @@
 # Scheduled functions configuration
 [functions]
   directory = "netlify/functions"
-  included_files = ["dev.db", "netlify/functions/dev.db"]
+  # Ensure the SQLite DB and Prisma engine are bundled with all functions
+  included_files = [
+    "dev.db",
+    "prisma/**",
+    "node_modules/.prisma/client/**",
+    "public/data/**"
+  ]
 
 [build.environment]
 # Install devDependencies during build so Prisma can generate the client.
 # Using legacy peer deps to avoid transient peer conflicts from test tooling.
   NPM_FLAGS = "--legacy-peer-deps"
-  DATABASE_URL = "file:/opt/build/repo/dev.db"
+  # Use a relative path so both build and runtime can resolve the DB file
+  DATABASE_URL = "file:./dev.db"
