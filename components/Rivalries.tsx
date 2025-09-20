@@ -65,8 +65,19 @@ export default function RivalriesSection({ rivalries }: RivalriesProps) {
     );
   }
 
+  // Dedupe rivalries by opponent + name to avoid visual duplicates
+  const seen = new Set<string>();
+  const deduped: Rivalry[] = [];
+  for (const r of rivalries) {
+    const key = `${r.opponentSlug || r.opponentName}::${r.rivalryName || ''}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      deduped.push(r);
+    }
+  }
+
   // Sort by feud intensity
-  const sortedRivalries = [...rivalries].sort((a, b) => b.feudIntensity - a.feudIntensity);
+  const sortedRivalries = deduped.sort((a, b) => b.feudIntensity - a.feudIntensity);
 
   return (
     <Card>
@@ -86,11 +97,11 @@ export default function RivalriesSection({ rivalries }: RivalriesProps) {
               key={rivalry.id}
               className="border rounded-lg p-4 hover:bg-muted/50 transition-colors"
             >
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-2 break-words">
                     <Flame className="h-4 w-4 text-orange-500" />
-                    <h3 className="font-semibold text-lg">
+                    <h3 className="font-semibold text-lg break-words">
                       {rivalry.rivalryName}
                     </h3>
                     <Badge
@@ -100,7 +111,7 @@ export default function RivalriesSection({ rivalries }: RivalriesProps) {
                     </Badge>
                   </div>
                   
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
                     <span className="text-muted-foreground">vs.</span>
                     <Link 
                       href={`/profiles/${rivalry.opponentSlug}`}
@@ -110,20 +121,22 @@ export default function RivalriesSection({ rivalries }: RivalriesProps) {
                     </Link>
                   </div>
                   
-                  <p className="text-muted-foreground mb-3 leading-relaxed">
+                  <p className="text-muted-foreground mb-3 leading-relaxed break-words">
                     {rivalry.description}
                   </p>
                   
                   {rivalry.notableMatches && (
                     <div className="mb-3">
                       <h4 className="font-medium mb-2 text-sm">Notable Matches:</h4>
-                      <p className="text-sm text-muted-foreground">
-                        {rivalry.notableMatches}
-                      </p>
+                      <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+                        {rivalry.notableMatches.split('•').map((item, idx) => (
+                          <li key={idx} className="break-words">{item.trim()}</li>
+                        ))}
+                      </ul>
                     </div>
                   )}
                   
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                     {(rivalry.startDate || rivalry.endDate) && (
                       <div className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
@@ -133,12 +146,12 @@ export default function RivalriesSection({ rivalries }: RivalriesProps) {
                   </div>
                 </div>
                 
-                <div className="flex flex-col items-end gap-2">
+                <div className="flex flex-col items-end gap-2 md:self-start">
                   <Badge variant="outline" className="text-xs">
                     Intensity: {rivalry.feudIntensity}/10
                   </Badge>
                   
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" asChild className="w-full md:w-auto">
                     <Link href={`/profiles/${rivalry.opponentSlug}`}>
                       View Opponent
                       <ArrowRight className="h-3 w-3 ml-1" />
