@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import Analytics from '@/components/Analytics';
 import { TopNav } from '@/components/TopNav';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -28,6 +29,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-LH31MCLV58';
   return (
     <html lang="en">
       <head>
@@ -41,20 +43,27 @@ export default function RootLayout({
         />
 
         {/* Google Analytics 4 */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-LH31MCLV58`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              id="ga4-src"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
           {`
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);} 
   gtag('js', new Date());
-  gtag('config', 'G-LH31MCLV58');
+  gtag('config', '${GA_MEASUREMENT_ID}');
           `}
-        </Script>
+            </Script>
+          </>
+        )}
       </head>
       <body className={inter.className}>
+        {/* Route-change page_view events for GA4 */}
+        {GA_MEASUREMENT_ID && <Analytics />}
         <TopNav />
         <main>
           {children}
