@@ -5,20 +5,15 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Scheduled functions configuration
 [functions]
   directory = "netlify/functions"
-  # Ensure the SQLite DB and Prisma engine are bundled with all functions
+  # Copy database file to functions directory
   included_files = [
     "dev.db",
     "prisma/**",
-    "node_modules/.prisma/client/**",
-    "public/data/**"
+    "node_modules/.prisma/client/**"
   ]
 
 [build.environment]
-# Install devDependencies during build so Prisma can generate the client.
-# Using legacy peer deps to avoid transient peer conflicts from test tooling.
   NPM_FLAGS = "--legacy-peer-deps"
-  # Use a relative path so both build and runtime can resolve the DB file
   DATABASE_URL = "file:./dev.db"

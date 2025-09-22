@@ -1,8 +1,14 @@
 import { Handler } from '@netlify/functions';
-import { promisify } from 'util';
-import { exec } from 'child_process';
+import { PrismaClient } from '@prisma/client';
 
-const execAsync = promisify(exec);
+// Use the correct path for Netlify functions runtime
+const prisma = new PrismaClient({
+  datasources: {
+    db: {
+      url: "file:./dev.db"
+    }
+  }
+});
 
 // Manual trigger function for checking wrestling database status
 const handler: Handler = async (event, context) => {
@@ -17,7 +23,7 @@ const handler: Handler = async (event, context) => {
   };
   
   // Handle preflight OPTIONS request
-  if (event.httpMethod === 'OPTIONS') {
+  if (event?.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
       headers: corsHeaders,
@@ -26,57 +32,50 @@ const handler: Handler = async (event, context) => {
   }
   
   try {
-    console.log('📊 Running database summary for current state...');
-    const { stdout } = await execAsync('cd /opt/build/repo && npx tsx scripts/database-summary.ts');
-    
-    // Parse statistics from output
-    const stats = stdout.match(/(\d+)\s+profiles/)?.[1] || '0';
-    const events = stdout.match(/(\d+)\s+events/)?.[1] || '0';
-    const reigns = stdout.match(/(\d+)\s+championship reigns/)?.[1] || '0';
-    const rivalries = stdout.match(/(\d+)\s+rivalries/)?.[1] || '0';
-    const highlights = stdout.match(/(\d+)\s+career highlights/)?.[1] || '0';
-    
-    const updateTime = new Date().toISOString();
-    
-    console.log(`✅ Database query completed successfully at ${updateTime}`);
-    console.log(`📈 Current Statistics:
-    - ${stats} total profiles
-    - ${events} total events  
-    - ${reigns} championship reigns
-    - ${rivalries} rivalries
-    - ${highlights} career highlights`);
-    
+    // Test database connection and get counts
+    const [profileCount, highlightCount, rivalryCount, eventCount] = await Promise.all([
+      prisma.profile.count(),
+      prisma.careerHighlight.count(),
+      prisma.rivalry.count(),
+      prisma.event.count()
+    ]);
+
+    const response = {
+      success: true,
+      database_status: {
+        profiles: profileCount,
+        career_highlights: highlightCount,
+        rivalries: rivalryCount,
+        events: eventCount
+      },
+      message: 'Database accessible and populated',
+      timestamp: new Date().toISOString()
+    };
+
+    console.log('✅ Database status check completed:', response);
+
     return {
       statusCode: 200,
       headers: corsHeaders,
-      body: JSON.stringify({
-        success: true,
-        message: 'Wrestling database queried successfully',
-        timestamp: updateTime,
-        statistics: {
-          profiles: parseInt(stats),
-          events: parseInt(events),
-          reigns: parseInt(reigns),
-          rivalries: parseInt(rivalries),
-          career_highlights: parseInt(highlights)
-        },
-        note: 'This function shows current database state. Use update-all-data function for comprehensive updates.'
-      })
+      body: JSON.stringify(response),
     };
     
-  } catch (error: any) {
-    console.error('❌ Database query failed:', error.message);
+  } catch (error) {
+    console.error('❌ Database connection failed:', error);
+    
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     
     return {
       statusCode: 500,
       headers: corsHeaders,
       body: JSON.stringify({
         success: false,
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        message: 'Database query failed - check function logs for details'
-      })
+        error: `Database connection failed: ${errorMessage}`,
+        timestamp: new Date().toISOString()
+      }),
     };
+  } finally {
+    await prisma.$disconnect();
   }
 };
 
