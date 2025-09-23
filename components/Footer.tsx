@@ -61,8 +61,8 @@ export function Footer() {
             <h4 className="font-semibold text-yellow-400 mb-2">⚖️ Legal Disclaimer</h4>
             <p className="text-gray-300 text-sm leading-relaxed">
               This site is an independent fan project and is <strong>not affiliated with or endorsed by WWE, 
-              All Elite Wrestling, or any other wrestling organization</strong>. All wrestling company names, 
-              champion names, and related trademarks are the property of their respective owners. 
+              All Elite Wrestling (AEW), the Ultimate Fighting Championship (UFC), or any other wrestling or MMA organization</strong>. 
+              All company, promotion, champion/fighter names, event names, and related trademarks are the property of their respective owners. 
               This site is for educational and entertainment purposes only.
             </p>
           </div>
@@ -72,6 +72,10 @@ export function Footer() {
             <p className="mt-1">
               Data sourced from publicly available wrestling databases and cross-referenced for accuracy.
             </p>
+            <div className="mt-3 space-x-4">
+              <a href="/privacy-policy" className="text-sm text-gray-500 hover:underline">Privacy Policy</a>
+              <a href="/contact" className="text-sm text-gray-500 hover:underline">Contact</a>
+            </div>
           </div>
         </div>
       </div>

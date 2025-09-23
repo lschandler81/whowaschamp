@@ -48,12 +48,6 @@
     "active": true
   },
   {
-    "id": "ufc_womens_featherweight",
-    "name": "UFC Women's Featherweight Championship",
-    "file": "ufc_womens_featherweight_reigns.json",
-    "active": true
-  },
-  {
     "id": "ufc_womens_bantamweight",
     "name": "UFC Women's Bantamweight Championship",
     "file": "ufc_womens_bantamweight_reigns.json",

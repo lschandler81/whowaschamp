@@ -2,38 +2,11 @@
   {
     "title_key": "ufc_womens_flyweight",
     "title_name": "UFC Women's Flyweight Championship",
-    "champion": "Nicco Montano",
-    "start_date": "2017-12-01",
-    "end_date": "2018-09-07",
-    "won_event": "The Ultimate Fighter 26 Finale",
-    "won_location": "Las Vegas, NV"
-  },
-  {
-    "title_key": "ufc_womens_flyweight",
-    "title_name": "UFC Women's Flyweight Championship",
-    "champion": "VACANT",
-    "start_date": "2018-09-08",
-    "end_date": "2019-01-18",
-    "won_event": "Stripped",
-    "won_location": "N/A",
-    "notes": "Nicco Montano stripped for missing weight and inactivity"
-  },
-  {
-    "title_key": "ufc_womens_flyweight",
-    "title_name": "UFC Women's Flyweight Championship",
-    "champion": "Valentina Shevchenko",
-    "start_date": "2019-01-19",
-    "end_date": "2023-09-08",
-    "won_event": "UFC on ESPN+ 1",
-    "won_location": "Brooklyn, NY"
-  },
-  {
-    "title_key": "ufc_womens_flyweight",
-    "title_name": "UFC Women's Flyweight Championship",
     "champion": "Alexa Grasso",
-    "start_date": "2023-09-09",
+    "start_date": "2023-03-04",
     "end_date": null,
     "won_event": "UFC 285",
-    "won_location": "Las Vegas, NV"
+    "won_location": "Las Vegas, NV",
+    "notes": null
   }
 ]

@@ -2,56 +2,11 @@
   {
     "title_key": "ufc_mens_flyweight",
     "title_name": "UFC Men's Flyweight Championship",
-    "champion": "Demetrious Johnson",
-    "start_date": "2012-09-22",
-    "end_date": "2018-08-03",
-    "won_event": "UFC 152",
-    "won_location": "Toronto, ON"
-  },
-  {
-    "title_key": "ufc_mens_flyweight",
-    "title_name": "UFC Men's Flyweight Championship",
-    "champion": "Henry Cejudo",
-    "start_date": "2018-08-04",
-    "end_date": "2020-05-08",
-    "won_event": "UFC 227",
-    "won_location": "Los Angeles, CA"
-  },
-  {
-    "title_key": "ufc_mens_flyweight",
-    "title_name": "UFC Men's Flyweight Championship",
-    "champion": "VACANT",
-    "start_date": "2020-05-09",
-    "end_date": "2021-01-20",
-    "won_event": "Vacated",
-    "won_location": "N/A",
-    "notes": "Henry Cejudo retired and vacated title"
-  },
-  {
-    "title_key": "ufc_mens_flyweight",
-    "title_name": "UFC Men's Flyweight Championship",
-    "champion": "Deiveson Figueiredo",
-    "start_date": "2021-01-21",
-    "end_date": "2023-01-20",
-    "won_event": "UFC 263",
-    "won_location": "Glendale, AZ"
-  },
-  {
-    "title_key": "ufc_mens_flyweight",
-    "title_name": "UFC Men's Flyweight Championship",
-    "champion": "Brandon Moreno",
-    "start_date": "2023-01-21",
-    "end_date": "2023-07-07",
-    "won_event": "UFC 283",
-    "won_location": "Rio de Janeiro, Brazil"
-  },
-  {
-    "title_key": "ufc_mens_flyweight",
-    "title_name": "UFC Men's Flyweight Championship",
     "champion": "Alexandre Pantoja",
     "start_date": "2023-07-08",
     "end_date": null,
     "won_event": "UFC 290",
-    "won_location": "Las Vegas, NV"
+    "won_location": "Las Vegas, NV",
+    "notes": null
   }
 ]

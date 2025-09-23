@@ -1,0 +1,36 @@
+{
+  "ufc_mens_heavyweight": [
+    { "champion": "Jon Jones", "start_date": "2023-03-04", "won_event": "UFC 285", "won_location": "Las Vegas, NV" }
+  ],
+  "ufc_mens_light_heavyweight": [
+    { "champion": "Alex Pereira", "start_date": "2023-12-16", "won_event": "UFC 296", "won_location": "Las Vegas, NV" }
+  ],
+  "ufc_mens_middleweight": [
+    { "champion": "Dricus du Plessis", "start_date": "2024-01-20", "won_event": "UFC 297", "won_location": "Toronto, Canada" }
+  ],
+  "ufc_mens_welterweight": [
+    { "champion": "Leon Edwards", "start_date": "2022-08-20", "won_event": "UFC 278", "won_location": "Salt Lake City, UT" }
+  ],
+  "ufc_mens_lightweight": [
+    { "champion": "Islam Makhachev", "start_date": "2022-10-22", "won_event": "UFC 280", "won_location": "Abu Dhabi, UAE" }
+  ],
+  "ufc_mens_featherweight": [
+    { "champion": "Ilia Topuria", "start_date": "2024-02-17", "won_event": "UFC 298", "won_location": "Anaheim, CA" }
+  ],
+  "ufc_mens_bantamweight": [
+    { "champion": "Sean O'Malley", "start_date": "2023-08-19", "won_event": "UFC 292", "won_location": "Boston, MA" }
+  ],
+  "ufc_mens_flyweight": [
+    { "champion": "Alexandre Pantoja", "start_date": "2023-07-08", "won_event": "UFC 290", "won_location": "Las Vegas, NV" }
+  ],
+  "ufc_womens_bantamweight": [
+    { "champion": "Raquel Pennington", "start_date": "2024-01-20", "won_event": "UFC 297", "won_location": "Toronto, Canada" }
+  ],
+  "ufc_womens_flyweight": [
+    { "champion": "Alexa Grasso", "start_date": "2023-03-04", "won_event": "UFC 285", "won_location": "Las Vegas, NV" }
+  ],
+  "ufc_womens_strawweight": [
+    { "champion": "Zhang Weili", "start_date": "2022-11-12", "won_event": "UFC 281", "won_location": "New York, NY" }
+  ]
+}
+

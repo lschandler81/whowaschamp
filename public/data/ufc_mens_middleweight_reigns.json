@@ -2,110 +2,11 @@
   {
     "title_key": "ufc_mens_middleweight",
     "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Dave Menne",
-    "start_date": "2001-11-02",
-    "end_date": "2002-01-11",
-    "won_event": "UFC 34",
-    "won_location": "Las Vegas, NV"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Murilo Bustamante",
-    "start_date": "2002-01-12",
-    "end_date": "2003-06-05",
-    "won_event": "UFC 35",
-    "won_location": "Uncasville, CT"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "VACANT",
-    "start_date": "2003-06-06",
-    "end_date": "2005-10-06",
-    "won_event": "Vacated",
-    "won_location": "N/A",
-    "notes": "Murilo Bustamante vacated title due to contract dispute"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Rich Franklin",
-    "start_date": "2005-10-07",
-    "end_date": "2006-10-13",
-    "won_event": "UFC 53",
-    "won_location": "Atlantic City, NJ"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Anderson Silva",
-    "start_date": "2006-10-14",
-    "end_date": "2013-07-05",
-    "won_event": "UFC 64",
-    "won_location": "Las Vegas, NV"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Chris Weidman",
-    "start_date": "2013-07-06",
-    "end_date": "2015-12-11",
-    "won_event": "UFC 162",
-    "won_location": "Las Vegas, NV"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Luke Rockhold",
-    "start_date": "2015-12-12",
-    "end_date": "2016-06-03",
-    "won_event": "UFC 194",
-    "won_location": "Las Vegas, NV"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Michael Bisping",
-    "start_date": "2016-06-04",
-    "end_date": "2017-11-03",
-    "won_event": "UFC 199",
-    "won_location": "Inglewood, CA"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Robert Whittaker",
-    "start_date": "2017-11-04",
-    "end_date": "2019-10-05",
-    "won_event": "UFC 217",
-    "won_location": "New York, NY"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Israel Adesanya",
-    "start_date": "2019-10-06",
-    "end_date": "2023-09-08",
-    "won_event": "UFC 243",
-    "won_location": "Melbourne, Australia"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
-    "champion": "Sean Strickland",
-    "start_date": "2023-09-09",
-    "end_date": "2024-01-19",
-    "won_event": "UFC 293",
-    "won_location": "Sydney, Australia"
-  },
-  {
-    "title_key": "ufc_mens_middleweight",
-    "title_name": "UFC Men's Middleweight Championship",
     "champion": "Dricus du Plessis",
     "start_date": "2024-01-20",
     "end_date": null,
     "won_event": "UFC 297",
-    "won_location": "Toronto, ON"
+    "won_location": "Toronto, Canada",
+    "notes": null
   }
 ]

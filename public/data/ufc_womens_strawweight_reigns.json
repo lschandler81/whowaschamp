@@ -2,55 +2,11 @@
   {
     "title_key": "ufc_womens_strawweight",
     "title_name": "UFC Women's Strawweight Championship",
-    "champion": "Carla Esparza",
-    "start_date": "2014-12-12",
-    "end_date": "2015-03-13",
-    "won_event": "The Ultimate Fighter 20 Finale",
-    "won_location": "Las Vegas, NV"
-  },
-  {
-    "title_key": "ufc_womens_strawweight",
-    "title_name": "UFC Women's Strawweight Championship",
-    "champion": "Joanna Jedrzejczyk",
-    "start_date": "2015-03-14",
-    "end_date": "2017-11-03",
-    "won_event": "UFC 185",
-    "won_location": "Dallas, TX"
-  },
-  {
-    "title_key": "ufc_womens_strawweight",
-    "title_name": "UFC Women's Strawweight Championship",
-    "champion": "Rose Namajunas",
-    "start_date": "2017-11-04",
-    "end_date": "2018-04-06",
-    "won_event": "UFC 217",
-    "won_location": "New York, NY"
-  },
-  {
-    "title_key": "ufc_womens_strawweight",
-    "title_name": "UFC Women's Strawweight Championship",
-    "champion": "Rose Namajunas",
-    "start_date": "2018-04-07",
-    "end_date": "2022-05-06",
-    "won_event": "UFC 223",
-    "won_location": "Brooklyn, NY"
-  },
-  {
-    "title_key": "ufc_womens_strawweight",
-    "title_name": "UFC Women's Strawweight Championship",
-    "champion": "Carla Esparza",
-    "start_date": "2022-05-07",
-    "end_date": "2022-11-11",
-    "won_event": "UFC 274",
-    "won_location": "Phoenix, AZ"
-  },
-  {
-    "title_key": "ufc_womens_strawweight",
-    "title_name": "UFC Women's Strawweight Championship",
     "champion": "Zhang Weili",
     "start_date": "2022-11-12",
     "end_date": null,
     "won_event": "UFC 281",
-    "won_location": "New York, NY"
+    "won_location": "New York, NY",
+    "notes": null
   }
 ]

@@ -2,57 +2,11 @@
   {
     "title_key": "ufc_mens_featherweight",
     "title_name": "UFC Men's Featherweight Championship",
-    "champion": "Jose Aldo",
-    "start_date": "2010-11-20",
-    "end_date": "2015-12-11",
-    "won_event": "WEC 48",
-    "won_location": "Sacramento, CA",
-    "notes": "Title transferred from WEC to UFC"
-  },
-  {
-    "title_key": "ufc_mens_featherweight",
-    "title_name": "UFC Men's Featherweight Championship",
-    "champion": "Conor McGregor",
-    "start_date": "2015-12-12",
-    "end_date": "2016-11-25",
-    "won_event": "UFC 194",
-    "won_location": "Las Vegas, NV"
-  },
-  {
-    "title_key": "ufc_mens_featherweight",
-    "title_name": "UFC Men's Featherweight Championship",
-    "champion": "VACANT",
-    "start_date": "2016-11-26",
-    "end_date": "2016-12-09",
-    "won_event": "Vacated",
-    "won_location": "N/A",
-    "notes": "Conor McGregor vacated to focus on lightweight division"
-  },
-  {
-    "title_key": "ufc_mens_featherweight",
-    "title_name": "UFC Men's Featherweight Championship",
-    "champion": "Jose Aldo",
-    "start_date": "2016-12-10",
-    "end_date": "2017-12-01",
-    "won_event": "UFC 200",
-    "won_location": "Las Vegas, NV"
-  },
-  {
-    "title_key": "ufc_mens_featherweight",
-    "title_name": "UFC Men's Featherweight Championship",
-    "champion": "Max Holloway",
-    "start_date": "2017-12-02",
-    "end_date": "2019-12-13",
-    "won_event": "UFC 212",
-    "won_location": "Rio de Janeiro, Brazil"
-  },
-  {
-    "title_key": "ufc_mens_featherweight",
-    "title_name": "UFC Men's Featherweight Championship",
-    "champion": "Alexander Volkanovski",
-    "start_date": "2019-12-14",
+    "champion": "Ilia Topuria",
+    "start_date": "2024-02-17",
     "end_date": null,
-    "won_event": "UFC 245",
-    "won_location": "Las Vegas, NV"
+    "won_event": "UFC 298",
+    "won_location": "Anaheim, CA",
+    "notes": null
   }
 ]

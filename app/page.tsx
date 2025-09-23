@@ -1,6 +1,5 @@
 import { DateTitleForm } from '@/components/DateTitleForm';
 import { Extras } from '@/components/Extras';
-import { Footer } from '@/components/Footer';
 import { PPVFlashbackSection } from '@/components/PPVFlashbackSection';
 import { getFeatureFlags } from '@/lib/feature-flags';
 import { Trophy, Calendar, Users, TrendingUp } from 'lucide-react';
@@ -130,8 +129,7 @@ export default function Home() {
 
       <Extras />
 
-      {/* Footer */}
-      <Footer />
+      {/* Footer is rendered globally in RootLayout */}
     </div>
   );
 }

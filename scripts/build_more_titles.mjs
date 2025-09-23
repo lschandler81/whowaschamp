@@ -11,6 +11,13 @@ import { setTimeout } from 'timers/promises';
 
 const TITLE_CONFIGS = [
   {
+    name: "AEW World Championship",
+    url: "https://en.wikipedia.org/wiki/AEW_World_Championship",
+    file: "aew_championship_reigns.json",
+    titleKey: "aew_world_championship",
+    titleName: "AEW World Championship"
+  },
+  {
     name: "WWE World Heavyweight Championship (2023)",
     url: "https://en.wikipedia.org/wiki/World_Heavyweight_Championship_(WWE)",
     file: "wwe_world_heavyweight_2023_reigns.json",
