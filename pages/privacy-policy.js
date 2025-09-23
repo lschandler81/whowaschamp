@@ -197,7 +197,6 @@ export default function PrivacyPolicyPage() {
           <li>By visiting this page on our website: <a href="https://whowaschamp.com/contact" rel="external nofollow noopener" target="_blank" className="text-blue-600 underline">https://whowaschamp.com/contact</a></li>
           </ul>
         </section>
-        </section>
           </div>
         </main>
       </div>
