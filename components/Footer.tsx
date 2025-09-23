@@ -73,6 +73,7 @@ export function Footer() {
               Data sourced from publicly available wrestling databases and cross-referenced for accuracy.
             </p>
             <div className="mt-3 space-x-4">
+              <a href="/about" className="text-sm text-gray-500 hover:underline">About</a>
               <a href="/privacy-policy" className="text-sm text-gray-500 hover:underline">Privacy Policy</a>
               <a href="/contact" className="text-sm text-gray-500 hover:underline">Contact</a>
             </div>

@@ -29,6 +29,12 @@ export function TopNav() {
             <Link href="/blog" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
               Articles
             </Link>
+            <Link href="/about" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
+              About
+            </Link>
+            <Link href="/contact" className="text-xs font-medium text-gray-700 hover:text-red-600 transition-colors whitespace-nowrap">
+              Contact
+            </Link>
           </nav>
 
           {/* Mobile Hamburger */}
@@ -72,6 +78,20 @@ export function TopNav() {
                 onClick={() => setIsOpen(false)}
               >
                 Articles
+              </Link>
+              <Link 
+                href="/about" 
+                className="block text-xs font-medium text-gray-700 hover:text-red-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                href="/contact" 
+                className="block text-xs font-medium text-gray-700 hover:text-red-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
               </Link>
             </nav>
           </div>

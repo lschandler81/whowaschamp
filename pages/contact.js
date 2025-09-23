@@ -1,6 +1,16 @@
 import { useState } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowLeft, Info, Database, Clock, Shield } from 'lucide-react'
+import { TopNav } from '@/components/TopNav'
 import { Footer } from '@/components/Footer'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Label } from '@/components/ui/label'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { Separator } from '@/components/ui/separator'
 
 export default function ContactPage() {
   const [name, setName] = useState('')
@@ -47,61 +57,114 @@ export default function ContactPage() {
         <title>Contact Us | Who Was Champ</title>
       </Head>
 
-      <main className="max-w-lg mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-6">Contact Us</h1>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <TopNav />
 
-        {status === 'success' && (
-          <div className="mb-4 rounded border border-green-300 bg-green-50 text-green-800 px-4 py-3">
-            Thanks! Your message has been sent.
+        <main className="max-w-screen-sm sm:max-w-4xl mx-auto px-4 sm:px-6 py-8">
+          <div className="mb-6">
+            <Link href="/" className="inline-flex items-center text-xs font-medium text-gray-700 hover:text-red-600 bg-white/80 border border-gray-200 rounded-md px-3 py-1 shadow-sm">
+              <ArrowLeft className="h-4 w-4 mr-1" /> Back to Home
+            </Link>
           </div>
-        )}
-        {status === 'error' && (
-          <div className="mb-4 rounded border border-red-300 bg-red-50 text-red-800 px-4 py-3">
-            Something went wrong. Please try again later.
+
+          <div className="bg-white/95 backdrop-blur-sm border rounded-xl shadow-md p-6 sm:p-8 space-y-6">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Contact Us</h1>
+              <p className="text-gray-700">Have feedback, a correction, or an idea? We’d love to hear from you.</p>
+            </div>
+
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle>Send a message</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div aria-live="polite" className="mb-4">
+                  {status === 'success' && (
+                    <Alert className="border-green-300">
+                      <AlertTitle>Success</AlertTitle>
+                      <AlertDescription>Thanks! Your message has been sent.</AlertDescription>
+                    </Alert>
+                  )}
+                  {status === 'error' && (
+                    <Alert variant="destructive">
+                      <AlertTitle>Error</AlertTitle>
+                      <AlertDescription>Something went wrong. Please try again later.</AlertDescription>
+                    </Alert>
+                  )}
+                </div>
+
+                <form onSubmit={onSubmit} noValidate>
+                  {/* honeypot */}
+                  <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" onChange={() => {}} />
+
+                  <div className="mb-4">
+                    <Label htmlFor="name" className="mb-1 block">Name</Label>
+                    <Input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required aria-required="true" />
+                  </div>
+                  <div className="mb-4">
+                    <Label htmlFor="email" className="mb-1 block">Email</Label>
+                    <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required aria-required="true" />
+                  </div>
+                  <div className="mb-6">
+                    <Label htmlFor="message" className="mb-1 block">Message</Label>
+                    <Textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} required aria-required="true" className="h-32" />
+                  </div>
+                  <Button type="submit" className="bg-blue-600 hover:bg-blue-700" disabled={loading} aria-busy={loading}>
+                    {loading ? 'Sending…' : 'Send'}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle>Before you message us</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700 space-y-3">
+                <p>We usually reply within a couple of days. Meanwhile, you might find quick answers here:</p>
+                <ul className="list-disc pl-6">
+                  <li><Link className="text-blue-600 underline" href="/privacy-policy">Privacy Policy</Link></li>
+                  <li><Link className="text-blue-600 underline" href="/about">About</Link></li>
+                  <li><Link className="text-blue-600 underline" href="/blog">Articles</Link></li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Separator className="hidden lg:block my-2" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <Card>
+                <CardHeader className="pb-2 flex items-center gap-2">
+                  <Info className="h-4 w-4 text-gray-500" />
+                  <CardTitle className="text-base">About This Site</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-gray-700">Fan-built and constantly improving with community feedback.</CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="pb-2 flex items-center gap-2">
+                  <Database className="h-4 w-4 text-gray-500" />
+                  <CardTitle className="text-base">Data Sources</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-gray-700">Publicly available databases, cross‑checked references, and historical archives.</CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="pb-2 flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-gray-500" />
+                  <CardTitle className="text-base">Data Updates</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-gray-700">Updated twice weekly via automation.</CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="pb-2 flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-gray-500" />
+                  <CardTitle className="text-base">Legal Disclaimer</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-gray-700">Not affiliated with WWE, AEW, UFC, or any organization. Trademarks belong to their owners.</CardContent>
+              </Card>
+            </div>
           </div>
-        )}
-
-        <form onSubmit={onSubmit} noValidate>
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">Name</label>
-          <input
-            id="name"
-            type="text"
-            className="w-full border rounded px-3 py-2 mb-4"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            className="w-full border rounded px-3 py-2 mb-4"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            className="w-full border rounded px-3 py-2 mb-4 h-32"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
-            disabled={loading}
-          >
-            {loading ? 'Sending…' : 'Submit'}
-          </button>
-        </form>
-      </main>
+        </main>
+      </div>
       <Footer />
     </>
   )
 }
-
