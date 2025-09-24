@@ -38,13 +38,21 @@ export default function ContactPage() {
                 <CardTitle>Send a message</CardTitle>
               </CardHeader>
               <CardContent>
+                {/* Hidden iframe target to allow background POST, then client redirect */}
+                <iframe name="nf-hidden" id="nf-hidden" className="hidden" />
                 <form
                   name="contact"
                   method="POST"
                   data-netlify="true"
                   netlify
                   data-netlify-honeypot="bot-field"
-                  action="/contact"
+                  action="/"
+                  target="nf-hidden"
+                  onSubmit={() => {
+                    if (typeof window !== 'undefined') {
+                      setTimeout(() => { window.location.href = '/thank-you'; }, 300);
+                    }
+                  }}
                 >
                   <input type="hidden" name="form-name" value="contact" />
                   <input name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
