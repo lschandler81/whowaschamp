@@ -48,6 +48,7 @@
     "update-static-data": "npm run generate-ppv-data && git add public/data/ && git commit -m 'Update static PPV data' && git push"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.13.3",
     "@hookform/resolvers": "^3.9.0",
     "@netlify/functions": "^4.2.5",
     "@next/swc-wasm-nodejs": "13.5.1",
