@@ -2,9 +2,9 @@ import { DateTitleForm } from '@/components/DateTitleForm';
 import { Extras } from '@/components/Extras';
 import { PPVFlashbackSection } from '@/components/PPVFlashbackSection';
 import { FeaturedArticles } from '@/components/FeaturedArticles';
+import { LatestArticles } from '@/components/LatestArticles';
 import { getFeatureFlags } from '@/lib/feature-flags';
 import { Trophy, Calendar, Users, TrendingUp } from 'lucide-react';
-import Link from 'next/link';
 
 export default function Home() {
   const flags = getFeatureFlags();
@@ -48,6 +48,9 @@ export default function Home() {
 
       {/* Featured Articles Section */}
       <FeaturedArticles />
+
+      {/* Latest Articles Section */}
+      <LatestArticles />
 
       {/* PPV Feature Sections */}
       {flags.ppvFlashback && <PPVFlashbackSection />}
@@ -100,33 +103,6 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Auto-Updated</h3>
               <p className="text-gray-600">Fresh data twice weekly</p>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Popular Posts */}
-      <section className="py-16 bg-gradient-to-br from-white to-gray-50">
-        <div className="max-w-screen-sm sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Popular Posts</h2>
-            <p className="text-gray-600">Explore more championship history and deep dives</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Link href="/blog/longest-reigns" className="block p-5 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
-              Read about the longest WWE Championship reigns in history
-            </Link>
-            <Link href="/blog/age-records" className="block p-5 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
-              Explore the youngest and oldest WWE champions
-            </Link>
-            <Link href="/blog/era-defining-reigns" className="block p-5 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
-              See era-defining championship reigns that changed wrestling
-            </Link>
-            <Link href="/blog/most-championship-reigns" className="block p-5 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
-              Discover who holds the most world championship reigns
-            </Link>
-            <Link href="/blog/attitude-era" className="block p-5 rounded-lg bg-white shadow hover:shadow-md text-gray-800">
-              Relive the champions of WWE’s Attitude Era
-            </Link>
           </div>
         </div>
       </section>

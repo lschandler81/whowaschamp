@@ -98,3 +98,6 @@ export default function ArticlesPage() {
   );
 }
 
+// Enable ISR with 1 hour revalidation
+export const revalidate = 3600;
+
