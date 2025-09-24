@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { ArrowLeft, Info, Database, Clock, Shield } from 'lucide-react'
@@ -9,48 +8,9 @@ import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Separator } from '@/components/ui/separator'
 
 export default function ContactPage() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [status, setStatus] = useState(null) // 'success' | 'error' | null
-  const [loading, setLoading] = useState(false)
-
-  async function onSubmit(e) {
-    e.preventDefault()
-    setStatus(null)
-
-    if (!name || !email || !message) {
-      setStatus('error')
-      return
-    }
-
-    try {
-      setLoading(true)
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
-      })
-      const data = await res.json().catch(() => ({ success: false }))
-      if (res.ok && data?.success) {
-        setStatus('success')
-        setName('')
-        setEmail('')
-        setMessage('')
-      } else {
-        setStatus('error')
-      }
-    } catch {
-      setStatus('error')
-    } finally {
-      setLoading(false)
-    }
-  }
-
   return (
     <>
       <Head>
@@ -78,40 +38,29 @@ export default function ContactPage() {
                 <CardTitle>Send a message</CardTitle>
               </CardHeader>
               <CardContent>
-                <div aria-live="polite" className="mb-4">
-                  {status === 'success' && (
-                    <Alert className="border-green-300">
-                      <AlertTitle>Success</AlertTitle>
-                      <AlertDescription>Thanks! Your message has been sent.</AlertDescription>
-                    </Alert>
-                  )}
-                  {status === 'error' && (
-                    <Alert variant="destructive">
-                      <AlertTitle>Error</AlertTitle>
-                      <AlertDescription>Something went wrong. Please try again later.</AlertDescription>
-                    </Alert>
-                  )}
-                </div>
-
-                <form onSubmit={onSubmit} noValidate>
-                  {/* honeypot */}
-                  <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" onChange={() => {}} />
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  action="/thank-you"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <input name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
 
                   <div className="mb-4">
                     <Label htmlFor="name" className="mb-1 block">Name</Label>
-                    <Input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required aria-required="true" />
+                    <Input id="name" name="name" type="text" required aria-required="true" />
                   </div>
                   <div className="mb-4">
                     <Label htmlFor="email" className="mb-1 block">Email</Label>
-                    <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required aria-required="true" />
+                    <Input id="email" name="email" type="email" required aria-required="true" />
                   </div>
                   <div className="mb-6">
                     <Label htmlFor="message" className="mb-1 block">Message</Label>
-                    <Textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} required aria-required="true" className="h-32" />
+                    <Textarea id="message" name="message" required aria-required="true" className="h-32" />
                   </div>
-                  <Button type="submit" className="bg-blue-600 hover:bg-blue-700" disabled={loading} aria-busy={loading}>
-                    {loading ? 'Sending…' : 'Send'}
-                  </Button>
+                  <Button type="submit" className="bg-blue-600 hover:bg-blue-700">Send</Button>
                 </form>
               </CardContent>
             </Card>
