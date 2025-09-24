@@ -1,6 +1,7 @@
 import { DateTitleForm } from '@/components/DateTitleForm';
 import { Extras } from '@/components/Extras';
 import { PPVFlashbackSection } from '@/components/PPVFlashbackSection';
+import { FeaturedArticles } from '@/components/FeaturedArticles';
 import { getFeatureFlags } from '@/lib/feature-flags';
 import { Trophy, Calendar, Users, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
@@ -44,6 +45,9 @@ export default function Home() {
           <DateTitleForm />
         </div>
       </section>
+
+      {/* Featured Articles Section */}
+      <FeaturedArticles />
 
       {/* PPV Feature Sections */}
       {flags.ppvFlashback && <PPVFlashbackSection />}
