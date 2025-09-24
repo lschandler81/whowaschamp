@@ -42,8 +42,9 @@ export default function ContactPage() {
                   name="contact"
                   method="POST"
                   data-netlify="true"
+                  netlify
                   data-netlify-honeypot="bot-field"
-                  action="/thank-you"
+                  action="/contact"
                 >
                   <input type="hidden" name="form-name" value="contact" />
                   <input name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
