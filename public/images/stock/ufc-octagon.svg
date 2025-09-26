@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Octagon cage pattern">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#0d1326"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <g stroke="#eab308" stroke-opacity="0.7" stroke-width="3" fill="none">
+    <polygon points="400,80 520,120 560,240 480,340 320,340 240,240 280,120"/>
+    <circle cx="400" cy="210" r="12" fill="#eab308"/>
+  </g>
+  <g stroke="#fff" stroke-opacity="0.2">
+    <line x1="0" y1="210" x2="800" y2="210"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+  </g>
+</svg>

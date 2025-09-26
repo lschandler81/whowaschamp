@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Calendar, BookOpen } from 'lucide-react';
-import { getAllArticles, generateExcerpt, formatPublishedDate, type BlogPost } from '@/lib/posts-home';
+import { getAllArticles, generateExcerpt, formatPublishedDate, getPostImage, type BlogPost } from '@/lib/posts-home';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,6 +16,7 @@ interface ArticleCardProps {
 
 function ArticleCard({ post }: ArticleCardProps) {
   const excerpt = generateExcerpt(post.description, 160);
+  const { src: imageSrc, alt: imageAlt } = getPostImage(post);
 
   return (
     <li className="group">
@@ -23,21 +24,14 @@ function ArticleCard({ post }: ArticleCardProps) {
         <article className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md hover:border-gray-300 transition-all duration-300 h-full flex flex-col">
           {/* Thumbnail */}
           <div className="relative h-48 bg-gradient-to-br from-blue-100 to-indigo-200 overflow-hidden">
-            {post.thumbnail ? (
-              <Image
-                src={post.thumbnail}
-                alt={post.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              />
-            ) : (
-              <div className="flex items-center justify-center h-full bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-200 group-hover:to-gray-300 transition-colors">
-                <div className="text-gray-400 text-4xl font-bold opacity-50">
-                  {post.title.charAt(0)}
-                </div>
-              </div>
-            )}
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
           </div>
           
           {/* Content */}

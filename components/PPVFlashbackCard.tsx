@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -56,6 +57,26 @@ export function PPVFlashbackCard({ org, heading, event, context, loading = false
         return 'border-l-yellow-400';
       default: 
         return 'border-l-gray-200';
+    }
+  };
+
+  const getOrgImage = (promotion: 'UFC' | 'WWE') => {
+    switch (promotion) {
+      case 'UFC':
+        return {
+          src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im9jdGFnb24iIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmZmQ3MDA7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIzMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmZmIzMDA7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMTExMTE1O3N0b3Atb3BhY2l0eToxIiAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjb2N0YWdvbikiLz48cG9seWdvbiBwb2ludHM9IjIwMCw3MCAzMDAsMTAwIDMwMCwyMDAgMjAwLDIzMCAxMDAsMjAwIDEwMCwxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgb3BhY2l0eT0iMC44Ii8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMTUwIiByPSIxNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNiIvPjwvc3ZnPg==',
+          alt: 'UFC Octagon with dramatic lighting pattern'
+        };
+      case 'WWE':
+        return {
+          src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9IndyZXN0bGluZ1JpbmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmZjAwMDA7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIzMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNiYjAwMDA7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMzMxMTExO3N0b3Atb3BhY2l0eToxIiAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjd3Jlc3RsaW5nUmluZykiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNTAiIHI9IjgwIiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC41Ii8+PC9zdmc+',
+          alt: 'Wrestling ring ropes detail shot'
+        };
+      default:
+        return {
+          src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNwb3RsaWdodCIgY3g9IjUwJSIgY3k9IjIwJSIgcj0iODAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZmZmZmO3N0b3Atb3BhY2l0eTowLjgiIC8+PHN0b3Agb2Zmc2V0PSI0MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM4ODU1ZGQ7c3RvcC1vcGFjaXR5OjAuNiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxMTExMjI7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNzcG90bGlnaHQpIi8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iNjAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuOCIvPjxyZWN0IHg9IjEwMCIgeT0iMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjgwIiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNiIvPjwvc3ZnPg==',
+          alt: 'Wrestling arena with dramatic spotlight'
+        };
     }
   };
 
@@ -119,8 +140,23 @@ export function PPVFlashbackCard({ org, heading, event, context, loading = false
     );
   }
 
+  const { src: imageSrc, alt: imageAlt } = getOrgImage(org);
+
   return (
     <Card className={`bg-white shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 ${getOrgAccentColor(org)}`}>
+      {/* Event Image */}
+      <div className="relative h-32 overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          className="object-cover hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      </div>
+
       <CardHeader className="pb-4">
         <div className="space-y-2">
           <CardTitle className="flex items-center gap-2 text-gray-700">

@@ -17,11 +17,20 @@ export const metadata: Metadata = {
     title: 'Birthday Champion Finder',
     description: 'Find out which wrestling legend held the belt the day you were born',
     type: 'website',
+    images: [
+      {
+        url: '/images/stock/stadium-spotlight.jpg',
+        width: 800,
+        height: 450,
+        alt: 'Wrestling arena with dramatic spotlight',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Birthday Champion Finder',
     description: 'Find out which wrestling legend held the belt the day you were born',
+    images: ['/images/stock/stadium-spotlight.jpg'],
   },
 };
 

@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Calendar, ArrowRight } from 'lucide-react';
+import { getAllArticles, generateExcerpt, formatPublishedDate, getPostImage, type BlogPost } from '@/lib/posts-home';
 
 const posts = [
   {
@@ -65,39 +67,82 @@ const posts = [
   }
 ];
 
-export default function ArticlesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-12 md:py-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-3 mb-2">
-          <BookOpen className="h-6 w-6 text-red-600" />
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Articles</h1>
-        </div>
-        <p className="text-sm text-gray-600 mb-8">
-          Deep dives into championship history, records, eras, storylines, and more.
-        </p>
+// Enable ISR with 1 hour revalidation
+export const revalidate = 3600;
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+function BlogArticleCard({ post }: { post: typeof posts[0] }) {
+  const { src: imageSrc, alt: imageAlt } = getPostImage(post);
+
+  return (
+    <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 border-2 hover:border-blue-200 bg-white h-full">
+      <Link href={`/blog/${post.slug}`} className="block h-full">
+        <div className="relative aspect-video overflow-hidden">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        </div>
+        <CardContent className="p-4 flex-1 flex flex-col">
+          <CardTitle className="text-lg font-semibold mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+            {post.title}
+          </CardTitle>
+          <p className="text-gray-600 text-sm line-clamp-3 mb-4 flex-1">
+            {post.description}
+          </p>
+          <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
+            <div className="flex items-center gap-1">
+              <BookOpen className="w-4 h-4" />
+              <span>Article</span>
+            </div>
+            <div className="flex items-center gap-1 text-blue-600 group-hover:gap-2 transition-all">
+              <span>Read more</span>
+              <ArrowRight className="w-4 h-4" />
+            </div>
+          </div>
+        </CardContent>
+      </Link>
+    </Card>
+  );
+}
+
+export default async function BlogPage() {
+  const allPosts = await getAllArticles();
+  
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8 max-w-6xl">
+        <div className="mb-8 text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Wrestling History & Analysis
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Deep dives into championship reigns, wrestling history, and the stories that shaped sports entertainment.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-              <Card className="border rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-gray-900 text-lg font-semibold group-hover:text-red-600 transition-colors">
-                    {post.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600 leading-relaxed">{post.description}</p>
-                </CardContent>
-              </Card>
-            </Link>
+            <BlogArticleCard key={post.slug} post={post} />
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Link 
+            href="/articles"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
+            <BookOpen className="w-5 h-5" />
+            View All Articles
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </div>
     </div>
   );
 }
-
-// Enable ISR with 1 hour revalidation
-export const revalidate = 3600;
 

@@ -1,8 +1,10 @@
+"use client";
 // components/FeaturedArticles.tsx
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, BookOpen } from 'lucide-react';
-import { getFeaturedPosts, generateExcerpt, type BlogPost } from '@/lib/posts-home';
+import { getFeaturedPosts, generateExcerpt, getPostImage, type BlogPost } from '@/lib/posts-home';
 
 interface FeaturedArticlesProps {
   limit?: number;
@@ -30,8 +32,8 @@ export function FeaturedArticles({ limit = 3 }: FeaturedArticlesProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {featuredPosts.map((post) => (
-            <FeaturedArticleCard key={post.slug} post={post} />
+          {featuredPosts.map((post, index) => (
+            <FeaturedArticleCard key={post.slug} post={post} priority={index === 0} />
           ))}
         </div>
 
@@ -51,23 +53,33 @@ export function FeaturedArticles({ limit = 3 }: FeaturedArticlesProps) {
 
 interface FeaturedArticleCardProps {
   post: BlogPost;
+  priority?: boolean;
 }
 
-function FeaturedArticleCard({ post }: FeaturedArticleCardProps) {
+function FeaturedArticleCard({ post, priority = false }: FeaturedArticleCardProps) {
   const excerpt = generateExcerpt(post.description, 140);
+  const { src: imageSrc, alt: imageAlt } = getPostImage(post);
 
   return (
     <Link href={`/blog/${post.slug}`} className="group block h-full">
       <Card className="h-full border rounded-xl bg-white shadow-sm hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-        {post.thumbnail && (
-          <div className="relative h-48 overflow-hidden rounded-t-xl bg-gradient-to-br from-gray-100 to-gray-200">
-            {/* Placeholder for thumbnail - replace with actual image when available */}
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              <BookOpen className="h-12 w-12" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-        )}
+        {/* Thumbnail */}
+        <div className="relative h-48 overflow-hidden rounded-t-xl bg-gradient-to-br from-gray-100 to-gray-200">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            loading={priority ? "eager" : "lazy"}
+            priority={priority}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            onError={(e) => {
+              // Hide the image element if it fails to load
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
         
         <CardHeader className="pb-3">
           <CardTitle className="text-gray-900 text-xl font-bold group-hover:text-red-600 transition-colors duration-200 line-clamp-2">

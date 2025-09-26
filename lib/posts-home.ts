@@ -8,6 +8,9 @@ export interface BlogPost {
   featured?: boolean;
   publishedAt?: string;
   thumbnail?: string;
+  image?: string;
+  imageAlt?: string;
+  category?: 'wwe' | 'ufc' | 'history' | 'records' | 'default';
 }
 
 // Static blog posts data (matching current blog structure)
@@ -18,7 +21,8 @@ const posts: BlogPost[] = [
     description: 'Explore the age extremes of WWE Championship glory — from young phenoms to seasoned veterans.',
     featured: true,
     publishedAt: '2025-09-20',
-    thumbnail: '/images/blog/age-records.jpg' // placeholder - update with actual images
+    // Use category-based fallback image until real stock photo is added
+    category: 'records'
   },
   {
     slug: 'era-defining-reigns',
@@ -26,7 +30,7 @@ const posts: BlogPost[] = [
     description: 'How certain championship runs reshaped entire eras and changed wrestling history.',
     featured: true,
     publishedAt: '2025-09-15',
-    thumbnail: '/images/blog/era-defining.jpg'
+    category: 'history'
   },
   {
     slug: 'attitude-era',
@@ -34,7 +38,7 @@ const posts: BlogPost[] = [
     description: 'Relive the champions and chaos that defined WWE\'s most explosive period.',
     featured: true,
     publishedAt: '2025-09-10',
-    thumbnail: '/images/blog/attitude-era.jpg'
+    category: 'wwe'
   },
   {
     slug: 'longest-reigns',
@@ -163,6 +167,121 @@ export function generateExcerpt(description: string, maxLength: number = 160): s
   }
   
   return truncated + '…';
+}
+
+/**
+ * Get fallback image for a blog post based on category or slug inference
+ * @param post Blog post to get image for
+ * @returns Image path and alt text
+ */
+export function getPostImage(post: BlogPost): { src: string; alt: string } {
+  // Use explicit image if provided
+  if (post.image) {
+    return {
+      src: post.image,
+      alt: post.imageAlt || `${post.title} - Wrestling article thumbnail`
+    };
+  }
+
+  // Use legacy thumbnail if provided
+  if (post.thumbnail) {
+    return {
+      src: post.thumbnail,
+      alt: post.imageAlt || `${post.title} - Wrestling article thumbnail`
+    };
+  }
+
+  // Infer category from slug or use explicit category
+  const category = post.category || inferCategoryFromSlug(post.slug);
+  
+  // Map categories to stock images
+  // Category-based image mapping with stock-style thumbnails
+  const imageMap = {
+    wwe: { 
+      src: '/images/stock/wwe-belt-dark.svg',
+      alt: 'WWE wrestling ring with red ropes and arena lighting' 
+    },
+    ufc: { 
+      src: '/images/stock/ufc-octagon.svg',
+      alt: 'UFC octagon with golden lighting and cage structure' 
+    },
+    history: { 
+      src: '/images/stock/arena-retro.svg',
+      alt: 'Vintage wrestling arena with retro atmosphere and seating' 
+    },
+    records: { 
+      src: '/images/stock/scoreboard-closeup.svg',
+      alt: 'Sports scoreboard displaying championship records and statistics' 
+    },
+    default: { 
+      src: '/images/stock/stadium-spotlight.svg',
+      alt: 'Wrestling arena with dramatic spotlight and stage setup' 
+    }
+  };
+
+  const fallback = imageMap[category] || imageMap.default;
+  return {
+    src: fallback.src,
+    alt: post.imageAlt || fallback.alt
+  };
+}
+
+/**
+ * Infer category from blog post slug
+ * @param slug Blog post slug
+ * @returns Inferred category
+ */
+function inferCategoryFromSlug(slug: string): 'wwe' | 'ufc' | 'history' | 'records' | 'default' {
+  const lowerSlug = slug.toLowerCase();
+  
+  if (lowerSlug.includes('wwe') || lowerSlug.includes('attitude-era') || lowerSlug.includes('sammartino')) {
+    return 'wwe';
+  }
+  if (lowerSlug.includes('ufc') || lowerSlug.includes('octagon')) {
+    return 'ufc';
+  }
+  if (lowerSlug.includes('record') || lowerSlug.includes('longest') || lowerSlug.includes('shortest') || lowerSlug.includes('most') || lowerSlug.includes('age')) {
+    return 'records';
+  }
+  if (lowerSlug.includes('era') || lowerSlug.includes('history') || lowerSlug.includes('lineage') || lowerSlug.includes('evolution')) {
+    return 'history';
+  }
+  
+  return 'default';
+}
+
+/**
+ * Get SEO metadata for a blog post including Open Graph images
+ * @param post Blog post
+ * @param baseUrl Base URL for absolute URLs (default: 'https://www.whowaschamp.com')
+ * @returns SEO metadata object
+ */
+export function getPostSEOMetadata(post: BlogPost, baseUrl: string = 'https://www.whowaschamp.com') {
+  const { src: imageSrc } = getPostImage(post);
+  const absoluteImageUrl = imageSrc.startsWith('http') ? imageSrc : `${baseUrl}${imageSrc}`;
+  
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: absoluteImageUrl,
+          width: 800,
+          height: 450,
+          alt: getPostImage(post).alt,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title: post.title,
+      description: post.description,
+      images: [absoluteImageUrl],
+    },
+  };
 }
 
 /**
