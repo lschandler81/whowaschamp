@@ -41,6 +41,7 @@
     "generate-wwe-data": "npx tsx scripts/generate-wwe-data.ts",
     "generate-split-data": "npm run generate-ufc-data && npm run generate-wwe-data",
     "create-complete-wwe-dataset": "npx tsx scripts/create-complete-wwe-dataset.ts",
+    "import:ufc:json": "npx tsx scripts/import-ufc-fighters-json.ts",
     "scrape-wwe-wikipedia": "npx tsx scripts/scrape-complete-wwe-wikipedia.ts",
     "add-remaining-wwe-events": "npx tsx scripts/add-remaining-wwe-events.ts",
     "add-final-wwe-events": "npx tsx scripts/add-final-wwe-events.ts",

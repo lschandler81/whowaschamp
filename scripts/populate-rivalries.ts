@@ -391,6 +391,140 @@ const famousRivalries: RivalryData[] = [
     startDate: new Date('2015-01-01'),
     endDate: new Date('2017-01-01')
   }
+  ,
+  // Additional WWE Rivalries (expanded set)
+  {
+    wrestler1Name: 'The Undertaker',
+    wrestler2Name: 'Kane',
+    rivalryName: 'Brothers of Destruction Collide',
+    description: 'A storied, supernatural rivalry between half-brothers that spanned decades with brutal stipulations and iconic moments.',
+    notableMatches: [
+      'WrestleMania XIV',
+      'WrestleMania XX',
+      'Hell in a Cell 2010'
+    ],
+    feudIntensity: 9,
+    startDate: new Date('1997-10-05'),
+    endDate: new Date('2010-10-24')
+  },
+  {
+    wrestler1Name: 'Shawn Michaels',
+    wrestler2Name: 'The Undertaker',
+    rivalryName: 'Mr. WrestleMania vs. The Streak',
+    description: 'Two all-time greats delivered back-to-back WrestleMania classics culminating in Shawn Michaels\' retirement.',
+    notableMatches: [
+      'WrestleMania 25',
+      'WrestleMania 26 - Career vs. Streak'
+    ],
+    feudIntensity: 10,
+    startDate: new Date('2009-04-05'),
+    endDate: new Date('2010-03-28')
+  },
+  {
+    wrestler1Name: 'Bret Hart',
+    wrestler2Name: 'Stone Cold Steve Austin',
+    rivalryName: 'The Hitman vs. The Rattlesnake',
+    description: 'A violent feud that helped launch the Attitude Era, highlighted by an iconic double-turn at WrestleMania 13.',
+    notableMatches: [
+      'WrestleMania 13 - Submission Match',
+      'Survivor Series 1996',
+      'In Your House: Revenge of the \"Taker\"'
+    ],
+    feudIntensity: 10,
+    startDate: new Date('1996-11-17'),
+    endDate: new Date('1997-04-20')
+  },
+  {
+    wrestler1Name: 'Edge',
+    wrestler2Name: 'Randy Orton',
+    rivalryName: 'Rated-R Superstar vs. The Viper',
+    description: 'Former friends turned enemies in a bitter, physical rivalry spanning different eras, including a heated comeback program in 2020.',
+    notableMatches: [
+      'WrestleMania 36 - Last Man Standing',
+      'Backlash 2020 - Greatest Wrestling Match Ever'
+    ],
+    feudIntensity: 8,
+    startDate: new Date('2007-01-01'),
+    endDate: new Date('2020-06-14')
+  },
+  {
+    wrestler1Name: 'The Rock',
+    wrestler2Name: 'Mankind',
+    rivalryName: 'The Rock n\' Sock Conflict',
+    description: 'From brutal battles to comedic gold, The Rock and Mankind clashed over the WWE Championship before later forming an unlikely team.',
+    notableMatches: [
+      'Royal Rumble 1999 - I Quit Match',
+      'Halftime Heat 1999 - Empty Arena Match'
+    ],
+    feudIntensity: 9,
+    startDate: new Date('1998-12-01'),
+    endDate: new Date('1999-02-14')
+  },
+  {
+    wrestler1Name: 'Ric Flair',
+    wrestler2Name: 'Dusty Rhodes',
+    rivalryName: 'The Nature Boy vs. The American Dream',
+    description: 'The working-class hero against the limousine-riding champion, an NWA classic that defined the 1980s.',
+    notableMatches: [
+      'The Great American Bash 1986',
+      'Starrcade 1985'
+    ],
+    feudIntensity: 9,
+    startDate: new Date('1985-01-01'),
+    endDate: new Date('1987-12-01')
+  },
+  {
+    wrestler1Name: 'Chris Jericho',
+    wrestler2Name: 'Shawn Michaels',
+    rivalryName: 'The Paragon vs. Mr. WrestleMania',
+    description: 'A personal, hard-hitting rivalry in 2008 known for masterclass storytelling and a blood-feud intensity.',
+    notableMatches: [
+      'WrestleMania XIX',
+      'No Mercy 2008 - Ladder Match'
+    ],
+    feudIntensity: 9,
+    startDate: new Date('2003-03-30'),
+    endDate: new Date('2008-10-05')
+  },
+  {
+    wrestler1Name: 'Brock Lesnar',
+    wrestler2Name: 'The Undertaker',
+    rivalryName: 'The Beast vs. The Phenom',
+    description: 'Lesnar ended The Undertaker\'s WrestleMania streak, sparking a multi-match rivalry filled with brutality.',
+    notableMatches: [
+      'WrestleMania 30',
+      'SummerSlam 2015',
+      'Hell in a Cell 2015'
+    ],
+    feudIntensity: 9,
+    startDate: new Date('2014-04-06'),
+    endDate: new Date('2015-10-25')
+  },
+  {
+    wrestler1Name: 'Kurt Angle',
+    wrestler2Name: 'Brock Lesnar',
+    rivalryName: 'Olympic Hero vs. The Next Big Thing',
+    description: 'Elite athletic battles over the WWE Championship, featuring one of WrestleMania\'s greatest main events.',
+    notableMatches: [
+      'WrestleMania XIX',
+      'SmackDown Iron Man Match 2003'
+    ],
+    feudIntensity: 8,
+    startDate: new Date('2003-02-20'),
+    endDate: new Date('2003-09-18')
+  },
+  {
+    wrestler1Name: 'Becky Lynch',
+    wrestler2Name: 'Ronda Rousey',
+    rivalryName: 'The Man vs. Rowdy',
+    description: 'A cross-sport rivalry that helped headline WrestleMania 35 and elevate the women\'s division to new heights.',
+    notableMatches: [
+      'WrestleMania 35 - Triple Threat main event'
+    ],
+    feudIntensity: 8,
+    startDate: new Date('2018-11-01'),
+    endDate: new Date('2019-04-07')
+  }
 ]
 
 async function populateRivalries() {

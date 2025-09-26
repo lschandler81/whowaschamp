@@ -157,20 +157,31 @@ export default function ClientProfilesPage() {
 
     // Promotion filter
     if (promotion !== 'all') {
+      const promLower = promotion.toLowerCase();
       filtered = filtered.filter(profile => 
-        profile.promotions.some(p => p === promotion)
+        profile.promotions.some(p => p.toLowerCase() === promLower)
       );
     }
 
     // Era filter
     if (era !== 'all') {
-      filtered = filtered.filter(profile => profile.era === era);
+      const eraMap: Record<string,string> = {
+        'Golden Era': 'Golden',
+        'Attitude Era': 'Attitude',
+        'Ruthless Aggression': 'Ruthless Aggression',
+        'PG Era': 'PG',
+        'Modern Era': 'Modern',
+        'New Generation': 'New Generation',
+      };
+      const canonical = eraMap[era] || era;
+      filtered = filtered.filter(profile => (profile.era || '').toLowerCase() === canonical.toLowerCase());
     }
 
     // Division filter
     if (division !== 'all') {
+      const divLower = division.toLowerCase();
       filtered = filtered.filter(profile => 
-        profile.divisions?.includes(division)
+        (profile.divisions || []).some(d => d.toLowerCase() === divLower)
       );
     }
 
@@ -261,6 +272,7 @@ export default function ClientProfilesPage() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Eras</SelectItem>
+              <SelectItem value="New Generation">New Generation</SelectItem>
               <SelectItem value="Golden Era">Golden Era</SelectItem>
               <SelectItem value="Attitude Era">Attitude Era</SelectItem>
               <SelectItem value="Ruthless Aggression">Ruthless Aggression</SelectItem>

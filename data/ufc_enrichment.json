@@ -1,0 +1,281 @@
+[
+  {
+    "name": "Conor Anthony McGregor",
+    "slug": "conor-mcgregor",
+    "nickname": "The Notorious",
+    "birthPlace": "Dublin, Ireland",
+    "height": "5'9\"",
+    "weight": "155 lbs",
+    "reach": "74\"",
+    "stance": "Southpaw",
+    "debut": "2008-02-17",
+    "promotion": "UFC",
+    "biography": "Conor McGregor is a former UFC Featherweight and Lightweight Champion who became the biggest star in MMA history. Known for his flashy lifestyle, trash-talking ability, and knockout power, McGregor was the first fighter to hold titles in two weight classes simultaneously.",
+    "championships": [
+      { "title": "UFC Featherweight Championship", "reigns": 1, "firstWon": "2015-12-12", "lastWon": "2016-11-26", "notes": "Knocked out José Aldo in 13 seconds" },
+      { "title": "UFC Lightweight Championship", "reigns": 1, "firstWon": "2016-11-12", "lastWon": "2018-04-07", "notes": "First simultaneous two-division champion" }
+    ],
+    "divisions": ["Featherweight", "Lightweight", "Welterweight"],
+    "careerStats": { "wins": 22, "losses": 6, "draws": 0, "titleReigns": 2 }
+  },
+  {
+    "name": "Israel Adesanya",
+    "slug": "israel-adesanya",
+    "nickname": "The Last Stylebender",
+    "birthPlace": "Lagos, Nigeria",
+    "height": "6'4\"",
+    "weight": "185 lbs",
+    "reach": "80\"",
+    "stance": "Switch",
+    "debut": "2012-03-24",
+    "promotion": "UFC",
+    "biography": "Israel Adesanya is a former two-time UFC Middleweight Champion known for his elite kickboxing, timing, and distance management. He rose rapidly through the UFC ranks, headlined multiple stadium events, and defeated elite contenders across eras.",
+    "championships": [
+      { "title": "UFC Middleweight Championship", "reigns": 1, "firstWon": "2019-10-06", "lastWon": "2022-11-12" },
+      { "title": "UFC Middleweight Championship", "reigns": 1, "firstWon": "2023-04-08", "lastWon": "2023-09-10" }
+    ],
+    "divisions": ["Middleweight", "Light Heavyweight"],
+    "careerStats": { "wins": 24, "losses": 3, "draws": 0, "titleReigns": 2 }
+  },
+  {
+    "name": "Amanda Lourenço Nunes",
+    "slug": "amanda-nunes",
+    "nickname": "The Lioness",
+    "birthPlace": "Pojuca, Brazil",
+    "height": "5'8\"",
+    "weight": "135 lbs",
+    "reach": "69\"",
+    "stance": "Orthodox",
+    "debut": "2008-03-08",
+    "retired": "2023-06-10",
+    "promotion": "UFC",
+    "biography": "Amanda Nunes is widely considered the greatest female fighter of all time. She simultaneously held the UFC Women's Bantamweight and Featherweight Championships, becoming the first woman to hold titles in two weight classes.",
+    "championships": [
+      { "title": "UFC Women's Bantamweight Championship", "reigns": 2, "firstWon": "2016-07-09", "lastWon": "2023-06-10", "notes": "Longest women's bantamweight title reign" },
+      { "title": "UFC Women's Featherweight Championship", "reigns": 1, "firstWon": "2018-12-29", "lastWon": "2023-06-10", "notes": "Defeated Cris Cyborg for the title" }
+    ],
+    "divisions": ["Bantamweight", "Featherweight"],
+    "careerStats": { "wins": 22, "losses": 5, "draws": 0, "titleReigns": 3 }
+  },
+  {
+    "name": "Jonathan Dwight Jones",
+    "slug": "jon-jones",
+    "nickname": "Bones",
+    "birthPlace": "Rochester, New York, USA",
+    "height": "6'4\"",
+    "weight": "265 lbs",
+    "reach": "84.5\"",
+    "stance": "Orthodox",
+    "debut": "2008-04-12",
+    "promotion": "UFC",
+    "biography": "Jon Jones is widely regarded as one of the greatest mixed martial artists of all time. The youngest champion in UFC history at age 23, Jones dominated the light heavyweight division for over a decade and later captured the heavyweight title.",
+    "championships": [
+      { "title": "UFC Light Heavyweight Championship", "reigns": 2, "firstWon": "2011-03-19", "lastWon": "2020-02-08", "notes": "Record light heavyweight success" },
+      { "title": "UFC Heavyweight Championship", "reigns": 1, "firstWon": "2023-03-04", "notes": "Current heavyweight champion" }
+    ],
+    "divisions": ["Light Heavyweight", "Heavyweight"],
+    "careerStats": { "wins": 27, "losses": 1, "draws": 0, "titleReigns": 3 }
+  },
+  {
+    "name": "Daniel Cormier",
+    "slug": "daniel-cormier",
+    "nickname": "DC",
+    "birthPlace": "Lafayette, Louisiana, USA",
+    "height": "5'11\"",
+    "weight": "265 lbs",
+    "reach": "72.5\"",
+    "stance": "Orthodox",
+    "debut": "2009-09-19",
+    "retired": "2020-08-15",
+    "promotion": "UFC",
+    "biography": "Daniel Cormier is a former two-division UFC champion and Olympic wrestler. He captured both the light heavyweight and heavyweight titles and later became a UFC commentator.",
+    "championships": [
+      { "title": "UFC Light Heavyweight Championship", "reigns": 1, "firstWon": "2015-05-23", "lastWon": "2018-07-07" },
+      { "title": "UFC Heavyweight Championship", "reigns": 1, "firstWon": "2018-07-07", "lastWon": "2019-08-17" }
+    ],
+    "divisions": ["Light Heavyweight", "Heavyweight"],
+    "careerStats": { "wins": 22, "losses": 3, "draws": 0, "titleReigns": 2 }
+  },
+  {
+    "name": "Alexander Volkanovski",
+    "slug": "alexander-volkanovski",
+    "nickname": "The Great",
+    "birthPlace": "Wollongong, Australia",
+    "height": "5'6\"",
+    "weight": "145 lbs",
+    "reach": "71.5\"",
+    "stance": "Orthodox",
+    "debut": "2012-09-15",
+    "promotion": "UFC",
+    "biography": "Alexander Volkanovski is a former UFC Featherweight Champion known for his cardio, boxing, and fight IQ. His trilogy with Max Holloway is a featherweight classic.",
+    "championships": [
+      { "title": "UFC Featherweight Championship", "reigns": 1, "firstWon": "2019-12-14", "lastWon": "2024-02-17" }
+    ],
+    "divisions": ["Featherweight", "Lightweight"],
+    "careerStats": { "wins": 26, "losses": 3, "draws": 0, "titleReigns": 1 }
+  },
+  {
+    "name": "Islam Makhachev",
+    "slug": "islam-makhachev",
+    "birthPlace": "Makhachkala, Russia",
+    "height": "5'10\"",
+    "weight": "155 lbs",
+    "reach": "70\"",
+    "stance": "Orthodox",
+    "debut": "2010-09-19",
+    "promotion": "UFC",
+    "biography": "Islam Makhachev is the current UFC Lightweight Champion, combining elite wrestling with strong striking. He trains with Khabib Nurmagomedov.",
+    "championships": [
+      { "title": "UFC Lightweight Championship", "reigns": 1, "firstWon": "2022-10-22" }
+    ],
+    "divisions": ["Lightweight"],
+    "careerStats": { "wins": 25, "losses": 1, "draws": 0, "titleReigns": 1 }
+  },
+  {
+    "name": "Anderson Silva",
+    "nickname": "The Spider",
+    "birthPlace": "São Paulo, Brazil",
+    "height": "6'2\"",
+    "weight": "185 lbs",
+    "reach": "77.5\"",
+    "stance": "Orthodox",
+    "debut": "1997-06-08",
+    "retired": "2020-10-31",
+    "promotion": "UFC",
+    "biography": "Anderson Silva is one of the greatest mixed martial artists ever. Former UFC Middleweight Champion with the longest title reign in UFC history (2,457 days).",
+    "championships": [
+      { "title": "UFC Middleweight Championship", "reigns": 1, "firstWon": "2006-10-14", "lastWon": "2013-07-06", "totalDays": 2457 }
+    ],
+    "divisions": ["Middleweight", "Light Heavyweight"],
+    "careerStats": { "wins": 34, "losses": 11, "draws": 0 }
+  },
+  {
+    "name": "Georges St-Pierre",
+    "nickname": "GSP",
+    "birthPlace": "Saint-Isidore, Quebec, Canada",
+    "height": "5'10\"",
+    "weight": "170 lbs",
+    "reach": "76\"",
+    "stance": "Southpaw",
+    "debut": "2002-01-25",
+    "retired": "2017-11-04",
+    "promotion": "UFC",
+    "biography": "Georges St-Pierre is one of the greatest welterweights ever. A two-division UFC champion known for elite athleticism and game planning.",
+    "championships": [
+      { "title": "UFC Welterweight Championship", "reigns": 2, "firstWon": "2006-11-18", "lastWon": "2013-11-16", "notes": "9 successful defenses" },
+      { "title": "UFC Middleweight Championship", "reigns": 1, "firstWon": "2017-11-04" }
+    ],
+    "divisions": ["Welterweight", "Middleweight"],
+    "careerStats": { "wins": 26, "losses": 2, "draws": 0 }
+  },
+  {
+    "name": "Khabib Nurmagomedov",
+    "nickname": "The Eagle",
+    "birthPlace": "Sildi, Dagestan, Russia",
+    "height": "5'10\"",
+    "weight": "155 lbs",
+    "reach": "70\"",
+    "stance": "Orthodox",
+    "debut": "2008-09-20",
+    "retired": "2020-10-24",
+    "promotion": "UFC",
+    "biography": "Khabib retired as undefeated UFC Lightweight Champion (29-0). Dominant wrestling and pressure, never lost a round in title fights.",
+    "championships": [
+      { "title": "UFC Lightweight Championship", "reigns": 1, "firstWon": "2018-04-07", "lastWon": "2020-10-24" }
+    ],
+    "divisions": ["Lightweight"],
+    "careerStats": { "wins": 29, "losses": 0, "draws": 0 }
+  },
+  {
+    "name": "Chuck Liddell",
+    "nickname": "The Iceman",
+    "birthPlace": "Santa Barbara, California",
+    "height": "6'2\"",
+    "weight": "205 lbs",
+    "reach": "74\"",
+    "stance": "Orthodox",
+    "debut": "1998-04-07",
+    "retired": "2018-11-24",
+    "promotion": "UFC",
+    "biography": "Chuck Liddell helped bring MMA to the mainstream. Former UFC Light Heavyweight Champion known for KO power and TDD.",
+    "championships": [
+      { "title": "UFC Light Heavyweight Championship", "reigns": 1, "firstWon": "2005-04-16", "lastWon": "2007-05-26" }
+    ],
+    "divisions": ["Light Heavyweight"],
+    "careerStats": { "wins": 21, "losses": 9, "draws": 0 }
+  },
+  {
+    "name": "Matt Hughes",
+    "birthPlace": "Hillsboro, Illinois",
+    "height": "5'9\"",
+    "weight": "170 lbs",
+    "stance": "Orthodox",
+    "promotion": "UFC",
+    "biography": "Matt Hughes was a dominant welterweight champion known for strength, wrestling, and ground-and-pound. UFC HOF 2010.",
+    "championships": [
+      { "title": "UFC Welterweight Championship", "reigns": 2 }
+    ],
+    "divisions": ["Welterweight"]
+  },
+  {
+    "name": "BJ Penn",
+    "birthPlace": "Hilo, Hawaii",
+    "height": "5'9\"",
+    "weight": "155 lbs",
+    "stance": "Orthodox",
+    "promotion": "UFC",
+    "biography": "BJ Penn was the first fighter to win UFC titles in two weight classes. Exceptional boxing and BJJ.",
+    "championships": [
+      { "title": "UFC Welterweight Championship", "reigns": 1 },
+      { "title": "UFC Lightweight Championship", "reigns": 1 }
+    ],
+    "divisions": ["Lightweight", "Welterweight"]
+  },
+  {
+    "name": "Quinton Jackson",
+    "nickname": "Rampage",
+    "promotion": "UFC",
+    "biography": "Rampage Jackson was known for explosive KO power and star charisma. Former UFC and PRIDE champion.",
+    "championships": [
+      { "title": "UFC Light Heavyweight Championship", "reigns": 1 }
+    ],
+    "divisions": ["Light Heavyweight"]
+  },
+  {
+    "name": "Lyoto Machida",
+    "promotion": "UFC",
+    "biography": "Lyoto Machida brought traditional karate to MMA with elusive movement and counter-striking. Former LHW champ.",
+    "championships": [
+      { "title": "UFC Light Heavyweight Championship", "reigns": 1 }
+    ],
+    "divisions": ["Light Heavyweight", "Middleweight"]
+  },
+  {
+    "name": "Forrest Griffin",
+    "promotion": "UFC",
+    "biography": "Forrest Griffin won TUF 1 and helped propel UFC into the mainstream. Former light heavyweight champion.",
+    "championships": [
+      { "title": "UFC Light Heavyweight Championship", "reigns": 1 }
+    ],
+    "divisions": ["Light Heavyweight"]
+  },
+  {
+    "name": "Jose Aldo",
+    "promotion": "UFC",
+    "biography": "Jose Aldo dominated featherweight for years with leg kicks and takedown defense. UFC and WEC champion.",
+    "championships": [
+      { "title": "UFC Featherweight Championship", "reigns": 2 }
+    ],
+    "divisions": ["Featherweight", "Bantamweight"]
+  },
+  {
+    "name": "Demetrious Johnson",
+    "nickname": "Mighty Mouse",
+    "promotion": "UFC",
+    "biography": "Demetrious Johnson is one of the most technically complete fighters ever. Longest UFC flyweight title reign.",
+    "championships": [
+      { "title": "UFC Flyweight Championship", "reigns": 1 }
+    ],
+    "divisions": ["Flyweight"]
+  }
+]

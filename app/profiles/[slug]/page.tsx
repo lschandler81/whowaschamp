@@ -154,7 +154,9 @@ function FighterDetails({ fighter }: { fighter: FighterProfile }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <span className="font-medium">Divisions:</span>{' '}
-              {fighter.divisions.join(', ') || 'N/A'}
+              {Array.isArray(fighter.divisions) && fighter.divisions.length > 0
+                ? fighter.divisions.join(', ')
+                : 'N/A'}
             </div>
             <div>
               <span className="font-medium">Stance:</span> {fighter.stance || 'N/A'}

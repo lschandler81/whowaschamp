@@ -8,6 +8,12 @@ export const runtime = 'nodejs';
  * Transform database profile to simple format for client
  */
 function transformProfile(dbProfile: any) {
+  const promotions = dbProfile.promotions?.map((p: any) => p.promotion.name) || [];
+  const era = dbProfile.wrestler?.era;
+  const divisions = dbProfile.fighter?.divisions
+    ? dbProfile.fighter.divisions.map((d: any) => d.divisionName || d.name).filter(Boolean)
+    : [];
+
   return {
     id: dbProfile.id,
     slug: dbProfile.slug,
@@ -16,16 +22,27 @@ function transformProfile(dbProfile: any) {
     type: dbProfile.type,
     hometown: dbProfile.hometown,
     tagline: dbProfile.tagline,
-    promotions: dbProfile.promotions?.map((p: any) => p.promotion.name) || [],
-    wrestler: dbProfile.wrestler ? {
-      era: dbProfile.wrestler.era,
-      worldTitleReigns: dbProfile.wrestler.worldTitleReigns || 0
-    } : undefined,
-    fighter: dbProfile.fighter ? {
-      division: dbProfile.fighter.divisions?.[0]?.name,
-      wins: dbProfile.fighter.wins,
-      losses: dbProfile.fighter.losses
-    } : undefined
+    promotions,
+    // Flatten commonly-used fields for client filtering
+    era,
+    divisions,
+    // Keep nested bits for potential future UI needs
+    wrestler: dbProfile.wrestler
+      ? {
+          era: dbProfile.wrestler.era,
+          worldTitleReigns: dbProfile.wrestler.worldTitleReigns || 0,
+        }
+      : undefined,
+    fighter: dbProfile.fighter
+      ? {
+          divisions,
+          wins: dbProfile.fighter.wins,
+          losses: dbProfile.fighter.losses,
+          draws: dbProfile.fighter.draws,
+          stance: dbProfile.fighter.stance,
+          reach: dbProfile.fighter.reach,
+        }
+      : undefined,
   };
 }
 

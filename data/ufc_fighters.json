@@ -1,0 +1,139 @@
+[
+  {
+    "name": "Jon Jones",
+    "nickname": "Bones",
+    "promotion": "UFC",
+    "divisions": ["Light Heavyweight", "Heavyweight"]
+  },
+  {
+    "name": "Conor McGregor",
+    "nickname": "Notorious",
+    "promotion": "UFC",
+    "divisions": ["Featherweight", "Lightweight", "Welterweight"]
+  },
+  {
+    "name": "Daniel Cormier",
+    "nickname": "DC",
+    "promotion": "UFC",
+    "divisions": ["Light Heavyweight", "Heavyweight"]
+  },
+  {
+    "name": "Stipe Miocic",
+    "promotion": "UFC",
+    "divisions": ["Heavyweight"]
+  },
+  {
+    "name": "Jose Aldo",
+    "promotion": "UFC",
+    "divisions": ["Featherweight", "Bantamweight"]
+  },
+  {
+    "name": "Demetrious Johnson",
+    "nickname": "Mighty Mouse",
+    "promotion": "UFC",
+    "divisions": ["Flyweight"]
+  },
+  {
+    "name": "Israel Adesanya",
+    "nickname": "The Last Stylebender",
+    "promotion": "UFC",
+    "divisions": ["Middleweight", "Light Heavyweight"]
+  },
+  {
+    "name": "Max Holloway",
+    "promotion": "UFC",
+    "divisions": ["Featherweight", "Lightweight"]
+  },
+  {
+    "name": "Dustin Poirier",
+    "promotion": "UFC",
+    "divisions": ["Lightweight", "Featherweight"]
+  },
+  {
+    "name": "Charles Oliveira",
+    "promotion": "UFC",
+    "divisions": ["Lightweight", "Featherweight"]
+  },
+  {
+    "name": "Kamaru Usman",
+    "promotion": "UFC",
+    "divisions": ["Welterweight"]
+  },
+  {
+    "name": "Alexander Volkanovski",
+    "promotion": "UFC",
+    "divisions": ["Featherweight", "Lightweight"]
+  },
+  {
+    "name": "Henry Cejudo",
+    "promotion": "UFC",
+    "divisions": ["Flyweight", "Bantamweight"]
+  },
+  {
+    "name": "Nate Diaz",
+    "promotion": "UFC",
+    "divisions": ["Lightweight", "Welterweight"]
+  },
+  { "name": "Chael Sonnen", "promotion": "UFC", "divisions": ["Middleweight", "Light Heavyweight"] },
+  { "name": "Brock Lesnar", "promotion": "UFC", "divisions": ["Heavyweight"] },
+  { "name": "Cain Velasquez", "promotion": "UFC", "divisions": ["Heavyweight"] },
+  { "name": "Junior dos Santos", "promotion": "UFC", "divisions": ["Heavyweight"] },
+  { "name": "Fabricio Werdum", "promotion": "UFC", "divisions": ["Heavyweight"] },
+  { "name": "Francis Ngannou", "promotion": "UFC", "divisions": ["Heavyweight"] },
+  { "name": "Curtis Blaydes", "promotion": "UFC", "divisions": ["Heavyweight"] },
+  { "name": "Alistair Overeem", "promotion": "UFC", "divisions": ["Heavyweight"] },
+  { "name": "Tito Ortiz", "promotion": "UFC", "divisions": ["Light Heavyweight"] },
+  { "name": "Rashad Evans", "promotion": "UFC", "divisions": ["Light Heavyweight"] },
+  { "name": "Mauricio Rua", "nickname": "Shogun", "promotion": "UFC", "divisions": ["Light Heavyweight"] },
+  { "name": "Glover Teixeira", "promotion": "UFC", "divisions": ["Light Heavyweight"] },
+  { "name": "Jan Blachowicz", "promotion": "UFC", "divisions": ["Light Heavyweight"] },
+  { "name": "Jiri Prochazka", "promotion": "UFC", "divisions": ["Light Heavyweight"] },
+  { "name": "Chris Weidman", "promotion": "UFC", "divisions": ["Middleweight"] },
+  { "name": "Robert Whittaker", "promotion": "UFC", "divisions": ["Middleweight"] },
+  { "name": "Michael Bisping", "promotion": "UFC", "divisions": ["Middleweight"] },
+  { "name": "Luke Rockhold", "promotion": "UFC", "divisions": ["Middleweight"] },
+  { "name": "Yoel Romero", "promotion": "UFC", "divisions": ["Middleweight"] },
+  { "name": "Sean Strickland", "promotion": "UFC", "divisions": ["Middleweight"] },
+  { "name": "Khamzat Chimaev", "promotion": "UFC", "divisions": ["Middleweight", "Welterweight"] },
+  { "name": "Colby Covington", "promotion": "UFC", "divisions": ["Welterweight"] },
+  { "name": "Belal Muhammad", "promotion": "UFC", "divisions": ["Welterweight"] },
+  { "name": "Jorge Masvidal", "promotion": "UFC", "divisions": ["Welterweight", "Lightweight"] },
+  { "name": "Robbie Lawler", "promotion": "UFC", "divisions": ["Welterweight"] },
+  { "name": "Tyron Woodley", "promotion": "UFC", "divisions": ["Welterweight"] },
+  { "name": "Johny Hendricks", "promotion": "UFC", "divisions": ["Welterweight"] },
+  { "name": "Rafael dos Anjos", "promotion": "UFC", "divisions": ["Lightweight", "Welterweight"] },
+  { "name": "Eddie Alvarez", "promotion": "UFC", "divisions": ["Lightweight"] },
+  { "name": "Benson Henderson", "promotion": "UFC", "divisions": ["Lightweight"] },
+  { "name": "Tony Ferguson", "promotion": "UFC", "divisions": ["Lightweight"] },
+  { "name": "Justin Gaethje", "promotion": "UFC", "divisions": ["Lightweight"] },
+  { "name": "Michael Chandler", "promotion": "UFC", "divisions": ["Lightweight"] },
+  { "name": "Max Holloway", "promotion": "UFC", "divisions": ["Featherweight", "Lightweight"] },
+  { "name": "Brian Ortega", "promotion": "UFC", "divisions": ["Featherweight"] },
+  { "name": "Yair Rodriguez", "promotion": "UFC", "divisions": ["Featherweight"] },
+  { "name": "Chad Mendes", "promotion": "UFC", "divisions": ["Featherweight"] },
+  { "name": "Ilia Topuria", "promotion": "UFC", "divisions": ["Featherweight", "Lightweight"] },
+  { "name": "Renan Barao", "promotion": "UFC", "divisions": ["Bantamweight"] },
+  { "name": "Sean O'Malley", "promotion": "UFC", "divisions": ["Bantamweight"] },
+  { "name": "Marlon Moraes", "promotion": "UFC", "divisions": ["Bantamweight"] },
+  { "name": "Cory Sandhagen", "promotion": "UFC", "divisions": ["Bantamweight"] },
+  { "name": "Urijah Faber", "promotion": "UFC", "divisions": ["Bantamweight", "Featherweight"] },
+  { "name": "Deiveson Figueiredo", "promotion": "UFC", "divisions": ["Flyweight", "Bantamweight"] },
+  { "name": "Brandon Moreno", "promotion": "UFC", "divisions": ["Flyweight"] },
+  { "name": "Joseph Benavidez", "promotion": "UFC", "divisions": ["Flyweight", "Bantamweight"] },
+  { "name": "Jussier Formiga", "promotion": "UFC", "divisions": ["Flyweight"] },
+  { "name": "Holly Holm", "promotion": "UFC", "divisions": ["Bantamweight", "Featherweight"] },
+  { "name": "Miesha Tate", "promotion": "UFC", "divisions": ["Bantamweight"] },
+  { "name": "Julianna Peña", "promotion": "UFC", "divisions": ["Bantamweight"] },
+  { "name": "Irene Aldana", "promotion": "UFC", "divisions": ["Bantamweight"] },
+  { "name": "Raquel Pennington", "promotion": "UFC", "divisions": ["Bantamweight"] },
+  { "name": "Valentina Shevchenko", "promotion": "UFC", "divisions": ["Flyweight", "Bantamweight"] },
+  { "name": "Taila Santos", "promotion": "UFC", "divisions": ["Flyweight"] },
+  { "name": "Erin Blanchfield", "promotion": "UFC", "divisions": ["Flyweight"] },
+  { "name": "Manon Fiorot", "promotion": "UFC", "divisions": ["Flyweight"] },
+  { "name": "Joanna Jedrzejczyk", "promotion": "UFC", "divisions": ["Strawweight", "Flyweight"] },
+  { "name": "Rose Namajunas", "promotion": "UFC", "divisions": ["Strawweight", "Flyweight"] },
+  { "name": "Zhang Weili", "promotion": "UFC", "divisions": ["Strawweight"] },
+  { "name": "Carla Esparza", "promotion": "UFC", "divisions": ["Strawweight"] },
+  { "name": "Jessica Andrade", "promotion": "UFC", "divisions": ["Strawweight", "Flyweight", "Bantamweight"] },
+  { "name": "Tecia Torres", "promotion": "UFC", "divisions": ["Strawweight"] }
+]

@@ -64,5 +64,11 @@
     "name": "UFC Women's Strawweight Championship",
     "file": "ufc_womens_strawweight_reigns.json",
     "active": true
+  },
+  {
+    "id": "ufc_womens_featherweight",
+    "name": "UFC Women's Featherweight Championship",
+    "file": "ufc_womens_featherweight_reigns.json",
+    "active": true
   }
 ]
