@@ -1,7 +1,9 @@
 {
-  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
   "/profiles/page": "app/profiles/page.js",
+  "/on-this-day/page": "app/on-this-day/page.js",
+  "/api/profiles/route": "app/api/profiles/route.js",
   "/profiles/[slug]/page": "app/profiles/[slug]/page.js",
-  "/api/profiles/route": "app/api/profiles/route.js"
+  "/api/events/ufc-flashback/route": "app/api/events/ufc-flashback/route.js",
+  "/api/events/wwe-flashback/route": "app/api/events/wwe-flashback/route.js"
 }

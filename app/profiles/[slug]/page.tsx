@@ -105,45 +105,53 @@ function WrestlerDetails({ wrestler }: { wrestler: WrestlerProfile }) {
 function FighterDetails({ fighter }: { fighter: FighterProfile }) {
   return (
     <div className="space-y-6">
-      {/* Fight Stats */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Target className="h-5 w-5" />
-            Fight Statistics
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-600">
-                {fighter.record?.wins || 0}
-              </div>
-              <div className="text-sm text-muted-foreground">Wins</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-red-600">
-                {fighter.record?.losses || 0}
-              </div>
-              <div className="text-sm text-muted-foreground">Losses</div>
-            </div>
-            {fighter.record?.draws && (
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-600">
-                  {fighter.record.draws}
+      {/* Fight Stats (only if available) */}
+      {(fighter.record?.wins !== undefined || fighter.record?.losses !== undefined || fighter.titleReigns) && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Target className="h-5 w-5" />
+              Fight Statistics
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {fighter.record?.wins !== undefined && (
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">
+                    {fighter.record.wins}
+                  </div>
+                  <div className="text-sm text-muted-foreground">Wins</div>
                 </div>
-                <div className="text-sm text-muted-foreground">Draws</div>
-              </div>
-            )}
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary">
-                {fighter.titleReigns || 0}
-              </div>
-              <div className="text-sm text-muted-foreground">Title Reigns</div>
+              )}
+              {fighter.record?.losses !== undefined && (
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-600">
+                    {fighter.record.losses}
+                  </div>
+                  <div className="text-sm text-muted-foreground">Losses</div>
+                </div>
+              )}
+              {fighter.record?.draws !== undefined && fighter.record?.draws > 0 && (
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-600">
+                    {fighter.record.draws}
+                  </div>
+                  <div className="text-sm text-muted-foreground">Draws</div>
+                </div>
+              )}
+              {fighter.titleReigns !== undefined && (
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">
+                    {fighter.titleReigns}
+                  </div>
+                  <div className="text-sm text-muted-foreground">Title Reigns</div>
+                </div>
+              )}
             </div>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Fighting Details */}
       <Card>
@@ -221,34 +229,33 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
               ))}
             </div>
           </div>
-          
-          {/* Quick Stats */}
-          <Card className="w-full md:w-80">
-            <CardContent className="pt-6">
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-sm">
-                  <Calendar className="h-4 w-4 text-muted-foreground" />
-                  <span className="font-medium">Active:</span>
-                  <span>
-                    {profile.activeYears.start}
-                    {profile.activeYears.end ? `-${profile.activeYears.end}` : '-Present'}
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <MapPin className="h-4 w-4 text-muted-foreground" />
-                  <span className="font-medium">From:</span>
-                  <span>{profile.hometown}, {profile.nationality}</span>
-                </div>
-                {profile.debut && (
-                  <div className="flex items-center gap-2 text-sm">
-                    <Users className="h-4 w-4 text-muted-foreground" />
-                    <span className="font-medium">Debut:</span>
-                    <span>{new Date(profile.debut).toLocaleDateString()}</span>
-                  </div>
-                )}
+          {/* Inline Quick Info (simpler layout) */}
+          <div className="w-full md:w-auto md:min-w-[20rem]">
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                <span className="font-medium">Active:</span>
+                <span>
+                  {profile.activeYears.start}
+                  {profile.activeYears.end ? `-${profile.activeYears.end}` : '-Present'}
+                </span>
               </div>
-            </CardContent>
-          </Card>
+              {(profile.hometown || profile.nationality) && (
+                <div className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4" />
+                  <span className="font-medium">From:</span>
+                  <span>{[profile.hometown, profile.nationality].filter(Boolean).join(', ')}</span>
+                </div>
+              )}
+              {profile.debut && (
+                <div className="flex items-center gap-2">
+                  <Users className="h-4 w-4" />
+                  <span className="font-medium">Debut:</span>
+                  <span>{new Date(profile.debut).toLocaleDateString()}</span>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
       
